@@ -1,0 +1,11 @@
+exam_id,exam_name,department_id,student_count
+ENG101,Academic English,Humanities,210
+CS101,Introduction to Programming,Computer Engineering,180
+ECON101,Economics I,Economics,155
+LAW101,Introduction to Law,Law,142
+STAT101,Statistics I,Engineering,135
+MATH101,Calculus I,Engineering,120
+PHYS101,Physics I,Engineering,95
+BIO101,General Biology,Science,88
+CHEM101,General Chemistry,Engineering,75
+HIST101,Modern History,Humanities,64

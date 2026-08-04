@@ -1,0 +1,9 @@
+exam_id,exam_name,student_count,department_id
+MATH101,Calculus I,4,Engineering
+PHYS101,Physics I,3,Engineering
+CS101,Introduction to Programming,4,Engineering
+CHEM101,General Chemistry,3,Engineering
+ENG101,Academic English,4,Humanities
+BIO101,General Biology,3,Science
+STAT101,Statistics I,2,Engineering
+HIST101,Modern History,2,Humanities

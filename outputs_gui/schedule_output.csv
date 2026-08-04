@@ -1,0 +1,114 @@
+exam_id,exam_name,department_id,student_count,timeslot_id,date,start_time,end_time,cpu_usage,ram_usage,bandwidth_usage,timeslot_total_students
+1679PLN-110İstatistiksel Yöntemler_Şehir ve Bölge Planlama_AraSinav,1679PLN-110İstatistiksel Yöntemler_Şehir ve Bölge Planlama_AraSinav,Şehir ve Bölge Planlama,101,TS0001,2023-04-10,08:00,10:00,2.02,5.05,20.2,2188
+1681PLN-202Planlama Projesi IV_Şehir ve Bölge Planlama_AraSinav,1681PLN-202Planlama Projesi IV_Şehir ve Bölge Planlama_AraSinav,Şehir ve Bölge Planlama,34,TS0001,2023-04-10,08:00,10:00,0.68,1.7,6.8,2188
+1683PLN-206Kent ve Bölge Ekonomisi_Şehir ve Bölge Planlama_AraSinav,1683PLN-206Kent ve Bölge Ekonomisi_Şehir ve Bölge Planlama_AraSinav,Şehir ve Bölge Planlama,23,TS0001,2023-04-10,08:00,10:00,0.46,1.15,4.6,2188
+1685PLN-210İleri Bilgisayar Uygulamaları_Şehir ve Bölge Planlama_AraSinav,1685PLN-210İleri Bilgisayar Uygulamaları_Şehir ve Bölge Planlama_AraSinav,Şehir ve Bölge Planlama,19,TS0001,2023-04-10,08:00,10:00,0.38,0.95,3.8,2188
+1692PLN-318Kentsel Ergonomi_Şehir ve Bölge Planlama_AraSinav,1692PLN-318Kentsel Ergonomi_Şehir ve Bölge Planlama_AraSinav,Şehir ve Bölge Planlama,38,TS0001,2023-04-10,08:00,10:00,0.76,1.9,7.6,2188
+1697PMM-102Bitki Tanıma I_Peyzaj Mimarlığı_AraSinav,1697PMM-102Bitki Tanıma I_Peyzaj Mimarlığı_AraSinav,Peyzaj Mimarlığı,115,TS0001,2023-04-10,08:00,10:00,2.3,5.75,23.0,2188
+1700PMM-108Temel Tasarım II_Peyzaj Mimarlığı_AraSinav,1700PMM-108Temel Tasarım II_Peyzaj Mimarlığı_AraSinav,Peyzaj Mimarlığı,76,TS0001,2023-04-10,08:00,10:00,1.52,3.8,15.2,2188
+1705PMM-208Peyzaj Mühendisliği I_Peyzaj Mimarlığı_AraSinav,1705PMM-208Peyzaj Mühendisliği I_Peyzaj Mimarlığı_AraSinav,Peyzaj Mimarlığı,49,TS0001,2023-04-10,08:00,10:00,0.98,2.45,9.8,2188
+1708PMM-214Peyzaj Planlamada Coğrafi Bilgi Sistemleri_Peyzaj Mimarlığı_AraSinav,1708PMM-214Peyzaj Planlamada Coğrafi Bilgi Sistemleri_Peyzaj Mimarlığı_AraSinav,Peyzaj Mimarlığı,98,TS0001,2023-04-10,08:00,10:00,1.96,4.9,19.6,2188
+1709PMM-216Peyzaj Mimarlığında Sanat Akımları_Peyzaj Mimarlığı_AraSinav,1709PMM-216Peyzaj Mimarlığında Sanat Akımları_Peyzaj Mimarlığı_AraSinav,Peyzaj Mimarlığı,45,TS0001,2023-04-10,08:00,10:00,0.9,2.25,9.0,2188
+1716PMM-324Peyzaj Mimarlığı Sulama Sistemleri_Peyzaj Mimarlığı_AraSinav,1716PMM-324Peyzaj Mimarlığı Sulama Sistemleri_Peyzaj Mimarlığı_AraSinav,Peyzaj Mimarlığı,34,TS0001,2023-04-10,08:00,10:00,0.68,1.7,6.8,2188
+1722PMM-416Özel Nitelikli Bitkilendirme_Peyzaj Mimarlığı_AraSinav,1722PMM-416Özel Nitelikli Bitkilendirme_Peyzaj Mimarlığı_AraSinav,Peyzaj Mimarlığı,29,TS0001,2023-04-10,08:00,10:00,0.58,1.45,5.8,2188
+196BIL-440Tasarım II_Bilgisayar Mühendisliği_AraSinav,196BIL-440Tasarım II_Bilgisayar Mühendisliği_AraSinav,Bilgisayar Mühendisliği,15,TS0001,2023-04-10,08:00,10:00,0.3,0.75,3.0,2188
+198BIL-440Tasarım II_Bilgisayar Mühendisliği_AraSinav,198BIL-440Tasarım II_Bilgisayar Mühendisliği_AraSinav,Bilgisayar Mühendisliği,12,TS0001,2023-04-10,08:00,10:00,0.24,0.6,2.4,2188
+201BIL-440Tasarım II_Bilgisayar Mühendisliği_AraSinav,201BIL-440Tasarım II_Bilgisayar Mühendisliği_AraSinav,Bilgisayar Mühendisliği,13,TS0001,2023-04-10,08:00,10:00,0.26,0.65,2.6,2188
+366ECZ-110Genel Kimya II_Eczacılık Fakültesi_AraSinav,366ECZ-110Genel Kimya II_Eczacılık Fakültesi_AraSinav,Eczacılık Fakültesi,106,TS0001,2023-04-10,08:00,10:00,2.12,5.3,21.2,2188
+370ECZ-206Biyokimya II_Eczacılık Fakültesi_AraSinav,370ECZ-206Biyokimya II_Eczacılık Fakültesi_AraSinav,Eczacılık Fakültesi,112,TS0001,2023-04-10,08:00,10:00,2.24,5.6,22.4,2188
+372ECZ-210Farmasötik Botanik_Eczacılık Fakültesi_AraSinav,372ECZ-210Farmasötik Botanik_Eczacılık Fakültesi_AraSinav,Eczacılık Fakültesi,103,TS0001,2023-04-10,08:00,10:00,2.06,5.15,20.6,2188
+374ECZ-238Fizyoloji_Eczacılık Fakültesi_AraSinav,374ECZ-238Fizyoloji_Eczacılık Fakültesi_AraSinav,Eczacılık Fakültesi,105,TS0001,2023-04-10,08:00,10:00,2.1,5.25,21.0,2188
+375ECZ-242Organik Kimya II_Eczacılık Fakültesi_AraSinav,375ECZ-242Organik Kimya II_Eczacılık Fakültesi_AraSinav,Eczacılık Fakültesi,109,TS0001,2023-04-10,08:00,10:00,2.18,5.45,21.8,2188
+385ECZ-308Farmasötik Kimya II_Eczacılık Fakültesi_AraSinav,385ECZ-308Farmasötik Kimya II_Eczacılık Fakültesi_AraSinav,Eczacılık Fakültesi,113,TS0001,2023-04-10,08:00,10:00,2.26,5.65,22.6,2188
+395ECZ-402Akılcı İlaç Kullanımı_Eczacılık Fakültesi_AraSinav,395ECZ-402Akılcı İlaç Kullanımı_Eczacılık Fakültesi_AraSinav,Eczacılık Fakültesi,102,TS0001,2023-04-10,08:00,10:00,2.04,5.1,20.4,2188
+396ECZ-404Farmakoloji IV_Eczacılık Fakültesi_AraSinav,396ECZ-404Farmakoloji IV_Eczacılık Fakültesi_AraSinav,Eczacılık Fakültesi,112,TS0001,2023-04-10,08:00,10:00,2.24,5.6,22.4,2188
+397ECZ-406Farmasötik Biyoteknoloji_Eczacılık Fakültesi_AraSinav,397ECZ-406Farmasötik Biyoteknoloji_Eczacılık Fakültesi_AraSinav,Eczacılık Fakültesi,98,TS0001,2023-04-10,08:00,10:00,1.96,4.9,19.6,2188
+398ECZ-408Farmasötik Kimya IV_Eczacılık Fakültesi_AraSinav,398ECZ-408Farmasötik Kimya IV_Eczacılık Fakültesi_AraSinav,Eczacılık Fakültesi,110,TS0001,2023-04-10,08:00,10:00,2.2,5.5,22.0,2188
+400ECZ-412Farmasötik Teknoloji IV_Eczacılık Fakültesi_AraSinav,400ECZ-412Farmasötik Teknoloji IV_Eczacılık Fakültesi_AraSinav,Eczacılık Fakültesi,99,TS0001,2023-04-10,08:00,10:00,1.98,4.95,19.8,2188
+401ECZ-414Farmasötik Teknoloji IV Lab._Eczacılık Fakültesi_AraSinav,401ECZ-414Farmasötik Teknoloji IV Lab._Eczacılık Fakültesi_AraSinav,Eczacılık Fakültesi,100,TS0001,2023-04-10,08:00,10:00,2.0,5.0,20.0,2188
+404ECZ-420Fitoterapi_Eczacılık Fakültesi_AraSinav,404ECZ-420Fitoterapi_Eczacılık Fakültesi_AraSinav,Eczacılık Fakültesi,108,TS0001,2023-04-10,08:00,10:00,2.16,5.4,21.6,2188
+405ECZ-422Klinik Eczacılık II_Eczacılık Fakültesi_AraSinav,405ECZ-422Klinik Eczacılık II_Eczacılık Fakültesi_AraSinav,Eczacılık Fakültesi,100,TS0001,2023-04-10,08:00,10:00,2.0,5.0,20.0,2188
+43ARK-350Pişmiş Toprak Heykelcikler_Arkeoloji_AraSinav,43ARK-350Pişmiş Toprak Heykelcikler_Arkeoloji_AraSinav,Arkeoloji,10,TS0001,2023-04-10,08:00,10:00,0.2,0.5,2.0,2188
+1492MAT-165Sağlık Bilimleri için Kalkülüs_Eczacılık Fakültesi_AraSinav,1492MAT-165Sağlık Bilimleri için Kalkülüs_Eczacılık Fakültesi_AraSinav,Eczacılık Fakültesi,95,TS0002,2023-04-10,09:00,11:00,1.9,4.75,19.0,2163
+1678PLN-108Kent Planlama Teknikleri_Şehir ve Bölge Planlama_AraSinav,1678PLN-108Kent Planlama Teknikleri_Şehir ve Bölge Planlama_AraSinav,Şehir ve Bölge Planlama,87,TS0002,2023-04-10,09:00,11:00,1.74,4.35,17.4,2163
+1694PLN-408Girişimcilik_Şehir ve Bölge Planlama_AraSinav,1694PLN-408Girişimcilik_Şehir ve Bölge Planlama_AraSinav,Şehir ve Bölge Planlama,20,TS0002,2023-04-10,09:00,11:00,0.4,1.0,4.0,2163
+1699PMM-106Maket Yapım Tekniği_Peyzaj Mimarlığı_AraSinav,1699PMM-106Maket Yapım Tekniği_Peyzaj Mimarlığı_AraSinav,Peyzaj Mimarlığı,83,TS0002,2023-04-10,09:00,11:00,1.66,4.15,16.6,2163
+1702PMM-202Tasarım Stüdyosu II_Peyzaj Mimarlığı_AraSinav,1702PMM-202Tasarım Stüdyosu II_Peyzaj Mimarlığı_AraSinav,Peyzaj Mimarlığı,81,TS0002,2023-04-10,09:00,11:00,1.62,4.05,16.2,2163
+1703PMM-204Tematik Peyzaj Tasarımları_Peyzaj Mimarlığı_AraSinav,1703PMM-204Tematik Peyzaj Tasarımları_Peyzaj Mimarlığı_AraSinav,Peyzaj Mimarlığı,47,TS0002,2023-04-10,09:00,11:00,0.94,2.35,9.4,2163
+1707PMM-212Bitkisel Üretim ve Plantasyon Tekniği_Peyzaj Mimarlığı_AraSinav,1707PMM-212Bitkisel Üretim ve Plantasyon Tekniği_Peyzaj Mimarlığı_AraSinav,Peyzaj Mimarlığı,40,TS0002,2023-04-10,09:00,11:00,0.8,2.0,8.0,2163
+1715PMM-318Evrensel Tasarım_Peyzaj Mimarlığı_AraSinav,1715PMM-318Evrensel Tasarım_Peyzaj Mimarlığı_AraSinav,Peyzaj Mimarlığı,34,TS0002,2023-04-10,09:00,11:00,0.68,1.7,6.8,2163
+1717PMM-326Doğa Felsefesi_Peyzaj Mimarlığı_AraSinav,1717PMM-326Doğa Felsefesi_Peyzaj Mimarlığı_AraSinav,Peyzaj Mimarlığı,33,TS0002,2023-04-10,09:00,11:00,0.66,1.65,6.6,2163
+1721PMM-414Çevresel Etki Değerlendirmesi_Peyzaj Mimarlığı_AraSinav,1721PMM-414Çevresel Etki Değerlendirmesi_Peyzaj Mimarlığı_AraSinav,Peyzaj Mimarlığı,32,TS0002,2023-04-10,09:00,11:00,0.64,1.6,6.4,2163
+1723PMM-418Görsel Analiz_Peyzaj Mimarlığı_AraSinav,1723PMM-418Görsel Analiz_Peyzaj Mimarlığı_AraSinav,Peyzaj Mimarlığı,28,TS0002,2023-04-10,09:00,11:00,0.56,1.4,5.6,2163
+190BIL-440Tasarım II_Bilgisayar Mühendisliği_AraSinav,190BIL-440Tasarım II_Bilgisayar Mühendisliği_AraSinav,Bilgisayar Mühendisliği,12,TS0002,2023-04-10,09:00,11:00,0.24,0.6,2.4,2163
+192BIL-440Tasarım II_Bilgisayar Mühendisliği_AraSinav,192BIL-440Tasarım II_Bilgisayar Mühendisliği_AraSinav,Bilgisayar Mühendisliği,10,TS0002,2023-04-10,09:00,11:00,0.2,0.5,2.0,2163
+195BIL-440Tasarım II_Bilgisayar Mühendisliği_AraSinav,195BIL-440Tasarım II_Bilgisayar Mühendisliği_AraSinav,Bilgisayar Mühendisliği,14,TS0002,2023-04-10,09:00,11:00,0.28,0.7,2.8,2163
+2215TUR-270Türk Dili II_Eczacılık Fakültesi_AraSinav,2215TUR-270Türk Dili II_Eczacılık Fakültesi_AraSinav,Eczacılık Fakültesi,87,TS0002,2023-04-10,09:00,11:00,1.74,4.35,17.4,2163
+362ECZ-102Biyoistatistik_Eczacılık Fakültesi_AraSinav,362ECZ-102Biyoistatistik_Eczacılık Fakültesi_AraSinav,Eczacılık Fakültesi,96,TS0002,2023-04-10,09:00,11:00,1.92,4.8,19.2,2163
+363ECZ-104Biyoloji II_Eczacılık Fakültesi_AraSinav,363ECZ-104Biyoloji II_Eczacılık Fakültesi_AraSinav,Eczacılık Fakültesi,97,TS0002,2023-04-10,09:00,11:00,1.94,4.85,19.4,2163
+365ECZ-108Eczacılıkta Etkili İletişim_Eczacılık Fakültesi_AraSinav,365ECZ-108Eczacılıkta Etkili İletişim_Eczacılık Fakültesi_AraSinav,Eczacılık Fakültesi,97,TS0002,2023-04-10,09:00,11:00,1.94,4.85,19.4,2163
+368ECZ-202Analitik Kimya II_Eczacılık Fakültesi_AraSinav,368ECZ-202Analitik Kimya II_Eczacılık Fakültesi_AraSinav,Eczacılık Fakültesi,86,TS0002,2023-04-10,09:00,11:00,1.72,4.3,17.2,2163
+371ECZ-208Biyokimya Lab._Eczacılık Fakültesi_AraSinav,371ECZ-208Biyokimya Lab._Eczacılık Fakültesi_AraSinav,Eczacılık Fakültesi,90,TS0002,2023-04-10,09:00,11:00,1.8,4.5,18.0,2163
+373ECZ-232Farmasötik Botanik Lab._Eczacılık Fakültesi_AraSinav,373ECZ-232Farmasötik Botanik Lab._Eczacılık Fakültesi_AraSinav,Eczacılık Fakültesi,93,TS0002,2023-04-10,09:00,11:00,1.86,4.65,18.6,2163
+382ECZ-302Farmakognozi II_Eczacılık Fakültesi_AraSinav,382ECZ-302Farmakognozi II_Eczacılık Fakültesi_AraSinav,Eczacılık Fakültesi,86,TS0002,2023-04-10,09:00,11:00,1.72,4.3,17.2,2163
+384ECZ-306Farmakoloji II_Eczacılık Fakültesi_AraSinav,384ECZ-306Farmakoloji II_Eczacılık Fakültesi_AraSinav,Eczacılık Fakültesi,87,TS0002,2023-04-10,09:00,11:00,1.74,4.35,17.4,2163
+386ECZ-310Farmasötik Kimya II Lab._Eczacılık Fakültesi_AraSinav,386ECZ-310Farmasötik Kimya II Lab._Eczacılık Fakültesi_AraSinav,Eczacılık Fakültesi,84,TS0002,2023-04-10,09:00,11:00,1.68,4.2,16.8,2163
+388ECZ-314Farmasötik Teknoloji II Lab._Eczacılık Fakültesi_AraSinav,388ECZ-314Farmasötik Teknoloji II Lab._Eczacılık Fakültesi_AraSinav,Eczacılık Fakültesi,87,TS0002,2023-04-10,09:00,11:00,1.74,4.35,17.4,2163
+389ECZ-318Hormon Biyokimyası_Eczacılık Fakültesi_AraSinav,389ECZ-318Hormon Biyokimyası_Eczacılık Fakültesi_AraSinav,Eczacılık Fakültesi,85,TS0002,2023-04-10,09:00,11:00,1.7,4.25,17.0,2163
+402ECZ-416Farmasötik Toksikoloji II_Eczacılık Fakültesi_AraSinav,402ECZ-416Farmasötik Toksikoloji II_Eczacılık Fakültesi_AraSinav,Eczacılık Fakültesi,97,TS0002,2023-04-10,09:00,11:00,1.94,4.85,19.4,2163
+403ECZ-418Farmasötik Toksikoloji II Lab._Eczacılık Fakültesi_AraSinav,403ECZ-418Farmasötik Toksikoloji II Lab._Eczacılık Fakültesi_AraSinav,Eczacılık Fakültesi,96,TS0002,2023-04-10,09:00,11:00,1.92,4.8,19.2,2163
+406ECZ-424Kozmetoloji_Eczacılık Fakültesi_AraSinav,406ECZ-424Kozmetoloji_Eczacılık Fakültesi_AraSinav,Eczacılık Fakültesi,98,TS0002,2023-04-10,09:00,11:00,1.96,4.9,19.6,2163
+885HEM-230Onkoloji Hemşireliği_Hemşirelik_AraSinav,885HEM-230Onkoloji Hemşireliği_Hemşirelik_AraSinav,Hemşirelik,95,TS0002,2023-04-10,09:00,11:00,1.9,4.75,19.0,2163
+983IDE-106Okuduğunu Anlama II_İngiliz Dili ve Edebiyatı_AraSinav,983IDE-106Okuduğunu Anlama II_İngiliz Dili ve Edebiyatı_AraSinav,İngiliz Dili ve Edebiyatı,86,TS0002,2023-04-10,09:00,11:00,1.72,4.3,17.2,2163
+1104ING-102İngilizce II (Hazırlık Eğitimine Tabi Olmayan Öğrenciler İçin)_Peyzaj Mimarlığı_AraSinav,1104ING-102İngilizce II (Hazırlık Eğitimine Tabi Olmayan Öğrenciler İçin)_Peyzaj Mimarlığı_AraSinav,Peyzaj Mimarlığı,52,TS0003,2023-04-10,11:00,13:00,1.04,2.6,10.4,1957
+1118ING-102İngilizce II (Hazırlık Eğitimine Tabi Olmayan Öğrenciler İçin)_Şehir ve Bölge Planlama_AraSinav,1118ING-102İngilizce II (Hazırlık Eğitimine Tabi Olmayan Öğrenciler İçin)_Şehir ve Bölge Planlama_AraSinav,Şehir ve Bölge Planlama,46,TS0003,2023-04-10,11:00,13:00,0.92,2.3,9.2,1957
+1677PLN-104Mimarlık Bilgisi_Şehir ve Bölge Planlama_AraSinav,1677PLN-104Mimarlık Bilgisi_Şehir ve Bölge Planlama_AraSinav,Şehir ve Bölge Planlama,72,TS0003,2023-04-10,11:00,13:00,1.44,3.6,14.4,1957
+1682PLN-204Kentsel Coğrafya_Şehir ve Bölge Planlama_AraSinav,1682PLN-204Kentsel Coğrafya_Şehir ve Bölge Planlama_AraSinav,Şehir ve Bölge Planlama,45,TS0003,2023-04-10,11:00,13:00,0.9,2.25,9.0,1957
+1684PLN-208Kent Planlamada Modeller_Şehir ve Bölge Planlama_AraSinav,1684PLN-208Kent Planlamada Modeller_Şehir ve Bölge Planlama_AraSinav,Şehir ve Bölge Planlama,45,TS0003,2023-04-10,11:00,13:00,0.9,2.25,9.0,1957
+1688PLN-304Kentsel Koruma ve Yenileme_Şehir ve Bölge Planlama_AraSinav,1688PLN-304Kentsel Koruma ve Yenileme_Şehir ve Bölge Planlama_AraSinav,Şehir ve Bölge Planlama,59,TS0003,2023-04-10,11:00,13:00,1.18,2.95,11.8,1957
+1695PLN-410Konut ve Alan Planlaması_Şehir ve Bölge Planlama_AraSinav,1695PLN-410Konut ve Alan Planlaması_Şehir ve Bölge Planlama_AraSinav,Şehir ve Bölge Planlama,30,TS0003,2023-04-10,11:00,13:00,0.6,1.5,6.0,1957
+1696PLN-416Kent Antropolojisi_Şehir ve Bölge Planlama_AraSinav,1696PLN-416Kent Antropolojisi_Şehir ve Bölge Planlama_AraSinav,Şehir ve Bölge Planlama,29,TS0003,2023-04-10,11:00,13:00,0.58,1.45,5.8,1957
+1698PMM-104Peyzaj Ekolojisi_Peyzaj Mimarlığı_AraSinav,1698PMM-104Peyzaj Ekolojisi_Peyzaj Mimarlığı_AraSinav,Peyzaj Mimarlığı,73,TS0003,2023-04-10,11:00,13:00,1.46,3.65,14.6,1957
+1701PMM-110Bilgisayar Destekli Tasarım_Peyzaj Mimarlığı_AraSinav,1701PMM-110Bilgisayar Destekli Tasarım_Peyzaj Mimarlığı_AraSinav,Peyzaj Mimarlığı,74,TS0003,2023-04-10,11:00,13:00,1.48,3.7,14.8,1957
+1704PMM-206Peyzaj Planlama I_Peyzaj Mimarlığı_AraSinav,1704PMM-206Peyzaj Planlama I_Peyzaj Mimarlığı_AraSinav,Peyzaj Mimarlığı,67,TS0003,2023-04-10,11:00,13:00,1.34,3.35,13.4,1957
+1706PMM-210Peyzaj Konstrüksiyonu II_Peyzaj Mimarlığı_AraSinav,1706PMM-210Peyzaj Konstrüksiyonu II_Peyzaj Mimarlığı_AraSinav,Peyzaj Mimarlığı,52,TS0003,2023-04-10,11:00,13:00,1.04,2.6,10.4,1957
+1711PMM-304Bitki Bakım Teknikleri_Peyzaj Mimarlığı_AraSinav,1711PMM-304Bitki Bakım Teknikleri_Peyzaj Mimarlığı_AraSinav,Peyzaj Mimarlığı,53,TS0003,2023-04-10,11:00,13:00,1.06,2.65,10.6,1957
+1712PMM-306Peyzaj Mimarlığının Sektörel Boyutu_Peyzaj Mimarlığı_AraSinav,1712PMM-306Peyzaj Mimarlığının Sektörel Boyutu_Peyzaj Mimarlığı_AraSinav,Peyzaj Mimarlığı,63,TS0003,2023-04-10,11:00,13:00,1.26,3.15,12.6,1957
+1713PMM-308Kent Estetiği_Peyzaj Mimarlığı_AraSinav,1713PMM-308Kent Estetiği_Peyzaj Mimarlığı_AraSinav,Peyzaj Mimarlığı,62,TS0003,2023-04-10,11:00,13:00,1.24,3.1,12.4,1957
+1719PMM-404Kentsel Tasarım Projesi_Peyzaj Mimarlığı_AraSinav,1719PMM-404Kentsel Tasarım Projesi_Peyzaj Mimarlığı_AraSinav,Peyzaj Mimarlığı,51,TS0003,2023-04-10,11:00,13:00,1.02,2.55,10.2,1957
+1724PMM-422Teknoloji ve Ar-Ge_Peyzaj Mimarlığı_AraSinav,1724PMM-422Teknoloji ve Ar-Ge_Peyzaj Mimarlığı_AraSinav,Peyzaj Mimarlığı,51,TS0003,2023-04-10,11:00,13:00,1.02,2.55,10.2,1957
+188BIL-440Tasarım II_Bilgisayar Mühendisliği_AraSinav,188BIL-440Tasarım II_Bilgisayar Mühendisliği_AraSinav,Bilgisayar Mühendisliği,12,TS0003,2023-04-10,11:00,13:00,0.24,0.6,2.4,1957
+189BIL-440Tasarım II_Bilgisayar Mühendisliği_AraSinav,189BIL-440Tasarım II_Bilgisayar Mühendisliği_AraSinav,Bilgisayar Mühendisliği,15,TS0003,2023-04-10,11:00,13:00,0.3,0.75,3.0,1957
+191BIL-440Tasarım II_Bilgisayar Mühendisliği_AraSinav,191BIL-440Tasarım II_Bilgisayar Mühendisliği_AraSinav,Bilgisayar Mühendisliği,19,TS0003,2023-04-10,11:00,13:00,0.38,0.95,3.8,1957
+197BIL-440Tasarım II_Bilgisayar Mühendisliği_AraSinav,197BIL-440Tasarım II_Bilgisayar Mühendisliği_AraSinav,Bilgisayar Mühendisliği,15,TS0003,2023-04-10,11:00,13:00,0.3,0.75,3.0,1957
+199BIL-440Tasarım II_Bilgisayar Mühendisliği_AraSinav,199BIL-440Tasarım II_Bilgisayar Mühendisliği_AraSinav,Bilgisayar Mühendisliği,11,TS0003,2023-04-10,11:00,13:00,0.22,0.55,2.2,1957
+2193TUR-270Türk Dili II_Şehir ve Bölge Planlama_AraSinav,2193TUR-270Türk Dili II_Şehir ve Bölge Planlama_AraSinav,Şehir ve Bölge Planlama,63,TS0003,2023-04-10,11:00,13:00,1.26,3.15,12.6,1957
+2222TUR-270Türk Dili II_Peyzaj Mimarlığı_AraSinav,2222TUR-270Türk Dili II_Peyzaj Mimarlığı_AraSinav,Peyzaj Mimarlığı,69,TS0003,2023-04-10,11:00,13:00,1.38,3.45,13.8,1957
+34ARK-226Klasik Dönem Mimarisi_Arkeoloji_AraSinav,34ARK-226Klasik Dönem Mimarisi_Arkeoloji_AraSinav,Arkeoloji,10,TS0003,2023-04-10,11:00,13:00,0.2,0.5,2.0,1957
+377ECZ-246Vitaminler_Eczacılık Fakültesi_AraSinav,377ECZ-246Vitaminler_Eczacılık Fakültesi_AraSinav,Eczacılık Fakültesi,50,TS0003,2023-04-10,11:00,13:00,1.0,2.5,10.0,1957
+379ECZ-260Doğal Kaynakların İlaç Keşfindeki Rolü_Eczacılık Fakültesi_AraSinav,379ECZ-260Doğal Kaynakların İlaç Keşfindeki Rolü_Eczacılık Fakültesi_AraSinav,Eczacılık Fakültesi,36,TS0003,2023-04-10,11:00,13:00,0.72,1.8,7.2,1957
+380ECZ-264Bağışıklık_Eczacılık Fakültesi_AraSinav,380ECZ-264Bağışıklık_Eczacılık Fakültesi_AraSinav,Eczacılık Fakültesi,75,TS0003,2023-04-10,11:00,13:00,1.5,3.75,15.0,1957
+381ECZ-266İlaç Hukuku_Eczacılık Fakültesi_AraSinav,381ECZ-266İlaç Hukuku_Eczacılık Fakültesi_AraSinav,Eczacılık Fakültesi,20,TS0003,2023-04-10,11:00,13:00,0.4,1.0,4.0,1957
+383ECZ-304Farmakognozi II Lab._Eczacılık Fakültesi_AraSinav,383ECZ-304Farmakognozi II Lab._Eczacılık Fakültesi_AraSinav,Eczacılık Fakültesi,79,TS0003,2023-04-10,11:00,13:00,1.58,3.95,15.8,1957
+387ECZ-312Farmasötik Teknoloji II_Eczacılık Fakültesi_AraSinav,387ECZ-312Farmasötik Teknoloji II_Eczacılık Fakültesi_AraSinav,Eczacılık Fakültesi,84,TS0003,2023-04-10,11:00,13:00,1.68,4.2,16.8,1957
+390ECZ-322İlaç Etken Madde Sentez Tasarımı_Eczacılık Fakültesi_AraSinav,390ECZ-322İlaç Etken Madde Sentez Tasarımı_Eczacılık Fakültesi_AraSinav,Eczacılık Fakültesi,80,TS0003,2023-04-10,11:00,13:00,1.6,4.0,16.0,1957
+391ECZ-324İlaç Etken Maddelerinde Yapı Aydınlatma_Eczacılık Fakültesi_AraSinav,391ECZ-324İlaç Etken Maddelerinde Yapı Aydınlatma_Eczacılık Fakültesi_AraSinav,Eczacılık Fakültesi,22,TS0003,2023-04-10,11:00,13:00,0.44,1.1,4.4,1957
+393ECZ-334Çok Fazlı Sistemler_Eczacılık Fakültesi_AraSinav,393ECZ-334Çok Fazlı Sistemler_Eczacılık Fakültesi_AraSinav,Eczacılık Fakültesi,79,TS0003,2023-04-10,11:00,13:00,1.58,3.95,15.8,1957
+571FEN-202Fen Öğretim Programları_Fen Bilgisi Öğretmenliği_AraSinav,571FEN-202Fen Öğretim Programları_Fen Bilgisi Öğretmenliği_AraSinav,Fen Bilgisi Öğretmenliği,49,TS0003,2023-04-10,11:00,13:00,0.98,2.45,9.8,1957
+65ATA-260Atatürk İlkeleri ve İnkılap Tarihi II_Şehir ve Bölge Planlama_AraSinav,65ATA-260Atatürk İlkeleri ve İnkılap Tarihi II_Şehir ve Bölge Planlama_AraSinav,Şehir ve Bölge Planlama,63,TS0003,2023-04-10,11:00,13:00,1.26,3.15,12.6,1957
+93ATA-260Atatürk İlkeleri ve İnkılap Tarihi II_Peyzaj Mimarlığı_AraSinav,93ATA-260Atatürk İlkeleri ve İnkılap Tarihi II_Peyzaj Mimarlığı_AraSinav,Peyzaj Mimarlığı,69,TS0003,2023-04-10,11:00,13:00,1.38,3.45,13.8,1957
+96ATA-280Atatürk İlkeleri ve İnkılap Tarihi 2_Sınıf Öğretmenliği_AraSinav,96ATA-280Atatürk İlkeleri ve İnkılap Tarihi 2_Sınıf Öğretmenliği_AraSinav,Sınıf Öğretmenliği,44,TS0003,2023-04-10,11:00,13:00,0.88,2.2,8.8,1957
+997IDE-30419.yy. İngiliz Romanı_İngiliz Dili ve Edebiyatı_AraSinav,997IDE-30419.yy. İngiliz Romanı_İngiliz Dili ve Edebiyatı_AraSinav,İngiliz Dili ve Edebiyatı,69,TS0003,2023-04-10,11:00,13:00,1.38,3.45,13.8,1957
+1117ING-102İngilizce II (Hazırlık Eğitimine Tabi Olmayan Öğrenciler İçin)_Eczacılık Fakültesi_AraSinav,1117ING-102İngilizce II (Hazırlık Eğitimine Tabi Olmayan Öğrenciler İçin)_Eczacılık Fakültesi_AraSinav,Eczacılık Fakültesi,12,TS0004,2023-04-10,12:00,14:00,0.24,0.6,2.4,86
+1672PEM-104Temel Tasarım_Peyzaj Mimarlığı_AraSinav,1672PEM-104Temel Tasarım_Peyzaj Mimarlığı_AraSinav,Peyzaj Mimarlığı,2,TS0004,2023-04-10,12:00,14:00,0.04,0.1,0.4,86
+1673PEM-210Kentsel Yeşil Alanlar ve Tasarımı_Peyzaj Mimarlığı_AraSinav,1673PEM-210Kentsel Yeşil Alanlar ve Tasarımı_Peyzaj Mimarlığı_AraSinav,Peyzaj Mimarlığı,3,TS0004,2023-04-10,12:00,14:00,0.06,0.15,0.6,86
+1674PEM-408Proje VI_Peyzaj Mimarlığı_AraSinav,1674PEM-408Proje VI_Peyzaj Mimarlığı_AraSinav,Peyzaj Mimarlığı,2,TS0004,2023-04-10,12:00,14:00,0.04,0.1,0.4,86
+1675PEM-458Görsel Analiz_Peyzaj Mimarlığı_AraSinav,1675PEM-458Görsel Analiz_Peyzaj Mimarlığı_AraSinav,Peyzaj Mimarlığı,10,TS0004,2023-04-10,12:00,14:00,0.2,0.5,2.0,86
+1686PLN-212Kentsel Coğrafi Bilgi Sistemleri_Şehir ve Bölge Planlama_AraSinav,1686PLN-212Kentsel Coğrafi Bilgi Sistemleri_Şehir ve Bölge Planlama_AraSinav,Şehir ve Bölge Planlama,4,TS0004,2023-04-10,12:00,14:00,0.08,0.2,0.8,86
+1720PMM-412Duyusal Tasarım_Peyzaj Mimarlığı_AraSinav,1720PMM-412Duyusal Tasarım_Peyzaj Mimarlığı_AraSinav,Peyzaj Mimarlığı,17,TS0004,2023-04-10,12:00,14:00,0.34,0.85,3.4,86
+193BIL-440Tasarım II_Bilgisayar Mühendisliği_AraSinav,193BIL-440Tasarım II_Bilgisayar Mühendisliği_AraSinav,Bilgisayar Mühendisliği,6,TS0004,2023-04-10,12:00,14:00,0.12,0.3,1.2,86
+194BIL-440Tasarım II_Bilgisayar Mühendisliği_AraSinav,194BIL-440Tasarım II_Bilgisayar Mühendisliği_AraSinav,Bilgisayar Mühendisliği,5,TS0004,2023-04-10,12:00,14:00,0.1,0.25,1.0,86
+200BIL-440Tasarım II_Bilgisayar Mühendisliği_AraSinav,200BIL-440Tasarım II_Bilgisayar Mühendisliği_AraSinav,Bilgisayar Mühendisliği,10,TS0004,2023-04-10,12:00,14:00,0.2,0.5,2.0,86
+2260YDY-001İngilizce Hazırlık_İşletme (İngilizce)_AraSinav,2260YDY-001İngilizce Hazırlık_İşletme (İngilizce)_AraSinav,İşletme (İngilizce),2,TS0004,2023-04-10,12:00,14:00,0.04,0.1,0.4,86
+47ARK-402Antik Dönem Resim Sanatı_Arkeoloji_AraSinav,47ARK-402Antik Dönem Resim Sanatı_Arkeoloji_AraSinav,Arkeoloji,3,TS0004,2023-04-10,12:00,14:00,0.06,0.15,0.6,86
+583FEN-406Öğretmenlik Uygulaması 2_Fen Bilgisi Öğretmenliği_AraSinav,583FEN-406Öğretmenlik Uygulaması 2_Fen Bilgisi Öğretmenliği_AraSinav,Fen Bilgisi Öğretmenliği,10,TS0004,2023-04-10,12:00,14:00,0.2,0.5,2.0,86

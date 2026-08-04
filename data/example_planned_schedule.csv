@@ -1,0 +1,11 @@
+exam_id,exam_name,student_count,department_id,date,start_time
+MATH101,Calculus I,120,Engineering,2026-07-01,09:00
+PHYS101,Physics I,95,Engineering,2026-07-01,09:00
+CS101,Introduction to Programming,180,Computer Engineering,2026-07-01,13:00
+CHEM101,General Chemistry,75,Engineering,2026-07-01,13:00
+ENG101,Academic English,210,Humanities,2026-07-02,09:00
+BIO101,General Biology,88,Science,2026-07-02,09:00
+STAT101,Statistics I,135,Engineering,2026-07-02,13:00
+HIST101,Modern History,64,Humanities,2026-07-02,13:00
+ECON101,Economics I,155,Economics,2026-07-03,09:00
+LAW101,Introduction to Law,142,Law,2026-07-03,13:00

@@ -1,0 +1,2 @@
+solver,success,feasible,is_best,objective_value,hard_constraint_violations,total_soft_penalty,load_variance,max_load,runtime_seconds,success_rate_pct
+graph,True,True,True,6561301.398809523,0,6561301.398809523,1297857.0666666667,2188.0,0.0,100.0

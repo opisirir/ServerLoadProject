@@ -1,0 +1,27 @@
+schedule,department_id,timeslot_id,exam_count,student_count
+optimized,Eczacılık Fakültesi,TS0002,16,1461
+optimized,Eczacılık Fakültesi,TS0001,14,1477
+optimized,Peyzaj Mimarlığı,TS0003,12,736
+optimized,Eczacılık Fakültesi,TS0003,9,525
+optimized,Şehir ve Bölge Planlama,TS0003,9,452
+optimized,Peyzaj Mimarlığı,TS0002,8,378
+optimized,Peyzaj Mimarlığı,TS0001,7,446
+optimized,Şehir ve Bölge Planlama,TS0001,5,215
+optimized,Bilgisayar Mühendisliği,TS0003,5,72
+optimized,Peyzaj Mimarlığı,TS0004,5,34
+optimized,Bilgisayar Mühendisliği,TS0001,3,40
+optimized,Bilgisayar Mühendisliği,TS0002,3,36
+optimized,Bilgisayar Mühendisliği,TS0004,3,21
+optimized,Şehir ve Bölge Planlama,TS0002,2,107
+optimized,Hemşirelik,TS0002,1,95
+optimized,İngiliz Dili ve Edebiyatı,TS0002,1,86
+optimized,İngiliz Dili ve Edebiyatı,TS0003,1,69
+optimized,Fen Bilgisi Öğretmenliği,TS0003,1,49
+optimized,Sınıf Öğretmenliği,TS0003,1,44
+optimized,Eczacılık Fakültesi,TS0004,1,12
+optimized,Arkeoloji,TS0003,1,10
+optimized,Arkeoloji,TS0001,1,10
+optimized,Fen Bilgisi Öğretmenliği,TS0004,1,10
+optimized,Şehir ve Bölge Planlama,TS0004,1,4
+optimized,Arkeoloji,TS0004,1,3
+optimized,İşletme (İngilizce),TS0004,1,2

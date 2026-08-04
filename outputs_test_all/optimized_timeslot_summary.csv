@@ -1,0 +1,7 @@
+schedule,timeslot_id,date,start_time,end_time,exam_count,student_count,cpu,ram,bandwidth
+optimized,TS0001,2026-01-07,09:00,11:00,2,215,4.3,10.75,43.0
+optimized,TS0002,2026-01-07,13:00,15:00,1,210,4.2,10.5,42.0
+optimized,TS0003,2026-02-07,09:00,11:00,1,180,3.6,9.0,36.0
+optimized,TS0004,2026-02-07,13:00,15:00,2,219,4.38,10.95,43.8
+optimized,TS0005,2026-03-07,09:00,11:00,2,210,4.2,10.5,42.0
+optimized,TS0006,2026-03-07,13:00,15:00,2,230,4.6,11.5,46.0

@@ -1,0 +1,4 @@
+/.venv/etc/jupyter/nbconfig/notebook.d
+/.venv/Lib/site-packages
+/.venv
+/__pycache__
