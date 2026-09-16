@@ -24,7 +24,7 @@ from visualization import generate_figures
 
 st.set_page_config(page_title="Exam Timetabling Optimizer", layout="wide")
 st.title("Exam Timetabling Optimizer")
-st.page_link("pages/1_Karsilastirma.py", label="Önce / Sonra Karşılaştırma grafikleri")
+st.page_link("pages/1_Comparison.py", label="Before / After Comparison charts")
 
 with st.sidebar:
     solver_name = st.selectbox("Solver", ["all", "hybrid", "graph", "ga", "sa"])
@@ -242,7 +242,9 @@ if st.button("Optimize", type="primary", disabled=not planned_file):
                             "before": planned_slot_df.copy(),
                             "after": optimized_slot_df.copy(),
                             "capacity": config.max_concurrent_students,
-                            "label": f"Son optimizasyon: {planned_file.name} · {result.solver_name} · referans: {reference_label}. Uygulamanın yüklediği ve birleştirdiği kayıtlar üzerinden hesaplanır.",
+                            "source_name": planned_file.name,
+                            "solver": result.solver_name,
+                            "label": f"Latest optimization: {planned_file.name} · {result.solver_name} · reference: {reference_label}. Calculated from the records loaded and grouped by the application.",
                         }
                     else:
                         st.session_state.pop("comparison_plans", None)

@@ -21,7 +21,7 @@ class ComparisonChartTests(unittest.TestCase):
         b = self.plan(["2023-04-12 12:00"], [100])
         curves = aligned_curves(a, b, 60)
         cropped = crop_day(curves, "2023-04-11")
-        self.assertEqual(cropped.iloc[0]['Önce'], 100)
+        self.assertEqual(cropped.iloc[0]['Before'], 100)
         self.assertEqual(cropped.iloc[-1].sum(), 0)
         self.assertEqual(daily_loads(a, b).sum().tolist(), [100, 100])
         self.assertEqual(curves.iloc[-1].sum(), 0)

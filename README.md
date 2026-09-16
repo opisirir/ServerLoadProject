@@ -35,7 +35,7 @@ python main.py --planned_schedule "C:\Users\Honour\My Drive\Makale\Server Load\D
 streamlit run app.py
 ```
 
-Ana sayfadaki **Önce / Sonra Karşılaştırma grafikleri** bağlantısı ayrı karşılaştırma sayfasını açar.
+Ana sayfadaki **Before / After Comparison charts** bağlantısı ayrı karşılaştırma sayfasını açar.
 Bu sayfa gönderilen CSV örneğini veya son optimizasyonun plan/sonuç çiftini gösterir.
 Eşzamanlı yük, günlük dağılım, tepe yük ve varsayımsal kaynak grafikleri bulunur;
 grafikler PNG, hesaplanan yükler CSV olarak indirilebilir. Ortak süre seçimi her iki

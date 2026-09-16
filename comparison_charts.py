@@ -12,20 +12,20 @@ def prepare_plan(frame: pd.DataFrame) -> pd.DataFrame:
     if "start_time" not in data and "timeslot_id" in data:
         data["start_time"] = data["timeslot_id"]
     if "start_time" not in data:
-        raise ValueError("Başlangıç saati bulunamadı.")
+        raise ValueError("Start time was not found.")
     counts = pd.to_numeric(data["student_count"], errors="coerce")
     dates = _normalize_date_series(data["date"])
     starts = pd.to_datetime(dates + " " + data["start_time"].astype(str).str.strip(), format="mixed", errors="coerce")
     if starts.isna().any() or (~np.isfinite(counts) | counts.lt(0) | counts.mod(1).ne(0)).any():
-        raise ValueError("Karşılaştırma verisinde geçersiz tarih, saat veya öğrenci sayısı var.")
+        raise ValueError("Comparison data contains an invalid date, time, or student count.")
     if data.empty or counts.sum() <= 0:
-        raise ValueError("Karşılaştırma için pozitif yük içeren bir plan gerekli.")
+        raise ValueError("Comparison requires a plan with a positive load.")
     return pd.DataFrame({"start": starts, "students": counts.astype(int)}).reset_index(drop=True)
 
 
 def concurrent_curve(plan: pd.DataFrame, minutes: int) -> pd.Series:
     if minutes <= 0:
-        raise ValueError("Süre sıfırdan büyük olmalı.")
+        raise ValueError("Duration must be greater than zero.")
     starts = pd.Series(plan.students.to_numpy(), index=pd.DatetimeIndex(plan.start))
     ends = pd.Series(-plan.students.to_numpy(), index=pd.DatetimeIndex(plan.start + pd.Timedelta(minutes=minutes)))
     # Net simultaneous starts/ends implement half-open [start, end) intervals.
@@ -35,13 +35,13 @@ def concurrent_curve(plan: pd.DataFrame, minutes: int) -> pd.Series:
 def aligned_curves(before: pd.DataFrame, after: pd.DataFrame, minutes: int) -> pd.DataFrame:
     a, b = concurrent_curve(before, minutes), concurrent_curve(after, minutes)
     grid = a.index.union(b.index).sort_values()
-    return pd.DataFrame({"Önce": a.reindex(grid).ffill().fillna(0), "Sonra": b.reindex(grid).ffill().fillna(0)}).astype(int)
+    return pd.DataFrame({"Before": a.reindex(grid).ffill().fillna(0), "After": b.reindex(grid).ffill().fillna(0)}).astype(int)
 
 
 def daily_loads(before: pd.DataFrame, after: pd.DataFrame) -> pd.DataFrame:
     def daily(plan):
         return plan.groupby(plan.start.dt.normalize()).students.sum()
-    return pd.concat([daily(before).rename("Önce"), daily(after).rename("Sonra")], axis=1).fillna(0).sort_index().astype(int)
+    return pd.concat([daily(before).rename("Before"), daily(after).rename("After")], axis=1).fillna(0).sort_index().astype(int)
 
 
 def hours_above(curve: pd.Series, capacity: int) -> float:
