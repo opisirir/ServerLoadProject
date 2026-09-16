@@ -3,6 +3,7 @@ from __future__ import annotations
 import json
 import re
 import unicodedata
+from datetime import date, datetime
 from pathlib import Path
 from typing import Dict, Iterable, List, Tuple
 
@@ -121,10 +122,9 @@ def kolonlari_esle(df: pd.DataFrame, gerekli_alanlar: Iterable[str], dosya_tipi:
     return eslesmis, mapping, eksik
 
 
-def _default_end_time(date_values: pd.Series, start_values: pd.Series, hours: int = 2) -> pd.Series:
-    combined = pd.to_datetime(date_values.astype(str) + " " + start_values.astype(str), errors="coerce", dayfirst=True)
-    ended = combined + pd.to_timedelta(hours, unit="h")
-    return ended.dt.strftime("%H:%M").fillna("")
+def _default_end_datetime(date_values: pd.Series, start_values: pd.Series, hours: int = 2) -> pd.Series:
+    combined = pd.to_datetime(_normalize_date_series(date_values) + " " + start_values.astype(str), errors="coerce", format="mixed")
+    return combined + pd.to_timedelta(hours, unit="h")
 
 
 def _temiz_str(seri: pd.Series, varsayilan: str = "") -> pd.Series:
@@ -132,12 +132,27 @@ def _temiz_str(seri: pd.Series, varsayilan: str = "") -> pd.Series:
 
 
 def _normalize_date_series(seri: pd.Series) -> pd.Series:
-    numeric = pd.to_numeric(seri, errors="coerce")
-    parsed_numeric = pd.to_datetime(numeric, unit="D", origin="1899-12-30", errors="coerce")
-    parsed_text = pd.to_datetime(seri.astype(str), errors="coerce", dayfirst=True)
-    parsed = parsed_numeric.fillna(parsed_text)
-    fallback = _temiz_str(seri)
-    return parsed.dt.strftime("%Y-%m-%d").fillna(fallback)
+    def normalize(value):
+        if pd.isna(value):
+            return ""
+        # Excel readers already convert date-formatted cells to timestamps.
+        # Converting these to numbers first produces nanoseconds, not Excel days.
+        if isinstance(value, (date, datetime, pd.Timestamp)):
+            return value.strftime("%Y-%m-%d")
+        text = str(value).strip()
+        numeric = pd.to_numeric(text, errors="coerce")
+        if pd.notna(numeric):
+            # Bound serials before pandas scales them to nanoseconds. Even with
+            # errors='coerce', huge floats can overflow under NumPy's raise mode.
+            if not -81182 <= numeric < 132321:
+                return text
+            parsed = pd.to_datetime(numeric, unit="D", origin="1899-12-30", errors="coerce")
+        else:
+            is_iso = re.match(r"^\d{4}-\d{2}-\d{2}(?:$|[ T])", text) is not None
+            parsed = pd.to_datetime(text, errors="coerce", dayfirst=not is_iso)
+        return parsed.strftime("%Y-%m-%d") if pd.notna(parsed) else text
+
+    return seri.map(normalize)
 
 
 def _derive_timeslots_from_plan(sinav_df: pd.DataFrame, config: ServerConfig) -> Tuple[pd.DataFrame, Dict[str, str], List[str]]:
@@ -149,7 +164,9 @@ def _derive_timeslots_from_plan(sinav_df: pd.DataFrame, config: ServerConfig) ->
     slot_df["start_time"] = _temiz_str(slot_df["start_time"])
     slot_df = slot_df.drop_duplicates().sort_values(["date", "start_time"]).reset_index(drop=True)
     slot_df["timeslot_id"] = ["TS" + str(i + 1).zfill(4) for i in range(len(slot_df))]
-    slot_df["end_time"] = _default_end_time(slot_df["date"], slot_df["start_time"])
+    ended = _default_end_datetime(slot_df["date"], slot_df["start_time"])
+    slot_df["end_time"] = ended.dt.strftime("%H:%M").fillna("")
+    slot_df["end_date"] = ended.dt.strftime("%Y-%m-%d").fillna("")
     slot_df["capacity"] = config.max_concurrent_students
     slot_df["max_cpu"] = config.max_cpu
     slot_df["max_ram"] = config.max_ram
@@ -251,10 +268,14 @@ def load_all_data(students_exams_path: str | None, exam_students_path: str, time
     if "timeslot_id" not in slot_df.columns:
         slot_df["timeslot_id"] = _temiz_str(slot_df["date"]) + "_" + _temiz_str(slot_df["start_time"])
     if "end_time" not in slot_df.columns:
-        slot_df["end_time"] = _default_end_time(slot_df["date"], slot_df["start_time"])
+        ended = _default_end_datetime(slot_df["date"], slot_df["start_time"])
+        slot_df["end_time"] = ended.dt.strftime("%H:%M").fillna("")
+        slot_df["end_date"] = ended.dt.strftime("%Y-%m-%d").fillna("")
     slot_df = slot_df.drop_duplicates(subset=["timeslot_id", "date", "start_time"])
     slot_df["timeslot_id"] = _temiz_str(slot_df["timeslot_id"])
     slot_df["date"] = _normalize_date_series(slot_df["date"])
+    if "end_date" in slot_df.columns:
+        slot_df["end_date"] = _normalize_date_series(slot_df["end_date"])
     slot_df["start_time"] = _temiz_str(slot_df["start_time"])
     slot_df["end_time"] = _temiz_str(slot_df["end_time"])
     if slot_df["timeslot_id"].duplicated().any():

@@ -51,7 +51,8 @@ def validate_data(kayit_df: pd.DataFrame, sinav_df: pd.DataFrame, slot_df: pd.Da
                 rapor["warnings"].append(f"{exam_id} student_count tutarsiz: dosya={beklenen}, kayit={bulunan}")
 
     parsed_start = pd.to_datetime(slot_df["date"].astype(str) + " " + slot_df["start_time"].astype(str), errors="coerce")
-    parsed_end = pd.to_datetime(slot_df["date"].astype(str) + " " + slot_df["end_time"].astype(str), errors="coerce")
+    end_dates = slot_df["end_date"] if "end_date" in slot_df.columns else slot_df["date"]
+    parsed_end = pd.to_datetime(end_dates.astype(str) + " " + slot_df["end_time"].astype(str), errors="coerce")
     if parsed_start.isna().any() or parsed_end.isna().any():
         rapor["warnings"].append("Bazi timeslot tarih/saat degerleri parse edilemedi.")
     if (parsed_end <= parsed_start).fillna(False).any():

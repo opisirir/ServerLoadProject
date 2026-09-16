@@ -1,0 +1,1345 @@
+{
+  "sources": {
+    "output": {
+      "path": "/Users/honour/My Drive/Makale/Server Load/ExampleFiles/2/2026-06-29T10-55_export.csv",
+      "sha256": "78ac96c797ac364a25195b4f2e81561d145f6317d77a7d8ac3eeda5b0bf3150e"
+    },
+    "slots": {
+      "path": "/Users/honour/My Drive/Makale/Server Load/ExampleFiles/timeslots_program_ready.csv",
+      "sha256": "9213b0db6a3884b09d3f720a7f175c08b4901385bbf72f6f1ac8b347412b13e0"
+    },
+    "raw": {
+      "path": "/Users/honour/My Drive/Makale/Server Load/HamVeriler/arasinavlar.xlsx",
+      "sha256": "aa9737a4c2c1b43dd0c04631c90d0e5d40b66c62d4a6ec364f74da56dcc9593d"
+    }
+  },
+  "raw_rows": 3558,
+  "output_rows": 2152,
+  "timeslot_rows": 43,
+  "enrollments": 196368,
+  "duplicate_exam_ids": 0,
+  "duplicate_slot_ids": 0,
+  "missing_output_cells": 0,
+  "missing_slot_cells": 0,
+  "invalid_counts": 0,
+  "identifier_or_count_mismatches": 0,
+  "unmatched_slot_ids": 0,
+  "slot_field_mismatches": {
+    "date": 0,
+    "start_time": 0,
+    "end_time": 0
+  },
+  "resource_formula_errors": {
+    "cpu_usage": 0,
+    "ram_usage": 0,
+    "bandwidth_usage": 0
+  },
+  "reported_slot_total_errors": 0,
+  "invalid_intervals": 0,
+  "adjacent_overlap_count": 0,
+  "duration_counts_minutes": {
+    "5.0": 5,
+    "10.0": 5,
+    "15.0": 15,
+    "30.0": 16,
+    "60.0": 2
+  },
+  "raw_unique_dates": 25,
+  "output_unique_dates": 1,
+  "raw_date_range": [
+    "2023-03-28",
+    "2023-06-12"
+  ],
+  "original_enrollments_on_output_day": 12140,
+  "slot_load_min": 4398,
+  "slot_load_max": 6612,
+  "slot_load_mean": 4566.697674418605,
+  "slot_load_sample_variance": 228512.64451827234,
+  "provided_capacity_violation_slots": 0,
+  "default_capacity_violation_slots": 3,
+  "peak_using_stated_end_times": {
+    "peak": 6612,
+    "time": "2023-04-10 12:00:00"
+  },
+  "duration_sensitivity": [
+    {
+      "assumed_minutes": 30,
+      "raw": {
+        "peak": 16899,
+        "time": "2023-04-16 00:01:00"
+      },
+      "output": {
+        "peak": 17775,
+        "time": "2023-04-10 12:50:00"
+      },
+      "interpretation": "Duration sensitivity only; actual exam duration unverified"
+    },
+    {
+      "assumed_minutes": 60,
+      "raw": {
+        "peak": 16899,
+        "time": "2023-04-16 00:01:00"
+      },
+      "output": {
+        "peak": 35542,
+        "time": "2023-04-10 13:25:00"
+      },
+      "interpretation": "Duration sensitivity only; actual exam duration unverified"
+    },
+    {
+      "assumed_minutes": 120,
+      "raw": {
+        "peak": 16981,
+        "time": "2023-04-16 00:01:00"
+      },
+      "output": {
+        "peak": 55649,
+        "time": "2023-04-10 13:30:00"
+      },
+      "interpretation": "Duration sensitivity only; actual exam duration unverified"
+    }
+  ],
+  "merged_conflicting_course_codes": 549,
+  "department_total_differences": [
+    {
+      "department": "Adalet",
+      "raw": 2258,
+      "output": 1989,
+      "difference": -269
+    },
+    {
+      "department": "Adalet İ.Ö.",
+      "raw": 951,
+      "output": 701,
+      "difference": -250
+    },
+    {
+      "department": "Anestezi",
+      "raw": 1206,
+      "output": 715,
+      "difference": -491
+    },
+    {
+      "department": "Arapça Öğretmenliği",
+      "raw": 1283,
+      "output": 901,
+      "difference": -382
+    },
+    {
+      "department": "Arkeoloji",
+      "raw": 648,
+      "output": 486,
+      "difference": -162
+    },
+    {
+      "department": "Ağız ve Diş Sağlığı",
+      "raw": 1364,
+      "output": 627,
+      "difference": -737
+    },
+    {
+      "department": "Bankacılık ve Finans",
+      "raw": 418,
+      "output": 370,
+      "difference": -48
+    },
+    {
+      "department": "Bankacılık ve Finans İ.Ö.",
+      "raw": 311,
+      "output": 359,
+      "difference": 48
+    },
+    {
+      "department": "Beden Eğitimi ve Spor Öğretmenliği",
+      "raw": 1058,
+      "output": 1015,
+      "difference": -43
+    },
+    {
+      "department": "Bilgisayar Mühendisliği",
+      "raw": 3239,
+      "output": 3755,
+      "difference": 516
+    },
+    {
+      "department": "Bilgisayar Mühendisliği İ.Ö.",
+      "raw": 2383,
+      "output": 1677,
+      "difference": -706
+    },
+    {
+      "department": "Bilgisayar ve Öğretim Teknolojileri Öğretmenliği",
+      "raw": 5,
+      "output": 0,
+      "difference": -5
+    },
+    {
+      "department": "Biyoloji",
+      "raw": 1438,
+      "output": 1162,
+      "difference": -276
+    },
+    {
+      "department": "Coğrafya",
+      "raw": 2624,
+      "output": 2470,
+      "difference": -154
+    },
+    {
+      "department": "Coğrafya İ.Ö.",
+      "raw": 1358,
+      "output": 1156,
+      "difference": -202
+    },
+    {
+      "department": "Diş Protez Teknolojisi",
+      "raw": 774,
+      "output": 1087,
+      "difference": 313
+    },
+    {
+      "department": "Drama Yazarlığı ve Dramaturji",
+      "raw": 9,
+      "output": 6,
+      "difference": -3
+    },
+    {
+      "department": "Ebelik",
+      "raw": 1519,
+      "output": 1330,
+      "difference": -189
+    },
+    {
+      "department": "Eczacılık Fakültesi",
+      "raw": 4246,
+      "output": 4059,
+      "difference": -187
+    },
+    {
+      "department": "Ekonometri",
+      "raw": 752,
+      "output": 1036,
+      "difference": 284
+    },
+    {
+      "department": "Elektrik-Elektronik Mühendisliği",
+      "raw": 2669,
+      "output": 2697,
+      "difference": 28
+    },
+    {
+      "department": "Elektrik-Elektronik Mühendisliği İ.Ö.",
+      "raw": 1665,
+      "output": 1216,
+      "difference": -449
+    },
+    {
+      "department": "Endüstri Mühendisliği",
+      "raw": 2505,
+      "output": 2437,
+      "difference": -68
+    },
+    {
+      "department": "Endüstri Mühendisliği İ.Ö.",
+      "raw": 2065,
+      "output": 1501,
+      "difference": -564
+    },
+    {
+      "department": "Engelli Bakımı ve Rehabilitasyon",
+      "raw": 1430,
+      "output": 1208,
+      "difference": -222
+    },
+    {
+      "department": "Engelli Bakımı ve Rehabilitasyon İ.Ö.",
+      "raw": 47,
+      "output": 0,
+      "difference": -47
+    },
+    {
+      "department": "Felsefe",
+      "raw": 653,
+      "output": 622,
+      "difference": -31
+    },
+    {
+      "department": "Fen Bilgisi Öğretmenliği",
+      "raw": 2913,
+      "output": 2794,
+      "difference": -119
+    },
+    {
+      "department": "Finans ve Bankacılık",
+      "raw": 1997,
+      "output": 1499,
+      "difference": -498
+    },
+    {
+      "department": "Finans ve Bankacılık İ.Ö.",
+      "raw": 267,
+      "output": 249,
+      "difference": -18
+    },
+    {
+      "department": "Fizik",
+      "raw": 400,
+      "output": 339,
+      "difference": -61
+    },
+    {
+      "department": "Fizyoterapi",
+      "raw": 2000,
+      "output": 1695,
+      "difference": -305
+    },
+    {
+      "department": "Fizyoterapi ve Rehabilitasyon",
+      "raw": 2969,
+      "output": 2730,
+      "difference": -239
+    },
+    {
+      "department": "Fizyoterapi İ.Ö.",
+      "raw": 169,
+      "output": 313,
+      "difference": 144
+    },
+    {
+      "department": "Gazetecilik",
+      "raw": 2641,
+      "output": 2023,
+      "difference": -618
+    },
+    {
+      "department": "Gazetecilik İ.Ö.",
+      "raw": 1829,
+      "output": 2873,
+      "difference": 1044
+    },
+    {
+      "department": "Grafik Tasarımı",
+      "raw": 597,
+      "output": 358,
+      "difference": -239
+    },
+    {
+      "department": "Görsel İletişim Tasarımı",
+      "raw": 1199,
+      "output": 988,
+      "difference": -211
+    },
+    {
+      "department": "Gıda Mühendisliği",
+      "raw": 494,
+      "output": 521,
+      "difference": 27
+    },
+    {
+      "department": "Halkla İlişkiler ve Tanıtım",
+      "raw": 3180,
+      "output": 3474,
+      "difference": 294
+    },
+    {
+      "department": "Halkla İlişkiler ve Tanıtım İ.Ö.",
+      "raw": 3035,
+      "output": 1177,
+      "difference": -1858
+    },
+    {
+      "department": "Havacılık Yönetimi",
+      "raw": 1296,
+      "output": 1069,
+      "difference": -227
+    },
+    {
+      "department": "Hemşirelik",
+      "raw": 5438,
+      "output": 5014,
+      "difference": -424
+    },
+    {
+      "department": "Hukuk",
+      "raw": 7428,
+      "output": 13481,
+      "difference": 6053
+    },
+    {
+      "department": "Jeofizik Mühendisliği",
+      "raw": 567,
+      "output": 574,
+      "difference": 7
+    },
+    {
+      "department": "Jeofizik Mühendisliği İ.Ö.",
+      "raw": 344,
+      "output": 337,
+      "difference": -7
+    },
+    {
+      "department": "Kimya",
+      "raw": 835,
+      "output": 718,
+      "difference": -117
+    },
+    {
+      "department": "Kimya Mühendisliği",
+      "raw": 1080,
+      "output": 462,
+      "difference": -618
+    },
+    {
+      "department": "Makine Mühendisliği",
+      "raw": 3922,
+      "output": 3993,
+      "difference": 71
+    },
+    {
+      "department": "Makine Mühendisliği İ.Ö.",
+      "raw": 3764,
+      "output": 2268,
+      "difference": -1496
+    },
+    {
+      "department": "Maliye",
+      "raw": 2804,
+      "output": 1983,
+      "difference": -821
+    },
+    {
+      "department": "Maliye İ.Ö.",
+      "raw": 808,
+      "output": 375,
+      "difference": -433
+    },
+    {
+      "department": "Matematik",
+      "raw": 1687,
+      "output": 1463,
+      "difference": -224
+    },
+    {
+      "department": "Mimarlık",
+      "raw": 2737,
+      "output": 2500,
+      "difference": -237
+    },
+    {
+      "department": "Müzikoloji",
+      "raw": 371,
+      "output": 406,
+      "difference": 35
+    },
+    {
+      "department": "Otomotiv Mühendisliği",
+      "raw": 1127,
+      "output": 1670,
+      "difference": 543
+    },
+    {
+      "department": "Peyzaj Mimarlığı",
+      "raw": 1801,
+      "output": 1605,
+      "difference": -196
+    },
+    {
+      "department": "Psikoloji",
+      "raw": 2063,
+      "output": 1873,
+      "difference": -190
+    },
+    {
+      "department": "Radyo, Televizyon ve Sinema",
+      "raw": 2793,
+      "output": 2937,
+      "difference": 144
+    },
+    {
+      "department": "Radyo, Televizyon ve Sinema İ.Ö.",
+      "raw": 2710,
+      "output": 1982,
+      "difference": -728
+    },
+    {
+      "department": "Resim",
+      "raw": 196,
+      "output": 177,
+      "difference": -19
+    },
+    {
+      "department": "Sahne Sanatları Dramatik Yazarlık",
+      "raw": 19,
+      "output": 10,
+      "difference": -9
+    },
+    {
+      "department": "Sahne Sanatları Oyunculuk",
+      "raw": 324,
+      "output": 312,
+      "difference": -12
+    },
+    {
+      "department": "Sahne Sanatları Sahne Tasarımı",
+      "raw": 33,
+      "output": 41,
+      "difference": 8
+    },
+    {
+      "department": "Sanat Tarihi",
+      "raw": 1697,
+      "output": 1773,
+      "difference": 76
+    },
+    {
+      "department": "Sağlık Yönetimi",
+      "raw": 2374,
+      "output": 2437,
+      "difference": 63
+    },
+    {
+      "department": "Sağlık Yönetimi İ.Ö.",
+      "raw": 1694,
+      "output": 1052,
+      "difference": -642
+    },
+    {
+      "department": "Siyaset Bilimi ve Kamu Yönetimi",
+      "raw": 2920,
+      "output": 2047,
+      "difference": -873
+    },
+    {
+      "department": "Siyaset Bilimi ve Kamu Yönetimi İ.Ö.",
+      "raw": 1891,
+      "output": 2207,
+      "difference": 316
+    },
+    {
+      "department": "Sosyal Bilgiler Öğretmenliği",
+      "raw": 968,
+      "output": 1104,
+      "difference": 136
+    },
+    {
+      "department": "Sosyal Hizmet",
+      "raw": 1715,
+      "output": 1227,
+      "difference": -488
+    },
+    {
+      "department": "Sosyal Hizmetler",
+      "raw": 1227,
+      "output": 1008,
+      "difference": -219
+    },
+    {
+      "department": "Sosyal Hizmetler İ.Ö.",
+      "raw": 90,
+      "output": 106,
+      "difference": 16
+    },
+    {
+      "department": "Sosyoloji",
+      "raw": 1943,
+      "output": 2194,
+      "difference": 251
+    },
+    {
+      "department": "Sosyoloji İ.Ö.",
+      "raw": 715,
+      "output": 493,
+      "difference": -222
+    },
+    {
+      "department": "Spor Yöneticiliği",
+      "raw": 1183,
+      "output": 815,
+      "difference": -368
+    },
+    {
+      "department": "Sınıf Öğretmenliği",
+      "raw": 1223,
+      "output": 1911,
+      "difference": 688
+    },
+    {
+      "department": "Tarih",
+      "raw": 2321,
+      "output": 1611,
+      "difference": -710
+    },
+    {
+      "department": "Tarih İ.Ö.",
+      "raw": 1779,
+      "output": 1730,
+      "difference": -49
+    },
+    {
+      "department": "Tekstil Mühendisliği",
+      "raw": 308,
+      "output": 325,
+      "difference": 17
+    },
+    {
+      "department": "Turizm İşletmeciliği",
+      "raw": 595,
+      "output": 636,
+      "difference": 41
+    },
+    {
+      "department": "Türk Dili ve Edebiyatı",
+      "raw": 2383,
+      "output": 2333,
+      "difference": -50
+    },
+    {
+      "department": "Türk Dili ve Edebiyatı İ.Ö.",
+      "raw": 6332,
+      "output": 6128,
+      "difference": -204
+    },
+    {
+      "department": "Türkçe Öğretmenliği",
+      "raw": 1784,
+      "output": 1889,
+      "difference": 105
+    },
+    {
+      "department": "Tıbbi Dokümantasyon ve Sekreterlik",
+      "raw": 1233,
+      "output": 921,
+      "difference": -312
+    },
+    {
+      "department": "Tıbbi Görüntüleme Teknikleri",
+      "raw": 1907,
+      "output": 1299,
+      "difference": -608
+    },
+    {
+      "department": "Tıbbi Görüntüleme Teknikleri İ.Ö.",
+      "raw": 393,
+      "output": 453,
+      "difference": 60
+    },
+    {
+      "department": "Tıbbi Laboratuvar Teknikleri",
+      "raw": 1386,
+      "output": 1687,
+      "difference": 301
+    },
+    {
+      "department": "Tıbbi Laboratuvar Teknikleri İ.Ö.",
+      "raw": 176,
+      "output": 0,
+      "difference": -176
+    },
+    {
+      "department": "Uluslararası İlişkiler",
+      "raw": 2844,
+      "output": 3142,
+      "difference": 298
+    },
+    {
+      "department": "Uluslararası İlişkiler İ.Ö.",
+      "raw": 598,
+      "output": 415,
+      "difference": -183
+    },
+    {
+      "department": "Yaşlı Bakımı",
+      "raw": 2117,
+      "output": 1838,
+      "difference": -279
+    },
+    {
+      "department": "Çalışma Ekonomisi ve Endüstri İlişkileri",
+      "raw": 1464,
+      "output": 1285,
+      "difference": -179
+    },
+    {
+      "department": "Çevre Mühendisliği",
+      "raw": 285,
+      "output": 201,
+      "difference": -84
+    },
+    {
+      "department": "Çevre Mühendisliği İ.Ö.",
+      "raw": 84,
+      "output": 168,
+      "difference": 84
+    },
+    {
+      "department": "Çocuk Gelişimi",
+      "raw": 2097,
+      "output": 1660,
+      "difference": -437
+    },
+    {
+      "department": "Çocuk Gelişimi İ.Ö.",
+      "raw": 321,
+      "output": 418,
+      "difference": 97
+    },
+    {
+      "department": "İktisat",
+      "raw": 1994,
+      "output": 1841,
+      "difference": -153
+    },
+    {
+      "department": "İlahiyat (Arapça Hazırlık)",
+      "raw": 9029,
+      "output": 17901,
+      "difference": 8872
+    },
+    {
+      "department": "İlahiyat İ.Ö. (Arapça Hazırlık)",
+      "raw": 5190,
+      "output": 6802,
+      "difference": 1612
+    },
+    {
+      "department": "İlk ve Acil Yardım",
+      "raw": 2520,
+      "output": 1480,
+      "difference": -1040
+    },
+    {
+      "department": "İlk ve Acil Yardım İ.Ö.",
+      "raw": 308,
+      "output": 545,
+      "difference": 237
+    },
+    {
+      "department": "İlköğretim Matematik Öğretmenliği",
+      "raw": 1529,
+      "output": 1085,
+      "difference": -444
+    },
+    {
+      "department": "İngiliz Dili ve Edebiyatı",
+      "raw": 2281,
+      "output": 2538,
+      "difference": 257
+    },
+    {
+      "department": "İngilizce Öğretmenliği",
+      "raw": 1737,
+      "output": 1746,
+      "difference": 9
+    },
+    {
+      "department": "İnsan Kaynakları Yönetimi",
+      "raw": 1929,
+      "output": 2058,
+      "difference": 129
+    },
+    {
+      "department": "İnşaat Mühendisliği",
+      "raw": 3006,
+      "output": 3871,
+      "difference": 865
+    },
+    {
+      "department": "İnşaat Mühendisliği İ.Ö.",
+      "raw": 405,
+      "output": 129,
+      "difference": -276
+    },
+    {
+      "department": "İstatistik",
+      "raw": 703,
+      "output": 409,
+      "difference": -294
+    },
+    {
+      "department": "İşletme",
+      "raw": 3133,
+      "output": 2996,
+      "difference": -137
+    },
+    {
+      "department": "İşletme (İngilizce)",
+      "raw": 402,
+      "output": 323,
+      "difference": -79
+    },
+    {
+      "department": "Şehir ve Bölge Planlama",
+      "raw": 1184,
+      "output": 1010,
+      "difference": -174
+    }
+  ],
+  "slot_checks": [
+    {
+      "timeslot_id": 101,
+      "date": "2023-04-10",
+      "start_time": "08:00",
+      "end_time": "08:30",
+      "students": 4455,
+      "cpu": 89.10000000000001,
+      "ram": 222.75,
+      "bandwidth": 891.0,
+      "provided_capacity_violation": false,
+      "default_capacity_violation": false
+    },
+    {
+      "timeslot_id": 102,
+      "date": "2023-04-10",
+      "start_time": "08:30",
+      "end_time": "09:00",
+      "students": 4398,
+      "cpu": 87.96000000000001,
+      "ram": 219.9,
+      "bandwidth": 879.6,
+      "provided_capacity_violation": false,
+      "default_capacity_violation": false
+    },
+    {
+      "timeslot_id": 103,
+      "date": "2023-04-10",
+      "start_time": "09:00",
+      "end_time": "09:15",
+      "students": 4422,
+      "cpu": 88.44,
+      "ram": 221.10000000000002,
+      "bandwidth": 884.4000000000001,
+      "provided_capacity_violation": false,
+      "default_capacity_violation": false
+    },
+    {
+      "timeslot_id": 104,
+      "date": "2023-04-10",
+      "start_time": "09:15",
+      "end_time": "09:30",
+      "students": 4419,
+      "cpu": 88.38,
+      "ram": 220.95000000000002,
+      "bandwidth": 883.8000000000001,
+      "provided_capacity_violation": false,
+      "default_capacity_violation": false
+    },
+    {
+      "timeslot_id": 105,
+      "date": "2023-04-10",
+      "start_time": "09:30",
+      "end_time": "09:45",
+      "students": 4469,
+      "cpu": 89.38,
+      "ram": 223.45000000000002,
+      "bandwidth": 893.8000000000001,
+      "provided_capacity_violation": false,
+      "default_capacity_violation": false
+    },
+    {
+      "timeslot_id": 106,
+      "date": "2023-04-10",
+      "start_time": "09:45",
+      "end_time": "10:00",
+      "students": 4402,
+      "cpu": 88.04,
+      "ram": 220.10000000000002,
+      "bandwidth": 880.4000000000001,
+      "provided_capacity_violation": false,
+      "default_capacity_violation": false
+    },
+    {
+      "timeslot_id": 107,
+      "date": "2023-04-10",
+      "start_time": "10:00",
+      "end_time": "10:30",
+      "students": 4423,
+      "cpu": 88.46000000000001,
+      "ram": 221.15,
+      "bandwidth": 884.6,
+      "provided_capacity_violation": false,
+      "default_capacity_violation": false
+    },
+    {
+      "timeslot_id": 108,
+      "date": "2023-04-10",
+      "start_time": "10:30",
+      "end_time": "10:45",
+      "students": 4457,
+      "cpu": 89.14,
+      "ram": 222.85000000000002,
+      "bandwidth": 891.4000000000001,
+      "provided_capacity_violation": false,
+      "default_capacity_violation": false
+    },
+    {
+      "timeslot_id": 109,
+      "date": "2023-04-10",
+      "start_time": "10:45",
+      "end_time": "10:55",
+      "students": 4461,
+      "cpu": 89.22,
+      "ram": 223.05,
+      "bandwidth": 892.2,
+      "provided_capacity_violation": false,
+      "default_capacity_violation": false
+    },
+    {
+      "timeslot_id": 110,
+      "date": "2023-04-10",
+      "start_time": "10:55",
+      "end_time": "11:00",
+      "students": 4471,
+      "cpu": 89.42,
+      "ram": 223.55,
+      "bandwidth": 894.2,
+      "provided_capacity_violation": false,
+      "default_capacity_violation": false
+    },
+    {
+      "timeslot_id": 111,
+      "date": "2023-04-10",
+      "start_time": "11:00",
+      "end_time": "11:30",
+      "students": 4407,
+      "cpu": 88.14,
+      "ram": 220.35000000000002,
+      "bandwidth": 881.4000000000001,
+      "provided_capacity_violation": false,
+      "default_capacity_violation": false
+    },
+    {
+      "timeslot_id": 112,
+      "date": "2023-04-10",
+      "start_time": "11:30",
+      "end_time": "11:45",
+      "students": 4441,
+      "cpu": 88.82000000000001,
+      "ram": 222.05,
+      "bandwidth": 888.2,
+      "provided_capacity_violation": false,
+      "default_capacity_violation": false
+    },
+    {
+      "timeslot_id": 113,
+      "date": "2023-04-10",
+      "start_time": "11:45",
+      "end_time": "12:00",
+      "students": 4468,
+      "cpu": 89.36,
+      "ram": 223.4,
+      "bandwidth": 893.6,
+      "provided_capacity_violation": false,
+      "default_capacity_violation": false
+    },
+    {
+      "timeslot_id": 114,
+      "date": "2023-04-10",
+      "start_time": "12:00",
+      "end_time": "12:15",
+      "students": 6612,
+      "cpu": 132.24,
+      "ram": 330.6,
+      "bandwidth": 1322.4,
+      "provided_capacity_violation": false,
+      "default_capacity_violation": true
+    },
+    {
+      "timeslot_id": 115,
+      "date": "2023-04-10",
+      "start_time": "12:15",
+      "end_time": "12:30",
+      "students": 4580,
+      "cpu": 91.60000000000001,
+      "ram": 229.0,
+      "bandwidth": 916.0,
+      "provided_capacity_violation": false,
+      "default_capacity_violation": false
+    },
+    {
+      "timeslot_id": 116,
+      "date": "2023-04-10",
+      "start_time": "12:30",
+      "end_time": "12:40",
+      "students": 4452,
+      "cpu": 89.04,
+      "ram": 222.60000000000002,
+      "bandwidth": 890.4000000000001,
+      "provided_capacity_violation": false,
+      "default_capacity_violation": false
+    },
+    {
+      "timeslot_id": 117,
+      "date": "2023-04-10",
+      "start_time": "12:40",
+      "end_time": "12:45",
+      "students": 4436,
+      "cpu": 88.72,
+      "ram": 221.8,
+      "bandwidth": 887.2,
+      "provided_capacity_violation": false,
+      "default_capacity_violation": false
+    },
+    {
+      "timeslot_id": 118,
+      "date": "2023-04-10",
+      "start_time": "12:45",
+      "end_time": "12:50",
+      "students": 4451,
+      "cpu": 89.02,
+      "ram": 222.55,
+      "bandwidth": 890.2,
+      "provided_capacity_violation": false,
+      "default_capacity_violation": false
+    },
+    {
+      "timeslot_id": 119,
+      "date": "2023-04-10",
+      "start_time": "12:50",
+      "end_time": "13:00",
+      "students": 4436,
+      "cpu": 88.72,
+      "ram": 221.8,
+      "bandwidth": 887.2,
+      "provided_capacity_violation": false,
+      "default_capacity_violation": false
+    },
+    {
+      "timeslot_id": 120,
+      "date": "2023-04-10",
+      "start_time": "13:00",
+      "end_time": "13:10",
+      "students": 4446,
+      "cpu": 88.92,
+      "ram": 222.3,
+      "bandwidth": 889.2,
+      "provided_capacity_violation": false,
+      "default_capacity_violation": false
+    },
+    {
+      "timeslot_id": 121,
+      "date": "2023-04-10",
+      "start_time": "13:10",
+      "end_time": "13:20",
+      "students": 4437,
+      "cpu": 88.74,
+      "ram": 221.85000000000002,
+      "bandwidth": 887.4000000000001,
+      "provided_capacity_violation": false,
+      "default_capacity_violation": false
+    },
+    {
+      "timeslot_id": 122,
+      "date": "2023-04-10",
+      "start_time": "13:20",
+      "end_time": "13:25",
+      "students": 4432,
+      "cpu": 88.64,
+      "ram": 221.60000000000002,
+      "bandwidth": 886.4000000000001,
+      "provided_capacity_violation": false,
+      "default_capacity_violation": false
+    },
+    {
+      "timeslot_id": 123,
+      "date": "2023-04-10",
+      "start_time": "13:25",
+      "end_time": "13:30",
+      "students": 4452,
+      "cpu": 89.04,
+      "ram": 222.60000000000002,
+      "bandwidth": 890.4000000000001,
+      "provided_capacity_violation": false,
+      "default_capacity_violation": false
+    },
+    {
+      "timeslot_id": 124,
+      "date": "2023-04-10",
+      "start_time": "13:30",
+      "end_time": "14:00",
+      "students": 4447,
+      "cpu": 88.94,
+      "ram": 222.35000000000002,
+      "bandwidth": 889.4000000000001,
+      "provided_capacity_violation": false,
+      "default_capacity_violation": false
+    },
+    {
+      "timeslot_id": 125,
+      "date": "2023-04-10",
+      "start_time": "14:00",
+      "end_time": "14:30",
+      "students": 4416,
+      "cpu": 88.32000000000001,
+      "ram": 220.8,
+      "bandwidth": 883.2,
+      "provided_capacity_violation": false,
+      "default_capacity_violation": false
+    },
+    {
+      "timeslot_id": 126,
+      "date": "2023-04-10",
+      "start_time": "14:30",
+      "end_time": "15:00",
+      "students": 4442,
+      "cpu": 88.84,
+      "ram": 222.10000000000002,
+      "bandwidth": 888.4000000000001,
+      "provided_capacity_violation": false,
+      "default_capacity_violation": false
+    },
+    {
+      "timeslot_id": 127,
+      "date": "2023-04-10",
+      "start_time": "15:00",
+      "end_time": "15:15",
+      "students": 4440,
+      "cpu": 88.8,
+      "ram": 222.0,
+      "bandwidth": 888.0,
+      "provided_capacity_violation": false,
+      "default_capacity_violation": false
+    },
+    {
+      "timeslot_id": 128,
+      "date": "2023-04-10",
+      "start_time": "15:15",
+      "end_time": "15:30",
+      "students": 4440,
+      "cpu": 88.8,
+      "ram": 222.0,
+      "bandwidth": 888.0,
+      "provided_capacity_violation": false,
+      "default_capacity_violation": false
+    },
+    {
+      "timeslot_id": 129,
+      "date": "2023-04-10",
+      "start_time": "15:30",
+      "end_time": "16:00",
+      "students": 4440,
+      "cpu": 88.8,
+      "ram": 222.0,
+      "bandwidth": 888.0,
+      "provided_capacity_violation": false,
+      "default_capacity_violation": false
+    },
+    {
+      "timeslot_id": 130,
+      "date": "2023-04-10",
+      "start_time": "16:00",
+      "end_time": "16:30",
+      "students": 4425,
+      "cpu": 88.5,
+      "ram": 221.25,
+      "bandwidth": 885.0,
+      "provided_capacity_violation": false,
+      "default_capacity_violation": false
+    },
+    {
+      "timeslot_id": 131,
+      "date": "2023-04-10",
+      "start_time": "16:30",
+      "end_time": "17:00",
+      "students": 4447,
+      "cpu": 88.94,
+      "ram": 222.35000000000002,
+      "bandwidth": 889.4000000000001,
+      "provided_capacity_violation": false,
+      "default_capacity_violation": false
+    },
+    {
+      "timeslot_id": 132,
+      "date": "2023-04-10",
+      "start_time": "17:00",
+      "end_time": "17:30",
+      "students": 4444,
+      "cpu": 88.88,
+      "ram": 222.20000000000002,
+      "bandwidth": 888.8000000000001,
+      "provided_capacity_violation": false,
+      "default_capacity_violation": false
+    },
+    {
+      "timeslot_id": 133,
+      "date": "2023-04-10",
+      "start_time": "17:30",
+      "end_time": "18:00",
+      "students": 4445,
+      "cpu": 88.9,
+      "ram": 222.25,
+      "bandwidth": 889.0,
+      "provided_capacity_violation": false,
+      "default_capacity_violation": false
+    },
+    {
+      "timeslot_id": 134,
+      "date": "2023-04-10",
+      "start_time": "18:00",
+      "end_time": "18:15",
+      "students": 4434,
+      "cpu": 88.68,
+      "ram": 221.70000000000002,
+      "bandwidth": 886.8000000000001,
+      "provided_capacity_violation": false,
+      "default_capacity_violation": false
+    },
+    {
+      "timeslot_id": 135,
+      "date": "2023-04-10",
+      "start_time": "18:15",
+      "end_time": "18:30",
+      "students": 4444,
+      "cpu": 88.88,
+      "ram": 222.20000000000002,
+      "bandwidth": 888.8000000000001,
+      "provided_capacity_violation": false,
+      "default_capacity_violation": false
+    },
+    {
+      "timeslot_id": 136,
+      "date": "2023-04-10",
+      "start_time": "18:30",
+      "end_time": "19:00",
+      "students": 5415,
+      "cpu": 108.3,
+      "ram": 270.75,
+      "bandwidth": 1083.0,
+      "provided_capacity_violation": false,
+      "default_capacity_violation": true
+    },
+    {
+      "timeslot_id": 137,
+      "date": "2023-04-10",
+      "start_time": "19:00",
+      "end_time": "20:00",
+      "students": 4451,
+      "cpu": 89.02,
+      "ram": 222.55,
+      "bandwidth": 890.2,
+      "provided_capacity_violation": false,
+      "default_capacity_violation": false
+    },
+    {
+      "timeslot_id": 138,
+      "date": "2023-04-10",
+      "start_time": "20:00",
+      "end_time": "20:30",
+      "students": 4450,
+      "cpu": 89.0,
+      "ram": 222.5,
+      "bandwidth": 890.0,
+      "provided_capacity_violation": false,
+      "default_capacity_violation": false
+    },
+    {
+      "timeslot_id": 139,
+      "date": "2023-04-10",
+      "start_time": "20:30",
+      "end_time": "21:00",
+      "students": 6581,
+      "cpu": 131.62,
+      "ram": 329.05,
+      "bandwidth": 1316.2,
+      "provided_capacity_violation": false,
+      "default_capacity_violation": true
+    },
+    {
+      "timeslot_id": 140,
+      "date": "2023-04-10",
+      "start_time": "21:00",
+      "end_time": "21:15",
+      "students": 4402,
+      "cpu": 88.04,
+      "ram": 220.10000000000002,
+      "bandwidth": 880.4000000000001,
+      "provided_capacity_violation": false,
+      "default_capacity_violation": false
+    },
+    {
+      "timeslot_id": 141,
+      "date": "2023-04-10",
+      "start_time": "21:15",
+      "end_time": "21:30",
+      "students": 4439,
+      "cpu": 88.78,
+      "ram": 221.95000000000002,
+      "bandwidth": 887.8000000000001,
+      "provided_capacity_violation": false,
+      "default_capacity_violation": false
+    },
+    {
+      "timeslot_id": 142,
+      "date": "2023-04-10",
+      "start_time": "21:30",
+      "end_time": "22:00",
+      "students": 4436,
+      "cpu": 88.72,
+      "ram": 221.8,
+      "bandwidth": 887.2,
+      "provided_capacity_violation": false,
+      "default_capacity_violation": false
+    },
+    {
+      "timeslot_id": 143,
+      "date": "2023-04-10",
+      "start_time": "22:00",
+      "end_time": "23:00",
+      "students": 4503,
+      "cpu": 90.06,
+      "ram": 225.15,
+      "bandwidth": 900.6,
+      "provided_capacity_violation": false,
+      "default_capacity_violation": false
+    }
+  ],
+  "common_course_examples": [
+    {
+      "exam_id": "TUR-270",
+      "student_count": 6612,
+      "date": "2023-04-10",
+      "start_time": "12:00",
+      "end_time": "12:15"
+    },
+    {
+      "exam_id": "FRM-904",
+      "student_count": 1494,
+      "date": "2023-04-10",
+      "start_time": "12:15",
+      "end_time": "12:30"
+    },
+    {
+      "exam_id": "FRM-902",
+      "student_count": 1495,
+      "date": "2023-04-10",
+      "start_time": "12:45",
+      "end_time": "12:50"
+    },
+    {
+      "exam_id": "FRM-906",
+      "student_count": 1494,
+      "date": "2023-04-10",
+      "start_time": "16:30",
+      "end_time": "17:00"
+    },
+    {
+      "exam_id": "ING-102",
+      "student_count": 4307,
+      "date": "2023-04-10",
+      "start_time": "18:30",
+      "end_time": "19:00"
+    },
+    {
+      "exam_id": "ATA-260",
+      "student_count": 6581,
+      "date": "2023-04-10",
+      "start_time": "20:30",
+      "end_time": "21:00"
+    }
+  ],
+  "extra_index_column": {
+    "name": "Unnamed: 0",
+    "unique": true,
+    "min": 0,
+    "max": 2151
+  }
+}

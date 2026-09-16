@@ -24,10 +24,12 @@ from visualization import generate_figures
 
 st.set_page_config(page_title="Exam Timetabling Optimizer", layout="wide")
 st.title("Exam Timetabling Optimizer")
+st.page_link("pages/1_Karsilastirma.py", label="Önce / Sonra Karşılaştırma grafikleri")
 
 with st.sidebar:
     solver_name = st.selectbox("Solver", ["all", "hybrid", "graph", "ga", "sa"])
     output_dir = st.text_input("Output folder", "outputs_gui")
+    st.session_state["comparison_output_dir"] = output_dir
     seed = st.number_input("Random seed", min_value=0, value=VARSAYILAN_CONFIG.random_seed)
     population_size = st.number_input("GA population", min_value=10, value=80)
     ga_generations = st.number_input("GA generations", min_value=10, value=250)
@@ -235,6 +237,15 @@ if st.button("Optimize", type="primary", disabled=not planned_file):
                     top_exam_df = top_exams(exams)
                     planned_slot_df = timeslot_summary(reference_assignment, exams, timeslots, config, "planned") if reference_assignment else pd.DataFrame()
                     optimized_slot_df = timeslot_summary(result.assignment, exams, timeslots, config, "optimized")
+                    if not planned_slot_df.empty:
+                        st.session_state["comparison_plans"] = {
+                            "before": planned_slot_df.copy(),
+                            "after": optimized_slot_df.copy(),
+                            "capacity": config.max_concurrent_students,
+                            "label": f"Son optimizasyon: {planned_file.name} · {result.solver_name} · referans: {reference_label}. Uygulamanın yüklediği ve birleştirdiği kayıtlar üzerinden hesaplanır.",
+                        }
+                    else:
+                        st.session_state.pop("comparison_plans", None)
                     planned_dept_slot_df = department_timeslot_concentration(reference_assignment, exams, "planned") if reference_assignment else pd.DataFrame()
                     optimized_dept_slot_df = department_timeslot_concentration(result.assignment, exams, "optimized")
                     department_df.to_csv(output / "department_summary.csv", index=False)

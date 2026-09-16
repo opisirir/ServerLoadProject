@@ -35,6 +35,14 @@ python main.py --planned_schedule "C:\Users\Honour\My Drive\Makale\Server Load\D
 streamlit run app.py
 ```
 
+Ana sayfadaki **Önce / Sonra Karşılaştırma grafikleri** bağlantısı ayrı karşılaştırma sayfasını açar.
+Bu sayfa gönderilen CSV örneğini veya son optimizasyonun plan/sonuç çiftini gösterir.
+Eşzamanlı yük, günlük dağılım, tepe yük ve varsayımsal kaynak grafikleri bulunur;
+grafikler PNG, hesaplanan yükler CSV olarak indirilebilir. Ortak süre seçimi her iki
+plana da uygulanır ve süreleri örtüşen sınavlar birlikte sayılır. Süre ve kapasite
+ayarları karşılaştırma senaryosudur; bu sayfa solver'ın amaç fonksiyonunu değiştirmez.
+Oturumdaki son sonuç yoksa seçili çıktı klasöründeki plan/optimize slot özetleri okunur.
+
 Arayuzden tek planlanmis sinav dosyasi yuklenir. Solver secilir ve planlanan cizelge ile optimize cizelge birlikte goruntulenir. Grafikler ve CSV/JSON ciktilari secilen output klasorune kaydedilir.
 
 Arayuz, yuklenen dosyadaki mevcut `TARIH + SAAT` atamasini gercek cizelge olarak yeniden kurabiliyorsa optimize sonuc ile ayni anda gosterir:

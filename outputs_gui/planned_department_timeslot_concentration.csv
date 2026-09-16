@@ -1,16 +1,2769 @@
 schedule,department_id,timeslot_id,exam_count,student_count
-planned,Eczacılık Fakültesi,TS0001,40,3475
-planned,Peyzaj Mimarlığı,TS0001,32,1594
-planned,Şehir ve Bölge Planlama,TS0001,16,733
-planned,Bilgisayar Mühendisliği,TS0001,14,169
-planned,Hemşirelik,TS0005,1,95
-planned,İngiliz Dili ve Edebiyatı,TS0002,1,86
-planned,İngiliz Dili ve Edebiyatı,TS0004,1,69
-planned,Fen Bilgisi Öğretmenliği,TS0004,1,49
-planned,Şehir ve Bölge Planlama,TS0005,1,45
-planned,Sınıf Öğretmenliği,TS0001,1,44
-planned,Arkeoloji,TS0005,1,10
-planned,Arkeoloji,TS0003,1,10
-planned,Fen Bilgisi Öğretmenliği,TS0003,1,10
-planned,Arkeoloji,TS0006,1,3
-planned,İşletme (İngilizce),TS0001,1,2
+planned,Makine Mühendisliği,TS0538,58,485
+planned,İlahiyat (Arapça Hazırlık),TS0015,49,1939
+planned,İlahiyat İ.Ö. (Arapça Hazırlık),TS0015,35,1343
+planned,İlahiyat (Arapça Hazırlık),TS0612,29,212
+planned,İnşaat Mühendisliği,TS0654,28,140
+planned,Matematik,TS0655,19,39
+planned,Eczacılık Fakültesi,TS0235,17,174
+planned,Spor Bilimleri,TS0154,17,82
+planned,Bilgisayar Mühendisliği,TS0015,16,188
+planned,Elektrik-Elektronik Mühendisliği,TS0658,16,88
+planned,Biyoloji,TS0559,16,23
+planned,Gıda Mühendisliği,TS0016,16,17
+planned,Kimya,TS0633,15,22
+planned,Tarih,TS0441,14,90
+planned,Peyzaj Mimarlığı,TS0457,14,53
+planned,Fen Bilgisi Öğretmenliği,TS0223,13,902
+planned,Fizik,TS0096,13,13
+planned,Fen Bilgisi Öğretmenliği,TS0218,11,692
+planned,Sosyoloji,TS0652,11,116
+planned,Ağız ve Diş Sağlığı,TS0348,11,85
+planned,Ağız ve Diş Sağlığı,TS0258,11,78
+planned,Antrenörlük Eğitimi,TS0483,11,50
+planned,Geleneksel Türk Sanatları Bölümü Tezhip Anasanat Dalı,TS0015,11,42
+planned,Türk Dili ve Edebiyatı,TS0652,10,97
+planned,Müzikoloji,TS0125,10,20
+planned,Coğrafya,TS0123,9,100
+planned,Spor Bilimleri,TS0486,9,81
+planned,Antrenörlük Eğitimi,TS0566,9,43
+planned,Kimya Mühendisliği,TS0632,9,20
+planned,Enformatik 1.Öğretim,TS0405,8,925
+planned,Yaşlı Bakımı,TS0255,8,73
+planned,Sınıf Öğretmenliği,TS0207,8,58
+planned,Otomotiv Mühendisliği,TS0613,8,38
+planned,Arkeoloji,TS0096,8,23
+planned,Maden Mühendisliği,TS0652,8,10
+planned,Endüstri Mühendisliği,TS0655,7,112
+planned,Tıbbi Görüntüleme Teknikleri,TS0178,7,83
+planned,Felsefe,TS0441,7,34
+planned,Antrenörlük Eğitimi,TS0486,7,22
+planned,Antrenörlük Eğitimi,TS0365,7,21
+planned,Müzik Bilimleri,TS0365,7,16
+planned,İlk ve Acil Yardım,TS0063,6,86
+planned,Anestezi,TS0603,6,85
+planned,Türkçe Öğretmenliği,TS0635,6,49
+planned,Sınıf Öğretmenliği,TS0436,6,45
+planned,Spor Bilimleri,TS0566,6,29
+planned,Turizm İşletmeciliği,TS0587,6,26
+planned,Antrenörlük Eğitimi,TS0154,6,22
+planned,Müzikoloji,TS0276,6,8
+planned,Antrenörlük Eğitimi,TS0466,6,7
+planned,Gazetecilik,TS0160,5,107
+planned,Anestezi,TS0560,5,94
+planned,Tıbbi Laboratuvar Teknikleri,TS0042,5,83
+planned,İngiliz Dili ve Edebiyatı,TS0120,5,62
+planned,İlköğretim Matematik Öğretmenliği,TS0120,5,61
+planned,Psikoloji,TS0657,5,61
+planned,Fen Bilgisi Öğretmenliği,TS0332,5,45
+planned,Beden Eğitimi ve Spor Öğretmenliği,TS0045,5,41
+planned,İngilizce Öğretmenliği,TS0313,5,40
+planned,Sanat Tarihi,TS0652,5,23
+planned,Makine Mühendisliği,TS0315,5,16
+planned,Müzik Bilimleri,TS0583,5,15
+planned,Müzikoloji,TS0242,5,6
+planned,Beslenme ve Diyetetik,TS0015,4,242
+planned,İnşaat Mühendisliği,TS0197,4,176
+planned,Antrenörlük Eğitimi,TS0598,4,86
+planned,Spor Bilimleri,TS0583,4,79
+planned,Beden Eğitimi ve Spor Öğretmenliği,TS0566,4,42
+planned,Beden Eğitimi ve Spor Öğretmenliği,TS0583,4,42
+planned,Beden Eğitimi ve Spor Öğretmenliği,TS0478,4,41
+planned,Makine Mühendisliği İ.Ö.,TS0315,4,27
+planned,Müzikoloji,TS0161,4,19
+planned,Sahne Sanatları Oyunculuk,TS0583,4,18
+planned,Spor Bilimleri,TS0466,4,6
+planned,İlahiyat (Arapça Hazırlık),TS0538,3,251
+planned,İlahiyat (Arapça Hazırlık),TS0219,3,224
+planned,İlahiyat (Arapça Hazırlık),TS0546,3,207
+planned,İlahiyat (Arapça Hazırlık),TS0323,3,206
+planned,İlahiyat (Arapça Hazırlık),TS0303,3,202
+planned,Elektrik-Elektronik Mühendisliği,TS0647,3,192
+planned,İlahiyat (Arapça Hazırlık),TS0113,3,191
+planned,İlahiyat (Arapça Hazırlık),TS0448,3,191
+planned,Mimarlık,TS0538,3,186
+planned,İlahiyat (Arapça Hazırlık),TS0434,3,183
+planned,İlahiyat (Arapça Hazırlık),TS0296,3,179
+planned,İlahiyat (Arapça Hazırlık),TS0621,3,172
+planned,İlahiyat (Arapça Hazırlık),TS0647,3,166
+planned,İlahiyat (Arapça Hazırlık),TS0551,3,163
+planned,İlahiyat (Arapça Hazırlık),TS0327,3,159
+planned,İlahiyat (Arapça Hazırlık),TS0225,3,156
+planned,İlahiyat (Arapça Hazırlık),TS0213,3,149
+planned,İlahiyat (Arapça Hazırlık),TS0528,3,138
+planned,İlahiyat (Arapça Hazırlık),TS0423,3,129
+planned,Elektrik-Elektronik Mühendisliği İ.Ö.,TS0647,3,128
+planned,İlahiyat (Arapça Hazırlık),TS0319,3,124
+planned,İlahiyat (Arapça Hazırlık),TS0103,3,123
+planned,İlahiyat (Arapça Hazırlık),TS0653,3,115
+planned,İlahiyat (Arapça Hazırlık),TS0557,3,112
+planned,İlahiyat (Arapça Hazırlık),TS0439,3,106
+planned,İlahiyat (Arapça Hazırlık),TS0293,3,105
+planned,İlahiyat (Arapça Hazırlık),TS0231,3,101
+planned,Çocuk Gelişimi,TS0016,3,99
+planned,Spor Bilimleri,TS0258,3,84
+planned,İlköğretim Matematik Öğretmenliği,TS0084,3,65
+planned,Tıbbi Laboratuvar Teknikleri İ.Ö.,TS0386,3,59
+planned,Antrenörlük Eğitimi,TS0579,3,47
+planned,Fen Bilgisi Öğretmenliği,TS0326,3,46
+planned,Arapça Öğretmenliği,TS0645,3,44
+planned,Beden Eğitimi ve Spor Öğretmenliği,TS0504,3,41
+planned,Spor Yöneticiliği,TS0603,3,41
+planned,Beden Eğitimi ve Spor Öğretmenliği,TS0572,3,40
+planned,Beden Eğitimi ve Spor Öğretmenliği,TS0500,3,38
+planned,Spor Yöneticiliği,TS0572,3,35
+planned,Kimya Mühendisliği,TS0436,3,25
+planned,Antrenörlük Eğitimi,TS0583,3,23
+planned,Beden Eğitimi ve Spor Öğretmenliği,TS0472,3,21
+planned,İstatistik,TS0098,3,12
+planned,Müzikoloji,TS0175,3,11
+planned,Geleneksel Türk Sanatları Bölümü Halı-Kilim-Eski Kumaş Desenleri Anasanat Dalı,TS0365,3,9
+planned,Müzikoloji,TS0136,3,9
+planned,Sahne Sanatları Dramatik Yazarlık,TS0583,3,6
+planned,Jeoloji Mühendisliği,TS0230,3,5
+planned,Maden Mühendisliği,TS0445,3,5
+planned,Felsefe,TS0213,3,4
+planned,Jeoloji Mühendisliği,TS0332,3,4
+planned,Türk Dili ve Edebiyatı İ.Ö.,TS0407,2,1481
+planned,Türk Dili ve Edebiyatı İ.Ö.,TS0411,2,1480
+planned,Türk Dili ve Edebiyatı İ.Ö.,TS0413,2,1480
+planned,Hemşirelik,TS0144,2,368
+planned,Hemşirelik,TS0492,2,350
+planned,Hemşirelik,TS0356,2,278
+planned,İlahiyat (Arapça Hazırlık),TS0452,2,265
+planned,İlahiyat (Arapça Hazırlık),TS0089,2,264
+planned,İlahiyat (Arapça Hazırlık),TS0196,2,261
+planned,İlahiyat (Arapça Hazırlık),TS0082,2,232
+planned,Makine Mühendisliği,TS0074,2,196
+planned,Fizyoterapi ve Rehabilitasyon,TS0463,2,193
+planned,İlahiyat İ.Ö. (Arapça Hazırlık),TS0219,2,172
+planned,İlahiyat İ.Ö. (Arapça Hazırlık),TS0538,2,169
+planned,İlahiyat (Arapça Hazırlık),TS0644,2,164
+planned,İlahiyat İ.Ö. (Arapça Hazırlık),TS0546,2,159
+planned,İlahiyat İ.Ö. (Arapça Hazırlık),TS0303,2,154
+planned,İlahiyat İ.Ö. (Arapça Hazırlık),TS0323,2,154
+planned,İlahiyat (Arapça Hazırlık),TS0076,2,151
+planned,İlahiyat İ.Ö. (Arapça Hazırlık),TS0448,2,151
+planned,Adalet,TS0163,2,150
+planned,Makine Mühendisliği İ.Ö.,TS0074,2,150
+planned,İlahiyat İ.Ö. (Arapça Hazırlık),TS0113,2,147
+planned,İlahiyat İ.Ö. (Arapça Hazırlık),TS0434,2,143
+planned,Mimarlık,TS0315,2,142
+planned,Diş Hekimliği Fakültesi,TS0012,2,139
+planned,İlahiyat İ.Ö. (Arapça Hazırlık),TS0647,2,134
+planned,İlahiyat İ.Ö. (Arapça Hazırlık),TS0296,2,130
+planned,Adalet İ.Ö.,TS0163,2,128
+planned,Fizyoterapi ve Rehabilitasyon,TS0356,2,128
+planned,Elektrik-Elektronik Mühendisliği İ.Ö.,TS0075,2,127
+planned,İlahiyat İ.Ö. (Arapça Hazırlık),TS0225,2,127
+planned,İlahiyat İ.Ö. (Arapça Hazırlık),TS0621,2,126
+planned,Fizyoterapi ve Rehabilitasyon,TS0144,2,124
+planned,İlahiyat İ.Ö. (Arapça Hazırlık),TS0327,2,119
+planned,Elektrik-Elektronik Mühendisliği,TS0075,2,118
+planned,Diş Hekimliği Fakültesi,TS0662,2,116
+planned,Hemşirelik,TS0531,2,116
+planned,İnşaat Mühendisliği,TS0536,2,116
+planned,Mimarlık,TS0646,2,115
+planned,Peyzaj Mimarlığı,TS0213,2,115
+planned,Fizyoterapi ve Rehabilitasyon,TS0136,2,112
+planned,İlahiyat (Arapça Hazırlık),TS0333,2,110
+planned,Sosyoloji,TS0630,2,110
+planned,Makine Mühendisliği İ.Ö.,TS0195,2,109
+planned,Engelli Bakımı ve Rehabilitasyon,TS0203,2,108
+planned,İlahiyat İ.Ö. (Arapça Hazırlık),TS0551,2,107
+planned,Fizyoterapi ve Rehabilitasyon,TS0028,2,105
+planned,Makine Mühendisliği,TS0195,2,105
+planned,Coğrafya,TS0104,2,102
+planned,İlahiyat İ.Ö. (Arapça Hazırlık),TS0528,2,102
+planned,İnşaat Mühendisliği,TS0122,2,98
+planned,İktisat,TS0349,2,96
+planned,İnşaat Mühendisliği,TS0547,2,96
+planned,Tıbbi Dokümantasyon ve Sekreterlik,TS0441,2,92
+planned,Fizyoterapi ve Rehabilitasyon,TS0478,2,87
+planned,İngiliz Dili ve Edebiyatı,TS0424,2,87
+planned,İlahiyat İ.Ö. (Arapça Hazırlık),TS0213,2,87
+planned,Adalet,TS0253,2,86
+planned,Felsefe,TS0520,2,84
+planned,İktisat,TS0567,2,84
+planned,Mimarlık,TS0295,2,84
+planned,İlahiyat İ.Ö. (Arapça Hazırlık),TS0557,2,82
+planned,Peyzaj Mimarlığı,TS0626,2,82
+planned,İşletme (İngilizce),TS0015,2,81
+planned,Tarih,TS0088,2,79
+planned,İlahiyat İ.Ö. (Arapça Hazırlık),TS0653,2,77
+planned,Peyzaj Mimarlığı,TS0441,2,77
+planned,Coğrafya,TS0092,2,72
+planned,Fizyoterapi,TS0364,2,72
+planned,İnşaat Mühendisliği İ.Ö.,TS0536,2,72
+planned,Diş Protez Teknolojisi,TS0276,2,70
+planned,Elektrik-Elektronik Mühendisliği,TS0310,2,68
+planned,İlk ve Acil Yardım İ.Ö.,TS0063,2,68
+planned,İlahiyat İ.Ö. (Arapça Hazırlık),TS0231,2,67
+planned,İnşaat Mühendisliği,TS0423,2,66
+planned,İngiliz Dili ve Edebiyatı,TS0210,2,65
+planned,İlahiyat İ.Ö. (Arapça Hazırlık),TS0439,2,65
+planned,İlahiyat İ.Ö. (Arapça Hazırlık),TS0423,2,65
+planned,İlahiyat İ.Ö. (Arapça Hazırlık),TS0103,2,64
+planned,Otomotiv Mühendisliği,TS0521,2,59
+planned,Peyzaj Mimarlığı,TS0652,2,59
+planned,Tarih İ.Ö.,TS0088,2,58
+planned,İlahiyat İ.Ö. (Arapça Hazırlık),TS0319,2,57
+planned,Fizyoterapi İ.Ö.,TS0581,2,56
+planned,Tıbbi Görüntüleme Teknikleri İ.Ö.,TS0178,2,54
+planned,Antrenörlük Eğitimi,TS0339,2,51
+planned,Antrenörlük Eğitimi,TS0384,2,51
+planned,İlahiyat İ.Ö. (Arapça Hazırlık),TS0293,2,51
+planned,Peyzaj Mimarlığı,TS0201,2,50
+planned,Peyzaj Mimarlığı,TS0111,2,50
+planned,İnşaat Mühendisliği İ.Ö.,TS0122,2,45
+planned,Arapça Öğretmenliği,TS0441,2,44
+planned,Arapça Öğretmenliği,TS0635,2,42
+planned,Arkeoloji,TS0295,2,41
+planned,Havacılık Yönetimi,TS0082,2,41
+planned,Peyzaj Mimarlığı,TS0096,2,38
+planned,İnşaat Mühendisliği,TS0327,2,36
+planned,Kimya Mühendisliği,TS0215,2,30
+planned,Peyzaj Mimarlığı,TS0107,2,30
+planned,Felsefe,TS0204,2,27
+planned,Kimya Mühendisliği,TS0092,2,27
+planned,Kimya Mühendisliği,TS0304,2,27
+planned,Grafik Tasarımı,TS0598,2,26
+planned,Spor Yöneticiliği,TS0598,2,26
+planned,Antrenörlük Eğitimi,TS0045,2,24
+planned,Beden Eğitimi ve Spor Öğretmenliği,TS0609,2,24
+planned,Kimya Mühendisliği,TS0428,2,22
+planned,Kimya Mühendisliği,TS0547,2,22
+planned,Müzikoloji,TS0384,2,21
+planned,Tekstil ve Moda Tasarımı,TS0378,2,21
+planned,Sosyal Bilgiler Öğretmenliği,TS0460,2,20
+planned,Makine Mühendisliği İ.Ö.,TS0101,2,20
+planned,Resim,TS0583,2,20
+planned,Sosyal Bilgiler Öğretmenliği,TS0459,2,18
+planned,Müzikoloji,TS0265,2,18
+planned,Kimya Mühendisliği,TS0082,2,17
+planned,Tezhip Sanatı,TS0250,2,16
+planned,Tekstil Mühendisliği,TS0218,2,16
+planned,Sosyal Bilgiler Öğretmenliği,TS0457,2,15
+planned,Geleneksel Türk Sanatları Bölümü Eski Yazı Anasanat Dalı,TS0608,2,14
+planned,Makine Mühendisliği,TS0101,2,14
+planned,Sahne Sanatları Oyunculuk,TS0356,2,14
+planned,Sosyal Bilgiler Öğretmenliği,TS0458,2,13
+planned,Tekstil ve Moda Tasarımı,TS0033,2,13
+planned,Tekstil ve Moda Tasarımı,TS0144,2,13
+planned,Tekstil ve Moda Tasarımı,TS0609,2,12
+planned,Müzikoloji,TS0566,2,11
+planned,"Halı, Kilim ve Geleneksel Kumaş Desenleri",TS0248,2,8
+planned,Spor Bilimleri,TS0483,2,8
+planned,Müzikoloji,TS0500,2,7
+planned,Drama Yazarlığı ve Dramaturji,TS0472,2,6
+planned,Makine Mühendisliği,TS0636,2,5
+planned,Makine Mühendisliği İ.Ö.,TS0636,2,5
+planned,Spor Bilimleri,TS0563,2,5
+planned,Spor Bilimleri,TS0579,2,5
+planned,Tekstil Mühendisliği,TS0015,2,4
+planned,Jeofizik Mühendisliği,TS0207,2,2
+planned,Peyzaj Mimarlığı,TS0185,2,2
+planned,Mekatronik Öğretmenliği,TS0015,2,2
+planned,Yapı Tasarımı Öğretmenliği,TS0015,2,2
+planned,Hukuk,TS0494,1,402
+planned,Hukuk,TS0178,1,394
+planned,Hukuk,TS0504,1,348
+planned,Hukuk,TS0384,1,343
+planned,Hukuk,TS0371,1,330
+planned,Hukuk,TS0268,1,305
+planned,Hukuk,TS0563,1,289
+planned,Hukuk,TS0242,1,276
+planned,Hukuk,TS0276,1,271
+planned,Hukuk,TS0063,1,266
+planned,Hukuk,TS0500,1,264
+planned,Makine Mühendisliği İ.Ö.,TS0082,1,255
+planned,Makine Mühendisliği,TS0422,1,244
+planned,Makine Mühendisliği,TS0082,1,233
+planned,Hukuk,TS0394,1,229
+planned,Hukuk,TS0058,1,226
+planned,Makine Mühendisliği,TS0433,1,225
+planned,Hukuk,TS0511,1,221
+planned,Hukuk,TS0181,1,215
+planned,Mimarlık,TS0326,1,215
+planned,Hukuk,TS0172,1,214
+planned,Hukuk,TS0378,1,213
+planned,Makine Mühendisliği İ.Ö.,TS0433,1,212
+planned,Hukuk,TS0286,1,208
+planned,Hukuk,TS0050,1,207
+planned,Hukuk,TS0339,1,207
+planned,Hukuk,TS0571,1,202
+planned,Hemşirelik,TS0579,1,201
+planned,Bilgisayar Mühendisliği,TS0651,1,199
+planned,Hemşirelik,TS0463,1,199
+planned,İlk ve Acil Yardım,TS0345,1,193
+planned,Maliye,TS0248,1,192
+planned,Bilgisayar Mühendisliği,TS0292,1,190
+planned,Makine Mühendisliği,TS0301,1,188
+planned,Hemşirelik,TS0560,1,187
+planned,Bilgisayar Mühendisliği,TS0304,1,186
+planned,Hemşirelik,TS0248,1,184
+planned,İşletme,TS0021,1,183
+planned,Bilgisayar Mühendisliği,TS0092,1,180
+planned,Bilgisayar Mühendisliği,TS0550,1,179
+planned,Hemşirelik,TS0618,1,179
+planned,Hukuk,TS0354,1,178
+planned,Bilgisayar Mühendisliği,TS0213,1,176
+planned,Hemşirelik,TS0159,1,175
+planned,İlahiyat İ.Ö. (Arapça Hazırlık),TS0082,1,174
+planned,İşletme,TS0161,1,173
+planned,Makine Mühendisliği,TS0613,1,169
+planned,Makine Mühendisliği İ.Ö.,TS0422,1,168
+planned,Makine Mühendisliği,TS0515,1,166
+planned,Gazetecilik,TS0239,1,166
+planned,Adalet,TS0040,1,165
+planned,İnşaat Mühendisliği,TS0304,1,165
+planned,Uluslararası İlişkiler,TS0165,1,164
+planned,Gazetecilik,TS0131,1,162
+planned,Endüstri Mühendisliği İ.Ö.,TS0103,1,158
+planned,Adalet,TS0496,1,157
+planned,Bilgisayar Mühendisliği İ.Ö.,TS0292,1,155
+planned,İnşaat Mühendisliği,TS0084,1,154
+planned,Elektrik-Elektronik Mühendisliği İ.Ö.,TS0291,1,153
+planned,Siyaset Bilimi ve Kamu Yönetimi,TS0560,1,153
+planned,Bilgisayar Mühendisliği,TS0526,1,152
+planned,Adalet,TS0388,1,151
+planned,Hemşirelik,TS0201,1,150
+planned,İşletme,TS0591,1,150
+planned,Uluslararası İlişkiler,TS0374,1,150
+planned,Endüstri Mühendisliği,TS0225,1,149
+planned,Makine Mühendisliği,TS0088,1,149
+planned,Endüstri Mühendisliği,TS0103,1,148
+planned,Siyaset Bilimi ve Kamu Yönetimi,TS0128,1,148
+planned,İşletme,TS0238,1,148
+planned,Gazetecilik,TS0466,1,148
+planned,Elektrik-Elektronik Mühendisliği,TS0527,1,147
+planned,Bilgisayar Mühendisliği İ.Ö.,TS0651,1,146
+planned,Coğrafya,TS0638,1,146
+planned,Hukuk,TS0607,1,146
+planned,Halkla İlişkiler ve Tanıtım İ.Ö.,TS0239,1,146
+planned,İnşaat Mühendisliği,TS0523,1,146
+planned,Bilgisayar Mühendisliği,TS0326,1,146
+planned,Diş Hekimliği Fakültesi,TS0666,1,145
+planned,Coğrafya,TS0292,1,144
+planned,Fizyoterapi ve Rehabilitasyon,TS0339,1,144
+planned,Gazetecilik,TS0057,1,144
+planned,İlahiyat (Arapça Hazırlık),TS0096,1,144
+planned,"Radyo, Televizyon ve Sinema",TS0131,1,144
+planned,Halkla İlişkiler ve Tanıtım,TS0239,1,144
+planned,Siyaset Bilimi ve Kamu Yönetimi,TS0238,1,144
+planned,Diş Hekimliği Fakültesi,TS0660,1,143
+planned,Bilgisayar Mühendisliği İ.Ö.,TS0213,1,143
+planned,Makine Mühendisliği İ.Ö.,TS0301,1,142
+planned,Diş Hekimliği Fakültesi,TS0004,1,142
+planned,Diş Hekimliği Fakültesi,TS0009,1,142
+planned,Diş Hekimliği Fakültesi,TS0001,1,142
+planned,Elektrik-Elektronik Mühendisliği,TS0202,1,142
+planned,İşletme,TS0465,1,141
+planned,Diş Hekimliği Fakültesi,TS0659,1,141
+planned,Diş Hekimliği Fakültesi,TS0002,1,141
+planned,Adalet İ.Ö.,TS0496,1,140
+planned,Diş Hekimliği Fakültesi,TS0663,1,140
+planned,Diş Hekimliği Fakültesi,TS0665,1,140
+planned,Diş Hekimliği Fakültesi,TS0007,1,140
+planned,Makine Mühendisliği,TS0521,1,140
+planned,"Radyo, Televizyon ve Sinema İ.Ö.",TS0131,1,139
+planned,Halkla İlişkiler ve Tanıtım İ.Ö.,TS0131,1,139
+planned,Bilgisayar Mühendisliği İ.Ö.,TS0304,1,138
+planned,Elektrik-Elektronik Mühendisliği,TS0303,1,138
+planned,İşletme,TS0341,1,138
+planned,Makine Mühendisliği İ.Ö.,TS0521,1,138
+planned,Siyaset Bilimi ve Kamu Yönetimi,TS0021,1,138
+planned,İşletme,TS0389,1,137
+planned,Sosyoloji,TS0411,1,137
+planned,Elektrik-Elektronik Mühendisliği İ.Ö.,TS0516,1,136
+planned,Elektrik-Elektronik Mühendisliği İ.Ö.,TS0188,1,136
+planned,Siyaset Bilimi ve Kamu Yönetimi,TS0037,1,136
+planned,"Radyo, Televizyon ve Sinema İ.Ö.",TS0374,1,136
+planned,Maliye,TS0499,1,136
+planned,Makine Mühendisliği,TS0441,1,136
+planned,Elektrik-Elektronik Mühendisliği İ.Ö.,TS0614,1,135
+planned,Elektrik-Elektronik Mühendisliği,TS0188,1,135
+planned,Bilgisayar Mühendisliği İ.Ö.,TS0515,1,135
+planned,Uluslararası İlişkiler,TS0560,1,135
+planned,Bilgisayar Mühendisliği İ.Ö.,TS0550,1,134
+planned,Endüstri Mühendisliği İ.Ö.,TS0187,1,134
+planned,İnşaat Mühendisliği,TS0441,1,134
+planned,Mimarlık,TS0441,1,134
+planned,Uluslararası İlişkiler,TS0465,1,134
+planned,Elektrik-Elektronik Mühendisliği,TS0291,1,133
+planned,Adalet,TS0020,1,133
+planned,İnşaat Mühendisliği,TS0430,1,133
+planned,Finans ve Bankacılık,TS0144,1,133
+planned,İlk ve Acil Yardım,TS0649,1,133
+planned,Coğrafya,TS0215,1,132
+planned,Diş Hekimliği Fakültesi,TS0661,1,132
+planned,Tıbbi Laboratuvar Teknikleri,TS0414,1,132
+planned,Siyaset Bilimi ve Kamu Yönetimi,TS0341,1,131
+planned,Halkla İlişkiler ve Tanıtım,TS0065,1,130
+planned,Tarih,TS0101,1,130
+planned,Türk Dili ve Edebiyatı,TS0613,1,130
+planned,Maliye,TS0341,1,129
+planned,Adalet İ.Ö.,TS0020,1,129
+planned,İnşaat Mühendisliği,TS0097,1,128
+planned,Bilgisayar Mühendisliği,TS0441,1,128
+planned,Uluslararası İlişkiler,TS0352,1,128
+planned,Adalet,TS0237,1,127
+planned,Bilgisayar Mühendisliği İ.Ö.,TS0092,1,127
+planned,Halkla İlişkiler ve Tanıtım İ.Ö.,TS0254,1,127
+planned,Türk Dili ve Edebiyatı,TS0074,1,127
+planned,Elektrik-Elektronik Mühendisliği,TS0614,1,126
+planned,Gazetecilik,TS0560,1,126
+planned,Siyaset Bilimi ve Kamu Yönetimi,TS0576,1,126
+planned,Makine Mühendisliği,TS0626,1,126
+planned,Makine Mühendisliği İ.Ö.,TS0428,1,126
+planned,Finans ve Bankacılık,TS0591,1,126
+planned,Mimarlık,TS0550,1,126
+planned,Diş Hekimliği Fakültesi,TS0664,1,125
+planned,Elektrik-Elektronik Mühendisliği,TS0516,1,125
+planned,"Radyo, Televizyon ve Sinema",TS0054,1,125
+planned,Mimarlık,TS0526,1,125
+planned,Türk Dili ve Edebiyatı,TS0213,1,125
+planned,Tıbbi Görüntüleme Teknikleri,TS0594,1,125
+planned,Fizyoterapi,TS0026,1,124
+planned,Halkla İlişkiler ve Tanıtım İ.Ö.,TS0376,1,124
+planned,"Radyo, Televizyon ve Sinema",TS0593,1,124
+planned,Maliye,TS0470,1,124
+planned,Sağlık Yönetimi,TS0562,1,124
+planned,Uluslararası İlişkiler,TS0147,1,124
+planned,Engelli Bakımı ve Rehabilitasyon,TS0629,1,123
+planned,Psikoloji,TS0549,1,123
+planned,Tarih,TS0515,1,123
+planned,Bilgisayar Mühendisliği,TS0322,1,122
+planned,Fizyoterapi,TS0565,1,122
+planned,Gazetecilik,TS0376,1,122
+planned,Adalet,TS0340,1,121
+planned,İnşaat Mühendisliği,TS0613,1,121
+planned,İlahiyat İ.Ö. (Arapça Hazırlık),TS0368,1,121
+planned,Halkla İlişkiler ve Tanıtım,TS0376,1,121
+planned,"Radyo, Televizyon ve Sinema",TS0374,1,121
+planned,Siyaset Bilimi ve Kamu Yönetimi İ.Ö.,TS0560,1,121
+planned,Siyaset Bilimi ve Kamu Yönetimi,TS0359,1,121
+planned,Finans ve Bankacılık,TS0494,1,120
+planned,Endüstri Mühendisliği İ.Ö.,TS0225,1,120
+planned,İnşaat Mühendisliği,TS0515,1,120
+planned,Makine Mühendisliği İ.Ö.,TS0613,1,120
+planned,Halkla İlişkiler ve Tanıtım,TS0254,1,120
+planned,"Radyo, Televizyon ve Sinema İ.Ö.",TS0054,1,120
+planned,"Radyo, Televizyon ve Sinema",TS0266,1,120
+planned,Endüstri Mühendisliği İ.Ö.,TS0422,1,120
+planned,Adalet,TS0562,1,119
+planned,İlk ve Acil Yardım,TS0015,1,119
+planned,Coğrafya,TS0190,1,119
+planned,Endüstri Mühendisliği İ.Ö.,TS0315,1,119
+planned,Siyaset Bilimi ve Kamu Yönetimi İ.Ö.,TS0128,1,119
+planned,İşletme,TS0242,1,119
+planned,Makine Mühendisliği,TS0428,1,119
+planned,Bilgisayar Mühendisliği İ.Ö.,TS0441,1,119
+planned,Mimarlık,TS0545,1,119
+planned,"Radyo, Televizyon ve Sinema",TS0468,1,119
+planned,Sağlık Yönetimi,TS0464,1,119
+planned,Sosyal Hizmet,TS0281,1,119
+planned,Türk Dili ve Edebiyatı İ.Ö.,TS0613,1,119
+planned,Sosyoloji,TS0306,1,118
+planned,Engelli Bakımı ve Rehabilitasyon,TS0090,1,118
+planned,Elektrik-Elektronik Mühendisliği,TS0090,1,118
+planned,Endüstri Mühendisliği,TS0187,1,118
+planned,Halkla İlişkiler ve Tanıtım,TS0563,1,118
+planned,Uluslararası İlişkiler,TS0593,1,118
+planned,Maliye,TS0235,1,118
+planned,Halkla İlişkiler ve Tanıtım,TS0131,1,118
+planned,Maliye,TS0591,1,118
+planned,Mimarlık,TS0428,1,118
+planned,Uluslararası İlişkiler,TS0238,1,118
+planned,Tarih,TS0615,1,118
+planned,Endüstri Mühendisliği İ.Ö.,TS0515,1,117
+planned,Halkla İlişkiler ve Tanıtım,TS0056,1,117
+planned,Makine Mühendisliği,TS0526,1,117
+planned,Bilgisayar Mühendisliği İ.Ö.,TS0326,1,117
+planned,Maliye,TS0167,1,117
+planned,"Radyo, Televizyon ve Sinema İ.Ö.",TS0041,1,117
+planned,Siyaset Bilimi ve Kamu Yönetimi İ.Ö.,TS0238,1,117
+planned,Ebelik,TS0570,1,116
+planned,Halkla İlişkiler ve Tanıtım İ.Ö.,TS0065,1,116
+planned,İlahiyat (Arapça Hazırlık),TS0431,1,116
+planned,İnşaat Mühendisliği,TS0435,1,116
+planned,Mimarlık,TS0107,1,116
+planned,Siyaset Bilimi ve Kamu Yönetimi İ.Ö.,TS0021,1,116
+planned,Adalet İ.Ö.,TS0237,1,115
+planned,Bilgisayar Mühendisliği,TS0515,1,115
+planned,Finans ve Bankacılık,TS0560,1,115
+planned,İlk ve Acil Yardım,TS0235,1,115
+planned,"Radyo, Televizyon ve Sinema İ.Ö.",TS0593,1,115
+planned,İnşaat Mühendisliği,TS0203,1,115
+planned,Matematik,TS0290,1,115
+planned,Sosyal Hizmetler,TS0631,1,115
+planned,Türk Dili ve Edebiyatı,TS0422,1,115
+planned,Finans ve Bankacılık,TS0344,1,114
+planned,Endüstri Mühendisliği,TS0315,1,114
+planned,Halkla İlişkiler ve Tanıtım İ.Ö.,TS0507,1,114
+planned,Maliye,TS0384,1,114
+planned,"Radyo, Televizyon ve Sinema İ.Ö.",TS0266,1,114
+planned,Maliye,TS0564,1,114
+planned,Matematik,TS0213,1,114
+planned,Psikoloji,TS0290,1,114
+planned,Uluslararası İlişkiler,TS0481,1,114
+planned,Bilgisayar Mühendisliği İ.Ö.,TS0526,1,113
+planned,Bilgisayar Mühendisliği,TS0445,1,113
+planned,Coğrafya,TS0515,1,113
+planned,Eczacılık Fakültesi,TS0566,1,113
+planned,Fizyoterapi ve Rehabilitasyon,TS0276,1,113
+planned,Halkla İlişkiler ve Tanıtım,TS0466,1,113
+planned,İşletme,TS0037,1,113
+planned,Otomotiv Mühendisliği,TS0187,1,113
+planned,"Radyo, Televizyon ve Sinema İ.Ö.",TS0468,1,113
+planned,Sağlık Yönetimi,TS0237,1,113
+planned,Bilgisayar Mühendisliği,TS0101,1,112
+planned,Bilgisayar Mühendisliği,TS0295,1,112
+planned,Eczacılık Fakültesi,TS0384,1,112
+planned,Eczacılık Fakültesi,TS0365,1,112
+planned,Endüstri Mühendisliği,TS0515,1,112
+planned,Fizyoterapi,TS0469,1,112
+planned,Halkla İlişkiler ve Tanıtım İ.Ö.,TS0563,1,112
+planned,Halkla İlişkiler ve Tanıtım,TS0507,1,112
+planned,İlahiyat İ.Ö. (Arapça Hazırlık),TS0478,1,112
+planned,Makine Mühendisliği İ.Ö.,TS0088,1,112
+planned,Bilgisayar Mühendisliği,TS0613,1,111
+planned,İlk ve Acil Yardım,TS0442,1,111
+planned,Siyaset Bilimi ve Kamu Yönetimi,TS0490,1,111
+planned,Matematik,TS0538,1,111
+planned,Tıbbi Laboratuvar Teknikleri,TS0164,1,111
+planned,İlk ve Acil Yardım,TS0016,1,110
+planned,Eczacılık Fakültesi,TS0072,1,110
+planned,Endüstri Mühendisliği,TS0301,1,110
+planned,Endüstri Mühendisliği İ.Ö.,TS0613,1,110
+planned,Fizyoterapi ve Rehabilitasyon,TS0125,1,110
+planned,Fizyoterapi,TS0134,1,110
+planned,Hukuk,TS0483,1,110
+planned,Maliye,TS0598,1,110
+planned,Endüstri Mühendisliği,TS0422,1,110
+planned,Sağlık Yönetimi,TS0343,1,110
+planned,Türk Dili ve Edebiyatı,TS0401,1,110
+planned,Türk Dili ve Edebiyatı İ.Ö.,TS0213,1,110
+planned,Adalet İ.Ö.,TS0340,1,109
+planned,İnsan Kaynakları Yönetimi,TS0016,1,109
+planned,Finans ve Bankacılık,TS0128,1,109
+planned,Eczacılık Fakültesi,TS0033,1,109
+planned,Makine Mühendisliği İ.Ö.,TS0515,1,109
+planned,Halkla İlişkiler ve Tanıtım İ.Ö.,TS0466,1,109
+planned,Halkla İlişkiler ve Tanıtım,TS0044,1,109
+planned,Halkla İlişkiler ve Tanıtım İ.Ö.,TS0150,1,109
+planned,Tıbbi Laboratuvar Teknikleri,TS0019,1,109
+planned,Halkla İlişkiler ve Tanıtım İ.Ö.,TS0056,1,109
+planned,İnşaat Mühendisliği,TS0334,1,109
+planned,Maliye,TS0504,1,109
+planned,Psikoloji,TS0615,1,109
+planned,Psikoloji,TS0308,1,109
+planned,Siyaset Bilimi ve Kamu Yönetimi İ.Ö.,TS0341,1,109
+planned,Tıbbi Görüntüleme Teknikleri,TS0267,1,109
+planned,Tıbbi Görüntüleme Teknikleri,TS0165,1,109
+planned,Eczacılık Fakültesi,TS0045,1,108
+planned,Halkla İlişkiler ve Tanıtım,TS0150,1,108
+planned,İşletme,TS0028,1,108
+planned,Mimarlık,TS0213,1,108
+planned,Sanat Tarihi,TS0290,1,108
+planned,Tıbbi Laboratuvar Teknikleri,TS0240,1,108
+planned,Adalet İ.Ö.,TS0562,1,107
+planned,Coğrafya,TS0443,1,107
+planned,Engelli Bakımı ve Rehabilitasyon,TS0433,1,107
+planned,Bilgisayar Mühendisliği İ.Ö.,TS0613,1,107
+planned,Fizyoterapi ve Rehabilitasyon,TS0265,1,107
+planned,Uluslararası İlişkiler,TS0037,1,107
+planned,Gazetecilik İ.Ö.,TS0131,1,107
+planned,"Radyo, Televizyon ve Sinema",TS0041,1,107
+planned,Tıbbi Görüntüleme Teknikleri,TS0346,1,107
+planned,Eczacılık Fakültesi,TS0125,1,106
+planned,İngiliz Dili ve Edebiyatı,TS0294,1,106
+planned,İşletme,TS0144,1,106
+planned,Sağlık Yönetimi,TS0130,1,106
+planned,Fizyoterapi ve Rehabilitasyon,TS0560,1,106
+planned,Sosyal Hizmetler,TS0455,1,106
+planned,Sosyal Hizmetler,TS0227,1,106
+planned,Türk Dili ve Edebiyatı,TS0290,1,106
+planned,Tıbbi Laboratuvar Teknikleri,TS0372,1,106
+planned,Tıbbi Laboratuvar Teknikleri,TS0024,1,106
+planned,Finans ve Bankacılık,TS0483,1,105
+planned,Bilgisayar Mühendisliği İ.Ö.,TS0101,1,105
+planned,Eczacılık Fakültesi,TS0063,1,105
+planned,İnşaat Mühendisliği,TS0439,1,105
+planned,Kimya Mühendisliği,TS0441,1,105
+planned,Türkçe Öğretmenliği,TS0295,1,105
+planned,Tarih,TS0076,1,105
+planned,Türk Dili ve Edebiyatı İ.Ö.,TS0422,1,105
+planned,Fizyoterapi ve Rehabilitasyon,TS0596,1,104
+planned,Hukuk,TS0159,1,104
+planned,İşletme,TS0136,1,104
+planned,Elektrik-Elektronik Mühendisliği,TS0441,1,104
+planned,Siyaset Bilimi ve Kamu Yönetimi,TS0072,1,104
+planned,Sosyal Hizmetler,TS0116,1,104
+planned,Tarih,TS0187,1,104
+planned,Tarih,TS0292,1,104
+planned,Türk Dili ve Edebiyatı İ.Ö.,TS0074,1,104
+planned,Tıbbi Görüntüleme Teknikleri,TS0576,1,104
+planned,Finans ve Bankacılık,TS0266,1,103
+planned,Eczacılık Fakültesi,TS0144,1,103
+planned,Endüstri Mühendisliği,TS0115,1,103
+planned,Fizyoterapi ve Rehabilitasyon,TS0269,1,103
+planned,Gazetecilik İ.Ö.,TS0239,1,103
+planned,Mimarlık,TS0088,1,103
+planned,Psikoloji,TS0530,1,103
+planned,Psikoloji,TS0201,1,103
+planned,Sosyal Hizmetler,TS0330,1,103
+planned,Adalet,TS0279,1,102
+planned,Eczacılık Fakültesi,TS0514,1,102
+planned,Engelli Bakımı ve Rehabilitasyon,TS0539,1,102
+planned,Hukuk,TS0477,1,102
+planned,Maliye,TS0583,1,102
+planned,Maliye,TS0572,1,102
+planned,İşletme,TS0570,1,102
+planned,Makine Mühendisliği,TS0201,1,102
+planned,Makine Mühendisliği İ.Ö.,TS0441,1,102
+planned,Siyaset Bilimi ve Kamu Yönetimi,TS0048,1,102
+planned,Uluslararası İlişkiler,TS0021,1,102
+planned,Tıbbi Görüntüleme Teknikleri,TS0054,1,102
+planned,Ağız ve Diş Sağlığı,TS0161,1,102
+planned,Uluslararası İlişkiler İ.Ö.,TS0261,1,102
+planned,Fizyoterapi ve Rehabilitasyon,TS0235,1,101
+planned,Fizyoterapi ve Rehabilitasyon,TS0175,1,101
+planned,Gazetecilik İ.Ö.,TS0466,1,101
+planned,İnşaat Mühendisliği,TS0209,1,101
+planned,Maliye,TS0271,1,101
+planned,Maliye,TS0369,1,101
+planned,Şehir ve Bölge Planlama,TS0442,1,101
+planned,"Radyo, Televizyon ve Sinema İ.Ö.",TS0280,1,101
+planned,Tarih,TS0424,1,101
+planned,Tıbbi Görüntüleme Teknikleri,TS0376,1,101
+planned,Finans ve Bankacılık,TS0356,1,100
+planned,Çocuk Gelişimi,TS0052,1,100
+planned,Diş Protez Teknolojisi,TS0265,1,100
+planned,Diş Protez Teknolojisi,TS0371,1,100
+planned,Eczacılık Fakültesi,TS0611,1,100
+planned,Eczacılık Fakültesi,TS0587,1,100
+planned,Engelli Bakımı ve Rehabilitasyon,TS0303,1,100
+planned,Gazetecilik İ.Ö.,TS0057,1,100
+planned,Hemşirelik,TS0315,1,100
+planned,Makine Mühendisliği İ.Ö.,TS0457,1,100
+planned,Sanat Tarihi,TS0613,1,100
+planned,Siyaset Bilimi ve Kamu Yönetimi,TS0367,1,100
+planned,Siyaset Bilimi ve Kamu Yönetimi,TS0261,1,100
+planned,Türk Dili ve Edebiyatı,TS0538,1,100
+planned,Diş Protez Teknolojisi,TS0169,1,99
+planned,Eczacılık Fakültesi,TS0184,1,99
+planned,Elektrik-Elektronik Mühendisliği,TS0108,1,99
+planned,İlahiyat İ.Ö. (Arapça Hazırlık),TS0096,1,99
+planned,İşletme,TS0352,1,99
+planned,"Radyo, Televizyon ve Sinema İ.Ö.",TS0251,1,99
+planned,Siyaset Bilimi ve Kamu Yönetimi,TS0481,1,99
+planned,Siyaset Bilimi ve Kamu Yönetimi,TS0587,1,99
+planned,Sağlık Yönetimi,TS0022,1,99
+planned,Tıbbi Görüntüleme Teknikleri,TS0481,1,99
+planned,Anestezi,TS0494,1,98
+planned,Bilgisayar Mühendisliği,TS0437,1,98
+planned,Eczacılık Fakültesi,TS0286,1,98
+planned,Eczacılık Fakültesi,TS0258,1,98
+planned,Gazetecilik,TS0180,1,98
+planned,Halkla İlişkiler ve Tanıtım İ.Ö.,TS0044,1,98
+planned,Peyzaj Mimarlığı,TS0526,1,98
+planned,"Radyo, Televizyon ve Sinema",TS0280,1,98
+planned,"Radyo, Televizyon ve Sinema İ.Ö.",TS0576,1,98
+planned,Tarih,TS0111,1,98
+planned,Uluslararası İlişkiler,TS0246,1,98
+planned,Diş Protez Teknolojisi,TS0136,1,97
+planned,Eczacılık Fakültesi,TS0054,1,97
+planned,Eczacılık Fakültesi,TS0560,1,97
+planned,Eczacılık Fakültesi,TS0251,1,97
+planned,Eczacılık Fakültesi,TS0051,1,97
+planned,Gazetecilik,TS0576,1,97
+planned,Hemşirelik,TS0213,1,97
+planned,İlk ve Acil Yardım,TS0256,1,97
+planned,İktisat,TS0487,1,97
+planned,Tıbbi Laboratuvar Teknikleri,TS0467,1,97
+planned,Eczacılık Fakültesi,TS0028,1,96
+planned,Eczacılık Fakültesi,TS0394,1,96
+planned,Hukuk,TS0070,1,96
+planned,Uluslararası İlişkiler,TS0031,1,96
+planned,Mimarlık,TS0101,1,96
+planned,"Radyo, Televizyon ve Sinema",TS0251,1,96
+planned,Sağlık Yönetimi İ.Ö.,TS0562,1,96
+planned,Eczacılık Fakültesi,TS0025,1,96
+planned,Bilgisayar Mühendisliği İ.Ö.,TS0322,1,95
+planned,Çocuk Gelişimi,TS0161,1,95
+planned,Coğrafya,TS0198,1,95
+planned,Eczacılık Fakültesi,TS0174,1,95
+planned,Eczacılık Fakültesi,TS0154,1,95
+planned,Fizyoterapi ve Rehabilitasyon,TS0572,1,95
+planned,İngiliz Dili ve Edebiyatı,TS0015,1,95
+planned,Hemşirelik,TS0125,1,95
+planned,Hemşirelik,TS0033,1,95
+planned,Hemşirelik,TS0041,1,95
+planned,İşletme,TS0472,1,95
+planned,Eczacılık Fakültesi,TS0494,1,95
+planned,Maliye,TS0263,1,95
+planned,Sanat Tarihi,TS0441,1,95
+planned,Siyaset Bilimi ve Kamu Yönetimi,TS0246,1,95
+planned,Tıbbi Görüntüleme Teknikleri,TS0498,1,95
+planned,Bilgisayar Mühendisliği İ.Ö.,TS0437,1,94
+planned,Elektrik-Elektronik Mühendisliği İ.Ö.,TS0527,1,94
+planned,İlköğretim Matematik Öğretmenliği,TS0098,1,94
+planned,Makine Mühendisliği,TS0290,1,94
+planned,Makine Mühendisliği,TS0457,1,94
+planned,"Radyo, Televizyon ve Sinema",TS0576,1,94
+planned,Sanat Tarihi,TS0187,1,94
+planned,Diş Protez Teknolojisi,TS0242,1,94
+planned,Türk Dili ve Edebiyatı İ.Ö.,TS0401,1,94
+planned,Eczacılık Fakültesi,TS0607,1,93
+planned,Fizyoterapi ve Rehabilitasyon,TS0033,1,93
+planned,Fizyoterapi ve Rehabilitasyon,TS0242,1,93
+planned,İlahiyat İ.Ö. (Arapça Hazırlık),TS0431,1,93
+planned,İlk ve Acil Yardım,TS0371,1,93
+planned,Tıbbi Görüntüleme Teknikleri,TS0251,1,93
+planned,Fizyoterapi ve Rehabilitasyon,TS0016,1,92
+planned,Elektrik-Elektronik Mühendisliği,TS0447,1,92
+planned,Endüstri Mühendisliği İ.Ö.,TS0301,1,92
+planned,Fizyoterapi ve Rehabilitasyon,TS0603,1,92
+planned,Halkla İlişkiler ve Tanıtım,TS0247,1,92
+planned,İlk ve Acil Yardım,TS0318,1,92
+planned,İktisat,TS0339,1,92
+planned,İlköğretim Matematik Öğretmenliği,TS0309,1,92
+planned,Makine Mühendisliği İ.Ö.,TS0626,1,92
+planned,Mimarlık,TS0632,1,92
+planned,Mimarlık,TS0309,1,92
+planned,Psikoloji,TS0322,1,92
+planned,Sağlık Yönetimi İ.Ö.,TS0343,1,92
+planned,Siyaset Bilimi ve Kamu Yönetimi,TS0147,1,92
+planned,Fizyoterapi,TS0499,1,92
+planned,Sosyoloji,TS0293,1,92
+planned,Uluslararası İlişkiler,TS0476,1,92
+planned,Anestezi,TS0235,1,91
+planned,Anestezi,TS0276,1,91
+planned,Hemşirelik,TS0478,1,91
+planned,İlk ve Acil Yardım,TS0398,1,91
+planned,İngiliz Dili ve Edebiyatı,TS0319,1,91
+planned,İktisat,TS0243,1,91
+planned,Gazetecilik İ.Ö.,TS0376,1,91
+planned,Maliye İ.Ö.,TS0470,1,91
+planned,Maliye,TS0352,1,91
+planned,"Radyo, Televizyon ve Sinema İ.Ö.",TS0147,1,91
+planned,Sağlık Yönetimi,TS0251,1,91
+planned,Sosyoloji,TS0190,1,91
+planned,Türk Dili ve Edebiyatı,TS0218,1,91
+planned,Mimarlık,TS0396,1,91
+planned,Yaşlı Bakımı,TS0267,1,91
+planned,Mimarlık,TS0399,1,90
+planned,Ebelik,TS0374,1,90
+planned,Eczacılık Fakültesi,TS0339,1,90
+planned,Eczacılık Fakültesi,TS0478,1,90
+planned,Matematik,TS0613,1,90
+planned,Kimya Mühendisliği,TS0515,1,90
+planned,Kimya Mühendisliği,TS0613,1,90
+planned,Hemşirelik,TS0483,1,90
+planned,Hemşirelik,TS0565,1,90
+planned,Hukuk,TS0598,1,90
+planned,Tıbbi Görüntüleme Teknikleri,TS0412,1,90
+planned,İnşaat Mühendisliği,TS0528,1,90
+planned,Siyaset Bilimi ve Kamu Yönetimi İ.Ö.,TS0490,1,90
+planned,Mimarlık,TS0533,1,90
+planned,Psikoloji,TS0424,1,90
+planned,Sanat Tarihi,TS0074,1,90
+planned,Siyaset Bilimi ve Kamu Yönetimi,TS0157,1,90
+planned,Adalet,TS0149,1,89
+planned,Çocuk Gelişimi,TS0265,1,89
+planned,Coğrafya,TS0222,1,89
+planned,Engelli Bakımı ve Rehabilitasyon,TS0315,1,89
+planned,Endüstri Mühendisliği İ.Ö.,TS0115,1,89
+planned,Endüstri Mühendisliği,TS0435,1,89
+planned,Endüstri Mühendisliği,TS0613,1,89
+planned,Hemşirelik,TS0235,1,89
+planned,Hukuk,TS0151,1,89
+planned,İktisat,TS0561,1,89
+planned,Psikoloji,TS0218,1,89
+planned,"Radyo, Televizyon ve Sinema",TS0147,1,89
+planned,Sağlık Yönetimi İ.Ö.,TS0130,1,89
+planned,Sağlık Yönetimi İ.Ö.,TS0464,1,89
+planned,Tıbbi Laboratuvar Teknikleri,TS0277,1,89
+planned,Türk Dili ve Edebiyatı İ.Ö.,TS0290,1,89
+planned,Tıbbi Laboratuvar Teknikleri,TS0038,1,89
+planned,Türkçe Öğretmenliği,TS0536,1,89
+planned,Siyaset Bilimi ve Kamu Yönetimi,TS0031,1,89
+planned,Finans ve Bankacılık,TS0507,1,88
+planned,Endüstri Mühendisliği,TS0452,1,88
+planned,Fizyoterapi ve Rehabilitasyon,TS0348,1,88
+planned,Gazetecilik İ.Ö.,TS0560,1,88
+planned,Halkla İlişkiler ve Tanıtım,TS0384,1,88
+planned,Halkla İlişkiler ve Tanıtım,TS0271,1,88
+planned,Halkla İlişkiler ve Tanıtım,TS0354,1,88
+planned,İnsan Kaynakları Yönetimi,TS0234,1,88
+planned,İnsan Kaynakları Yönetimi,TS0463,1,88
+planned,İlk ve Acil Yardım,TS0125,1,88
+planned,İngiliz Dili ve Edebiyatı,TS0101,1,88
+planned,İngiliz Dili ve Edebiyatı,TS0431,1,88
+planned,İlahiyat (Arapça Hazırlık),TS0462,1,88
+planned,İnsan Kaynakları Yönetimi,TS0591,1,88
+planned,Mimarlık,TS0437,1,88
+planned,Maliye,TS0492,1,88
+planned,Siyaset Bilimi ve Kamu Yönetimi,TS0352,1,88
+planned,Siyaset Bilimi ve Kamu Yönetimi,TS0570,1,88
+planned,Uluslararası İlişkiler,TS0381,1,88
+planned,Anestezi,TS0161,1,87
+planned,Finans ve Bankacılık,TS0275,1,87
+planned,Eczacılık Fakültesi,TS0503,1,87
+planned,Eczacılık Fakültesi,TS0378,1,87
+planned,Engelli Bakımı ve Rehabilitasyon,TS0214,1,87
+planned,Fizyoterapi ve Rehabilitasyon,TS0472,1,87
+planned,Fizyoterapi ve Rehabilitasyon,TS0566,1,87
+planned,Gazetecilik,TS0041,1,87
+planned,Halkla İlişkiler ve Tanıtım,TS0140,1,87
+planned,Halkla İlişkiler ve Tanıtım,TS0061,1,87
+planned,İktisat,TS0488,1,87
+planned,Şehir ve Bölge Planlama,TS0425,1,87
+planned,"Radyo, Televizyon ve Sinema",TS0481,1,87
+planned,Finans ve Bankacılık,TS0171,1,86
+planned,Çocuk Gelişimi,TS0371,1,86
+planned,Ebelik,TS0353,1,86
+planned,Eczacılık Fakültesi,TS0178,1,86
+planned,Eczacılık Fakültesi,TS0169,1,86
+planned,Engelli Bakımı ve Rehabilitasyon,TS0441,1,86
+planned,Endüstri Mühendisliği İ.Ö.,TS0648,1,86
+planned,İngiliz Dili ve Edebiyatı,TS0301,1,86
+planned,Fizyoterapi ve Rehabilitasyon,TS0248,1,86
+planned,Fizyoterapi ve Rehabilitasyon,TS0500,1,86
+planned,Halkla İlişkiler ve Tanıtım,TS0571,1,86
+planned,İktisat,TS0126,1,86
+planned,İngiliz Dili ve Edebiyatı,TS0217,1,86
+planned,İngiliz Dili ve Edebiyatı,TS0515,1,86
+planned,İnsan Kaynakları Yönetimi,TS0371,1,86
+planned,İktisat,TS0236,1,86
+planned,Endüstri Mühendisliği,TS0526,1,86
+planned,Psikoloji,TS0650,1,86
+planned,Sağlık Yönetimi İ.Ö.,TS0237,1,86
+planned,Anestezi,TS0377,1,85
+planned,Ebelik,TS0141,1,85
+planned,Eczacılık Fakültesi,TS0509,1,85
+planned,Eczacılık Fakültesi,TS0472,1,85
+planned,Halkla İlişkiler ve Tanıtım,TS0579,1,85
+planned,İlk ve Acil Yardım,TS0541,1,85
+planned,Mimarlık,TS0457,1,85
+planned,Maliye,TS0159,1,85
+planned,Psikoloji,TS0104,1,85
+planned,Psikoloji,TS0213,1,85
+planned,"Radyo, Televizyon ve Sinema",TS0389,1,85
+planned,Siyaset Bilimi ve Kamu Yönetimi,TS0251,1,85
+planned,Uluslararası İlişkiler,TS0157,1,85
+planned,Adalet,TS0483,1,84
+planned,Adalet,TS0177,1,84
+planned,Anestezi,TS0175,1,84
+planned,Finans ve Bankacılık,TS0476,1,84
+planned,Çevre Mühendisliği İ.Ö.,TS0015,1,84
+planned,Ağız ve Diş Sağlığı,TS0242,1,84
+planned,Ebelik,TS0475,1,84
+planned,Eczacılık Fakültesi,TS0246,1,84
+planned,Eczacılık Fakültesi,TS0271,1,84
+planned,Engelli Bakımı ve Rehabilitasyon,TS0639,1,84
+planned,Halkla İlişkiler ve Tanıtım İ.Ö.,TS0247,1,84
+planned,Halkla İlişkiler ve Tanıtım İ.Ö.,TS0271,1,84
+planned,İnsan Kaynakları Yönetimi,TS0494,1,84
+planned,İnsan Kaynakları Yönetimi,TS0161,1,84
+planned,Fizyoterapi,TS0412,1,84
+planned,İngiliz Dili ve Edebiyatı,TS0190,1,84
+planned,İnşaat Mühendisliği,TS0076,1,84
+planned,Kimya,TS0419,1,84
+planned,Makine Mühendisliği İ.Ö.,TS0309,1,84
+planned,Makine Mühendisliği İ.Ö.,TS0207,1,84
+planned,İktisat,TS0591,1,84
+planned,Siyaset Bilimi ve Kamu Yönetimi,TS0476,1,84
+planned,Türkçe Öğretmenliği,TS0207,1,84
+planned,Yaşlı Bakımı,TS0133,1,84
+planned,Ağız ve Diş Sağlığı,TS0136,1,83
+planned,Fizyoterapi ve Rehabilitasyon,TS0378,1,83
+planned,Gazetecilik,TS0150,1,83
+planned,Halkla İlişkiler ve Tanıtım İ.Ö.,TS0354,1,83
+planned,Elektrik-Elektronik Mühendisliği İ.Ö.,TS0441,1,83
+planned,Maliye,TS0140,1,83
+planned,"Radyo, Televizyon ve Sinema İ.Ö.",TS0481,1,83
+planned,Siyaset Bilimi ve Kamu Yönetimi İ.Ö.,TS0157,1,83
+planned,Sosyoloji,TS0077,1,83
+planned,Yaşlı Bakımı,TS0168,1,83
+planned,Ağız ve Diş Sağlığı,TS0265,1,82
+planned,Anestezi,TS0478,1,82
+planned,Coğrafya,TS0524,1,82
+planned,Ebelik,TS0481,1,82
+planned,Engelli Bakımı ve Rehabilitasyon,TS0102,1,82
+planned,Elektrik-Elektronik Mühendisliği,TS0434,1,82
+planned,Elektrik-Elektronik Mühendisliği,TS0621,1,82
+planned,Gazetecilik,TS0254,1,82
+planned,Halkla İlişkiler ve Tanıtım,TS0032,1,82
+planned,İktisat,TS0017,1,82
+planned,Ağız ve Diş Sağlığı,TS0412,1,82
+planned,Maliye İ.Ö.,TS0598,1,82
+planned,İlahiyat (Arapça Hazırlık),TS0310,1,82
+planned,Makine Mühendisliği İ.Ö.,TS0096,1,82
+planned,Maliye,TS0361,1,82
+planned,Peyzaj Mimarlığı,TS0101,1,82
+planned,Psikoloji,TS0086,1,82
+planned,Sanat Tarihi,TS0515,1,82
+planned,Siyaset Bilimi ve Kamu Yönetimi İ.Ö.,TS0261,1,82
+planned,Sosyoloji,TS0424,1,82
+planned,Sağlık Yönetimi İ.Ö.,TS0022,1,82
+planned,Adalet,TS0506,1,81
+planned,Beslenme ve Diyetetik,TS0405,1,81
+planned,Bilgisayar Mühendisliği İ.Ö.,TS0096,1,81
+planned,Çocuk Gelişimi,TS0080,1,81
+planned,Ebelik,TS0495,1,81
+planned,Elektrik-Elektronik Mühendisliği İ.Ö.,TS0202,1,81
+planned,Endüstri Mühendisliği,TS0648,1,81
+planned,Halkla İlişkiler ve Tanıtım,TS0175,1,81
+planned,Halkla İlişkiler ve Tanıtım İ.Ö.,TS0571,1,81
+planned,Halkla İlişkiler ve Tanıtım,TS0477,1,81
+planned,Çocuk Gelişimi,TS0420,1,81
+planned,İngiliz Dili ve Edebiyatı,TS0326,1,81
+planned,İngiliz Dili ve Edebiyatı,TS0198,1,81
+planned,Makine Mühendisliği İ.Ö.,TS0526,1,81
+planned,Otomotiv Mühendisliği,TS0213,1,81
+planned,Siyaset Bilimi ve Kamu Yönetimi İ.Ö.,TS0072,1,81
+planned,Anestezi,TS0052,1,81
+planned,Türk Dili ve Edebiyatı İ.Ö.,TS0538,1,81
+planned,Yaşlı Bakımı,TS0498,1,81
+planned,Ağız ve Diş Sağlığı,TS0144,1,80
+planned,Ağız ve Diş Sağlığı,TS0384,1,80
+planned,Ağız ve Diş Sağlığı,TS0276,1,80
+planned,Ebelik,TS0357,1,80
+planned,Ebelik,TS0252,1,80
+planned,Eczacılık Fakültesi,TS0142,1,80
+planned,Halkla İlişkiler ve Tanıtım İ.Ö.,TS0140,1,80
+planned,İngiliz Dili ve Edebiyatı,TS0206,1,80
+planned,İktisat,TS0379,1,80
+planned,İktisat,TS0259,1,80
+planned,İnşaat Mühendisliği İ.Ö.,TS0097,1,80
+planned,İşletme,TS0393,1,80
+planned,İlk ve Acil Yardım,TS0553,1,80
+planned,Makine Mühendisliği İ.Ö.,TS0620,1,80
+planned,Makine Mühendisliği İ.Ö.,TS0533,1,80
+planned,Makine Mühendisliği,TS0207,1,80
+planned,Sınıf Öğretmenliği,TS0457,1,80
+planned,Maliye,TS0242,1,80
+planned,Şehir ve Bölge Planlama,TS0433,1,80
+planned,Psikoloji,TS0454,1,80
+planned,Ebelik,TS0166,1,80
+planned,Siyaset Bilimi ve Kamu Yönetimi,TS0140,1,80
+planned,İlk ve Acil Yardım,TS0478,1,80
+planned,Sosyal Hizmetler,TS0103,1,80
+planned,Spor Bilimleri,TS0287,1,80
+planned,Türk Dili ve Edebiyatı,TS0433,1,80
+planned,Türk Dili ve Edebiyatı,TS0295,1,80
+planned,Yaşlı Bakımı,TS0519,1,80
+planned,Bilgisayar Mühendisliği,TS0096,1,79
+planned,Ebelik,TS0575,1,79
+planned,Ebelik,TS0261,1,79
+planned,Eczacılık Fakültesi,TS0355,1,79
+planned,Eczacılık Fakültesi,TS0059,1,79
+planned,Endüstri Mühendisliği,TS0082,1,79
+planned,Türk Dili ve Edebiyatı İ.Ö.,TS0301,1,79
+planned,Halkla İlişkiler ve Tanıtım İ.Ö.,TS0061,1,79
+planned,İlk ve Acil Yardım,TS0215,1,79
+planned,Türkçe Öğretmenliği,TS0428,1,79
+planned,İktisat,TS0137,1,79
+planned,"Radyo, Televizyon ve Sinema",TS0274,1,79
+planned,Siyaset Bilimi ve Kamu Yönetimi İ.Ö.,TS0367,1,79
+planned,Ağız ve Diş Sağlığı,TS0486,1,79
+planned,Spor Bilimleri,TS0045,1,79
+planned,Türk Dili ve Edebiyatı İ.Ö.,TS0403,1,79
+planned,Yaşlı Bakımı,TS0342,1,79
+planned,Bilgisayar Mühendisliği İ.Ö.,TS0445,1,78
+planned,Halkla İlişkiler ve Tanıtım İ.Ö.,TS0184,1,78
+planned,İlk ve Acil Yardım,TS0641,1,78
+planned,İktisat,TS0473,1,78
+planned,İşletme,TS0261,1,78
+planned,İşletme,TS0583,1,78
+planned,İnşaat Mühendisliği,TS0646,1,78
+planned,Matematik,TS0428,1,78
+planned,İngilizce Öğretmenliği,TS0433,1,78
+planned,Psikoloji,TS0299,1,78
+planned,"Radyo, Televizyon ve Sinema İ.Ö.",TS0389,1,78
+planned,Sağlık Yönetimi,TS0030,1,78
+planned,Tarih İ.Ö.,TS0623,1,78
+planned,Tıbbi Görüntüleme Teknikleri,TS0280,1,78
+planned,Finans ve Bankacılık,TS0571,1,77
+planned,Coğrafya İ.Ö.,TS0198,1,77
+planned,Ebelik,TS0147,1,77
+planned,İngilizce Öğretmenliği,TS0203,1,77
+planned,Gazetecilik,TS0571,1,77
+planned,İlahiyat (Arapça Hazırlık),TS0409,1,77
+planned,İlköğretim Matematik Öğretmenliği,TS0322,1,77
+planned,Otomotiv Mühendisliği,TS0290,1,77
+planned,"Radyo, Televizyon ve Sinema",TS0570,1,77
+planned,Sosyal Hizmet,TS0183,1,77
+planned,Sosyal Hizmet,TS0286,1,77
+planned,Anestezi,TS0391,1,77
+planned,Sosyal Hizmetler,TS0544,1,77
+planned,Sosyal Hizmet,TS0465,1,77
+planned,Tarih,TS0430,1,77
+planned,Tıbbi Görüntüleme Teknikleri,TS0065,1,77
+planned,Tıbbi Görüntüleme Teknikleri,TS0389,1,77
+planned,Finans ve Bankacılık,TS0242,1,76
+planned,Bankacılık ve Finans,TS0392,1,76
+planned,Çocuk Gelişimi,TS0105,1,76
+planned,Çocuk Gelişimi,TS0315,1,76
+planned,Ebelik,TS0238,1,76
+planned,Endüstri Mühendisliği İ.Ö.,TS0452,1,76
+planned,İngilizce Öğretmenliği,TS0626,1,76
+planned,İktisat,TS0155,1,76
+planned,Çalışma Ekonomisi ve Endüstri İlişkileri,TS0235,1,76
+planned,İşletme,TS0576,1,76
+planned,Sosyal Hizmet,TS0560,1,76
+planned,Otomotiv Mühendisliği,TS0101,1,76
+planned,Siyaset Bilimi ve Kamu Yönetimi İ.Ö.,TS0246,1,76
+planned,Sosyal Hizmetler,TS0320,1,76
+planned,Tarih,TS0523,1,76
+planned,Türk Dili ve Edebiyatı İ.Ö.,TS0218,1,76
+planned,Uluslararası İlişkiler,TS0490,1,76
+planned,Finans ve Bankacılık,TS0579,1,75
+planned,Finans ve Bankacılık,TS0378,1,75
+planned,Bilgisayar Mühendisliği İ.Ö.,TS0295,1,75
+planned,Çalışma Ekonomisi ve Endüstri İlişkileri,TS0125,1,75
+planned,Çalışma Ekonomisi ve Endüstri İlişkileri,TS0560,1,75
+planned,Çocuk Gelişimi,TS0572,1,75
+planned,Eczacılık Fakültesi,TS0580,1,75
+planned,Endüstri Mühendisliği İ.Ö.,TS0435,1,75
+planned,Endüstri Mühendisliği İ.Ö.,TS0082,1,75
+planned,Matematik,TS0304,1,75
+planned,İngiliz Dili ve Edebiyatı,TS0085,1,75
+planned,İlahiyat (Arapça Hazırlık),TS0144,1,75
+planned,Şehir ve Bölge Planlama,TS0615,1,75
+planned,Ebelik,TS0592,1,75
+planned,Tarih,TS0436,1,75
+planned,Tarih,TS0623,1,75
+planned,Türk Dili ve Edebiyatı,TS0428,1,75
+planned,Türkçe Öğretmenliği,TS0197,1,75
+planned,Çocuk Gelişimi,TS0248,1,74
+planned,Çocuk Gelişimi,TS0384,1,74
+planned,Coğrafya İ.Ö.,TS0638,1,74
+planned,Diş Protez Teknolojisi,TS0144,1,74
+planned,Elektrik-Elektronik Mühendisliği İ.Ö.,TS0303,1,74
+planned,Halkla İlişkiler ve Tanıtım İ.Ö.,TS0579,1,74
+planned,Halkla İlişkiler ve Tanıtım İ.Ö.,TS0032,1,74
+planned,Halkla İlişkiler ve Tanıtım İ.Ö.,TS0368,1,74
+planned,İnsan Kaynakları Yönetimi,TS0169,1,74
+planned,Türk Dili ve Edebiyatı,TS0301,1,74
+planned,İktisat,TS0584,1,74
+planned,Çalışma Ekonomisi ve Endüstri İlişkileri,TS0339,1,74
+planned,İlköğretim Matematik Öğretmenliği,TS0542,1,74
+planned,Makine Mühendisliği,TS0096,1,74
+planned,"Radyo, Televizyon ve Sinema İ.Ö.",TS0274,1,74
+planned,Sosyal Hizmet,TS0341,1,74
+planned,Tarih İ.Ö.,TS0111,1,74
+planned,Tarih,TS0082,1,74
+planned,Türk Dili ve Edebiyatı,TS0225,1,74
+planned,Türkçe Öğretmenliği,TS0445,1,74
+planned,Uluslararası İlişkiler,TS0171,1,74
+planned,Yaşlı Bakımı,TS0190,1,74
+planned,Arapça Öğretmenliği,TS0327,1,73
+planned,Çocuk Gelişimi,TS0215,1,73
+planned,Çocuk Gelişimi,TS0192,1,73
+planned,Çocuk Gelişimi,TS0033,1,73
+planned,Çocuk Gelişimi,TS0478,1,73
+planned,Çocuk Gelişimi,TS0603,1,73
+planned,Coğrafya,TS0228,1,73
+planned,Coğrafya,TS0449,1,73
+planned,Endüstri Mühendisliği,TS0195,1,73
+planned,Fizyoterapi,TS0256,1,73
+planned,Halkla İlişkiler ve Tanıtım İ.Ö.,TS0384,1,73
+planned,Halkla İlişkiler ve Tanıtım İ.Ö.,TS0477,1,73
+planned,Hukuk,TS0595,1,73
+planned,İlahiyat (Arapça Hazırlık),TS0269,1,73
+planned,İşletme,TS0048,1,73
+planned,İlahiyat İ.Ö. (Arapça Hazırlık),TS0159,1,73
+planned,Türkçe Öğretmenliği,TS0457,1,73
+planned,Mimarlık,TS0218,1,73
+planned,Peyzaj Mimarlığı,TS0315,1,73
+planned,Psikoloji,TS0623,1,73
+planned,Siyaset Bilimi ve Kamu Yönetimi İ.Ö.,TS0048,1,73
+planned,Sosyal Hizmetler,TS0217,1,73
+planned,Türk Dili ve Edebiyatı,TS0403,1,73
+planned,Yaşlı Bakımı,TS0444,1,73
+planned,Bankacılık ve Finans,TS0154,1,72
+planned,Bankacılık ve Finans,TS0261,1,72
+planned,Çalışma Ekonomisi ve Endüstri İlişkileri,TS0016,1,72
+planned,Beden Eğitimi ve Spor Öğretmenliği,TS0144,1,72
+planned,Çalışma Ekonomisi ve Endüstri İlişkileri,TS0418,1,72
+planned,Engelli Bakımı ve Rehabilitasyon,TS0529,1,72
+planned,Halkla İlişkiler ve Tanıtım İ.Ö.,TS0175,1,72
+planned,İngiliz Dili ve Edebiyatı,TS0457,1,72
+planned,İlköğretim Matematik Öğretmenliği,TS0190,1,72
+planned,Matematik,TS0550,1,72
+planned,Maliye,TS0481,1,72
+planned,Maliye İ.Ö.,TS0271,1,72
+planned,Maliye İ.Ö.,TS0504,1,72
+planned,Şehir ve Bölge Planlama,TS0320,1,72
+planned,Peyzaj Mimarlığı,TS0538,1,72
+planned,Siyaset Bilimi ve Kamu Yönetimi İ.Ö.,TS0352,1,72
+planned,Sosyal Hizmetler,TS0442,1,72
+planned,Türk Dili ve Edebiyatı,TS0082,1,72
+planned,Uluslararası İlişkiler,TS0601,1,72
+planned,Uluslararası İlişkiler,TS0611,1,72
+planned,Yaşlı Bakımı,TS0152,1,72
+planned,Bankacılık ve Finans,TS0490,1,71
+planned,Çocuk Gelişimi,TS0144,1,71
+planned,Çocuk Gelişimi,TS0356,1,71
+planned,Diş Protez Teknolojisi,TS0384,1,71
+planned,Gazetecilik,TS0382,1,71
+planned,Hemşirelik,TS0298,1,71
+planned,İlk ve Acil Yardım İ.Ö.,TS0256,1,71
+planned,İngiliz Dili ve Edebiyatı,TS0109,1,71
+planned,"Radyo, Televizyon ve Sinema İ.Ö.",TS0065,1,71
+planned,"Radyo, Televizyon ve Sinema",TS0065,1,71
+planned,Siyaset Bilimi ve Kamu Yönetimi İ.Ö.,TS0587,1,71
+planned,Sosyal Hizmet,TS0178,1,71
+planned,Diş Protez Teknolojisi,TS0486,1,71
+planned,Türk Dili ve Edebiyatı İ.Ö.,TS0225,1,71
+planned,Türk Dili ve Edebiyatı,TS0550,1,71
+planned,Türk Dili ve Edebiyatı,TS0620,1,71
+planned,Coğrafya İ.Ö.,TS0292,1,70
+planned,Endüstri Mühendisliği,TS0621,1,70
+planned,Fizyoterapi,TS0191,1,70
+planned,Halkla İlişkiler ve Tanıtım İ.Ö.,TS0050,1,70
+planned,Halkla İlişkiler ve Tanıtım,TS0159,1,70
+planned,İktisat,TS0046,1,70
+planned,Çalışma Ekonomisi ve Endüstri İlişkileri,TS0463,1,70
+planned,İşletme,TS0285,1,70
+planned,İşletme,TS0490,1,70
+planned,Makine Mühendisliği İ.Ö.,TS0437,1,70
+planned,"Radyo, Televizyon ve Sinema",TS0476,1,70
+planned,"Radyo, Televizyon ve Sinema",TS0169,1,70
+planned,Yaşlı Bakımı,TS0363,1,70
+planned,Sosyoloji,TS0107,1,70
+planned,Tarih İ.Ö.,TS0082,1,70
+planned,Türk Dili ve Edebiyatı,TS0646,1,70
+planned,Yaşlı Bakımı,TS0384,1,70
+planned,Çalışma Ekonomisi ve Endüstri İlişkileri,TS0500,1,69
+planned,İngilizce Öğretmenliği,TS0189,1,69
+planned,Fizyoterapi,TS0581,1,69
+planned,Halkla İlişkiler ve Tanıtım,TS0050,1,69
+planned,Halkla İlişkiler ve Tanıtım İ.Ö.,TS0513,1,69
+planned,Halkla İlişkiler ve Tanıtım İ.Ö.,TS0159,1,69
+planned,İngiliz Dili ve Edebiyatı,TS0218,1,69
+planned,İngiliz Dili ve Edebiyatı,TS0440,1,69
+planned,Maliye İ.Ö.,TS0583,1,69
+planned,İşletme,TS0481,1,69
+planned,Şehir ve Bölge Planlama,TS0224,1,69
+planned,"Radyo, Televizyon ve Sinema İ.Ö.",TS0028,1,69
+planned,"Radyo, Televizyon ve Sinema",TS0140,1,69
+planned,Sosyal Hizmet,TS0165,1,69
+planned,Sosyal Hizmet,TS0238,1,69
+planned,Tarih İ.Ö.,TS0430,1,69
+planned,Türk Dili ve Edebiyatı İ.Ö.,TS0082,1,69
+planned,Coğrafya,TS0117,1,68
+planned,Coğrafya,TS0559,1,68
+planned,Coğrafya,TS0440,1,68
+planned,Endüstri Mühendisliği İ.Ö.,TS0195,1,68
+planned,İlahiyat (Arapça Hazırlık),TS0248,1,68
+planned,İngilizce Öğretmenliği,TS0304,1,68
+planned,İlahiyat (Arapça Hazırlık),TS0417,1,68
+planned,Matematik,TS0107,1,68
+planned,İngilizce Öğretmenliği,TS0325,1,68
+planned,Mimarlık,TS0207,1,68
+planned,Şehir ve Bölge Planlama,TS0189,1,68
+planned,Sağlık Yönetimi,TS0260,1,68
+planned,Sosyal Hizmet,TS0021,1,68
+planned,Sosyoloji,TS0525,1,68
+planned,Tarih,TS0295,1,68
+planned,Tarih İ.Ö.,TS0437,1,68
+planned,Türk Dili ve Edebiyatı İ.Ö.,TS0295,1,68
+planned,Türk Dili ve Edebiyatı,TS0230,1,68
+planned,Yaşlı Bakımı,TS0043,1,67
+planned,Finans ve Bankacılık,TS0248,1,67
+planned,Coğrafya,TS0100,1,67
+planned,İngilizce Öğretmenliği,TS0528,1,67
+planned,Görsel İletişim Tasarımı,TS0375,1,67
+planned,Halkla İlişkiler ve Tanıtım,TS0368,1,67
+planned,Halkla İlişkiler ve Tanıtım İ.Ö.,TS0588,1,67
+planned,İlk ve Acil Yardım,TS0453,1,67
+planned,İngiliz Dili ve Edebiyatı,TS0332,1,67
+planned,İlahiyat (Arapça Hazırlık),TS0161,1,67
+planned,İlköğretim Matematik Öğretmenliği,TS0457,1,67
+planned,Makine Mühendisliği,TS0620,1,67
+planned,Makine Mühendisliği,TS0437,1,67
+planned,Matematik,TS0620,1,67
+planned,Mimarlık,TS0620,1,67
+planned,Peyzaj Mimarlığı,TS0225,1,67
+planned,"Radyo, Televizyon ve Sinema İ.Ö.",TS0570,1,67
+planned,Sağlık Yönetimi,TS0387,1,67
+planned,Sağlık Yönetimi,TS0148,1,67
+planned,Sağlık Yönetimi,TS0362,1,67
+planned,Sağlık Yönetimi,TS0351,1,67
+planned,Sağlık Yönetimi İ.Ö.,TS0030,1,67
+planned,Siyaset Bilimi ve Kamu Yönetimi İ.Ö.,TS0570,1,67
+planned,Türkçe Öğretmenliği,TS0322,1,67
+planned,Yaşlı Bakımı,TS0077,1,67
+planned,Yaşlı Bakımı,TS0615,1,67
+planned,Bankacılık ve Finans,TS0587,1,66
+planned,Halkla İlişkiler ve Tanıtım,TS0588,1,66
+planned,İngiliz Dili ve Edebiyatı,TS0295,1,66
+planned,Yaşlı Bakımı,TS0305,1,66
+planned,İşletme,TS0154,1,66
+planned,Makine Mühendisliği,TS0632,1,66
+planned,İlköğretim Matematik Öğretmenliği,TS0295,1,66
+planned,Mimarlık,TS0433,1,66
+planned,Maliye İ.Ö.,TS0263,1,66
+planned,"Radyo, Televizyon ve Sinema İ.Ö.",TS0381,1,66
+planned,"Radyo, Televizyon ve Sinema İ.Ö.",TS0169,1,66
+planned,Sağlık Yönetimi,TS0568,1,66
+planned,Siyaset Bilimi ve Kamu Yönetimi İ.Ö.,TS0140,1,66
+planned,Sosyal Hizmet,TS0015,1,66
+planned,Sosyoloji İ.Ö.,TS0107,1,66
+planned,Sosyoloji,TS0624,1,66
+planned,Sosyoloji,TS0198,1,66
+planned,Tarih İ.Ö.,TS0322,1,66
+planned,Tarih,TS0197,1,66
+planned,Tarih İ.Ö.,TS0295,1,66
+planned,Türk Dili ve Edebiyatı İ.Ö.,TS0433,1,66
+planned,Türk Dili ve Edebiyatı İ.Ö.,TS0428,1,66
+planned,Türkçe Öğretmenliği,TS0189,1,66
+planned,Yaşlı Bakımı,TS0629,1,66
+planned,Coğrafya İ.Ö.,TS0215,1,65
+planned,İngilizce Öğretmenliği,TS0103,1,65
+planned,Halkla İlişkiler ve Tanıtım,TS0262,1,65
+planned,Arapça Öğretmenliği,TS0015,1,65
+planned,Hemşirelik,TS0427,1,65
+planned,Sanat Tarihi,TS0301,1,65
+planned,İlköğretim Matematik Öğretmenliği,TS0437,1,65
+planned,Makine Mühendisliği,TS0533,1,65
+planned,Arapça Öğretmenliği,TS0538,1,65
+planned,Peyzaj Mimarlığı,TS0295,1,65
+planned,"Radyo, Televizyon ve Sinema",TS0061,1,65
+planned,"Radyo, Televizyon ve Sinema İ.Ö.",TS0140,1,65
+planned,Sağlık Yönetimi,TS0173,1,65
+planned,Sağlık Yönetimi İ.Ö.,TS0049,1,65
+planned,Sağlık Yönetimi,TS0049,1,65
+planned,Sosyal Hizmet,TS0251,1,65
+planned,Sosyoloji,TS0432,1,65
+planned,Sosyoloji,TS0087,1,65
+planned,Tarih İ.Ö.,TS0101,1,65
+planned,Tarih İ.Ö.,TS0523,1,65
+planned,Adalet İ.Ö.,TS0506,1,64
+planned,Çalışma Ekonomisi ve Endüstri İlişkileri,TS0511,1,64
+planned,Coğrafya,TS0209,1,64
+planned,Ekonometri,TS0569,1,64
+planned,Elektrik-Elektronik Mühendisliği İ.Ö.,TS0090,1,64
+planned,Endüstri Mühendisliği İ.Ö.,TS0621,1,64
+planned,Görsel İletişim Tasarımı,TS0166,1,64
+planned,Gazetecilik,TS0032,1,64
+planned,İnsan Kaynakları Yönetimi,TS0063,1,64
+planned,İngiliz Dili ve Edebiyatı,TS0230,1,64
+planned,Matematik,TS0201,1,64
+planned,İngilizce Öğretmenliği,TS0451,1,64
+planned,Maliye İ.Ö.,TS0140,1,64
+planned,Maliye İ.Ö.,TS0242,1,64
+planned,"Radyo, Televizyon ve Sinema İ.Ö.",TS0061,1,64
+planned,"Radyo, Televizyon ve Sinema",TS0381,1,64
+planned,Sosyal Hizmetler,TS0554,1,64
+planned,Sosyoloji İ.Ö.,TS0100,1,64
+planned,Türk Dili ve Edebiyatı,TS0545,1,64
+planned,Tıbbi Görüntüleme Teknikleri İ.Ö.,TS0576,1,64
+planned,Türkçe Öğretmenliği,TS0423,1,64
+planned,Uluslararası İlişkiler,TS0048,1,64
+planned,Coğrafya,TS0435,1,63
+planned,Coğrafya,TS0337,1,63
+planned,Halkla İlişkiler ve Tanıtım,TS0513,1,63
+planned,Halkla İlişkiler ve Tanıtım,TS0184,1,63
+planned,Anestezi,TS0398,1,63
+planned,İlköğretim Matematik Öğretmenliği,TS0623,1,63
+planned,Otomotiv Mühendisliği,TS0074,1,63
+planned,İlköğretim Matematik Öğretmenliği,TS0433,1,63
+planned,Otomotiv Mühendisliği,TS0309,1,63
+planned,Peyzaj Mimarlığı,TS0445,1,63
+planned,"Radyo, Televizyon ve Sinema",TS0028,1,63
+planned,Sağlık Yönetimi,TS0578,1,63
+planned,Sağlık Yönetimi,TS0484,1,63
+planned,Sosyal Hizmet,TS0136,1,63
+planned,Sosyoloji İ.Ö.,TS0525,1,63
+planned,Sosyoloji İ.Ö.,TS0533,1,63
+planned,Sosyoloji,TS0212,1,63
+planned,Türk Dili ve Edebiyatı İ.Ö.,TS0620,1,63
+planned,Tıbbi Görüntüleme Teknikleri İ.Ö.,TS0481,1,63
+planned,Tıbbi Görüntüleme Teknikleri İ.Ö.,TS0251,1,63
+planned,Hukuk,TS0023,1,63
+planned,Siyaset Bilimi ve Kamu Yönetimi İ.Ö.,TS0031,1,63
+planned,Yaşlı Bakımı,TS0485,1,63
+planned,Arapça Öğretmenliği,TS0079,1,62
+planned,Arapça Öğretmenliği,TS0203,1,62
+planned,Endüstri Mühendisliği,TS0439,1,62
+planned,İngilizce Öğretmenliği,TS0297,1,62
+planned,Halkla İlişkiler ve Tanıtım İ.Ö.,TS0262,1,62
+planned,İngiliz Dili ve Edebiyatı,TS0309,1,62
+planned,İlköğretim Matematik Öğretmenliği,TS0088,1,62
+planned,Makine Mühendisliği İ.Ö.,TS0290,1,62
+planned,Makine Mühendisliği,TS0295,1,62
+planned,Kimya,TS0441,1,62
+planned,Türkçe Öğretmenliği,TS0538,1,62
+planned,Peyzaj Mimarlığı,TS0428,1,62
+planned,Psikoloji,TS0099,1,62
+planned,Psikoloji,TS0559,1,62
+planned,Sağlık Yönetimi,TS0067,1,62
+planned,Siyaset Bilimi ve Kamu Yönetimi İ.Ö.,TS0476,1,62
+planned,Sosyal Hizmet,TS0037,1,62
+planned,Sosyoloji İ.Ö.,TS0624,1,62
+planned,Sosyoloji,TS0100,1,62
+planned,Tarih,TS0322,1,62
+planned,Tarih İ.Ö.,TS0197,1,62
+planned,Yaşlı Bakımı,TS0088,1,62
+planned,Adalet İ.Ö.,TS0253,1,61
+planned,Bankacılık ve Finans,TS0369,1,61
+planned,Coğrafya İ.Ö.,TS0515,1,61
+planned,Coğrafya,TS0655,1,61
+planned,İngilizce Öğretmenliği,TS0197,1,61
+planned,Gazetecilik,TS0361,1,61
+planned,Gazetecilik,TS0384,1,61
+planned,Gazetecilik,TS0247,1,61
+planned,İngiliz Dili ve Edebiyatı,TS0111,1,61
+planned,İktisat,TS0248,1,61
+planned,İlahiyat (Arapça Hazırlık),TS0640,1,61
+planned,İlahiyat (Arapça Hazırlık),TS0406,1,61
+planned,İnşaat Mühendisliği,TS0189,1,61
+planned,İşletme,TS0280,1,61
+planned,Sınıf Öğretmenliği,TS0530,1,61
+planned,Maliye İ.Ö.,TS0159,1,61
+planned,Şehir ve Bölge Planlama,TS0523,1,61
+planned,Psikoloji,TS0211,1,61
+planned,Sağlık Yönetimi İ.Ö.,TS0260,1,61
+planned,Sosyal Hizmet,TS0065,1,61
+planned,Sosyoloji İ.Ö.,TS0432,1,61
+planned,Türk Dili ve Edebiyatı,TS0402,1,61
+planned,Arapça Öğretmenliği,TS0640,1,60
+planned,Ekonometri,TS0373,1,60
+planned,Endüstri Mühendisliği,TS0558,1,60
+planned,İngilizce Öğretmenliği,TS0442,1,60
+planned,Fizyoterapi,TS0321,1,60
+planned,Görsel İletişim Tasarımı,TS0267,1,60
+planned,Gazetecilik İ.Ö.,TS0571,1,60
+planned,Gazetecilik İ.Ö.,TS0513,1,60
+planned,İngiliz Dili ve Edebiyatı,TS0322,1,60
+planned,İnşaat Mühendisliği,TS0292,1,60
+planned,İlköğretim Matematik Öğretmenliği,TS0301,1,60
+planned,İlahiyat (Arapça Hazırlık),TS0208,1,60
+planned,İlköğretim Matematik Öğretmenliği,TS0521,1,60
+planned,İlköğretim Matematik Öğretmenliği,TS0526,1,60
+planned,İlköğretim Matematik Öğretmenliği,TS0445,1,60
+planned,Matematik,TS0433,1,60
+planned,Matematik,TS0111,1,60
+planned,Matematik,TS0545,1,60
+planned,Mimarlık,TS0201,1,60
+planned,Maliye İ.Ö.,TS0352,1,60
+planned,Sağlık Yönetimi,TS0512,1,60
+planned,Sosyal Hizmet,TS0062,1,60
+planned,Sınıf Öğretmenliği,TS0325,1,60
+planned,Sosyoloji,TS0092,1,60
+planned,Sosyoloji,TS0440,1,60
+planned,İktisat,TS0028,1,60
+planned,Uluslararası İlişkiler İ.Ö.,TS0246,1,60
+planned,Uluslararası İlişkiler İ.Ö.,TS0476,1,60
+planned,Uluslararası İlişkiler,TS0393,1,60
+planned,Yaşlı Bakımı,TS0201,1,60
+planned,Adalet,TS0605,1,59
+planned,Çalışma Ekonomisi ve Endüstri İlişkileri,TS0609,1,59
+planned,Çocuk Gelişimi,TS0112,1,59
+planned,Çocuk Gelişimi,TS0095,1,59
+planned,Çocuk Gelişimi,TS0119,1,59
+planned,Coğrafya İ.Ö.,TS0222,1,59
+planned,Endüstri Mühendisliği,TS0207,1,59
+planned,Gazetecilik İ.Ö.,TS0041,1,59
+planned,Gazetecilik,TS0507,1,59
+planned,Gazetecilik İ.Ö.,TS0050,1,59
+planned,İnsan Kaynakları Yönetimi,TS0144,1,59
+planned,İnsan Kaynakları Yönetimi,TS0028,1,59
+planned,İnsan Kaynakları Yönetimi,TS0348,1,59
+planned,İnsan Kaynakları Yönetimi,TS0045,1,59
+planned,İnsan Kaynakları Yönetimi,TS0486,1,59
+planned,İnsan Kaynakları Yönetimi,TS0392,1,59
+planned,Hukuk,TS0572,1,59
+planned,İlköğretim Matematik Öğretmenliği,TS0636,1,59
+planned,Çocuk Gelişimi,TS0304,1,59
+planned,İlköğretim Matematik Öğretmenliği,TS0326,1,59
+planned,Makine Mühendisliği İ.Ö.,TS0201,1,59
+planned,Endüstri Mühendisliği İ.Ö.,TS0526,1,59
+planned,Şehir ve Bölge Planlama,TS0625,1,59
+planned,Psikoloji,TS0313,1,59
+planned,Psikoloji,TS0437,1,59
+planned,Sağlık Yönetimi İ.Ö.,TS0512,1,59
+planned,Sosyal Hizmet,TS0507,1,59
+planned,Sosyal Hizmet,TS0384,1,59
+planned,Sosyal Hizmet,TS0500,1,59
+planned,Tarih İ.Ö.,TS0515,1,59
+planned,Tıbbi Laboratuvar Teknikleri İ.Ö.,TS0038,1,59
+planned,Çalışma Ekonomisi ve Endüstri İlişkileri,TS0059,1,58
+planned,Çocuk Gelişimi,TS0226,1,58
+planned,Çocuk Gelişimi,TS0089,1,58
+planned,Elektrik-Elektronik Mühendisliği İ.Ö.,TS0621,1,58
+planned,Elektrik-Elektronik Mühendisliği,TS0220,1,58
+planned,Endüstri Mühendisliği,TS0335,1,58
+planned,Endüstri Mühendisliği İ.Ö.,TS0207,1,58
+planned,İngilizce Öğretmenliği,TS0448,1,58
+planned,Fizyoterapi,TS0543,1,58
+planned,Görsel İletişim Tasarımı,TS0055,1,58
+planned,Gazetecilik İ.Ö.,TS0368,1,58
+planned,Gazetecilik,TS0368,1,58
+planned,Halkla İlişkiler ve Tanıtım,TS0361,1,58
+planned,İnsan Kaynakları Yönetimi,TS0181,1,58
+planned,Uluslararası İlişkiler İ.Ö.,TS0031,1,58
+planned,İlk ve Acil Yardım İ.Ö.,TS0453,1,58
+planned,İngiliz Dili ve Edebiyatı,TS0098,1,58
+planned,İlahiyat İ.Ö. (Arapça Hazırlık),TS0339,1,58
+planned,Maliye,TS0178,1,58
+planned,Sanat Tarihi,TS0088,1,58
+planned,Tıbbi Laboratuvar Teknikleri İ.Ö.,TS0277,1,58
+planned,İlk ve Acil Yardım İ.Ö.,TS0478,1,58
+planned,Sınıf Öğretmenliği,TS0533,1,58
+planned,Sosyal Hizmetler,TS0091,1,58
+planned,Sosyoloji İ.Ö.,TS0198,1,58
+planned,Sosyoloji,TS0533,1,58
+planned,Sosyoloji İ.Ö.,TS0440,1,58
+planned,Türk Dili ve Edebiyatı,TS0088,1,58
+planned,Yaşlı Bakımı,TS0433,1,58
+planned,Antrenörlük Eğitimi,TS0175,1,57
+planned,Havacılık Yönetimi,TS0088,1,57
+planned,Bilgisayar Mühendisliği İ.Ö.,TS0120,1,57
+planned,Coğrafya İ.Ö.,TS0190,1,57
+planned,Coğrafya,TS0643,1,57
+planned,Coğrafya,TS0324,1,57
+planned,Elektrik-Elektronik Mühendisliği İ.Ö.,TS0108,1,57
+planned,Endüstri Mühendisliği İ.Ö.,TS0322,1,57
+planned,Endüstri Mühendisliği,TS0121,1,57
+planned,Fen Bilgisi Öğretmenliği,TS0315,1,57
+planned,İngilizce Öğretmenliği,TS0540,1,57
+planned,Fizyoterapi,TS0426,1,57
+planned,Fizyoterapi İ.Ö.,TS0364,1,57
+planned,Gazetecilik İ.Ö.,TS0262,1,57
+planned,İngilizce Öğretmenliği,TS0290,1,57
+planned,Fen Bilgisi Öğretmenliği,TS0524,1,57
+planned,İngilizce Öğretmenliği,TS0428,1,57
+planned,"Radyo, Televizyon ve Sinema İ.Ö.",TS0476,1,57
+planned,"Radyo, Televizyon ve Sinema",TS0157,1,57
+planned,Sağlık Yönetimi İ.Ö.,TS0568,1,57
+planned,Sosyal Hizmet,TS0031,1,57
+planned,Sosyoloji İ.Ö.,TS0087,1,57
+planned,Sosyoloji İ.Ö.,TS0212,1,57
+planned,Türkçe Öğretmenliği,TS0315,1,57
+planned,Havacılık Yönetimi,TS0225,1,56
+planned,Bankacılık ve Finans İ.Ö.,TS0490,1,56
+planned,Çalışma Ekonomisi ve Endüstri İlişkileri,TS0392,1,56
+planned,Elektrik-Elektronik Mühendisliği İ.Ö.,TS0434,1,56
+planned,İngilizce Öğretmenliği,TS0547,1,56
+planned,Fizyoterapi İ.Ö.,TS0256,1,56
+planned,Görsel İletişim Tasarımı,TS0129,1,56
+planned,Görsel İletişim Tasarımı,TS0482,1,56
+planned,Gazetecilik İ.Ö.,TS0382,1,56
+planned,Gazetecilik,TS0262,1,56
+planned,İngiliz Dili ve Edebiyatı,TS0225,1,56
+planned,İngiliz Dili ve Edebiyatı,TS0436,1,56
+planned,İngiliz Dili ve Edebiyatı,TS0445,1,56
+planned,Görsel İletişim Tasarımı,TS0498,1,56
+planned,İnşaat Mühendisliği,TS0628,1,56
+planned,Tarih,TS0304,1,56
+planned,Matematik,TS0295,1,56
+planned,İngilizce Öğretmenliği,TS0315,1,56
+planned,İlköğretim Matematik Öğretmenliği,TS0422,1,56
+planned,İlköğretim Matematik Öğretmenliği,TS0107,1,56
+planned,Sosyal Hizmet,TS0242,1,56
+planned,Fizyoterapi,TS0617,1,56
+planned,Sosyoloji İ.Ö.,TS0314,1,56
+planned,Türk Dili ve Edebiyatı İ.Ö.,TS0230,1,56
+planned,Türkçe Öğretmenliği,TS0517,1,56
+planned,Spor Yöneticiliği,TS0235,1,56
+planned,Yaşlı Bakımı,TS0526,1,56
+planned,Bilgisayar Mühendisliği İ.Ö.,TS0207,1,55
+planned,Coğrafya İ.Ö.,TS0443,1,55
+planned,Coğrafya,TS0329,1,55
+planned,Elektrik-Elektronik Mühendisliği,TS0232,1,55
+planned,Kimya,TS0102,1,55
+planned,Fizyoterapi,TS0434,1,55
+planned,Fizyoterapi,TS0202,1,55
+planned,Gazetecilik,TS0062,1,55
+planned,İngilizce Öğretmenliği,TS0015,1,55
+planned,İnsan Kaynakları Yönetimi,TS0378,1,55
+planned,Mimarlık,TS0418,1,55
+planned,Kimya,TS0539,1,55
+planned,Fizyoterapi,TS0303,1,55
+planned,Matematik,TS0632,1,55
+planned,Türkçe Öğretmenliği,TS0290,1,55
+planned,İlköğretim Matematik Öğretmenliği,TS0290,1,55
+planned,İlk ve Acil Yardım,TS0415,1,55
+planned,Otomotiv Mühendisliği,TS0225,1,55
+planned,Sanat Tarihi,TS0201,1,55
+planned,Sağlık Yönetimi İ.Ö.,TS0182,1,55
+planned,Tarih İ.Ö.,TS0615,1,55
+planned,Türk Dili ve Edebiyatı İ.Ö.,TS0646,1,55
+planned,Türk Dili ve Edebiyatı İ.Ö.,TS0550,1,55
+planned,Adalet İ.Ö.,TS0177,1,54
+planned,Havacılık Yönetimi,TS0201,1,54
+planned,Çalışma Ekonomisi ve Endüstri İlişkileri,TS0421,1,54
+planned,Coğrafya İ.Ö.,TS0104,1,54
+planned,Elektrik-Elektronik Mühendisliği,TS0546,1,54
+planned,Gazetecilik,TS0050,1,54
+planned,İngiliz Dili ve Edebiyatı,TS0526,1,54
+planned,Maliye İ.Ö.,TS0369,1,54
+planned,"Radyo, Televizyon ve Sinema",TS0392,1,54
+planned,Sosyoloji,TS0300,1,54
+planned,Tarih İ.Ö.,TS0187,1,54
+planned,Tarih İ.Ö.,TS0076,1,54
+planned,Uluslararası İlişkiler İ.Ö.,TS0171,1,54
+planned,İngilizce Öğretmenliği,TS0619,1,54
+planned,Arapça Öğretmenliği,TS0194,1,53
+planned,Havacılık Yönetimi,TS0101,1,53
+planned,Bankacılık ve Finans İ.Ö.,TS0587,1,53
+planned,Bilgisayar Mühendisliği İ.Ö.,TS0230,1,53
+planned,Çalışma Ekonomisi ve Endüstri İlişkileri,TS0271,1,53
+planned,Coğrafya İ.Ö.,TS0449,1,53
+planned,Ekonometri,TS0245,1,53
+planned,Endüstri Mühendisliği,TS0546,1,53
+planned,İngilizce Öğretmenliği,TS0638,1,53
+planned,Görsel İletişim Tasarımı,TS0039,1,53
+planned,İlk ve Acil Yardım,TS0319,1,53
+planned,Çalışma Ekonomisi ve Endüstri İlişkileri,TS0598,1,53
+planned,İnşaat Mühendisliği İ.Ö.,TS0334,1,53
+planned,İlk ve Acil Yardım İ.Ö.,TS0649,1,53
+planned,İlahiyat (Arapça Hazırlık),TS0125,1,53
+planned,Makine Mühendisliği İ.Ö.,TS0295,1,53
+planned,Arapça Öğretmenliği,TS0315,1,53
+planned,Arapça Öğretmenliği,TS0526,1,53
+planned,Türkçe Öğretmenliği,TS0432,1,53
+planned,Fen Bilgisi Öğretmenliği,TS0433,1,53
+planned,Maliye İ.Ö.,TS0492,1,53
+planned,Otomotiv Mühendisliği,TS0623,1,53
+planned,Peyzaj Mimarlığı,TS0218,1,53
+planned,Tarih İ.Ö.,TS0424,1,53
+planned,Tarih İ.Ö.,TS0537,1,53
+planned,Arapça Öğretmenliği,TS0457,1,52
+planned,Antrenörlük Eğitimi,TS0150,1,52
+planned,Bankacılık ve Finans İ.Ö.,TS0154,1,52
+planned,Bankacılık ve Finans İ.Ö.,TS0369,1,52
+planned,Bilgisayar Mühendisliği,TS0230,1,52
+planned,Bilgisayar Mühendisliği,TS0120,1,52
+planned,Bilgisayar Mühendisliği,TS0207,1,52
+planned,Çalışma Ekonomisi ve Endüstri İlişkileri,TS0378,1,52
+planned,Coğrafya İ.Ö.,TS0524,1,52
+planned,Ekonometri,TS0170,1,52
+planned,Endüstri Mühendisliği İ.Ö.,TS0445,1,52
+planned,Endüstri Mühendisliği İ.Ö.,TS0439,1,52
+planned,Görsel İletişim Tasarımı,TS0360,1,52
+planned,Gazetecilik,TS0513,1,52
+planned,İlk ve Acil Yardım,TS0542,1,52
+planned,İlk ve Acil Yardım,TS0190,1,52
+planned,İlahiyat İ.Ö. (Arapça Hazırlık),TS0462,1,52
+planned,İstatistik,TS0189,1,52
+planned,Arapça Öğretmenliği,TS0451,1,52
+planned,Peyzaj Mimarlığı,TS0550,1,52
+planned,Sağlık Yönetimi İ.Ö.,TS0351,1,52
+planned,Uluslararası İlişkiler,TS0606,1,52
+planned,Sosyoloji,TS0530,1,52
+planned,Tarih,TS0437,1,52
+planned,Türk Dili ve Edebiyatı,TS0096,1,52
+planned,Tıbbi Görüntüleme Teknikleri İ.Ö.,TS0065,1,52
+planned,Antrenörlük Eğitimi,TS0241,1,51
+planned,Bankacılık ve Finans İ.Ö.,TS0392,1,51
+planned,Çalışma Ekonomisi ve Endüstri İlişkileri,TS0070,1,51
+planned,Endüstri Mühendisliği,TS0445,1,51
+planned,Gazetecilik İ.Ö.,TS0180,1,51
+planned,Gazetecilik,TS0140,1,51
+planned,Gazetecilik,TS0355,1,51
+planned,İnsan Kaynakları Yönetimi,TS0500,1,51
+planned,İnsan Kaynakları Yönetimi,TS0609,1,51
+planned,Fen Bilgisi Öğretmenliği,TS0538,1,51
+planned,Otomotiv Mühendisliği,TS0422,1,51
+planned,Peyzaj Mimarlığı,TS0555,1,51
+planned,Peyzaj Mimarlığı,TS0437,1,51
+planned,Sınıf Öğretmenliği,TS0646,1,51
+planned,Tarih İ.Ö.,TS0309,1,51
+planned,Türk Dili ve Edebiyatı İ.Ö.,TS0545,1,51
+planned,Tıbbi Görüntüleme Teknikleri İ.Ö.,TS0280,1,51
+planned,Türkçe Öğretmenliği,TS0312,1,51
+planned,Uluslararası İlişkiler,TS0280,1,51
+planned,Uluslararası İlişkiler İ.Ö.,TS0157,1,51
+planned,Spor Yöneticiliği,TS0339,1,51
+planned,Antrenörlük Eğitimi,TS0025,1,51
+planned,Antrenörlük Eğitimi,TS0132,1,50
+planned,Antrenörlük Eğitimi,TS0254,1,50
+planned,Antrenörlük Eğitimi,TS0041,1,50
+planned,Bilgisayar Mühendisliği,TS0107,1,50
+planned,Coğrafya İ.Ö.,TS0553,1,50
+planned,Coğrafya,TS0630,1,50
+planned,Coğrafya İ.Ö.,TS0324,1,50
+planned,Eczacılık Fakültesi,TS0572,1,50
+planned,Görsel İletişim Tasarımı,TS0577,1,50
+planned,İnsan Kaynakları Yönetimi,TS0242,1,50
+planned,İlk ve Acil Yardım,TS0615,1,50
+planned,İlk ve Acil Yardım,TS0433,1,50
+planned,İktisat,TS0034,1,50
+planned,Sınıf Öğretmenliği,TS0422,1,50
+planned,Sınıf Öğretmenliği,TS0451,1,50
+planned,Sosyal Bilgiler Öğretmenliği,TS0524,1,50
+planned,"Radyo, Televizyon ve Sinema",TS0045,1,50
+planned,"Radyo, Televizyon ve Sinema",TS0582,1,50
+planned,Sanat Tarihi,TS0521,1,50
+planned,Sınıf Öğretmenliği,TS0198,1,50
+planned,Sosyoloji İ.Ö.,TS0300,1,50
+planned,Spor Bilimleri,TS0136,1,50
+planned,Tarih İ.Ö.,TS0292,1,50
+planned,Tarih,TS0203,1,50
+planned,Türk Dili ve Edebiyatı İ.Ö.,TS0402,1,50
+planned,Türk Dili ve Edebiyatı,TS0309,1,50
+planned,Antrenörlük Eğitimi,TS0361,1,49
+planned,Beden Eğitimi ve Spor Öğretmenliği,TS0356,1,49
+planned,Bilgisayar Mühendisliği,TS0457,1,49
+planned,Çocuk Gelişimi,TS0328,1,49
+planned,Coğrafya İ.Ö.,TS0228,1,49
+planned,Elektrik-Elektronik Mühendisliği İ.Ö.,TS0447,1,49
+planned,Elektrik-Elektronik Mühendisliği,TS0323,1,49
+planned,Endüstri Mühendisliği İ.Ö.,TS0335,1,49
+planned,Endüstri Mühendisliği İ.Ö.,TS0558,1,49
+planned,Fen Bilgisi Öğretmenliği,TS0187,1,49
+planned,Fen Bilgisi Öğretmenliği,TS0088,1,49
+planned,Fen Bilgisi Öğretmenliği,TS0428,1,49
+planned,Görsel İletişim Tasarımı,TS0179,1,49
+planned,Görsel İletişim Tasarımı,TS0390,1,49
+planned,Gazetecilik İ.Ö.,TS0576,1,49
+planned,Gazetecilik,TS0275,1,49
+planned,İlk ve Acil Yardım,TS0424,1,49
+planned,İlahiyat (Arapça Hazırlık),TS0235,1,49
+planned,İlahiyat İ.Ö. (Arapça Hazırlık),TS0310,1,49
+planned,İlk ve Acil Yardım,TS0301,1,49
+planned,İstatistik,TS0441,1,49
+planned,Ekonometri,TS0591,1,49
+planned,Matematik,TS0218,1,49
+planned,Arapça Öğretmenliği,TS0295,1,49
+planned,Fen Bilgisi Öğretmenliği,TS0322,1,49
+planned,Sınıf Öğretmenliği,TS0548,1,49
+planned,Otomotiv Mühendisliği,TS0315,1,49
+planned,"Radyo, Televizyon ve Sinema İ.Ö.",TS0045,1,49
+planned,"Radyo, Televizyon ve Sinema İ.Ö.",TS0261,1,49
+planned,"Radyo, Televizyon ve Sinema",TS0367,1,49
+planned,"Radyo, Televizyon ve Sinema İ.Ö.",TS0157,1,49
+planned,Sanat Tarihi,TS0295,1,49
+planned,Türk Dili ve Edebiyatı İ.Ö.,TS0088,1,49
+planned,Türkçe Öğretmenliği,TS0524,1,49
+planned,Uluslararası İlişkiler İ.Ö.,TS0601,1,49
+planned,Uluslararası İlişkiler İ.Ö.,TS0490,1,49
+planned,Arapça Öğretmenliği,TS0652,1,48
+planned,Finans ve Bankacılık İ.Ö.,TS0476,1,48
+planned,Bilgisayar Mühendisliği İ.Ö.,TS0457,1,48
+planned,Spor Yöneticiliği,TS0016,1,48
+planned,Çocuk Gelişimi İ.Ö.,TS0384,1,48
+planned,Endüstri Mühendisliği,TS0643,1,48
+planned,Endüstri Mühendisliği İ.Ö.,TS0121,1,48
+planned,Fen Bilgisi Öğretmenliği,TS0101,1,48
+planned,Fen Bilgisi Öğretmenliği,TS0082,1,48
+planned,Fen Bilgisi Öğretmenliği,TS0195,1,48
+planned,Görsel İletişim Tasarımı,TS0252,1,48
+planned,Görsel İletişim Tasarımı,TS0501,1,48
+planned,Hukuk,TS0254,1,48
+planned,İstatistik,TS0515,1,48
+planned,Makine Mühendisliği,TS0309,1,48
+planned,Makine Mühendisliği İ.Ö.,TS0632,1,48
+planned,Havacılık Yönetimi,TS0591,1,48
+planned,Sınıf Öğretmenliği,TS0290,1,48
+planned,Sınıf Öğretmenliği,TS0428,1,48
+planned,Sınıf Öğretmenliği,TS0553,1,48
+planned,Sınıf Öğretmenliği,TS0445,1,48
+planned,Sınıf Öğretmenliği,TS0312,1,48
+planned,Sosyoloji,TS0436,1,48
+planned,Sosyoloji,TS0314,1,48
+planned,Tarih,TS0530,1,48
+planned,Tarih İ.Ö.,TS0230,1,48
+planned,Arapça Öğretmenliği,TS0642,1,47
+planned,Arapça Öğretmenliği,TS0450,1,47
+planned,Arapça Öğretmenliği,TS0110,1,47
+planned,Finans ve Bankacılık İ.Ö.,TS0571,1,47
+planned,Bankacılık ve Finans İ.Ö.,TS0261,1,47
+planned,Beden Eğitimi ve Spor Öğretmenliği,TS0033,1,47
+planned,Çalışma Ekonomisi ve Endüstri İlişkileri,TS0283,1,47
+planned,Çocuk Gelişimi İ.Ö.,TS0033,1,47
+planned,Çocuk Gelişimi İ.Ö.,TS0356,1,47
+planned,Coğrafya İ.Ö.,TS0117,1,47
+planned,Engelli Bakımı ve Rehabilitasyon İ.Ö.,TS0529,1,47
+planned,Görsel İletişim Tasarımı,TS0066,1,47
+planned,Gazetecilik İ.Ö.,TS0032,1,47
+planned,Halkla İlişkiler ve Tanıtım İ.Ö.,TS0361,1,47
+planned,İlk ve Acil Yardım,TS0201,1,47
+planned,Ekonometri,TS0464,1,47
+planned,İlahiyat İ.Ö. (Arapça Hazırlık),TS0463,1,47
+planned,Ekonometri,TS0237,1,47
+planned,Türkçe Öğretmenliği,TS0306,1,47
+planned,Matematik,TS0437,1,47
+planned,"Radyo, Televizyon ve Sinema",TS0070,1,47
+planned,Sanat Tarihi,TS0626,1,47
+planned,Sağlık Yönetimi İ.Ö.,TS0173,1,47
+planned,Sınıf Öğretmenliği,TS0542,1,47
+planned,Tarih,TS0537,1,47
+planned,Tarih İ.Ö.,TS0097,1,47
+planned,Türk Dili ve Edebiyatı,TS0437,1,47
+planned,Uluslararası İlişkiler İ.Ö.,TS0381,1,47
+planned,Havacılık Yönetimi,TS0451,1,46
+planned,Finans ve Bankacılık İ.Ö.,TS0275,1,46
+planned,Beden Eğitimi ve Spor Öğretmenliği,TS0248,1,46
+planned,Beden Eğitimi ve Spor Öğretmenliği,TS0395,1,46
+planned,Beden Eğitimi ve Spor Öğretmenliği,TS0365,1,46
+planned,Çocuk Gelişimi İ.Ö.,TS0478,1,46
+planned,Çocuk Gelişimi İ.Ö.,TS0248,1,46
+planned,Çocuk Gelişimi İ.Ö.,TS0572,1,46
+planned,Coğrafya İ.Ö.,TS0092,1,46
+planned,Coğrafya,TS0297,1,46
+planned,Fen Bilgisi Öğretmenliği,TS0295,1,46
+planned,Gazetecilik İ.Ö.,TS0355,1,46
+planned,İnsan Kaynakları Yönetimi,TS0258,1,46
+planned,İlahiyat İ.Ö. (Arapça Hazırlık),TS0602,1,46
+planned,Sınıf Öğretmenliği,TS0301,1,46
+planned,Matematik,TS0309,1,46
+planned,Tıbbi Laboratuvar Teknikleri,TS0415,1,46
+planned,"Radyo, Televizyon ve Sinema İ.Ö.",TS0367,1,46
+planned,Sosyal Hizmetler İ.Ö.,TS0091,1,46
+planned,Tarih İ.Ö.,TS0209,1,46
+planned,Türk Dili ve Edebiyatı İ.Ö.,TS0309,1,46
+planned,Tıbbi Görüntüleme Teknikleri İ.Ö.,TS0389,1,46
+planned,Havacılık Yönetimi,TS0550,1,45
+planned,Havacılık Yönetimi,TS0295,1,45
+planned,Finans ve Bankacılık İ.Ö.,TS0171,1,45
+planned,Çocuk Gelişimi İ.Ö.,TS0603,1,45
+planned,Coğrafya İ.Ö.,TS0643,1,45
+planned,Ekonometri,TS0501,1,45
+planned,Endüstri Mühendisliği,TS0322,1,45
+planned,Fen Bilgisi Öğretmenliği,TS0422,1,45
+planned,İngilizce Öğretmenliği,TS0211,1,45
+planned,Turizm İşletmeciliği,TS0131,1,45
+planned,Ekonometri,TS0020,1,45
+planned,İlahiyat İ.Ö. (Arapça Hazırlık),TS0141,1,45
+planned,Otomotiv Mühendisliği,TS0201,1,45
+planned,Şehir ve Bölge Planlama,TS0456,1,45
+planned,Şehir ve Bölge Planlama,TS0229,1,45
+planned,Peyzaj Mimarlığı,TS0433,1,45
+planned,"Radyo, Televizyon ve Sinema İ.Ö.",TS0392,1,45
+planned,"Radyo, Televizyon ve Sinema İ.Ö.",TS0582,1,45
+planned,Sınıf Öğretmenliği,TS0190,1,45
+planned,Sınıf Öğretmenliği,TS0443,1,45
+planned,Tıbbi Dokümantasyon ve Sekreterlik,TS0216,1,45
+planned,Tıbbi Dokümantasyon ve Sekreterlik,TS0319,1,45
+planned,Tıbbi Dokümantasyon ve Sekreterlik,TS0518,1,45
+planned,Arapça Öğretmenliği,TS0093,1,44
+planned,Antrenörlük Eğitimi,TS0395,1,44
+planned,Antrenörlük Eğitimi,TS0287,1,44
+planned,Havacılık Yönetimi,TS0107,1,44
+planned,Havacılık Yönetimi,TS0521,1,44
+planned,Çocuk Gelişimi İ.Ö.,TS0144,1,44
+planned,İngilizce Öğretmenliği,TS0207,1,44
+planned,Gazetecilik İ.Ö.,TS0150,1,44
+planned,Gazetecilik İ.Ö.,TS0140,1,44
+planned,Gazetecilik İ.Ö.,TS0062,1,44
+planned,Kimya Mühendisliği,TS0074,1,44
+planned,İktisat,TS0385,1,44
+planned,Matematik,TS0555,1,44
+planned,Fen Bilgisi Öğretmenliği,TS0290,1,44
+planned,İlköğretim Matematik Öğretmenliği,TS0642,1,44
+planned,Otomotiv Mühendisliği,TS0533,1,44
+planned,"Radyo, Televizyon ve Sinema",TS0261,1,44
+planned,"Radyo, Televizyon ve Sinema İ.Ö.",TS0070,1,44
+planned,Sanat Tarihi,TS0326,1,44
+planned,Tarih,TS0209,1,44
+planned,Türk Dili ve Edebiyatı,TS0555,1,44
+planned,Türkçe Öğretmenliği,TS0624,1,44
+planned,Türkçe Öğretmenliği,TS0203,1,44
+planned,Antrenörlük Eğitimi,TS0136,1,43
+planned,Havacılık Yönetimi,TS0422,1,43
+planned,Havacılık Yönetimi,TS0428,1,43
+planned,Beden Eğitimi ve Spor Öğretmenliği,TS0154,1,43
+planned,Beden Eğitimi ve Spor Öğretmenliği,TS0486,1,43
+planned,Coğrafya,TS0086,1,43
+planned,Endüstri Mühendisliği İ.Ö.,TS0643,1,43
+planned,Fen Bilgisi Öğretmenliği,TS0646,1,43
+planned,Gazetecilik İ.Ö.,TS0247,1,43
+planned,İktisat,TS0047,1,43
+planned,Fen Bilgisi Öğretmenliği,TS0301,1,43
+planned,Matematik,TS0230,1,43
+planned,Fen Bilgisi Öğretmenliği,TS0526,1,43
+planned,Tarih,TS0097,1,43
+planned,Tarih,TS0309,1,43
+planned,Tıbbi Dokümantasyon ve Sekreterlik,TS0190,1,43
+planned,Tıbbi Dokümantasyon ve Sekreterlik,TS0078,1,43
+planned,Türkçe Öğretmenliği,TS0528,1,43
+planned,Spor Yöneticiliği,TS0175,1,43
+planned,Havacılık Yönetimi,TS0433,1,42
+planned,Havacılık Yönetimi,TS0526,1,42
+planned,İnsan Kaynakları Yönetimi,TS0504,1,42
+planned,Siyaset Bilimi ve Kamu Yönetimi İ.Ö.,TS0037,1,42
+planned,Turizm İşletmeciliği,TS0341,1,42
+planned,Biyoloji,TS0290,1,42
+planned,İstatistik,TS0301,1,42
+planned,Türkçe Öğretmenliği,TS0451,1,42
+planned,Otomotiv Mühendisliği,TS0634,1,42
+planned,Sınıf Öğretmenliği,TS0620,1,42
+planned,Sosyal Hizmetler İ.Ö.,TS0554,1,42
+planned,Felsefe,TS0531,1,42
+planned,Tıbbi Laboratuvar Teknikleri,TS0616,1,42
+planned,Türkçe Öğretmenliği,TS0326,1,42
+planned,Antrenörlük Eğitimi,TS0028,1,41
+planned,Finans ve Bankacılık İ.Ö.,TS0378,1,41
+planned,Bilgisayar Mühendisliği,TS0428,1,41
+planned,Beden Eğitimi ve Spor Öğretmenliği,TS0016,1,41
+planned,Coğrafya İ.Ö.,TS0630,1,41
+planned,Coğrafya İ.Ö.,TS0086,1,41
+planned,Felsefe,TS0294,1,41
+planned,Fizik,TS0315,1,41
+planned,Görsel İletişim Tasarımı,TS0030,1,41
+planned,Görsel İletişim Tasarımı,TS0245,1,41
+planned,Havacılık Yönetimi,TS0441,1,41
+planned,Havacılık Yönetimi,TS0301,1,41
+planned,İngilizce Öğretmenliği,TS0457,1,41
+planned,Sanat Tarihi,TS0620,1,41
+planned,Sanat Tarihi,TS0642,1,41
+planned,Sağlık Yönetimi,TS0182,1,41
+planned,Tarih İ.Ö.,TS0436,1,41
+planned,Türk Dili ve Edebiyatı,TS0404,1,41
+planned,Tıbbi Laboratuvar Teknikleri,TS0217,1,41
+planned,Türkçe Öğretmenliği,TS0550,1,41
+planned,Spor Yöneticiliği,TS0356,1,41
+planned,Antrenörlük Eğitimi,TS0242,1,40
+planned,Havacılık Yönetimi,TS0538,1,40
+planned,Finans ve Bankacılık İ.Ö.,TS0242,1,40
+planned,Beden Eğitimi ve Spor Öğretmenliği,TS0125,1,40
+planned,Beden Eğitimi ve Spor Öğretmenliği,TS0028,1,40
+planned,Bilgisayar Mühendisliği,TS0620,1,40
+planned,Biyoloji,TS0076,1,40
+planned,Biyoloji,TS0104,1,40
+planned,Coğrafya İ.Ö.,TS0559,1,40
+planned,Felsefe,TS0081,1,40
+planned,Felsefe,TS0436,1,40
+planned,Felsefe,TS0193,1,40
+planned,Fen Bilgisi Öğretmenliği,TS0201,1,40
+planned,Gazetecilik İ.Ö.,TS0275,1,40
+planned,İlahiyat (Arapça Hazırlık),TS0615,1,40
+planned,Sosyal Bilgiler Öğretmenliği,TS0451,1,40
+planned,Arapça Öğretmenliği,TS0322,1,40
+planned,Peyzaj Mimarlığı,TS0301,1,40
+planned,Hukuk,TS0037,1,40
+planned,Şehir ve Bölge Planlama,TS0536,1,40
+planned,Sosyal Bilgiler Öğretmenliği,TS0326,1,40
+planned,Sınıf Öğretmenliği,TS0230,1,40
+planned,Tarih,TS0230,1,40
+planned,Türk Dili ve Edebiyatı İ.Ö.,TS0096,1,40
+planned,Spor Yöneticiliği,TS0248,1,40
+planned,Arkeoloji,TS0187,1,39
+planned,Bilgisayar Mühendisliği İ.Ö.,TS0107,1,39
+planned,Biyoloji,TS0215,1,39
+planned,Sağlık Yönetimi,TS0366,1,39
+planned,Çocuk Gelişimi,TS0205,1,39
+planned,Elektrik-Elektronik Mühendisliği,TS0438,1,39
+planned,Endüstri Mühendisliği İ.Ö.,TS0295,1,39
+planned,İngilizce Öğretmenliği,TS0091,1,39
+planned,İnsan Kaynakları Yönetimi,TS0603,1,39
+planned,İktisat,TS0145,1,39
+planned,İlköğretim Matematik Öğretmenliği,TS0545,1,39
+planned,Sanat Tarihi,TS0526,1,39
+planned,Sosyal Bilgiler Öğretmenliği,TS0445,1,39
+planned,Sosyal Hizmet,TS0352,1,39
+planned,Türk Dili ve Edebiyatı İ.Ö.,TS0437,1,39
+planned,Turizm İşletmeciliği,TS0023,1,39
+planned,Turizm İşletmeciliği,TS0563,1,39
+planned,Turizm İşletmeciliği,TS0238,1,39
+planned,Havacılık Yönetimi,TS0401,1,39
+planned,Spor Yöneticiliği,TS0466,1,39
+planned,Spor Yöneticiliği,TS0125,1,39
+planned,Spor Yöneticiliği,TS0033,1,39
+planned,Adalet İ.Ö.,TS0605,1,38
+planned,Arkeoloji,TS0515,1,38
+planned,Havacılık Yönetimi,TS0213,1,38
+planned,Beden Eğitimi ve Spor Öğretmenliği,TS0235,1,38
+planned,Beden Eğitimi ve Spor Öğretmenliği,TS0242,1,38
+planned,Beden Eğitimi ve Spor Öğretmenliği,TS0348,1,38
+planned,Bilgisayar Mühendisliği İ.Ö.,TS0309,1,38
+planned,Görsel İletişim Tasarımı,TS0569,1,38
+planned,Kimya,TS0637,1,38
+planned,Sosyal Bilgiler Öğretmenliği,TS0538,1,38
+planned,Şehir ve Bölge Planlama,TS0197,1,38
+planned,Tıbbi Laboratuvar Teknikleri,TS0319,1,38
+planned,Uluslararası İlişkiler İ.Ö.,TS0611,1,38
+planned,Spor Yöneticiliği,TS0144,1,38
+planned,Biyoloji,TS0190,1,37
+planned,Sağlık Yönetimi İ.Ö.,TS0366,1,37
+planned,Coğrafya İ.Ö.,TS0100,1,37
+planned,Coğrafya İ.Ö.,TS0440,1,37
+planned,Görsel İletişim Tasarımı,TS0380,1,37
+planned,Görsel İletişim Tasarımı,TS0273,1,37
+planned,Görsel İletişim Tasarımı,TS0139,1,37
+planned,Kimya,TS0316,1,37
+planned,Kimya,TS0202,1,37
+planned,Kimya,TS0528,1,37
+planned,Fizyoterapi,TS0416,1,37
+planned,Otomotiv Mühendisliği,TS0088,1,37
+planned,Otomotiv Mühendisliği,TS0111,1,37
+planned,Sağlık Yönetimi İ.Ö.,TS0251,1,37
+planned,Sağlık Yönetimi,TS0586,1,37
+planned,Sosyal Bilgiler Öğretmenliği,TS0526,1,37
+planned,Sosyal Bilgiler Öğretmenliği,TS0091,1,37
+planned,Sosyal Bilgiler Öğretmenliği,TS0297,1,37
+planned,Sosyal Bilgiler Öğretmenliği,TS0084,1,37
+planned,Tıbbi Laboratuvar Teknikleri,TS0052,1,37
+planned,Tıbbi Laboratuvar Teknikleri,TS0542,1,37
+planned,Tıbbi Laboratuvar Teknikleri,TS0425,1,37
+planned,Turizm İşletmeciliği,TS0261,1,37
+planned,Uluslararası İlişkiler,TS0389,1,37
+planned,Spor Yöneticiliği,TS0478,1,37
+planned,Havacılık Yönetimi,TS0315,1,36
+planned,Bilgisayar Mühendisliği İ.Ö.,TS0428,1,36
+planned,Coğrafya İ.Ö.,TS0435,1,36
+planned,Eczacılık Fakültesi,TS0068,1,36
+planned,Ekonometri,TS0030,1,36
+planned,Elektrik-Elektronik Mühendisliği,TS0653,1,36
+planned,Felsefe,TS0325,1,36
+planned,İnşaat Mühendisliği İ.Ö.,TS0439,1,36
+planned,Kimya,TS0215,1,36
+planned,Gıda Mühendisliği,TS0187,1,36
+planned,Sosyal Bilgiler Öğretmenliği,TS0550,1,36
+planned,Otomotiv Mühendisliği,TS0538,1,36
+planned,Otomotiv Mühendisliği,TS0326,1,36
+planned,Sanat Tarihi,TS0555,1,36
+planned,Sağlık Yönetimi İ.Ö.,TS0244,1,36
+planned,Sağlık Yönetimi,TS0474,1,36
+planned,Turizm İşletmeciliği,TS0352,1,36
+planned,Arkeoloji,TS0422,1,35
+planned,Bilgisayar Mühendisliği İ.Ö.,TS0620,1,35
+planned,Bilgisayar Mühendisliği,TS0309,1,35
+planned,İşletme (İngilizce),TS0125,1,35
+planned,Çalışma Ekonomisi ve Endüstri İlişkileri,TS0356,1,35
+planned,Coğrafya İ.Ö.,TS0337,1,35
+planned,Elektrik-Elektronik Mühendisliği,TS0121,1,35
+planned,Endüstri Mühendisliği İ.Ö.,TS0546,1,35
+planned,Fizik,TS0074,1,35
+planned,İnşaat Mühendisliği İ.Ö.,TS0209,1,35
+planned,İstatistik,TS0322,1,35
+planned,Sosyal Bilgiler Öğretmenliği,TS0322,1,35
+planned,Sanat Tarihi,TS0082,1,35
+planned,Sanat Tarihi,TS0195,1,35
+planned,Sağlık Yönetimi,TS0244,1,35
+planned,Sağlık Yönetimi İ.Ö.,TS0474,1,35
+planned,Sosyal Bilgiler Öğretmenliği,TS0428,1,35
+planned,Sosyal Bilgiler Öğretmenliği,TS0437,1,35
+planned,Sosyal Bilgiler Öğretmenliği,TS0120,1,35
+planned,Türk Dili ve Edebiyatı İ.Ö.,TS0555,1,35
+planned,Tıbbi Dokümantasyon ve Sekreterlik,TS0326,1,35
+planned,Uluslararası İlişkiler İ.Ö.,TS0393,1,35
+planned,Arkeoloji,TS0290,1,34
+planned,Coğrafya İ.Ö.,TS0297,1,34
+planned,Elektrik-Elektronik Mühendisliği,TS0461,1,34
+planned,Endüstri Mühendisliği,TS0626,1,34
+planned,Siyaset Bilimi ve Kamu Yönetimi İ.Ö.,TS0576,1,34
+planned,Kimya,TS0628,1,34
+planned,Tekstil Mühendisliği,TS0101,1,34
+planned,Fizik,TS0441,1,34
+planned,Sosyal Bilgiler Öğretmenliği,TS0422,1,34
+planned,Sosyal Bilgiler Öğretmenliği,TS0304,1,34
+planned,Otomotiv Mühendisliği,TS0644,1,34
+planned,Şehir ve Bölge Planlama,TS0532,1,34
+planned,Peyzaj Mimarlığı,TS0195,1,34
+planned,Peyzaj Mimarlığı,TS0521,1,34
+planned,Sanat Tarihi,TS0437,1,34
+planned,İnsan Kaynakları Yönetimi,TS0384,1,34
+planned,Sosyal Bilgiler Öğretmenliği,TS0433,1,34
+planned,Türk Dili ve Edebiyatı İ.Ö.,TS0404,1,34
+planned,Tıbbi Dokümantasyon ve Sekreterlik,TS0114,1,34
+planned,Tıbbi Dokümantasyon ve Sekreterlik,TS0077,1,34
+planned,Turizm İşletmeciliği,TS0031,1,34
+planned,Turizm İşletmeciliği,TS0048,1,34
+planned,Beden Eğitimi ve Spor Öğretmenliği,TS0136,1,33
+planned,Coğrafya İ.Ö.,TS0655,1,33
+planned,Coğrafya İ.Ö.,TS0209,1,33
+planned,Felsefe,TS0098,1,33
+planned,Fen Bilgisi Öğretmenliği,TS0096,1,33
+planned,Havacılık Yönetimi,TS0015,1,33
+planned,İktisat,TS0479,1,33
+planned,İktisat,TS0573,1,33
+planned,Tıbbi Dokümantasyon ve Sekreterlik,TS0301,1,33
+planned,Şehir ve Bölge Planlama,TS0548,1,33
+planned,Peyzaj Mimarlığı,TS0082,1,33
+planned,Sanat Tarihi,TS0428,1,33
+planned,Sağlık Yönetimi,TS0383,1,33
+planned,Sağlık Yönetimi İ.Ö.,TS0586,1,33
+planned,Sosyal Bilgiler Öğretmenliği,TS0103,1,33
+planned,Spor Bilimleri,TS0472,1,33
+planned,Tıbbi Dokümantasyon ve Sekreterlik,TS0646,1,33
+planned,Tıbbi Dokümantasyon ve Sekreterlik,TS0550,1,33
+planned,Uluslararası İlişkiler İ.Ö.,TS0048,1,33
+planned,Spor Yöneticiliği,TS0028,1,33
+planned,İşletme (İngilizce),TS0144,1,32
+planned,Elektrik-Elektronik Mühendisliği,TS0333,1,32
+planned,İngilizce Öğretmenliği,TS0327,1,32
+planned,Gazetecilik İ.Ö.,TS0254,1,32
+planned,İnsan Kaynakları Yönetimi,TS0572,1,32
+planned,İlahiyat (Arapça Hazırlık),TS0571,1,32
+planned,Sosyal Bilgiler Öğretmenliği,TS0295,1,32
+planned,Kimya,TS0302,1,32
+planned,Peyzaj Mimarlığı,TS0309,1,32
+planned,Sanat Tarihi,TS0451,1,32
+planned,Siyaset Bilimi ve Kamu Yönetimi İ.Ö.,TS0359,1,32
+planned,Sosyal Bilgiler Öğretmenliği,TS0317,1,32
+planned,Sosyal Bilgiler Öğretmenliği,TS0215,1,32
+planned,Sosyal Bilgiler Öğretmenliği,TS0441,1,32
+planned,Sosyal Bilgiler Öğretmenliği,TS0545,1,32
+planned,Tıbbi Dokümantasyon ve Sekreterlik,TS0202,1,32
+planned,Tıbbi Dokümantasyon ve Sekreterlik,TS0433,1,32
+planned,Tıbbi Laboratuvar Teknikleri,TS0410,1,32
+planned,Tıbbi Laboratuvar Teknikleri,TS0091,1,32
+planned,Türkçe Öğretmenliği,TS0620,1,32
+planned,Arapça Öğretmenliği,TS0547,1,31
+planned,Adalet,TS0578,1,31
+planned,Bilgisayar Mühendisliği,TS0521,1,31
+planned,Biyoloji,TS0449,1,31
+planned,Elektrik-Elektronik Mühendisliği İ.Ö.,TS0220,1,31
+planned,Kimya,TS0435,1,31
+planned,Tıbbi Laboratuvar Teknikleri,TS0304,1,31
+planned,Sosyal Bilgiler Öğretmenliği,TS0097,1,31
+planned,İşletme (İngilizce),TS0235,1,30
+planned,Elektrik-Elektronik Mühendisliği İ.Ö.,TS0546,1,30
+planned,Elektrik-Elektronik Mühendisliği,TS0535,1,30
+planned,Felsefe,TS0298,1,30
+planned,Fen Bilgisi Öğretmenliği,TS0309,1,30
+planned,Kimya,TS0397,1,30
+planned,Fen Bilgisi Öğretmenliği,TS0555,1,30
+planned,Şehir ve Bölge Planlama,TS0633,1,30
+planned,Sanat Tarihi,TS0107,1,30
+planned,Tarih İ.Ö.,TS0304,1,30
+planned,Sosyal Bilgiler Öğretmenliği,TS0533,1,30
+planned,Tıbbi Dokümantasyon ve Sekreterlik,TS0251,1,30
+planned,Tekstil Mühendisliği,TS0213,1,30
+planned,Tekstil Mühendisliği,TS0636,1,30
+planned,Turizm İşletmeciliği,TS0570,1,30
+planned,Turizm İşletmeciliği,TS0157,1,30
+planned,Spor Yöneticiliği,TS0472,1,30
+planned,Arkeoloji,TS0074,1,29
+planned,Biyoloji,TS0197,1,29
+planned,Eczacılık Fakültesi,TS0282,1,29
+planned,Felsefe,TS0085,1,29
+planned,Felsefe,TS0210,1,29
+planned,Gazetecilik İ.Ö.,TS0361,1,29
+planned,İnsan Kaynakları Yönetimi,TS0276,1,29
+planned,Ekonometri,TS0604,1,29
+planned,Şehir ve Bölge Planlama,TS0122,1,29
+planned,Peyzaj Mimarlığı,TS0120,1,29
+planned,Spor Yöneticiliği,TS0136,1,29
+planned,Spor Yöneticiliği,TS0271,1,29
+planned,Biyoloji,TS0109,1,28
+planned,Biyoloji,TS0295,1,28
+planned,Ekonometri,TS0249,1,28
+planned,Fizik,TS0515,1,28
+planned,Gıda Mühendisliği,TS0290,1,28
+planned,Sanat Tarihi,TS0533,1,28
+planned,Tarih İ.Ö.,TS0530,1,28
+planned,Spor Yöneticiliği,TS0348,1,28
+planned,Arkeoloji,TS0620,1,27
+planned,Coğrafya İ.Ö.,TS0329,1,27
+planned,Felsefe,TS0312,1,27
+planned,Gıda Mühendisliği,TS0295,1,27
+planned,Ekonometri,TS0387,1,27
+planned,Kimya,TS0197,1,27
+planned,Fizik,TS0187,1,27
+planned,Siyaset Bilimi ve Kamu Yönetimi İ.Ö.,TS0147,1,27
+planned,Otomotiv Mühendisliği,TS0301,1,27
+planned,Spor Yöneticiliği,TS0242,1,27
+planned,Spor Yöneticiliği,TS0566,1,27
+planned,Arkeoloji,TS0613,1,26
+planned,Bilgisayar Mühendisliği İ.Ö.,TS0521,1,26
+planned,Biyoloji,TS0203,1,26
+planned,Biyoloji,TS0085,1,26
+planned,Biyoloji,TS0221,1,26
+planned,Biyoloji,TS0098,1,26
+planned,İşletme (İngilizce),TS0016,1,26
+planned,Ekonometri,TS0574,1,26
+planned,Endüstri Mühendisliği,TS0295,1,26
+planned,Felsefe,TS0199,1,26
+planned,İlahiyat (Arapça Hazırlık),TS0560,1,26
+planned,İlahiyat (Arapça Hazırlık),TS0588,1,26
+planned,Kimya,TS0297,1,26
+planned,Kimya Mühendisliği,TS0530,1,26
+planned,Sanat Tarihi,TS0309,1,26
+planned,Tıbbi Dokümantasyon ve Sekreterlik,TS0389,1,26
+planned,Tekstil Mühendisliği,TS0315,1,26
+planned,Turizm İşletmeciliği,TS0483,1,26
+planned,Havacılık Yönetimi,TS0445,1,25
+planned,Havacılık Yönetimi,TS0545,1,25
+planned,Elektrik-Elektronik Mühendisliği İ.Ö.,TS0232,1,25
+planned,Elektrik-Elektronik Mühendisliği İ.Ö.,TS0438,1,25
+planned,Elektrik-Elektronik Mühendisliği İ.Ö.,TS0461,1,25
+planned,Felsefe,TS0440,1,25
+planned,Gıda Mühendisliği,TS0526,1,25
+planned,Gazetecilik İ.Ö.,TS0507,1,25
+planned,Çalışma Ekonomisi ve Endüstri İlişkileri,TS0033,1,25
+planned,İlahiyat İ.Ö. (Arapça Hazırlık),TS0596,1,25
+planned,İstatistik,TS0435,1,25
+planned,Kimya,TS0523,1,25
+planned,Kimya,TS0084,1,25
+planned,Kimya Mühendisliği,TS0638,1,25
+planned,Sağlık Yönetimi İ.Ö.,TS0148,1,25
+planned,Sağlık Yönetimi İ.Ö.,TS0362,1,25
+planned,Tarih İ.Ö.,TS0203,1,25
+planned,Tıbbi Dokümantasyon ve Sekreterlik,TS0482,1,25
+planned,Tıbbi Dokümantasyon ve Sekreterlik,TS0360,1,25
+planned,Tıbbi Dokümantasyon ve Sekreterlik,TS0037,1,25
+planned,Tıbbi Dokümantasyon ve Sekreterlik,TS0147,1,25
+planned,Tıbbi Dokümantasyon ve Sekreterlik,TS0577,1,25
+planned,Turizm İşletmeciliği,TS0476,1,25
+planned,Antrenörlük Eğitimi,TS0015,1,24
+planned,Arkeoloji,TS0632,1,24
+planned,Biyoloji,TS0524,1,24
+planned,İşletme (İngilizce),TS0591,1,24
+planned,Fizik,TS0445,1,24
+planned,Ekonometri,TS0071,1,24
+planned,Otomotiv Mühendisliği,TS0433,1,24
+planned,Sanat Tarihi,TS0433,1,24
+planned,Sanat Tarihi,TS0207,1,24
+planned,Sanat Tarihi,TS0230,1,24
+planned,Sanat Tarihi,TS0120,1,24
+planned,Spor Bilimleri,TS0348,1,24
+planned,Tıbbi Dokümantasyon ve Sekreterlik,TS0347,1,24
+planned,Tıbbi Dokümantasyon ve Sekreterlik,TS0135,1,24
+planned,Tıbbi Dokümantasyon ve Sekreterlik,TS0263,1,24
+planned,Tıbbi Dokümantasyon ve Sekreterlik,TS0597,1,24
+planned,Tıbbi Dokümantasyon ve Sekreterlik,TS0471,1,24
+planned,Uluslararası İlişkiler,TS0251,1,24
+planned,Biyoloji,TS0331,1,23
+planned,Biyoloji,TS0313,1,23
+planned,İşletme (İngilizce),TS0560,1,23
+planned,İşletme (İngilizce),TS0463,1,23
+planned,İşletme (İngilizce),TS0371,1,23
+planned,Ekonometri,TS0610,1,23
+planned,Ekonometri,TS0366,1,23
+planned,Ekonometri,TS0284,1,23
+planned,Elektrik-Elektronik Mühendisliği İ.Ö.,TS0535,1,23
+planned,Elektrik-Elektronik Mühendisliği İ.Ö.,TS0653,1,23
+planned,Fizik,TS0322,1,23
+planned,Grafik Tasarımı,TS0371,1,23
+planned,Grafik Tasarımı,TS0131,1,23
+planned,Hukuk,TS0275,1,23
+planned,Çalışma Ekonomisi ve Endüstri İlişkileri,TS0248,1,23
+planned,İlahiyat (Arapça Hazırlık),TS0536,1,23
+planned,İstatistik,TS0295,1,23
+planned,Kimya,TS0536,1,23
+planned,Gıda Mühendisliği,TS0101,1,23
+planned,Kimya Mühendisliği,TS0319,1,23
+planned,Şehir ve Bölge Planlama,TS0630,1,23
+planned,Sağlık Yönetimi,TS0491,1,23
+planned,Sağlık Yönetimi İ.Ö.,TS0158,1,23
+planned,Tıbbi Dokümantasyon ve Sekreterlik,TS0027,1,23
+planned,Tıbbi Dokümantasyon ve Sekreterlik,TS0370,1,23
+planned,Antrenörlük Eğitimi,TS0258,1,22
+planned,Arkeoloji,TS0332,1,22
+planned,Biyoloji,TS0437,1,22
+planned,Biyoloji,TS0233,1,22
+planned,Biyoloji,TS0120,1,22
+planned,Eczacılık Fakültesi,TS0598,1,22
+planned,Felsefe,TS0431,1,22
+planned,Gıda Mühendisliği,TS0096,1,22
+planned,Grafik Tasarımı,TS0591,1,22
+planned,Grafik Tasarımı,TS0494,1,22
+planned,Grafik Tasarımı,TS0276,1,22
+planned,Hukuk,TS0356,1,22
+planned,Kimya,TS0622,1,22
+planned,Kimya,TS0097,1,22
+planned,Kimya,TS0209,1,22
+planned,Kimya,TS0400,1,22
+planned,Kimya Mühendisliği,TS0097,1,22
+planned,Tekstil Mühendisliği,TS0225,1,22
+planned,Müzikoloji,TS0052,1,22
+planned,Sahne Sanatları Oyunculuk,TS0235,1,22
+planned,Sanat Tarihi,TS0632,1,22
+planned,Sağlık Yönetimi,TS0508,1,22
+planned,Sağlık Yönetimi,TS0158,1,22
+planned,Turizm İşletmeciliği,TS0367,1,22
+planned,Biyoloji,TS0209,1,21
+planned,Ekonometri,TS0489,1,21
+planned,Elektrik-Elektronik Mühendisliği İ.Ö.,TS0323,1,21
+planned,Elektrik-Elektronik Mühendisliği İ.Ö.,TS0310,1,21
+planned,Elektrik-Elektronik Mühendisliği,TS0556,1,21
+planned,Fizik,TS0082,1,21
+planned,Gıda Mühendisliği,TS0107,1,21
+planned,Gıda Mühendisliği,TS0642,1,21
+planned,Gıda Mühendisliği,TS0445,1,21
+planned,Grafik Tasarımı,TS0167,1,21
+planned,Kimya,TS0439,1,21
+planned,Kimya Mühendisliği,TS0207,1,21
+planned,Kimya Mühendisliği,TS0309,1,21
+planned,Sahne Sanatları Oyunculuk,TS0125,1,21
+planned,Spor Bilimleri,TS0028,1,21
+planned,Turizm İşletmeciliği,TS0254,1,21
+planned,Arkeoloji,TS0120,1,20
+planned,Biyoloji,TS0116,1,20
+planned,Biyoloji,TS0324,1,20
+planned,Çalışma Ekonomisi ve Endüstri İlişkileri,TS0478,1,20
+planned,Eczacılık Fakültesi,TS0356,1,20
+planned,Gıda Mühendisliği,TS0201,1,20
+planned,Grafik Tasarımı,TS0265,1,20
+planned,Grafik Tasarımı,TS0483,1,20
+planned,Hukuk,TS0141,1,20
+planned,Sağlık Yönetimi,TS0040,1,20
+planned,İstatistik,TS0197,1,20
+planned,Kimya,TS0311,1,20
+planned,Kimya Mühendisliği,TS0628,1,20
+planned,Kimya Mühendisliği,TS0201,1,20
+planned,Kimya Mühendisliği,TS0649,1,20
+planned,Kimya Mühendisliği,TS0439,1,20
+planned,Şehir ve Bölge Planlama,TS0338,1,20
+planned,Sağlık Yönetimi,TS0138,1,20
+planned,Sağlık Yönetimi İ.Ö.,TS0491,1,20
+planned,Siyaset Bilimi ve Kamu Yönetimi İ.Ö.,TS0481,1,20
+planned,Türkçe Öğretmenliği,TS0440,1,20
+planned,Arkeoloji,TS0428,1,19
+planned,Biyoloji,TS0228,1,19
+planned,Çalışma Ekonomisi ve Endüstri İlişkileri,TS0409,1,19
+planned,Ekonometri,TS0035,1,19
+planned,Fen Bilgisi Öğretmenliği,TS0207,1,19
+planned,Gıda Mühendisliği,TS0428,1,19
+planned,Resim,TS0128,1,19
+planned,Ekonometri,TS0480,1,19
+planned,İstatistik,TS0534,1,19
+planned,Kimya Mühendisliği,TS0101,1,19
+planned,Müzikoloji,TS0339,1,19
+planned,Şehir ve Bölge Planlama,TS0118,1,19
+planned,Tekstil ve Moda Tasarımı,TS0161,1,19
+planned,Havacılık Yönetimi,TS0195,1,18
+planned,Biyoloji,TS0092,1,18
+planned,Biyoloji,TS0336,1,18
+planned,İşletme (İngilizce),TS0248,1,18
+planned,Çalışma Ekonomisi ve Endüstri İlişkileri,TS0572,1,18
+planned,Müzikoloji,TS0016,1,18
+planned,Fizik,TS0545,1,18
+planned,Fizik,TS0620,1,18
+planned,Gıda Mühendisliği,TS0626,1,18
+planned,Gıda Mühendisliği,TS0545,1,18
+planned,Gıda Mühendisliği,TS0195,1,18
+planned,Grafik Tasarımı,TS0504,1,18
+planned,Müzikoloji,TS0371,1,18
+planned,Gazetecilik İ.Ö.,TS0384,1,18
+planned,Bilgisayar Mühendisliği İ.Ö.,TS0015,1,18
+planned,Kimya Mühendisliği,TS0537,1,18
+planned,İstatistik,TS0526,1,18
+planned,Otomotiv Mühendisliği,TS0550,1,18
+planned,Şehir ve Bölge Planlama,TS0209,1,18
+planned,Siyaset Bilimi ve Kamu Yönetimi İ.Ö.,TS0251,1,18
+planned,Spor Bilimleri,TS0254,1,18
+planned,Arkeoloji,TS0326,1,17
+planned,Arkeoloji,TS0521,1,17
+planned,Arkeoloji,TS0533,1,17
+planned,Havacılık Yönetimi,TS0322,1,17
+planned,Beden Eğitimi ve Spor Öğretmenliği,TS0181,1,17
+planned,İşletme (İngilizce),TS0478,1,17
+planned,Fen Bilgisi Öğretmenliği,TS0437,1,17
+planned,Gıda Mühendisliği,TS0082,1,17
+planned,Grafik Tasarımı,TS0150,1,17
+planned,Resim,TS0341,1,17
+planned,Makine Mühendisliği,TS0015,1,17
+planned,İstatistik,TS0201,1,17
+planned,İstatistik,TS0091,1,17
+planned,İstatistik,TS0627,1,17
+planned,Müzikoloji,TS0494,1,17
+planned,Müzikoloji,TS0235,1,17
+planned,Müzikoloji,TS0144,1,17
+planned,Peyzaj Mimarlığı,TS0207,1,17
+planned,Resim,TS0266,1,17
+planned,Sağlık Yönetimi İ.Ö.,TS0387,1,17
+planned,Sağlık Yönetimi İ.Ö.,TS0578,1,17
+planned,Sağlık Yönetimi İ.Ö.,TS0484,1,17
+planned,Sağlık Yönetimi İ.Ö.,TS0383,1,17
+planned,Spor Bilimleri,TS0041,1,17
+planned,Tekstil Mühendisliği,TS0326,1,17
+planned,Tekstil ve Moda Tasarımı,TS0463,1,17
+planned,Tekstil ve Moda Tasarımı,TS0591,1,17
+planned,Arapça Öğretmenliği,TS0523,1,16
+planned,İşletme (İngilizce),TS0576,1,16
+planned,İşletme (İngilizce),TS0356,1,16
+planned,İşletme (İngilizce),TS0037,1,16
+planned,Felsefe,TS0433,1,16
+planned,Gıda Mühendisliği,TS0533,1,16
+planned,Gıda Mühendisliği,TS0437,1,16
+planned,Gıda Mühendisliği,TS0230,1,16
+planned,Gıda Mühendisliği,TS0632,1,16
+planned,Sahne Sanatları Oyunculuk,TS0339,1,16
+planned,İnsan Kaynakları Yönetimi,TS0566,1,16
+planned,İstatistik,TS0446,1,16
+planned,Müzikoloji,TS0560,1,16
+planned,Resim,TS0251,1,16
+planned,Sahne Sanatları Oyunculuk,TS0466,1,16
+planned,Sağlık Yönetimi İ.Ö.,TS0067,1,16
+planned,Gıda Mühendisliği,TS0301,1,16
+planned,Spor Bilimleri,TS0242,1,16
+planned,Tekstil Mühendisliği,TS0526,1,16
+planned,Ekonometri,TS0176,1,15
+planned,Felsefe,TS0326,1,15
+planned,Gıda Mühendisliği,TS0088,1,15
+planned,Gıda Mühendisliği,TS0309,1,15
+planned,Gıda Mühendisliği,TS0332,1,15
+planned,Grafik Tasarımı,TS0361,1,15
+planned,Grafik Tasarımı,TS0579,1,15
+planned,Grafik Tasarımı,TS0169,1,15
+planned,Grafik Tasarımı,TS0348,1,15
+planned,Grafik Tasarımı,TS0500,1,15
+planned,İstatistik,TS0622,1,15
+planned,İstatistik,TS0334,1,15
+planned,Müzik Bilimleri,TS0609,1,15
+planned,Sahne Sanatları Oyunculuk,TS0154,1,15
+planned,Sahne Sanatları Oyunculuk,TS0283,1,15
+planned,Sahne Sanatları Oyunculuk,TS0511,1,15
+planned,Tekstil Mühendisliği,TS0433,1,15
+planned,Tekstil ve Moda Tasarımı,TS0265,1,15
+planned,Turizm İşletmeciliği,TS0150,1,15
+planned,Elektrik-Elektronik Mühendisliği,TS0227,1,14
+planned,Endüstri Mühendisliği İ.Ö.,TS0626,1,14
+planned,Fizik,TS0652,1,14
+planned,Fizik,TS0230,1,14
+planned,Fizik,TS0457,1,14
+planned,Fizik,TS0309,1,14
+planned,Tekstil ve Moda Tasarımı,TS0016,1,14
+planned,Grafik Tasarımı,TS0254,1,14
+planned,İstatistik,TS0522,1,14
+planned,İstatistik,TS0429,1,14
+planned,Müzikoloji,TS0169,1,14
+planned,Müzik Bilimleri,TS0392,1,14
+planned,Müzik Bilimleri,TS0486,1,14
+planned,Resim,TS0603,1,14
+planned,Resim,TS0481,1,14
+planned,Resim,TS0579,1,14
+planned,Sosyal Hizmet,TS0576,1,14
+planned,Spor Bilimleri,TS0339,1,14
+planned,Turizm İşletmeciliği,TS0041,1,14
+planned,Turizm İşletmeciliği,TS0513,1,14
+planned,Fizik,TS0437,1,13
+planned,Fizik,TS0533,1,13
+planned,Fizik,TS0120,1,13
+planned,Grafik Tasarım,TS0609,1,13
+planned,Sahne Sanatları Oyunculuk,TS0265,1,13
+planned,Tekstil Mühendisliği,TS0290,1,13
+planned,Turizm İşletmeciliği,TS0361,1,13
+planned,Turizm İşletmeciliği,TS0497,1,13
+planned,Fizik,TS0195,1,12
+planned,Gıda Mühendisliği,TS0225,1,12
+planned,Grafik Tasarımı,TS0378,1,12
+planned,Grafik Tasarımı,TS0271,1,12
+planned,İstatistik,TS0207,1,12
+planned,Jeoloji Mühendisliği,TS0521,1,12
+planned,Kimya Mühendisliği,TS0297,1,12
+planned,Müzikoloji,TS0572,1,12
+planned,Müzik Bilimleri,TS0283,1,12
+planned,Sahne Sanatları Oyunculuk,TS0271,1,12
+planned,Sahne Sanatları Oyunculuk,TS0598,1,12
+planned,Sağlık Yönetimi,TS0176,1,12
+planned,Maden Mühendisliği,TS0301,1,12
+planned,Spor Bilimleri,TS0125,1,12
+planned,Tezhip Sanatı,TS0474,1,12
+planned,Tekstil Mühendisliği,TS0088,1,12
+planned,Tekstil Mühendisliği,TS0646,1,12
+planned,Tekstil ve Moda Tasarımı,TS0566,1,12
+planned,Tekstil ve Moda Tasarımı,TS0169,1,12
+planned,Bilgisayar Mühendisliği,TS0197,1,11
+planned,Felsefe,TS0618,1,11
+planned,Gıda Mühendisliği,TS0433,1,11
+planned,Spor Bilimleri,TS0016,1,11
+planned,Grafik Tasarımı,TS0141,1,11
+planned,Grafik Tasarım,TS0590,1,11
+planned,Grafik Tasarım,TS0486,1,11
+planned,Grafik Tasarım,TS0154,1,11
+planned,Geleneksel Türk Sanatları Bölümü Halı-Kilim-Eski Kumaş Desenleri Anasanat Dalı,TS0583,1,11
+planned,İstatistik,TS0632,1,11
+planned,Jeoloji Mühendisliği,TS0526,1,11
+planned,Jeoloji Mühendisliği,TS0295,1,11
+planned,Maden Mühendisliği,TS0315,1,11
+planned,Resim,TS0070,1,11
+planned,Resim,TS0073,1,11
+planned,Sağlık Yönetimi İ.Ö.,TS0138,1,11
+planned,Tekstil Mühendisliği,TS0201,1,11
+planned,Tekstil Mühendisliği,TS0626,1,11
+planned,Tekstil ve Moda Tasarımı,TS0125,1,11
+planned,Tekstil ve Moda Tasarımı,TS0598,1,11
+planned,Tekstil ve Moda Tasarımı,TS0348,1,11
+planned,Tekstil ve Moda Tasarımı,TS0045,1,11
+planned,Turizm İşletmeciliği,TS0490,1,11
+planned,Siyaset Bilimi ve Kamu Yönetimi,TS0266,1,11
+planned,Arkeoloji,TS0088,1,10
+planned,Arkeoloji,TS0082,1,10
+planned,Fizyoterapi ve Rehabilitasyon,TS0504,1,10
+planned,Gıda Mühendisliği,TS0326,1,10
+planned,Grafik Tasarım,TS0511,1,10
+planned,Grafik Tasarım,TS0583,1,10
+planned,"Halı, Kilim ve Geleneksel Kumaş Desenleri",TS0566,1,10
+planned,Elektrik-Elektronik Mühendisliği İ.Ö.,TS0015,1,10
+planned,İstatistik,TS0309,1,10
+planned,Jeoloji Mühendisliği,TS0088,1,10
+planned,Jeoloji Mühendisliği,TS0326,1,10
+planned,Jeofizik Mühendisliği,TS0538,1,10
+planned,Arapça Öğretmenliği,TS0309,1,10
+planned,Maden Mühendisliği,TS0533,1,10
+planned,Müzik Bilimleri,TS0511,1,10
+planned,Sahne Sanatları Oyunculuk,TS0494,1,10
+planned,Sahne Sanatları Oyunculuk,TS0159,1,10
+planned,Sahne Sanatları Oyunculuk,TS0269,1,10
+planned,Sahne Sanatları Oyunculuk,TS0371,1,10
+planned,Resim,TS0045,1,10
+planned,Sahne Sanatları Oyunculuk,TS0141,1,10
+planned,Sosyal Hizmet,TS0593,1,10
+planned,Spor Bilimleri,TS0384,1,10
+planned,Tekstil Mühendisliği,TS0082,1,10
+planned,Tekstil ve Moda Tasarımı,TS0603,1,10
+planned,Tekstil ve Moda Tasarımı,TS0070,1,10
+planned,Tekstil ve Moda Tasarımı,TS0154,1,10
+planned,Yaşlı Bakımı,TS0085,1,10
+planned,Arkeoloji,TS0433,1,9
+planned,Bilgisayar Mühendisliği İ.Ö.,TS0197,1,9
+planned,Diş Hekimliği Fakültesi,TS0003,1,9
+planned,Diş Hekimliği Fakültesi,TS0010,1,9
+planned,Diş Hekimliği Fakültesi,TS0011,1,9
+planned,Diş Hekimliği Fakültesi,TS0013,1,9
+planned,Diş Hekimliği Fakültesi,TS0005,1,9
+planned,Diş Hekimliği Fakültesi,TS0008,1,9
+planned,Diş Hekimliği Fakültesi,TS0006,1,9
+planned,Diş Hekimliği Fakültesi,TS0014,1,9
+planned,Fizik,TS0111,1,9
+planned,Geleneksel Türk Sanatları Bölümü Halı-Kilim-Eski Kumaş Desenleri Anasanat Dalı,TS0486,1,9
+planned,İstatistik,TS0437,1,9
+planned,Jeofizik Mühendisliği,TS0088,1,9
+planned,Maden Mühendisliği,TS0437,1,9
+planned,Müzikoloji,TS0478,1,9
+planned,Müzikoloji,TS0033,1,9
+planned,Müzikoloji,TS0028,1,9
+planned,Resim,TS0504,1,9
+planned,Sahne Sanatları Oyunculuk,TS0572,1,9
+planned,Sahne Sanatları Oyunculuk,TS0500,1,9
+planned,Spor Bilimleri,TS0150,1,9
+planned,Tezhip Sanatı,TS0279,1,9
+planned,Tezhip Sanatı,TS0036,1,9
+planned,Tezhip Sanatı,TS0506,1,9
+planned,Tezhip Sanatı,TS0272,1,9
+planned,Tezhip Sanatı,TS0350,1,9
+planned,Tekstil Mühendisliği,TS0107,1,9
+planned,Tekstil ve Moda Tasarımı,TS0472,1,9
+planned,Turizm İşletmeciliği,TS0579,1,9
+planned,Arkeoloji,TS0626,1,8
+planned,Arkeoloji,TS0107,1,8
+planned,Grafik Tasarım,TS0365,1,8
+planned,"Halı, Kilim ve Geleneksel Kumaş Desenleri",TS0125,1,8
+planned,"Halı, Kilim ve Geleneksel Kumaş Desenleri",TS0560,1,8
+planned,Geleneksel Türk Sanatları Bölümü Halı-Kilim-Eski Kumaş Desenleri Anasanat Dalı,TS0154,1,8
+planned,Geleneksel Türk Sanatları Bölümü Halı-Kilim-Eski Kumaş Desenleri Anasanat Dalı,TS0264,1,8
+planned,Hat Sanatı,TS0566,1,8
+planned,İstatistik,TS0083,1,8
+planned,Jeoloji Mühendisliği,TS0433,1,8
+planned,Jeoloji Mühendisliği,TS0201,1,8
+planned,Jeoloji Mühendisliği,TS0626,1,8
+planned,Jeoloji Mühendisliği,TS0620,1,8
+planned,Jeoloji Mühendisliği,TS0437,1,8
+planned,Kimya Mühendisliği,TS0620,1,8
+planned,Müzikoloji,TS0063,1,8
+planned,Müzikoloji,TS0356,1,8
+planned,Psikoloji,TS0449,1,8
+planned,Sahne Sanatları Oyunculuk,TS0276,1,8
+planned,Tezhip Sanatı,TS0599,1,8
+planned,Tekstil Mühendisliği,TS0620,1,8
+planned,Tekstil Mühendisliği,TS0322,1,8
+planned,Tekstil ve Moda Tasarımı,TS0063,1,8
+planned,Tekstil ve Moda Tasarımı,TS0504,1,8
+planned,Tekstil ve Moda Tasarımı,TS0572,1,8
+planned,Tekstil ve Moda Tasarımı,TS0500,1,8
+planned,Tekstil ve Moda Tasarımı,TS0283,1,8
+planned,Bilgisayar Mühendisliği,TS0082,1,7
+planned,Bilgisayar Mühendisliği İ.Ö.,TS0082,1,7
+planned,Grafik Tasarım,TS0283,1,7
+planned,"Halı, Kilim ve Geleneksel Kumaş Desenleri",TS0235,1,7
+planned,Geleneksel Türk Sanatları Bölümü Halı-Kilim-Eski Kumaş Desenleri Anasanat Dalı,TS0160,1,7
+planned,Geleneksel Türk Sanatları Bölümü Eski Yazı Anasanat Dalı,TS0585,1,7
+planned,Geleneksel Türk Sanatları Bölümü Eski Yazı Anasanat Dalı,TS0069,1,7
+planned,Geleneksel Türk Sanatları Bölümü Eski Yazı Anasanat Dalı,TS0153,1,7
+planned,Geleneksel Türk Sanatları Bölümü Eski Yazı Anasanat Dalı,TS0257,1,7
+planned,Geleneksel Türk Sanatları Bölümü Eski Yazı Anasanat Dalı,TS0510,1,7
+planned,Geleneksel Türk Sanatları Bölümü Eski Yazı Anasanat Dalı,TS0489,1,7
+planned,Jeoloji Mühendisliği,TS0290,1,7
+planned,Jeoloji Mühendisliği,TS0111,1,7
+planned,Jeoloji Mühendisliği,TS0195,1,7
+planned,Jeoloji Mühendisliği,TS0632,1,7
+planned,Jeoloji Mühendisliği,TS0309,1,7
+planned,Jeofizik Mühendisliği,TS0074,1,7
+planned,Jeofizik Mühendisliği,TS0526,1,7
+planned,Maden Mühendisliği,TS0428,1,7
+planned,Maden Mühendisliği,TS0207,1,7
+planned,Maden Mühendisliği,TS0332,1,7
+planned,Müzikoloji,TS0463,1,7
+planned,Sahne Sanatları Oyunculuk,TS0242,1,7
+planned,Sahne Sanatları Oyunculuk,TS0486,1,7
+planned,Sahne Sanatları Oyunculuk,TS0609,1,7
+planned,Spor Bilimleri,TS0235,1,7
+planned,Spor Bilimleri,TS0361,1,7
+planned,Yapı Öğretmenliği,TS0210,1,7
+planned,Tezhip Sanatı,TS0568,1,7
+planned,Tekstil Mühendisliği,TS0445,1,7
+planned,Turizm İşletmeciliği,TS0140,1,7
+planned,Arkeoloji,TS0526,1,6
+planned,İşletme (İngilizce),TS0028,1,6
+planned,Çevre Mühendisliği,TS0315,1,6
+planned,Sahne Sanatları Dramatik Yazarlık,TS0486,1,6
+planned,"Halı, Kilim ve Geleneksel Kumaş Desenleri",TS0463,1,6
+planned,"Halı, Kilim ve Geleneksel Kumaş Desenleri",TS0144,1,6
+planned,"Halı, Kilim ve Geleneksel Kumaş Desenleri",TS0136,1,6
+planned,"Halı, Kilim ve Geleneksel Kumaş Desenleri",TS0378,1,6
+planned,Elektrik-Elektronik Mühendisliği,TS0015,1,6
+planned,Sağlık Yönetimi İ.Ö.,TS0040,1,6
+planned,Jeoloji Mühendisliği,TS0074,1,6
+planned,Jeoloji Mühendisliği,TS0082,1,6
+planned,Jeoloji Mühendisliği,TS0207,1,6
+planned,Jeoloji Mühendisliği,TS0533,1,6
+planned,Jeofizik Mühendisliği,TS0550,1,6
+planned,Maden Mühendisliği,TS0290,1,6
+planned,Maden Mühendisliği,TS0632,1,6
+planned,Maden Mühendisliği,TS0309,1,6
+planned,Müzikoloji,TS0348,1,6
+planned,Müzikoloji,TS0271,1,6
+planned,Sahne Sanatları Oyunculuk,TS0175,1,6
+planned,Sahne Sanatları Oyunculuk,TS0063,1,6
+planned,Sahne Sanatları Oyunculuk,TS0248,1,6
+planned,Sahne Sanatları Oyunculuk,TS0028,1,6
+planned,Sahne Sanatları Oyunculuk,TS0478,1,6
+planned,Sahne Sanatları Oyunculuk,TS0354,1,6
+planned,Sosyal Hizmet,TS0359,1,6
+planned,Jeoloji Mühendisliği,TS0301,1,6
+planned,Tezhip Sanatı,TS0388,1,6
+planned,Tekstil Mühendisliği,TS0545,1,6
+planned,Tekstil ve Moda Tasarımı,TS0494,1,6
+planned,Çevre Mühendisliği,TS0326,1,5
+planned,Çevre Mühendisliği,TS0428,1,5
+planned,Fizik,TS0526,1,5
+planned,Fizik,TS0225,1,5
+planned,"Halı, Kilim ve Geleneksel Kumaş Desenleri",TS0572,1,5
+planned,Makine Mühendisliği İ.Ö.,TS0015,1,5
+planned,İşletme,TS0171,1,5
+planned,Jeoloji Mühendisliği,TS0545,1,5
+planned,Jeoloji Mühendisliği,TS0096,1,5
+planned,Jeofizik Mühendisliği,TS0290,1,5
+planned,Jeofizik Mühendisliği,TS0201,1,5
+planned,Jeofizik Mühendisliği,TS0626,1,5
+planned,Jeofizik Mühendisliği,TS0433,1,5
+planned,Müzikoloji,TS0598,1,5
+planned,Resim,TS0359,1,5
+planned,Resim,TS0476,1,5
+planned,Sağlık Yönetimi İ.Ö.,TS0508,1,5
+planned,Sosyal Hizmet,TS0606,1,5
+planned,Sosyal Hizmet,TS0476,1,5
+planned,Sahne Sanatları Sahne Tasarımı,TS0265,1,5
+planned,Fizik,TS0301,1,5
+planned,Tezhip Sanatı,TS0358,1,5
+planned,Arapça Öğretmenliği,TS0437,1,4
+planned,Arapça Öğretmenliği,TS0207,1,4
+planned,İşletme (İngilizce),TS0348,1,4
+planned,Çevre Mühendisliği,TS0144,1,4
+planned,Çevre Mühendisliği,TS0441,1,4
+planned,Çevre Mühendisliği,TS0218,1,4
+planned,Sahne Sanatları Dramatik Yazarlık,TS0258,1,4
+planned,Felsefe,TS0315,1,4
+planned,"Halı, Kilim ve Geleneksel Kumaş Desenleri",TS0339,1,4
+planned,"Halı, Kilim ve Geleneksel Kumaş Desenleri",TS0356,1,4
+planned,"Halı, Kilim ve Geleneksel Kumaş Desenleri",TS0478,1,4
+planned,"Halı, Kilim ve Geleneksel Kumaş Desenleri",TS0348,1,4
+planned,Otomotiv Mühendisliği,TS0015,1,4
+planned,Hukuk,TS0258,1,4
+planned,İşletme İ.Ö.,TS0251,1,4
+planned,Jeoloji Mühendisliği,TS0451,1,4
+planned,Jeofizik Mühendisliği,TS0187,1,4
+planned,Jeofizik Mühendisliği,TS0636,1,4
+planned,Jeofizik Mühendisliği,TS0451,1,4
+planned,Maden Mühendisliği,TS0187,1,4
+planned,Maden Mühendisliği,TS0626,1,4
+planned,Maden Mühendisliği,TS0195,1,4
+planned,Maden Mühendisliği,TS0642,1,4
+planned,Müzikoloji,TS0603,1,4
+planned,Müzikoloji,TS0472,1,4
+planned,Müzikoloji,TS0378,1,4
+planned,Resim,TS0140,1,4
+planned,Sahne Sanatları Dramatik Yazarlık,TS0609,1,4
+planned,Sağlık Yönetimi İ.Ö.,TS0176,1,4
+planned,Seramik ve Cam,TS0045,1,4
+planned,Seramik ve Cam,TS0258,1,4
+planned,Seramik ve Cam,TS0486,1,4
+planned,Seramik ve Cam,TS0365,1,4
+planned,Sosyal Hizmet,TS0481,1,4
+planned,Tarih İ.Ö.,TS0632,1,4
+planned,Sahne Sanatları Sahne Tasarımı,TS0161,1,4
+planned,Sahne Sanatları Sahne Tasarımı,TS0144,1,4
+planned,Sahne Sanatları Sahne Tasarımı,TS0248,1,4
+planned,Şehir ve Bölge Planlama,TS0304,1,4
+planned,Arapça Öğretmenliği,TS0656,1,3
+planned,Arapça Öğretmenliği,TS0533,1,3
+planned,Antrenörlük Eğitimi,TS0124,1,3
+planned,Antrenörlük Eğitimi,TS0235,1,3
+planned,Arkeoloji,TS0195,1,3
+planned,Arkeoloji,TS0437,1,3
+planned,İşletme (İngilizce),TS0242,1,3
+planned,İşletme (İngilizce),TS0472,1,3
+planned,İşletme (İngilizce),TS0136,1,3
+planned,İşletme (İngilizce),TS0408,1,3
+planned,Çevre Mühendisliği,TS0526,1,3
+planned,Çevre Mühendisliği,TS0201,1,3
+planned,Çevre Mühendisliği,TS0295,1,3
+planned,Çevre Mühendisliği,TS0545,1,3
+planned,Çevre Mühendisliği,TS0082,1,3
+planned,Çevre Mühendisliği,TS0309,1,3
+planned,Drama Yazarlığı ve Dramaturji,TS0265,1,3
+planned,Felsefe,TS0101,1,3
+planned,Sahne Sanatları Sahne Tasarımı,TS0583,1,3
+planned,"Halı, Kilim ve Geleneksel Kumaş Desenleri",TS0242,1,3
+planned,"Halı, Kilim ve Geleneksel Kumaş Desenleri",TS0472,1,3
+planned,Tezhip Sanatı,TS0020,1,3
+planned,Çevre Mühendisliği,TS0213,1,3
+planned,Bilgisayar ve Öğretim Teknolojileri Öğretmenliği,TS0428,1,3
+planned,Maden Mühendisliği,TS0538,1,3
+planned,Maden Mühendisliği,TS0295,1,3
+planned,Maden Mühendisliği,TS0521,1,3
+planned,Müzikoloji,TS0248,1,3
+planned,Müzik Bilimleri,TS0258,1,3
+planned,Sahne Sanatları Oyunculuk,TS0256,1,3
+planned,Resim,TS0500,1,3
+planned,Resim,TS0028,1,3
+planned,Seramik ve Cam,TS0143,1,3
+planned,Sahne Sanatları Sahne Tasarımı,TS0371,1,3
+planned,Engelli Bakımı ve Rehabilitasyon,TS0307,1,3
+planned,Tekstil ve Moda Tasarımı,TS0511,1,3
+planned,Tekstil ve Moda Tasarımı,TS0486,1,3
+planned,Jeofizik Mühendisliği,TS0301,1,3
+planned,Arkeoloji,TS0201,1,2
+planned,Çalışma Ekonomisi ve Endüstri İlişkileri,TS0181,1,2
+planned,Çevre Mühendisliği,TS0107,1,2
+planned,Çevre Mühendisliği,TS0207,1,2
+planned,Çevre Mühendisliği,TS0457,1,2
+planned,Elektronik ve Haberleşme Mühendisliği,TS0556,1,2
+planned,Gazetecilik İ.Ö.,TS0588,1,2
+planned,Geleneksel Türk Sanatları Bölümü Halı-Kilim-Eski Kumaş Desenleri Anasanat Dalı,TS0493,1,2
+planned,Hat Sanatı,TS0029,1,2
+planned,İşletme İ.Ö.,TS0513,1,2
+planned,Jeoloji Mühendisliği,TS0225,1,2
+planned,Jeofizik Mühendisliği,TS0428,1,2
+planned,Makine Mühendisliği İ.Ö.,TS0213,1,2
+planned,Bilgisayar ve Öğretim Teknolojileri Öğretmenliği,TS0325,1,2
+planned,Maden Mühendisliği,TS0620,1,2
+planned,Müzikoloji,TS0059,1,2
+planned,Müzik Bilimleri,TS0045,1,2
+planned,Resim,TS0169,1,2
+planned,Resim,TS0589,1,2
+planned,Sahne Sanatları Sahne Tasarımı,TS0609,1,2
+planned,Sosyal Bilgiler Öğretmenliği,TS0185,1,2
+planned,Sosyal Bilgiler Öğretmenliği,TS0186,1,2
+planned,Sosyal Bilgiler Öğretmenliği,TS0200,1,2
+planned,Çalışma Ekonomisi ve Endüstri İlişkileri,TS0151,1,2
+planned,Sahne Sanatları Sahne Tasarımı,TS0384,1,2
+planned,Sahne Sanatları Sahne Tasarımı,TS0504,1,2
+planned,Sahne Sanatları Sahne Tasarımı,TS0365,1,2
+planned,Sahne Sanatları Sahne Tasarımı,TS0493,1,2
+planned,Yapı Öğretmenliği,TS0213,1,2
+planned,Tekstil Mühendisliği,TS0632,1,2
+planned,Tekstil ve Moda Tasarımı,TS0583,1,2
+planned,Arkeoloji,TS0301,1,2
+planned,Adalet İ.Ö.,TS0614,1,1
+planned,Adalet,TS0464,1,1
+planned,Arkeoloji,TS0441,1,1
+planned,Arkeoloji,TS0445,1,1
+planned,Bilgisayar ve Öğretim Teknolojileri Öğretmenliği,TS0201,1,1
+planned,Bilgisayar ve Öğretim Teknolojileri Öğretmenliği,TS0088,1,1
+planned,Bilgisayar ve Öğretim Teknolojileri Öğretmenliği,TS0433,1,1
+planned,Bilgisayar ve Öğretim Teknolojileri Öğretmenliği,TS0295,1,1
+planned,Bilgisayar ve Öğretim Teknolojileri Öğretmenliği,TS0309,1,1
+planned,Bilgisayar ve Öğretim Teknolojileri Öğretmenliği,TS0445,1,1
+planned,Çalışma Ekonomisi ve Endüstri İlişkileri,TS0169,1,1
+planned,Çevre Mühendisliği,TS0074,1,1
+planned,Çevre Mühendisliği,TS0088,1,1
+planned,Çevre Mühendisliği,TS0096,1,1
+planned,Çevre Mühendisliği,TS0437,1,1
+planned,Geleneksel Türk Sanatları Bölümü Eski Çini Onarımları,TS0035,1,1
+planned,Geleneksel Türk Sanatları Bölümü Eski Çini Onarımları,TS0146,1,1
+planned,Geleneksel Türk Sanatları Bölümü Eski Çini Onarımları,TS0249,1,1
+planned,Geleneksel Türk Sanatları Bölümü Eski Çini Onarımları,TS0357,1,1
+planned,Geleneksel Türk Sanatları Bölümü Eski Çini Onarımları,TS0278,1,1
+planned,Geleneksel Türk Sanatları Bölümü Eski Çini Onarımları,TS0387,1,1
+planned,Geleneksel Türk Sanatları Bölümü Eski Çini Onarımları,TS0156,1,1
+planned,Drama Yazarlığı ve Dramaturji,TS0248,1,1
+planned,Engelli Bakımı ve Rehabilitasyon İ.Ö.,TS0539,1,1
+planned,Sosyal Bilgiler Öğretmenliği,TS0646,1,1
+planned,Sosyal Bilgiler Öğretmenliği,TS0623,1,1
+planned,Fen Bilgisi Öğretmenliği,TS0533,1,1
+planned,Bilgisayar ve Öğretim Teknolojileri Öğretmenliği,TS0422,1,1
+planned,Fizik,TS0433,1,1
+planned,Gazetecilik,TS0477,1,1
+planned,Geleneksel Türk Sanatları Bölümü Halı-Kilim-Eski Kumaş Desenleri Anasanat Dalı,TS0258,1,1
+planned,Hat Sanatı,TS0127,1,1
+planned,Hat Sanatı,TS0053,1,1
+planned,Hat Sanatı,TS0480,1,1
+planned,Hat Sanatı,TS0035,1,1
+planned,Hat Sanatı,TS0064,1,1
+planned,Hat Sanatı,TS0604,1,1
+planned,Hat Sanatı,TS0505,1,1
+planned,Hat Sanatı,TS0162,1,1
+planned,Hat Sanatı,TS0248,1,1
+planned,Hat Sanatı,TS0356,1,1
+planned,Hat Sanatı,TS0387,1,1
+planned,Hat Sanatı,TS0599,1,1
+planned,Hat Sanatı,TS0379,1,1
+planned,Hat Sanatı,TS0348,1,1
+planned,Hat Sanatı,TS0060,1,1
+planned,Hat Sanatı,TS0244,1,1
+planned,Hukuk,TS0492,1,1
+planned,Hukuk,TS0028,1,1
+planned,Geleneksel Türk Sanatları Bölümü Eski Çini Onarımları,TS0018,1,1
+planned,Uluslararası İlişkiler İ.Ö.,TS0054,1,1
+planned,Hat Sanatı,TS0018,1,1
+planned,İlk ve Acil Yardım,TS0550,1,1
+planned,İlk ve Acil Yardım İ.Ö.,TS0298,1,1
+planned,İlk ve Acil Yardım İ.Ö.,TS0552,1,1
+planned,İlahiyat İ.Ö. (Arapça Hazırlık),TS0648,1,1
+planned,Ekonometri,TS0600,1,1
+planned,Jeoloji Mühendisliği,TS0187,1,1
+planned,Jeofizik Mühendisliği,TS0295,1,1
+planned,Jeofizik Mühendisliği,TS0620,1,1
+planned,Jeofizik Mühendisliği,TS0437,1,1
+planned,Kimya Mühendisliği,TS0229,1,1
+planned,Kimya Mühendisliği,TS0452,1,1
+planned,Kamu Yönetimi İ.Ö.,TS0593,1,1
+planned,Çalışma Ekonomisi ve Endüstri İlişkileri,TS0144,1,1
+planned,Bilgisayar ve Öğretim Teknolojileri Öğretmenliği,TS0074,1,1
+planned,Maden Mühendisliği,TS0433,1,1
+planned,Maden Mühendisliği,TS0526,1,1
+planned,Maden Mühendisliği,TS0545,1,1
+planned,Maden Mühendisliği,TS0218,1,1
+planned,Müzik Bilimleri,TS0494,1,1
+planned,Müzikoloji,TS0504,1,1
+planned,Peyzaj Mimarlığı,TS0288,1,1
+planned,Resim,TS0352,1,1
+planned,Resim,TS0274,1,1
+planned,Resim,TS0154,1,1
+planned,"Radyo, Televizyon ve Sinema",TS0502,1,1
+planned,"Radyo, Televizyon ve Sinema İ.Ö.",TS0502,1,1
+planned,"Radyo, Televizyon ve Sinema İ.Ö.",TS0490,1,1
+planned,Drama Yazarlığı ve Dramaturji,TS0175,1,1
+planned,Sosyal Bilgiler Öğretmenliği,TS0074,1,1
+planned,Sosyal Bilgiler Öğretmenliği,TS0081,1,1
+planned,Sosyal Bilgiler Öğretmenliği,TS0085,1,1
+planned,Sosyal Bilgiler Öğretmenliği,TS0088,1,1
+planned,Sosyal Bilgiler Öğretmenliği,TS0094,1,1
+planned,Sosyal Bilgiler Öğretmenliği,TS0098,1,1
+planned,Sosyal Bilgiler Öğretmenliği,TS0101,1,1
+planned,Sosyal Bilgiler Öğretmenliği,TS0106,1,1
+planned,Sosyal Bilgiler Öğretmenliği,TS0289,1,1
+planned,Sosyal Bilgiler Öğretmenliği,TS0109,1,1
+planned,Sosyal Bilgiler Öğretmenliği,TS0195,1,1
+planned,Sosyal Bilgiler Öğretmenliği,TS0198,1,1
+planned,Sosyal Bilgiler Öğretmenliği,TS0207,1,1
+planned,Sosyal Bilgiler Öğretmenliği,TS0210,1,1
+planned,Sosyal Bilgiler Öğretmenliği,TS0213,1,1
+planned,Sosyal Bilgiler Öğretmenliği,TS0548,1,1
+planned,Siyaset Bilimi ve Kamu Yönetimi,TS0381,1,1
+planned,Siyaset Bilimi ve Kamu Yönetimi,TS0374,1,1
+planned,Seramik ve Cam,TS0598,1,1
+planned,Tarih,TS0632,1,1
+planned,Sahne Sanatları Sahne Tasarımı,TS0169,1,1
+planned,Sahne Sanatları Sahne Tasarımı,TS0348,1,1
+planned,Tıbbi Dokümantasyon ve Sekreterlik,TS0015,1,1
+planned,Tıbbi Dokümantasyon ve Sekreterlik,TS0270,1,1
+planned,Tıbbi Dokümantasyon ve Sekreterlik,TS0187,1,1
+planned,Yapı Öğretmenliği,TS0015,1,1
+planned,Tekstil Mühendisliği,TS0533,1,1
+planned,Yer Bilimleri Mühendisliği,TS0187,1,1
+planned,İlk ve Acil Yardım İ.Ö.,TS0294,1,1
+planned,İlk ve Acil Yardım,TS0294,1,1

@@ -1,0 +1,554 @@
+{
+  "summary": [
+    {
+      "file": "23.05.2023.xlsx",
+      "sheet": "Page 1",
+      "rows": 4032,
+      "enrollments": 196941.0,
+      "unique_course_codes": 2358,
+      "conflicting_course_codes": 563,
+      "invalid_date_rows": 1,
+      "invalid_time_rows": 0,
+      "invalid_count_rows": 110,
+      "midnight_rows": 233,
+      "exact_duplicate_rows": 0,
+      "excluded_rows": 333,
+      "retained_rows": 3699,
+      "retained_enrollments": 176564.0,
+      "sha256": "106d5597f2d01e20ce50c2c8816b93a11faf01c2fd6939a6e781fac94b185b95",
+      "pivot_mismatch_slots": 0,
+      "period_review_rows": 25,
+      "excluded_enrollments": 20377.0
+    },
+    {
+      "file": "24.05.2023 15.25.xlsx",
+      "sheet": "Page 1",
+      "rows": 3937,
+      "enrollments": 197916.0,
+      "unique_course_codes": 2349,
+      "conflicting_course_codes": 550,
+      "invalid_date_rows": 1,
+      "invalid_time_rows": 0,
+      "invalid_count_rows": 7,
+      "midnight_rows": 238,
+      "exact_duplicate_rows": 0,
+      "excluded_rows": 240,
+      "retained_rows": 3697,
+      "retained_enrollments": 176654.0,
+      "sha256": "58a87324c1ac53efc71d41e35163895f9d6bee82e4a26449e132c98cd0797e9a",
+      "pivot_mismatch_slots": 0,
+      "period_review_rows": 25,
+      "excluded_enrollments": 21262.0
+    },
+    {
+      "file": "Ara sınavlar saatlere göre.xlsx",
+      "sheet": "Page 1",
+      "rows": 3558,
+      "enrollments": 196368.0,
+      "unique_course_codes": 2152,
+      "conflicting_course_codes": 549,
+      "invalid_date_rows": 0,
+      "invalid_time_rows": 0,
+      "invalid_count_rows": 0,
+      "midnight_rows": 213,
+      "exact_duplicate_rows": 8,
+      "excluded_rows": 221,
+      "retained_rows": 3337,
+      "retained_enrollments": 176196.0,
+      "sha256": "aa9737a4c2c1b43dd0c04631c90d0e5d40b66c62d4a6ec364f74da56dcc9593d",
+      "pivot_mismatch_slots": 15,
+      "period_review_rows": 19,
+      "excluded_enrollments": 20172.0
+    },
+    {
+      "file": "arasinavlar.xlsx",
+      "sheet": "Page 1",
+      "rows": 3558,
+      "enrollments": 196368.0,
+      "unique_course_codes": 2152,
+      "conflicting_course_codes": 549,
+      "invalid_date_rows": 0,
+      "invalid_time_rows": 0,
+      "invalid_count_rows": 0,
+      "midnight_rows": 213,
+      "exact_duplicate_rows": 8,
+      "excluded_rows": 221,
+      "retained_rows": 3337,
+      "retained_enrollments": 176196.0,
+      "sha256": "aa9737a4c2c1b43dd0c04631c90d0e5d40b66c62d4a6ec364f74da56dcc9593d",
+      "pivot_mismatch_slots": 15,
+      "period_review_rows": 19,
+      "excluded_enrollments": 20172.0
+    }
+  ],
+  "pivot_differences": [
+    {
+      "source_file": "Ara sınavlar saatlere göre.xlsx",
+      "sheet": "Sayfa3",
+      "date": "01.06.2023",
+      "time": "09:00",
+      "detail_total": 252.0,
+      "pivot_total": 0
+    },
+    {
+      "source_file": "Ara sınavlar saatlere göre.xlsx",
+      "sheet": "Sayfa3",
+      "date": "02.06.2023",
+      "time": "23:00",
+      "detail_total": 91.0,
+      "pivot_total": 0
+    },
+    {
+      "source_file": "Ara sınavlar saatlere göre.xlsx",
+      "sheet": "Sayfa3",
+      "date": "03.05.2023",
+      "time": "16:30",
+      "detail_total": 179.0,
+      "pivot_total": 0
+    },
+    {
+      "source_file": "Ara sınavlar saatlere göre.xlsx",
+      "sheet": "Sayfa3",
+      "date": "05.06.2023",
+      "time": "09:00",
+      "detail_total": 80.0,
+      "pivot_total": 0
+    },
+    {
+      "source_file": "Ara sınavlar saatlere göre.xlsx",
+      "sheet": "Sayfa3",
+      "date": "08.05.2023",
+      "time": "09:00",
+      "detail_total": 187.0,
+      "pivot_total": 0
+    },
+    {
+      "source_file": "Ara sınavlar saatlere göre.xlsx",
+      "sheet": "Sayfa3",
+      "date": "09.06.2023",
+      "time": "09:00",
+      "detail_total": 179.0,
+      "pivot_total": 0
+    },
+    {
+      "source_file": "Ara sınavlar saatlere göre.xlsx",
+      "sheet": "Sayfa3",
+      "date": "09.06.2023",
+      "time": "23:00",
+      "detail_total": 10.0,
+      "pivot_total": 0
+    },
+    {
+      "source_file": "Ara sınavlar saatlere göre.xlsx",
+      "sheet": "Sayfa3",
+      "date": "10.06.2023",
+      "time": "23:00",
+      "detail_total": 10.0,
+      "pivot_total": 0
+    },
+    {
+      "source_file": "Ara sınavlar saatlere göre.xlsx",
+      "sheet": "Sayfa3",
+      "date": "12.06.2023",
+      "time": "09:00",
+      "detail_total": 179.0,
+      "pivot_total": 0
+    },
+    {
+      "source_file": "Ara sınavlar saatlere göre.xlsx",
+      "sheet": "Sayfa3",
+      "date": "18.05.2023",
+      "time": "23:00",
+      "detail_total": 174.0,
+      "pivot_total": 0
+    },
+    {
+      "source_file": "Ara sınavlar saatlere göre.xlsx",
+      "sheet": "Sayfa3",
+      "date": "28.03.2023",
+      "time": "13:00",
+      "detail_total": 187.0,
+      "pivot_total": 0
+    },
+    {
+      "source_file": "Ara sınavlar saatlere göre.xlsx",
+      "sheet": "Sayfa3",
+      "date": "30.05.2023",
+      "time": "09:00",
+      "detail_total": 187.0,
+      "pivot_total": 0
+    },
+    {
+      "source_file": "Ara sınavlar saatlere göre.xlsx",
+      "sheet": "Sayfa3",
+      "date": "30.05.2023",
+      "time": "10:00",
+      "detail_total": 187.0,
+      "pivot_total": 0
+    },
+    {
+      "source_file": "Ara sınavlar saatlere göre.xlsx",
+      "sheet": "Sayfa3",
+      "date": "30.05.2023",
+      "time": "17:00",
+      "detail_total": 47.0,
+      "pivot_total": 0
+    },
+    {
+      "source_file": "Ara sınavlar saatlere göre.xlsx",
+      "sheet": "Sayfa3",
+      "date": "31.05.2023",
+      "time": "09:00",
+      "detail_total": 187.0,
+      "pivot_total": 0
+    },
+    {
+      "source_file": "arasinavlar.xlsx",
+      "sheet": "Sayfa3",
+      "date": "01.06.2023",
+      "time": "09:00",
+      "detail_total": 252.0,
+      "pivot_total": 0
+    },
+    {
+      "source_file": "arasinavlar.xlsx",
+      "sheet": "Sayfa3",
+      "date": "02.06.2023",
+      "time": "23:00",
+      "detail_total": 91.0,
+      "pivot_total": 0
+    },
+    {
+      "source_file": "arasinavlar.xlsx",
+      "sheet": "Sayfa3",
+      "date": "03.05.2023",
+      "time": "16:30",
+      "detail_total": 179.0,
+      "pivot_total": 0
+    },
+    {
+      "source_file": "arasinavlar.xlsx",
+      "sheet": "Sayfa3",
+      "date": "05.06.2023",
+      "time": "09:00",
+      "detail_total": 80.0,
+      "pivot_total": 0
+    },
+    {
+      "source_file": "arasinavlar.xlsx",
+      "sheet": "Sayfa3",
+      "date": "08.05.2023",
+      "time": "09:00",
+      "detail_total": 187.0,
+      "pivot_total": 0
+    },
+    {
+      "source_file": "arasinavlar.xlsx",
+      "sheet": "Sayfa3",
+      "date": "09.06.2023",
+      "time": "09:00",
+      "detail_total": 179.0,
+      "pivot_total": 0
+    },
+    {
+      "source_file": "arasinavlar.xlsx",
+      "sheet": "Sayfa3",
+      "date": "09.06.2023",
+      "time": "23:00",
+      "detail_total": 10.0,
+      "pivot_total": 0
+    },
+    {
+      "source_file": "arasinavlar.xlsx",
+      "sheet": "Sayfa3",
+      "date": "10.06.2023",
+      "time": "23:00",
+      "detail_total": 10.0,
+      "pivot_total": 0
+    },
+    {
+      "source_file": "arasinavlar.xlsx",
+      "sheet": "Sayfa3",
+      "date": "12.06.2023",
+      "time": "09:00",
+      "detail_total": 179.0,
+      "pivot_total": 0
+    },
+    {
+      "source_file": "arasinavlar.xlsx",
+      "sheet": "Sayfa3",
+      "date": "18.05.2023",
+      "time": "23:00",
+      "detail_total": 174.0,
+      "pivot_total": 0
+    },
+    {
+      "source_file": "arasinavlar.xlsx",
+      "sheet": "Sayfa3",
+      "date": "28.03.2023",
+      "time": "13:00",
+      "detail_total": 187.0,
+      "pivot_total": 0
+    },
+    {
+      "source_file": "arasinavlar.xlsx",
+      "sheet": "Sayfa3",
+      "date": "30.05.2023",
+      "time": "09:00",
+      "detail_total": 187.0,
+      "pivot_total": 0
+    },
+    {
+      "source_file": "arasinavlar.xlsx",
+      "sheet": "Sayfa3",
+      "date": "30.05.2023",
+      "time": "10:00",
+      "detail_total": 187.0,
+      "pivot_total": 0
+    },
+    {
+      "source_file": "arasinavlar.xlsx",
+      "sheet": "Sayfa3",
+      "date": "30.05.2023",
+      "time": "17:00",
+      "detail_total": 47.0,
+      "pivot_total": 0
+    },
+    {
+      "source_file": "arasinavlar.xlsx",
+      "sheet": "Sayfa3",
+      "date": "31.05.2023",
+      "time": "09:00",
+      "detail_total": 187.0,
+      "pivot_total": 0
+    }
+  ],
+  "ambiguous_snapshot_keys": [
+    "1ATA-260|Fizyoterapi",
+    "1ATA-260|Tıbbi Dokümantasyon ve Sekreterlik",
+    "1ATA-260|İlk ve Acil Yardım",
+    "1CGE-102|Çocuk Gelişimi",
+    "1CGE-104|Çocuk Gelişimi",
+    "1CGE-106|Çocuk Gelişimi",
+    "1CGE-110|Çocuk Gelişimi",
+    "1CGE-208|Çocuk Gelişimi",
+    "1CGE-210|Çocuk Gelişimi",
+    "1CGE-218|Çocuk Gelişimi",
+    "1CGE-236|Çocuk Gelişimi",
+    "1CGE-240|Çocuk Gelişimi",
+    "1CGE-242|Çocuk Gelişimi",
+    "1FZY-106|Fizyoterapi",
+    "1FZY-108|Fizyoterapi",
+    "1FZY-110|Fizyoterapi",
+    "1FZY-234|Fizyoterapi",
+    "1IAY-108|İlk ve Acil Yardım",
+    "1IAY-114|İlk ve Acil Yardım",
+    "1IAY-116|İlk ve Acil Yardım",
+    "1IAY-118|İlk ve Acil Yardım",
+    "1IAY-216|İlk ve Acil Yardım",
+    "1IAY-232|İlk ve Acil Yardım",
+    "1ING-102|Fizyoterapi",
+    "1ING-102|Tıbbi Dokümantasyon ve Sekreterlik",
+    "1ING-102|İlk ve Acil Yardım",
+    "1SHM-102|Tıbbi Laboratuvar Teknikleri",
+    "1SHM-201|Fizyoterapi",
+    "1SHM-206|Tıbbi Laboratuvar Teknikleri",
+    "1SHM-220|İlk ve Acil Yardım",
+    "1TDS-112|Tıbbi Dokümantasyon ve Sekreterlik",
+    "1TDS-114|Tıbbi Dokümantasyon ve Sekreterlik",
+    "1TDS-116|Tıbbi Dokümantasyon ve Sekreterlik",
+    "1TDS-122|Tıbbi Dokümantasyon ve Sekreterlik",
+    "1TDS-134|Tıbbi Dokümantasyon ve Sekreterlik",
+    "1TDS-136|Tıbbi Dokümantasyon ve Sekreterlik",
+    "1TDS-220|Tıbbi Dokümantasyon ve Sekreterlik",
+    "1TDS-224|Tıbbi Dokümantasyon ve Sekreterlik",
+    "1TDS-230|Tıbbi Dokümantasyon ve Sekreterlik",
+    "1TDS-232|Tıbbi Dokümantasyon ve Sekreterlik",
+    "1TDS-234|Tıbbi Dokümantasyon ve Sekreterlik",
+    "1TDS-238|Tıbbi Dokümantasyon ve Sekreterlik",
+    "1TLT-104|Tıbbi Laboratuvar Teknikleri",
+    "1TLT-108|Tıbbi Laboratuvar Teknikleri",
+    "1TLT-202|Tıbbi Laboratuvar Teknikleri",
+    "1TLT-206|Tıbbi Laboratuvar Teknikleri",
+    "1TUR-270|Fizyoterapi",
+    "1TUR-270|Tıbbi Dokümantasyon ve Sekreterlik",
+    "1TUR-270|Yaşlı Bakımı",
+    "1TUR-270|İlk ve Acil Yardım",
+    "1YBP-122|Yaşlı Bakımı",
+    "1YBP-204|Yaşlı Bakımı"
+  ],
+  "midterm_detail_identical": true,
+  "outputs": [
+    {
+      "folder": "outputs_gui",
+      "rows": 2219,
+      "enrollments": 144467,
+      "min_date": "2023-03-28",
+      "max_date": "2023-06-12",
+      "peak_start_slot_load": 856,
+      "resource_arithmetic": {
+        "cpu_usage": true,
+        "ram_usage": true,
+        "bandwidth_usage": true
+      },
+      "slot_totals_match": true,
+      "input_matches": [
+        {
+          "scenario": "final_23may",
+          "shared_ids": 0,
+          "output_ids": 2219,
+          "exact_total_match": false
+        },
+        {
+          "scenario": "final_24may",
+          "shared_ids": 0,
+          "output_ids": 2219,
+          "exact_total_match": false
+        },
+        {
+          "scenario": "midterm",
+          "shared_ids": 0,
+          "output_ids": 2219,
+          "exact_total_match": false
+        },
+        {
+          "scenario": "midterm_copy",
+          "shared_ids": 0,
+          "output_ids": 2219,
+          "exact_total_match": false
+        }
+      ]
+    },
+    {
+      "folder": "outputs_test",
+      "rows": 10,
+      "enrollments": 1264,
+      "min_date": "2026-01-07",
+      "max_date": "2026-03-07",
+      "peak_start_slot_load": 230,
+      "resource_arithmetic": {
+        "cpu_usage": true,
+        "ram_usage": true,
+        "bandwidth_usage": true
+      },
+      "slot_totals_match": true,
+      "input_matches": [
+        {
+          "scenario": "final_23may",
+          "shared_ids": 0,
+          "output_ids": 10,
+          "exact_total_match": false
+        },
+        {
+          "scenario": "final_24may",
+          "shared_ids": 0,
+          "output_ids": 10,
+          "exact_total_match": false
+        },
+        {
+          "scenario": "midterm",
+          "shared_ids": 0,
+          "output_ids": 10,
+          "exact_total_match": false
+        },
+        {
+          "scenario": "midterm_copy",
+          "shared_ids": 0,
+          "output_ids": 10,
+          "exact_total_match": false
+        }
+      ]
+    },
+    {
+      "folder": "outputs_test_all",
+      "rows": 10,
+      "enrollments": 1264,
+      "min_date": "2026-01-07",
+      "max_date": "2026-03-07",
+      "peak_start_slot_load": 230,
+      "resource_arithmetic": {
+        "cpu_usage": true,
+        "ram_usage": true,
+        "bandwidth_usage": true
+      },
+      "slot_totals_match": true,
+      "input_matches": [
+        {
+          "scenario": "final_23may",
+          "shared_ids": 0,
+          "output_ids": 10,
+          "exact_total_match": false
+        },
+        {
+          "scenario": "final_24may",
+          "shared_ids": 0,
+          "output_ids": 10,
+          "exact_total_match": false
+        },
+        {
+          "scenario": "midterm",
+          "shared_ids": 0,
+          "output_ids": 10,
+          "exact_total_match": false
+        },
+        {
+          "scenario": "midterm_copy",
+          "shared_ids": 0,
+          "output_ids": 10,
+          "exact_total_match": false
+        }
+      ]
+    }
+  ],
+  "overlap": [
+    {
+      "schedule": "planned",
+      "enrollments": 144467,
+      "peak_start_slot": 7752,
+      "peak_overlapping_2h": 7898,
+      "peak_time": "2023-04-16 00:01:00",
+      "assumption": "Her sinav 2 saat; [baslangic, bitis) araligi; olculmus sunucu yuku degil"
+    },
+    {
+      "schedule": "optimized",
+      "enrollments": 144467,
+      "peak_start_slot": 856,
+      "peak_overlapping_2h": 8577,
+      "peak_time": "2023-04-19 13:25:00",
+      "assumption": "Her sinav 2 saat; [baslangic, bitis) araligi; olculmus sunucu yuku degil"
+    }
+  ],
+  "clean_import_checks": [
+    {
+      "scenario": "final_23may",
+      "rows": 3699,
+      "enrollments": 176564,
+      "timeslots": 657,
+      "validation_errors": 0,
+      "validation_warnings": 0
+    },
+    {
+      "scenario": "final_24may",
+      "rows": 3697,
+      "enrollments": 176654,
+      "timeslots": 666,
+      "validation_errors": 0,
+      "validation_warnings": 0
+    },
+    {
+      "scenario": "midterm",
+      "rows": 3337,
+      "enrollments": 176196,
+      "timeslots": 229,
+      "validation_errors": 0,
+      "validation_warnings": 0
+    }
+  ],
+  "output_source_match": "outputs_gui matches data/Example_data.xlsx on all 2219 loaded IDs and student counts; no exact match to supplied raw workbooks",
+  "code_hashes": {
+    "data_loader.py": "6f285907afa826a70348df69609dc9c5a8e6c85805b02bb7a9d1bbea3f2260d6",
+    "evaluation.py": "b10f34b3780a1c847079dd368bbd28ebdb7379bf0498d77aa486d44ece03d027",
+    "comparison.py": "4e549629725f32939b6768ecab43d16c9b27e9d049413ff2cffd675b387fd5dd",
+    "config.py": "79688342a30baaaddf76914a1fa23e697df7bae40cbefcf26c79015da797bc6b"
+  }
+}
