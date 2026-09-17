@@ -2,9 +2,9 @@
   "warnings": [],
   "errors": [],
   "summary": {
-    "students_exam_rows": 3697,
-    "exam_rows": 3697,
-    "timeslot_rows": 666,
+    "students_exam_rows": 113,
+    "exam_rows": 113,
+    "timeslot_rows": 6,
     "mode": "course_student_count"
   }
 }

@@ -1,3 +1,6 @@
+import json
+from server_profiles import DEFAULT_PROFILE, ASSUMPTION, build_server_config
+from models import ServerConfig
 from io import BytesIO
 from pathlib import Path
 
@@ -47,6 +50,7 @@ with st.sidebar:
     minutes = st.select_slider("Shared exam duration assumption (minutes)", options=[5, 10, 15, 30, 45, 60, 90, 120, 180], value=60)
     st.caption("The selected duration applies to both plans. This sensitivity scenario replaces the end times in the files.")
 
+resource_config = build_server_config()
 try:
     if source == "Provided CSV example":
         files = [EXAMPLE_ROOT / "HamVeriler/arasinavlar.xlsx", EXAMPLE_ROOT / "ExampleFiles/2/2026-06-29T10-55_export.csv", EXAMPLE_ROOT / "ExampleFiles/timeslots_program_ready.csv"]
@@ -56,14 +60,20 @@ try:
     elif "comparison_plans" in st.session_state:
         saved = st.session_state["comparison_plans"]
         before, after = prepare_plan(saved["before"]), prepare_plan(saved["after"])
+        resource_config = build_server_config(saved.get("profile_id", DEFAULT_PROFILE))
         default_capacity = int(saved["capacity"])
         source_note = f"Latest optimization: {saved.get('source_name', 'current session')} · {saved.get('solver', 'saved result')}. Calculated from the records loaded and grouped by the application."
     else:
         folder = Path(st.session_state.get("comparison_output_dir", str(ROOT / "outputs_gui")))
         before = prepare_plan(pd.read_csv(folder / "planned_timeslot_summary.csv"))
         after = prepare_plan(pd.read_csv(folder / "optimized_timeslot_summary.csv"))
-        default_capacity = 5000
-        source_note = f"Saved planned and optimized slot summaries: {folder.name}. Capacity was not saved, so the initial value is 5,000; adjust it if needed."
+        profile_path = folder / "server_profile.json"
+        if profile_path.exists():
+            resource_config = ServerConfig(**json.loads(profile_path.read_text(encoding="utf-8"))["config"])
+        else:
+            st.warning("These older results have no saved server profile. Resource charts use the current default scenario; rerun optimization to apply it.")
+        default_capacity = resource_config.max_concurrent_students
+        source_note = f"Saved planned and optimized slot summaries: {folder.name}."
     st.caption(source_note)
 except (OSError, ValueError, KeyError) as exc:
     st.info("Unable to read the selected plans. Choose another data source or run an optimization on the main page.")
@@ -123,12 +133,12 @@ with peak_tab:
     st.dataframe(pd.DataFrame({"Plan":list(COLORS),"Peak load":[int(peaks[n]) for n in COLORS],"Time above capacity (hours)":[round(hours_above(curves[n],capacity),2) for n in COLORS]}), hide_index=True, use_container_width=True)
 
 with resource_tab:
-    st.caption("Assumed resource model per student: CPU 0.02; RAM 0.05; bandwidth 0.2. Resource units and coefficients have not been validated against measurements.")
+    st.caption(ASSUMPTION)
     fig, axes = plt.subplots(3, 1, figsize=(12, 8), sharex=True)
-    for ax, (label, rate) in zip(axes, [("CPU", .02), ("RAM", .05), ("Bandwidth", .2)]):
+    for ax, (label, rate) in zip(axes, [("CPU (vCPU)", resource_config.cpu_per_student), ("RAM (GB)", resource_config.ram_per_student), ("Bandwidth (Mbps)", resource_config.bandwidth_per_student)]):
         for name in COLORS:
             ax.step(shown.index, shown[name]*rate, where="post", color=COLORS[name], label=name)
-        ax.set_ylabel(f"{label}\n(model units)"); ax.set_ylim(bottom=0); style_time_axis(ax)
+        ax.set_ylabel(label); ax.set_ylim(bottom=0); style_time_axis(ax)
     axes[0].legend(); axes[0].set_title(f"Resource load model · {minutes} minute assumption · {day}")
     draw(fig, f"resource_model_{minutes}min_{day}.png")
 

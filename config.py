@@ -1,15 +1,18 @@
 from dataclasses import dataclass
+from server_profiles import build_server_config
+
+_DEFAULT = build_server_config()
 
 
 @dataclass(frozen=True)
 class VarsayilanConfig:
-    cpu_per_student: float = 0.02
-    ram_per_student: float = 0.05
-    bandwidth_per_student: float = 0.2
-    max_cpu: float = 100.0
-    max_ram: float = 256.0
-    max_bandwidth: float = 1000.0
-    max_concurrent_students: int = 5000
+    cpu_per_student: float = _DEFAULT.cpu_per_student
+    ram_per_student: float = _DEFAULT.ram_per_student
+    bandwidth_per_student: float = _DEFAULT.bandwidth_per_student
+    max_cpu: float = _DEFAULT.max_cpu
+    max_ram: float = _DEFAULT.max_ram
+    max_bandwidth: float = _DEFAULT.max_bandwidth
+    max_concurrent_students: int = _DEFAULT.max_concurrent_students
     random_seed: int = 42
 
 

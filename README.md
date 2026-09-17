@@ -106,14 +106,33 @@ Graph solver, dersleri buyukten kucuge siralayan ve timeslotlari kapasite, yuk d
 
 ## Notlar
 
-Varsayilan sunucu modeli:
+Varsayılan altyapı, firma belgesindeki **Moodle Senaryo 3** olarak güncellendi.
 
-- `cpu_per_student = 0.02`
-- `ram_per_student = 0.05`
-- `bandwidth_per_student = 0.2`
-- `max_cpu = 100`
-- `max_ram = 256`
-- `max_bandwidth = 1000`
-- `max_concurrent_students = 5000`
+- App01 / App02 / App03+: her biri 16 vCPU, 32 GB RAM, 100 GB disk.
+- Ayrı LB, NFS/GlusterFS depolama, SQL proxy, master/replica SQL ve Redis katmanları.
+- Dış ağ: en az 1 Gbps; yerel ağ: 10 Gbps. SSD/NVMe depolama.
+- Belgede 30.000–50.000+ aktif kullanıcı, 3.000–6.000 eşzamanlı kullanıcı belirtiliyor.
+- Başlangıç planlama sınırı: 3.000 eşzamanlı sınav katılımı (aralığın alt sınırı).
 
-Eksik `department` alani `UNKNOWN`, eksik `exam_name` alani `exam_id`, eksik timeslot kaynak limitleri varsayilan config degerleri ile doldurulur.
+Arayüzde `Server infrastructure` seçimi veya CLI ile diğer profiller seçilebilir:
+
+```bash
+python main.py --planned_schedule data/example_planned_schedule.csv --server_profile moodle_3 --solver graph --output outputs_moodle3
+```
+
+Profil, mimari ve hesaplama varsayımları her çalışmada `server_profile.json` dosyasına kaydedilir.
+CPU vCPU, RAM GB, ağ Mbps birimindedir. Öğrenci başına katsayılar uygulama katmanı
+kapasitesinin başlangıç kullanıcı sınırına bölünmesiyle türetilmiş doğrusal planlama
+tahminleridir; firma ölçümü değildir. SQL/cache kaynakları uygulama havuzuna eklenmez.
+Senaryo 3 için üç uygulama düğümü esas alınır; belgede yinelenen SQL2+ satırı ikinci
+replica olarak envanterde tutulur. `+` işaretleri otomatik sınırsız ölçekleme anlamına gelmez.
+Disk kapasitesi, IOPS, SQL yazma darboğazı ve düğüm arızaları solver tarafından modellenmez.
+BigBlueButton ayrı bir iş yükü olduğu için Moodle kapasitesine eklenmez.
+Aktif kullanıcı sayısı eşzamanlı sınav kapasitesi değildir; 6.000 üst sınırı yük testiyle
+kalibre edilmeden garantili sınav kapasitesi sayılmaz.
+
+Kaynak: `moodle_kullanım_2025-tech spect.docx - Google Dokümanlar.pdf`, sayfa 1–2.
+Harici timeslot dosyasındaki açık kapasite/kaynak limitleri mevcut davranış gereği
+profil varsayılanlarını geçersiz kılar. Önceki çıktı dosyaları eski modeli içerir;
+yeni profil için optimizasyon yeniden çalıştırılmalıdır. Solver slot bazında çalışır;
+farklı başlangıç saatlerinde örtüşen sınavları karşılaştırma sayfası ayrıca hesaplar.

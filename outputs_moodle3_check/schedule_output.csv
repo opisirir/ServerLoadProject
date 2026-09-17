@@ -1,0 +1,11 @@
+exam_id,exam_name,department_id,student_count,timeslot_id,date,start_time,end_time,cpu_usage,ram_usage,bandwidth_usage,timeslot_total_students
+MATH101,Calculus I,Engineering,120,TS0001,2026-07-01,09:00,11:00,1.92,3.84,40.0,215
+PHYS101,Physics I,Engineering,95,TS0001,2026-07-01,09:00,11:00,1.52,3.04,31.6667,215
+ENG101,Academic English,Humanities,210,TS0002,2026-07-01,13:00,15:00,3.36,6.72,70.0,210
+CS101,Introduction to Programming,Computer Engineering,180,TS0003,2026-07-02,09:00,11:00,2.88,5.76,60.0,180
+ECON101,Economics I,Economics,155,TS0004,2026-07-02,13:00,15:00,2.48,4.96,51.6667,219
+HIST101,Modern History,Humanities,64,TS0004,2026-07-02,13:00,15:00,1.024,2.048,21.3333,219
+CHEM101,General Chemistry,Engineering,75,TS0005,2026-07-03,09:00,11:00,1.2,2.4,25.0,210
+STAT101,Statistics I,Engineering,135,TS0005,2026-07-03,09:00,11:00,2.16,4.32,45.0,210
+BIO101,General Biology,Science,88,TS0006,2026-07-03,13:00,15:00,1.408,2.816,29.3333,230
+LAW101,Introduction to Law,Law,142,TS0006,2026-07-03,13:00,15:00,2.272,4.544,47.3333,230

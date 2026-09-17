@@ -10,6 +10,7 @@ import streamlit as st
 
 from comparison import compare_metrics, compare_timeslots, evaluate_reference_schedule
 from config import VARSAYILAN_CONFIG
+from server_profiles import DEFAULT_PROFILE, PROFILES, ASSUMPTION, build_server_config, save_server_profile
 from data_loader import load_all_data
 from data_validator import validate_data
 from genetic_algorithm import GeneticAlgorithmSolver
@@ -27,6 +28,7 @@ st.title("Exam Timetabling Optimizer")
 st.page_link("pages/1_Comparison.py", label="Before / After Comparison charts")
 
 with st.sidebar:
+    profile_id = st.selectbox("Server infrastructure", list(PROFILES), index=list(PROFILES).index(DEFAULT_PROFILE), format_func=lambda key: PROFILES[key]["label"])
     solver_name = st.selectbox("Solver", ["all", "hybrid", "graph", "ga", "sa"])
     output_dir = st.text_input("Output folder", "outputs_gui")
     st.session_state["comparison_output_dir"] = output_dir
@@ -34,6 +36,11 @@ with st.sidebar:
     population_size = st.number_input("GA population", min_value=10, value=80)
     ga_generations = st.number_input("GA generations", min_value=10, value=250)
     max_iterations = st.number_input("SA iterations", min_value=100, value=3000)
+
+with st.expander("Server infrastructure and model assumptions", expanded=True):
+    st.dataframe(pd.DataFrame(PROFILES[profile_id]["nodes"], columns=["Role", "vCPU", "RAM (GB)", "Storage"]), hide_index=True)
+    st.caption(ASSUMPTION)
+    st.caption("SSD / NVMe; external network: " + str(PROFILES[profile_id]["network_mbps"]) + " Mbps minimum. Scenario 3 local network: 10 Gbps.")
 
 planned_file = st.file_uploader("planned exam schedule", type=["csv", "xlsx", "xls", "json"])
 
@@ -181,15 +188,7 @@ if st.button("Optimize", type="primary", disabled=not planned_file):
         tmp_path = Path(tmp)
         planned_path = _save_upload(planned_file, tmp_path)
 
-        config = ServerConfig(
-            cpu_per_student=VARSAYILAN_CONFIG.cpu_per_student,
-            ram_per_student=VARSAYILAN_CONFIG.ram_per_student,
-            bandwidth_per_student=VARSAYILAN_CONFIG.bandwidth_per_student,
-            max_cpu=VARSAYILAN_CONFIG.max_cpu,
-            max_ram=VARSAYILAN_CONFIG.max_ram,
-            max_bandwidth=VARSAYILAN_CONFIG.max_bandwidth,
-            max_concurrent_students=VARSAYILAN_CONFIG.max_concurrent_students,
-        )
+        config = build_server_config(profile_id)
 
         try:
             kayit_df, sinav_df, slot_df, exams, students, timeslots, config, _ = load_all_data(None, planned_path, None, config)
@@ -226,6 +225,7 @@ if st.button("Optimize", type="primary", disabled=not planned_file):
                     timeslot_comparison = compare_timeslots(reference_metrics, result.metrics, timeslots) if reference_metrics else pd.DataFrame()
                     output = Path(output_dir)
                     output.mkdir(parents=True, exist_ok=True)
+                    save_server_profile(output, profile_id, config)
                     schedule.to_csv(output / "schedule_output.csv", index=False)
                     pd.DataFrame([result.metrics]).to_csv(output / "results.csv", index=False)
                     algorithm_df = _algorithm_results_df(algorithm_results)
@@ -242,6 +242,7 @@ if st.button("Optimize", type="primary", disabled=not planned_file):
                             "before": planned_slot_df.copy(),
                             "after": optimized_slot_df.copy(),
                             "capacity": config.max_concurrent_students,
+                            "profile_id": profile_id,
                             "source_name": planned_file.name,
                             "solver": result.solver_name,
                             "label": f"Latest optimization: {planned_file.name} · {result.solver_name} · reference: {reference_label}. Calculated from the records loaded and grouped by the application.",

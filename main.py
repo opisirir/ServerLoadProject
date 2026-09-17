@@ -7,6 +7,7 @@ from pathlib import Path
 import pandas as pd
 
 from config import VARSAYILAN_CONFIG
+from server_profiles import DEFAULT_PROFILE, PROFILES, ASSUMPTION, build_server_config, save_server_profile
 from cp_sat_solver import CPSATSolver
 from data_loader import load_all_data
 from data_validator import validate_data
@@ -27,6 +28,7 @@ def parse_args():
     parser.add_argument("--exam_students", default=None)
     parser.add_argument("--timeslots", default=None)
     parser.add_argument("--solver", choices=["cp_sat", "graph", "ga", "sa", "hybrid", "all"], default="hybrid")
+    parser.add_argument("--server_profile", choices=list(PROFILES), default=DEFAULT_PROFILE)
     parser.add_argument("--output", default="outputs")
     parser.add_argument("--time_limit", type=int, default=60)
     parser.add_argument("--max_iterations", type=int, default=3000)
@@ -85,19 +87,12 @@ def main():
         raise ValueError("--planned_schedule veya --exam_students verilmelidir.")
     output = Path(args.output)
     output.mkdir(parents=True, exist_ok=True)
-    config = ServerConfig(
-        cpu_per_student=VARSAYILAN_CONFIG.cpu_per_student,
-        ram_per_student=VARSAYILAN_CONFIG.ram_per_student,
-        bandwidth_per_student=VARSAYILAN_CONFIG.bandwidth_per_student,
-        max_cpu=VARSAYILAN_CONFIG.max_cpu,
-        max_ram=VARSAYILAN_CONFIG.max_ram,
-        max_bandwidth=VARSAYILAN_CONFIG.max_bandwidth,
-        max_concurrent_students=VARSAYILAN_CONFIG.max_concurrent_students,
-    )
+    config = build_server_config(args.server_profile)
 
     kayit_df, sinav_df, slot_df, exams, students, timeslots, config, metadata = load_all_data(
         args.students_exams, exam_students_path, args.timeslots, config
     )
+    save_server_profile(output, args.server_profile, config)
     validation = validate_data(kayit_df, sinav_df, slot_df, output)
     if validation["errors"]:
         raise ValueError("Validasyon hatalari bulundu: " + "; ".join(validation["errors"]))

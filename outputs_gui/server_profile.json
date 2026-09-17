@@ -1,0 +1,88 @@
+{
+  "profile_id": "moodle_3",
+  "source": "moodle_kullanım_2025-tech spect.docx - Google Dokümanlar.pdf",
+  "infrastructure": {
+    "label": "Moodle 3 — 3000–6000 concurrent users",
+    "concurrent_range": [
+      3000,
+      6000
+    ],
+    "active_users": "30000–50000+",
+    "network_mbps": 1000,
+    "local_network_mbps": 10000,
+    "app_vcpu": 48,
+    "app_ram_gb": 96,
+    "nodes": [
+      [
+        "LB / Nginx proxy",
+        8,
+        16,
+        "100 GB"
+      ],
+      [
+        "App01",
+        16,
+        32,
+        "100 GB"
+      ],
+      [
+        "App02",
+        16,
+        32,
+        "100 GB"
+      ],
+      [
+        "App03+ (baseline: one node)",
+        16,
+        32,
+        "100 GB"
+      ],
+      [
+        "Storage / NFS or GlusterFS",
+        8,
+        16,
+        "1024 GB+"
+      ],
+      [
+        "SQL proxy",
+        8,
+        16,
+        "100 GB"
+      ],
+      [
+        "SQL1 / master",
+        16,
+        16,
+        "100 GB"
+      ],
+      [
+        "SQL2+ / replica 1",
+        16,
+        16,
+        "100 GB"
+      ],
+      [
+        "SQL2+ / replica 2 (repeated source row)",
+        16,
+        16,
+        "100 GB"
+      ],
+      [
+        "Cache / Redis",
+        16,
+        8,
+        "50 GB"
+      ]
+    ]
+  },
+  "assumptions": "Supplier concurrent-user ranges are not measured exam throughput. Default capacity uses the lower bound. CPU (vCPU), RAM (GB) and network (Mbps) estimates scale linearly to that bound; coefficients are not measured. CPU/RAM represent only the application tier, not pooled SQL/cache resources. Storage and database IOPS are documented but not modeled as constraints.",
+  "config": {
+    "cpu_per_student": 0.016,
+    "ram_per_student": 0.032,
+    "bandwidth_per_student": 0.3333333333333333,
+    "max_cpu": 48,
+    "max_ram": 96,
+    "max_bandwidth": 1000,
+    "max_concurrent_students": 3000
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "warnings": [],
+  "errors": [],
+  "summary": {
+    "students_exam_rows": 10,
+    "exam_rows": 10,
+    "timeslot_rows": 6,
+    "mode": "course_student_count"
+  }
+}
