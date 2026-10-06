@@ -1,0 +1,88 @@
+﻿{
+    "source_file":  "Gerçek Dünya Uygulamalarında Kullanılan Algoritmalar.xlsx",
+    "sheet":  "Table 1",
+    "reference":  "Siew vd. (2024), A Survey of Solution Methodologies for Exam Timetabling Problems",
+    "methods":  [
+                    {
+                        "source_row":  2,
+                        "name":  "Karma Tam Sayılı Programlama (MIP) ve 2 Aşamalı Sezgisel Yaklaşım",
+                        "category":  "Matematiksel Optimizasyon / Sezgisel",
+                        "problem":  "Kıt kaynaklı gerçek dünya sınav programlama problemi",
+                        "institution":  "Pamukkale Üniversitesi Mühendislik Fakültesi",
+                        "source_claim":  "İki aşamalı yöntem, ticari yazılımlara (CPLEX ve Gurobi) kıyasla daha iyi uygulanabilir çözümler ve daha hızlı hesaplama süreleri sunmuş, final haftasını bir gün kısaltmıştır.",
+                        "reference":  "1"
+                    },
+                    {
+                        "source_row":  3,
+                        "name":  "Sayısal Hedef Programlama (Binary Goal Programming) ve Bulanık Mantık",
+                        "category":  "Matematiksel Optimizasyon (Goal Programming)",
+                        "problem":  "Dengeli sınav programı oluşturma problemi",
+                        "institution":  "Uludağ Üniversitesi Endüstri Mühendisliği Bölümü",
+                        "source_claim":  "Bulanık kritiklik seviyeleri belirlenip Hedef Programlama modeline aktarılmıştır. Üretilen program, insan uzman tarafından hazırlanan programdan tüm değerlendirilen hedeflerde daha iyi performans göstermiştir.",
+                        "reference":  "1"
+                    },
+                    {
+                        "source_row":  4,
+                        "name":  "Karar Destek Sistemi (DSS) ve MIP Model (Microsoft Excel, Solver-Studio, Gurobi)",
+                        "category":  "Matematiksel Optimizasyon (MIP)",
+                        "problem":  "Dengeli sınav programı oluşturma",
+                        "institution":  "Yıldız Teknik Üniversitesi Endüstri Mühendisliği Bölümü",
+                        "source_claim":  "MIP modeli Excel ve Gurobi ile entegre edilerek dengeli sınav programları oluşturan bir karar destek sistemi geliştirilmiştir.",
+                        "reference":  "1"
+                    },
+                    {
+                        "source_row":  5,
+                        "name":  "Ayrıştırma Yaklaşımlı MIP Modelleri ve CBC Çözücü",
+                        "category":  "Matematiksel Optimizasyon (MIP)",
+                        "problem":  "Sınav ve gözetmen atama problemi",
+                        "institution":  "Bir meslek yüksekokulu (Önlisans seviyesi)",
+                        "source_claim":  "Web tabanlı bir karar destek sistemine entegre edilen açık kaynaklı CBC çözücü ile tipik bir son kullanıcı 2 dakikadan kısa sürede ders programı oluşturabilmektedir.",
+                        "reference":  "1"
+                    },
+                    {
+                        "source_row":  6,
+                        "name":  "Üç Aşamalı Tam Sayılı Lineer Programlama (ILP)",
+                        "category":  "Matematiksel Optimizasyon (ILP)",
+                        "problem":  "Sınav programlama problemi",
+                        "institution":  "Alman Ürdün Üniversitesi (GJU) / Toronto Veri Seti",
+                        "source_claim":  "Problemi üç aşamaya (zaman dilimi, gün ve derslik atamaları) bölerek modülerleştirmiş ve manuel yöntemlere göre çok daha hızlı uygulanabilir zaman çizelgeleri üretmiştir.",
+                        "reference":  "1"
+                    },
+                    {
+                        "source_row":  7,
+                        "name":  "Sütun Üretimi (Column Generation - CG) Modelleri",
+                        "category":  "Matematiksel Optimizasyon (LP)",
+                        "problem":  "Birden fazla sınav versiyonunun çakışmasız ve dengeli dağıtımı",
+                        "institution":  "KU Leuven Kampüsü / Toronto Veri Seti",
+                        "source_claim":  "CPLEX kullanılarak uygulanmış, öğrenci gruplarına sınav versiyonlarının atanmasında ve yayılım maliyetlerinin minimize edilmesinde başarılı sonuçlar elde etmiştir.",
+                        "reference":  "1"
+                    },
+                    {
+                        "source_row":  8,
+                        "name":  "Üç Matematiksel Programlama Modeli (GAMS / CPLEX)",
+                        "category":  "Matematiksel Optimizasyon",
+                        "problem":  "Müfredat tabanlı sınav programlama problemi (Curriculum-based ETP)",
+                        "institution":  "Universidad Diego Portales (Şili)",
+                        "source_claim":  "Manuel sürece kıyasla daha verimli, çakışması az olan ve yeniden programlama gerektirmeyen sınav çizelgeleri oluşturulmuştur.",
+                        "reference":  "1"
+                    },
+                    {
+                        "source_row":  9,
+                        "name":  "Lineer 0-1 Tam Sayılı Programlama Modelleri (AMPL / CPLEX)",
+                        "category":  "Matematiksel Optimizasyon",
+                        "problem":  "Heterojen seçmeli ders yapısına sahip sınav çizelgeleme",
+                        "institution":  "Bir İşletme Okulu (Business School)",
+                        "source_claim":  "Fakülte ve derslik odaklı modeller hızlı optimizasyon süreleri sergilemiş ve birbirleri için etkili vekil (surrogate) modeller olarak işlev görmüştür.",
+                        "reference":  "1"
+                    },
+                    {
+                        "source_row":  10,
+                        "name":  "ILP Modeli ve IBM ILOG CPLEX Arama Ağacı Gezinmesi",
+                        "category":  "Matematiksel Optimizasyon (ILP)",
+                        "problem":  "Sınav çakışmaları, öğretim üyesi sınav çakışmaları ve ortak sorular kısıtları altında sınav çizelgeleme",
+                        "institution":  "Ferdowsi Üniversitesi Yönetim Bölümü",
+                        "source_claim":  "Manuel hazırlanan programdan daha üstün performans göstererek optimum sınıf kullanımı sağlamış, çakışmaları önlemiş ve ortalama sınav yayılımını başarmıştır.",
+                        "reference":  "1"
+                    }
+                ]
+}
