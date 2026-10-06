@@ -4,7 +4,7 @@ from datetime import date, datetime
 import numpy as np
 import pandas as pd
 
-from data_loader import _normalize_date_series
+from examlab.data import _normalize_date_series
 
 
 class DateNormalizationTests(unittest.TestCase):

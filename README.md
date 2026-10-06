@@ -1,138 +1,89 @@
-# Examination Timetabling Optimization
+﻿# Exam Balance
 
-Gercek CSV, XLSX veya JSON dosyalarindan sinav cizelgesi ureten Python optimizasyon sistemi.
+Makalenin V3 sürümündeki **CP-SAT → Great Deluge** yaklaşımı için örtüşen sınav yüklerini hesaplayan optimizasyon motoru ve GitHub Pages karşılaştırma sitesi.
 
-## Kurulum
+## Çalıştırma
 
-```bash
-python -m venv .venv
-.venv\Scripts\activate
-pip install -r requirements.txt
+```powershell
+python -m pip install -r requirements.txt
+python main.py --input data/example_planned_schedule.csv --scenario all --minutes 60 --seeds 42,43,44 --seconds 10 --evaluations 3000 --output results/benchmark.json
+python -m http.server 8765 --directory web
 ```
 
-OR-Tools kurulu degilse `cp_sat` calismaz, fakat `ga`, `sa` ve `hybrid` cozumleri kullanilabilir.
+`http://localhost:8765` adresini açın. **Sonuç yükle** ile `results/benchmark.json` seçin. Dosya tarayıcıda işlenir, bir sunucuya yüklenmez. Sayfa örnek olarak gerçek algoritma koşularından üretilmiş, açıkça **sentetik** etiketli bir veri kümesi gösterir.
 
-## Calistirma
+Eski Streamlit arayüzü kaldırıldı. GitHub Pages Python çalıştırmaz; deneyler yerel Python ortamında hesaplanır, JSON raporu statik sitede incelenir. Yükleme, senaryo/algoritma/tohum seçimi, karşılaştırma CSV'si ve seçilen çizelge indirmesi desteklenir.
 
-```bash
-python main.py \
-  --planned_schedule data/planned_schedule.xlsx \
-  --solver hybrid \
-  --output outputs
+## Sunucu senaryoları
+
+| Senaryo | Maksimum eşzamanlı kullanıcı |
+|---|---:|
+| Senaryo 1 | 500 |
+| Senaryo 2 | 2.500 |
+| Senaryo 3 | 6.000 |
+
+`--scenario paper` makaledeki **5.000** kapasiteli deney varsayımını seçer. Bu, Senaryo 3'ün maksimumu değildir. CPU/RAM/ağ katsayıları ve ayrıntılı donanım tabloları kaldırıldı; tek kaynak kısıtı eşzamanlı sınav katılımıdır.
+
+## Ortak problem ve algoritmalar
+
+Her sınav, dosyada gözlenen aday başlangıçlardan tam olarak birine atanır; sınav ve katılımcı grubu bölünmez. Tüm sınavlar için `--minutes` ortak süre varsayımı kullanılır (varsayılan 60). Bitiş saati dosyadan alınmaz. Yükler `[başlangıç, bitiş)` aralıklarında hesaplanır; farklı başlangıç saatleri, gece yarısı ve eşzamanlı bitiş/başlangıç doğru ele alınır. Amaç, kapasiteyi koruyarak **en yüksek eşzamanlı katılımı azaltmaktır**.
+
+- **CP-SAT → GD:** CP-SAT amaç fonksiyonu olmadan ilk olurlu çözümde durur. Great Deluge azalan kabul eşiğiyle taşıma/takas komşuluğunda tepe yükü iyileştirir, olurluluğu korur ve en iyi çözümü saklar. Büyük veri için bire bir ikili atama matrisine eşdeğer, ayrık başlangıç alanlı interval/cumulative modeli kullanılır.
+- **PSO:** ayrık zaman dilimlerine yuvarlanan hız/konum güncellemeleri, kişisel ve küresel en iyi, küçük mutasyon.
+- **GA:** turnuva seçimi, uniform çaprazlama, mutasyon ve elitist en kötü birey değişimi.
+- **TS:** taşıma komşuluğu, yedi iterasyonluk tabu süresi ve aspirasyon.
+- **AC:** feromon buharlaşması, en iyi çözüm pekiştirmesi ve artımlı yük sezgiselliği.
+- **HS:** harmony memory, bellekten seçim, pitch adjustment ve en kötü çözüm değişimi.
+- **Probleme özgü sezgisel:** büyük sınavları önce yerleştirme ve iyileştiren taşıma/takas araması.
+- **ANN:** sürekli Hopfield benzeri atama nöronları, karesel yük/kapasite enerjisi ve tekrarlayan güncellemeler. Eğitilmiş bir tahmin modeli değildir.
+- **SA:** azalan sıcaklık ve Metropolis kabulü.
+
+Baseline yöntemler aynı problem için referans uygulamalardır; kullanıcının andığı araştırmacıların özgün uygulamalarının birebir replikasyonu değildir. PSO: inertia 0,7 ve cognitive/social 1,4; GA: turnuva 3, mutasyon max(1/n, 0,02); AC: buharlaşma 0,1, heuristic üssü 2; HS: memory 0,9, pitch 0,3; ANN: adım 0,2, overflow ağırlığı 10; SA: başlangıç sıcaklığı en büyük sınav katılımı. Bu parametreler `examlab/algorithms.py` içinde açıktır.
+
+Her yöntem aynı süre ve değerlendirme üst sınırını kullanır. CP-SAT iç arama sayıları bu sayaçla eşdeğer değildir; duvar saati ayrıca raporlanır. Model kurma veya tek bir pahalı adım süre sınırını aşabilir. Zaman sınırı baskınsa aynı tohum farklı makinelerde farklı sonuç verebilir. Başlangıç stratejileri algoritmanın parçasıdır; tümüne önerilen yöntemden iyi bir çizelge verilmez.
+
+Rapor ortalama/std. sapma/en iyi tepeyi **yalnız olurlu koşulardan**, başarı oranını ve süreyi **tüm koşulardan** hesaplar. Çözümsüzlük ile zaman aşımı ayrıdır. Tek koşuyu başarı oranı gibi sunmaz. Sıralama önce olurlu çözüm oranına, sonra ortalama tepeye göre yapılır. Makale yöntemi vurgulanır ama kazanan sonuçlar değiştirilmez.
+
+## Veri ve sınırlar
+
+CSV, XLSX ve JSON desteklenir. Gerekli kolonlar: `exam_id, student_count, date, start_time`. `DERS_ID`, `OGR_SAY`, `TARIH`, `PLANLANAN_SAAT` gibi Türkçe kolonlar eşlenir. Tekrarlanan ders kodları birleştirilmez; her satır ayrı sınav olayıdır. Çıktı kimlikleri anonimleştirilir. Negatif/kesirli katılım ve hatalı tarih/saat varsayılan olarak reddedilir. `--drop-invalid` açıkça dışlamaya izin verir; dışlanan satır numaraları rapora yazılır. Otomatik ek tarih aralığı filtresi uygulanmaz.
+
+Bireysel öğrenci kayıtları olmadığı için öğrenci çakışması doğrulanmaz; bölüm etiketi öğrenci ortaklığı olarak kabul edilmez. Katılım toplamı tekil kişi değildir. Kapasite olurluluğu hizmet kesintisinin önlendiğini veya donanım azaltılabileceğini ispatlamaz. Bu sürümde aday tarihler arasında hareket serbesttir; bölüm/gün sabitlemesi veya farklı sınav süreleri ayrıca modellenmemiştir.
+
+V3 taslağı 1.957 sınav, 118.964 katılım ve 149 aday başlangıçla 5.948 → 3.582 (%39,78) tek koşu bildirir. Depodaki `VerilerArasinav.xlsx` 2.219 sınav, 144.467 katılım ve 187 aday başlangıç içerir; bu farklı veri, makalenin filtrelenmiş deneyi gibi sunulmaz. Taslaktaki Tablo 3'ün kaynak/katsayı satırları tutarsız olduğundan fiziksel kaynak modeli türetilmemiştir.
+
+## GitHub Pages yayını
+
+1. Değişiklikleri GitHub'daki `main` dalına gönderin.
+2. **Settings → Pages → Source → GitHub Actions** seçin.
+3. `Publish comparison site` iş akışı yalnız `web/` klasörünü yayımlar.
+
+[GitHub Pages özel iş akışları](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages). Ham kurumsal veriler ve yerel `results/` yayın paketine dahil değildir. Canlı yayına gönderme bu revizyon sırasında yapılmamıştır.
+
+## Doğrulama
+
+```powershell
+python -m unittest discover -s tests
+node --test tests/test_web.cjs
 ```
 
-Solver secenekleri: `cp_sat`, `graph`, `ga`, `sa`, `hybrid`, `all`.
+Örnek sonuçları yeniden üretmek için `python generate_demo.py` kullanın. Bu işlem sentetik örnek CSV'yi ve `web/data/benchmark.json` raporunu yeniden oluşturur.
 
-Program ders bazli ogrenci sayisi ile calisir; bireysel `student_id` dosyasi istemez. Planlanmis sinav dosyasindaki `TARIH + PLANLANAN_SAAT` mevcut plan kabul edilir, ayni timeslot evreni icinde optimize edilir ve planned-vs-optimized karsilastirmasi uretilir. Referans Excel dosyalarinda `DERS_ID`, `DERS_KOD`, `DERS_AD`, `OGR_SAY`, `TARIH`, `PLANLANAN_SAAT`, `SAAT`, `BOLUM`, `PROG_AD` ve `_6477` son ekli kolonlar otomatik algilanir.
+## Dosya yapısı
 
-```bash
-python main.py --planned_schedule "C:\Users\Honour\My Drive\Makale\Server Load\DüzenliVeriler\VerilerArasinav.xlsx" --solver hybrid --output outputs
-```
+- `examlab/`: veri okuma, zaman örtüşmesi, algoritmalar, benchmark raporu
+- `main.py`: tek komut satırı giriş noktası
+- `web/`: bağımlılıksız HTML/CSS/JS karşılaştırma sitesi
+- `tests/`: model, tarih ve rapor/grafik testleri
+- `data/`: sentetik örnek plan ve saklanan yerel gerçek veri
+- `results/`: yerel deney sonuçları (Git tarafından yok sayılır)
 
-## Gorsel arayuz
+## Kaynak
 
-```bash
-streamlit run app.py
-```
+Onur Mahmut Pişirir ve Recep Çolak, *Algorithmic Exam Timetabling to Prevent Server Crash in Cloud-Based Learning Management Systems*, V3 taslağı. CP-SAT → GD iki aşaması, 60 dakika varsayımı, kapasite senaryoları ve bildirilen %39,78 bulgusu bu kullanıcı belgesinden alınmıştır. Model uygulaması için [OR-Tools CP-SAT belgeleri](https://developers.google.com/optimization/cp/cp_solver) esas alınır. Belgede tamamlanmamış bölümler ve literatür anlatımı, yazılıma yönelik talimat olarak işlenmez.
 
-Ana sayfadaki **Before / After Comparison charts** bağlantısı ayrı karşılaştırma sayfasını açar.
-Bu sayfa gönderilen CSV örneğini veya son optimizasyonun plan/sonuç çiftini gösterir.
-Eşzamanlı yük, günlük dağılım, tepe yük ve varsayımsal kaynak grafikleri bulunur;
-grafikler PNG, hesaplanan yükler CSV olarak indirilebilir. Ortak süre seçimi her iki
-plana da uygulanır ve süreleri örtüşen sınavlar birlikte sayılır. Süre ve kapasite
-ayarları karşılaştırma senaryosudur; bu sayfa solver'ın amaç fonksiyonunu değiştirmez.
-Oturumdaki son sonuç yoksa seçili çıktı klasöründeki plan/optimize slot özetleri okunur.
+## Arayüz dilleri ve birleşik karşılaştırmalar
 
-Arayuzden tek planlanmis sinav dosyasi yuklenir. Solver secilir ve planlanan cizelge ile optimize cizelge birlikte goruntulenir. Grafikler ve CSV/JSON ciktilari secilen output klasorune kaydedilir.
+Üst menüde Türkçe / English seçimi bulunur; seçim tarayıcıda saklanır. Dil değişince rapor, senaryo, algoritma ve tohum seçimi korunur. Başlıklar, grafikler, sonuç yorumları ve hata mesajları çevrilir.
 
-Arayuz, yuklenen dosyadaki mevcut `TARIH + SAAT` atamasini gercek cizelge olarak yeniden kurabiliyorsa optimize sonuc ile ayni anda gosterir:
-
-- `Overview`: objective, load variance, max load ve hard violation iyilesmeleri
-- `Algorithms`: graph, GA, SA ve hybrid algoritmalarinin basari, objective, runtime ve load variance karsilastirmasi
-- `Load comparison`: gercek ve optimize timeslot ogrenci/sinav dagilimi
-- `Resource comparison`: CPU, RAM ve bandwidth karsilastirmasi
-- `Improvements`: metrik bazli yuzde iyilesme grafigi
-- `Statistics`: bolum bazli en cok sinav, ogrenci sayisi, en buyuk sinavlar ve bolum-timeslot yogunlugu
-- `Schedule`: optimize cizelge ve gercek atama eslemesi
-
-Ek karsilastirma ciktilari:
-
-- `outputs_gui/real_vs_optimized_metrics.csv`
-- `outputs_gui/real_vs_optimized_timeslots.csv`
-
-Performans parametreleri:
-
-```bash
-python main.py --planned_schedule data/example_planned_schedule.csv --solver all --time_limit 60 --max_iterations 5000 --ga_generations 300 --population_size 100 --seed 42
-```
-
-## Beklenen dosya formatlari
-
-`planned_schedule`:
-
-```csv
-exam_id,exam_name,student_count,department_id,date,start_time
-MATH101,Calculus,120,Engineering,2026-07-01,09:00
-PHY101,Physics,80,Engineering,2026-07-01,13:00
-```
-Turkce veya farkli kolon adlari otomatik eslenmeye calisilir. Ornekler: `DERS_ID`, `sinav`, `ders_kodu`, `ders_ad`, `bolum`, `ogrenci_sayisi`, `ogr_say`, `tarih`, `PLANLANAN_SAAT`, `saat`.
-
-## Ciktilar
-
-- `outputs/schedule_output.csv`
-- `outputs/results.csv`
-- `outputs/metrics_summary.json`
-- `outputs/algorithm_comparison.csv`
-- `outputs/validation_report.json`
-- `outputs/department_summary.csv`
-- `outputs/top_exams.csv`
-- `outputs/planned_timeslot_summary.csv`
-- `outputs/optimized_timeslot_summary.csv`
-- `outputs/planned_department_timeslot_concentration.csv`
-- `outputs/optimized_department_timeslot_concentration.csv`
-- `outputs/figures/`
-
-## Algoritma karsilastirmasi
-
-`--solver all` ile birden fazla algoritma ayni dosya uzerinde calistirilir. Arayuzde `Solver = all` secildiginde `Algorithms` sekmesi acilir ve su bilgiler gosterilir:
-
-- Hangi algoritma bu dosyada en iyi objective degerini verdi
-- Hangi algoritmalar feasible cozum uretmeyi basardi
-- Algoritma bazli runtime
-- Algoritma bazli load variance
-- Ortalama success rate
-
-Graph solver, dersleri buyukten kucuge siralayan ve timeslotlari kapasite, yuk dengesi ve bolum yogunluguna gore puanlayan hizli bir graph-coloring benzeri sezgisel algoritmadir.
-
-## Notlar
-
-Varsayılan altyapı, firma belgesindeki **Moodle Senaryo 3** olarak güncellendi.
-
-- App01 / App02 / App03+: her biri 16 vCPU, 32 GB RAM, 100 GB disk.
-- Ayrı LB, NFS/GlusterFS depolama, SQL proxy, master/replica SQL ve Redis katmanları.
-- Dış ağ: en az 1 Gbps; yerel ağ: 10 Gbps. SSD/NVMe depolama.
-- Belgede 30.000–50.000+ aktif kullanıcı, 3.000–6.000 eşzamanlı kullanıcı belirtiliyor.
-- Başlangıç planlama sınırı: 3.000 eşzamanlı sınav katılımı (aralığın alt sınırı).
-
-Arayüzde `Server infrastructure` seçimi veya CLI ile diğer profiller seçilebilir:
-
-```bash
-python main.py --planned_schedule data/example_planned_schedule.csv --server_profile moodle_3 --solver graph --output outputs_moodle3
-```
-
-Profil, mimari ve hesaplama varsayımları her çalışmada `server_profile.json` dosyasına kaydedilir.
-CPU vCPU, RAM GB, ağ Mbps birimindedir. Öğrenci başına katsayılar uygulama katmanı
-kapasitesinin başlangıç kullanıcı sınırına bölünmesiyle türetilmiş doğrusal planlama
-tahminleridir; firma ölçümü değildir. SQL/cache kaynakları uygulama havuzuna eklenmez.
-Senaryo 3 için üç uygulama düğümü esas alınır; belgede yinelenen SQL2+ satırı ikinci
-replica olarak envanterde tutulur. `+` işaretleri otomatik sınırsız ölçekleme anlamına gelmez.
-Disk kapasitesi, IOPS, SQL yazma darboğazı ve düğüm arızaları solver tarafından modellenmez.
-BigBlueButton ayrı bir iş yükü olduğu için Moodle kapasitesine eklenmez.
-Aktif kullanıcı sayısı eşzamanlı sınav kapasitesi değildir; 6.000 üst sınırı yük testiyle
-kalibre edilmeden garantili sınav kapasitesi sayılmaz.
-
-Kaynak: `moodle_kullanım_2025-tech spect.docx - Google Dokümanlar.pdf`, sayfa 1–2.
-Harici timeslot dosyasındaki açık kapasite/kaynak limitleri mevcut davranış gereği
-profil varsayılanlarını geçersiz kılar. Önceki çıktı dosyaları eski modeli içerir;
-yeni profil için optimizasyon yeniden çalıştırılmalıdır. Solver slot bazında çalışır;
-farklı başlangıç saatlerinde örtüşen sınavları karşılaştırma sayfası ayrıca hesaplar.
+Süre–tepe yük dağılım grafiği, seçili tohumda tüm algoritmaların yakınsaması ve tüm senaryoları kapsayan sonuç matrisi eklendi. Makale yönteminin avantajları rapordaki başarı oranı, olurlu ortalama tepe ve süre değerlerinden hesaplanır. Daha iyi sonuç veren rakipler de gösterilir. Başarısız koşular sıfır yük olarak çizilmez. Örtüşme modeli bütün yöntemlerde ortak olduğu için yalnız makale yönteminin avantajı olarak sunulmaz.

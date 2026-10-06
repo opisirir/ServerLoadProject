@@ -1,9 +1,0 @@
-schedule,department_id,timeslot_id,exam_count,student_count
-optimized,Engineering,TS0001,2,215
-optimized,Engineering,TS0005,2,210
-optimized,Humanities,TS0002,1,210
-optimized,Computer Engineering,TS0003,1,180
-optimized,Economics,TS0004,1,155
-optimized,Law,TS0006,1,142
-optimized,Science,TS0006,1,88
-optimized,Humanities,TS0004,1,64

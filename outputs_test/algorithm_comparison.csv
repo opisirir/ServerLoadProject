@@ -1,2 +1,0 @@
-solver,success,feasible,is_best,objective_value,hard_constraint_violations,total_soft_penalty,load_variance,max_load,runtime_seconds,success_rate_pct
-hybrid,True,True,True,3221.166666666667,0,3221.166666666667,280.6666666666667,230.0,2.5675599575042725,100.0

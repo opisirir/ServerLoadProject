@@ -1,7 +1,0 @@
-timeslot_id,date,start_time,reference_students,optimized_students,student_delta,reference_exams,optimized_exams,exam_delta,reference_cpu,optimized_cpu,reference_ram,optimized_ram,reference_bandwidth,optimized_bandwidth
-TS0001,2026-01-07,09:00,215,180,-35,2,1,-1,4.3,3.6,10.75,9.0,43.0,36.0
-TS0002,2026-01-07,13:00,255,215,-40,2,2,0,5.1,4.3,12.75,10.75,51.0,43.0
-TS0003,2026-02-07,09:00,298,210,-88,2,2,0,5.96,4.2,14.9,10.5,59.6,42.0
-TS0004,2026-02-07,13:00,199,230,31,2,2,0,3.98,4.6,9.95,11.5,39.8,46.0
-TS0005,2026-03-07,09:00,155,210,55,1,1,0,3.1,4.2,7.75,10.5,31.0,42.0
-TS0006,2026-03-07,13:00,142,219,77,1,2,1,2.84,4.38,7.1,10.95,28.4,43.8

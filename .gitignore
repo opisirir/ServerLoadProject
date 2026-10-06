@@ -1,4 +1,7 @@
-/.venv/etc/jupyter/nbconfig/notebook.d
-/.venv/Lib/site-packages
-/.venv
-/__pycache__
+﻿.venv/
+.venv-1/
+__pycache__/
+*.py[cod]
+results/
+outputs*/
+.pytest_cache/
