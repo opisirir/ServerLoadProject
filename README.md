@@ -1,89 +1,73 @@
 ﻿# Exam Balance
 
-Makalenin V3 sürümündeki **CP-SAT → Great Deluge** yaklaşımı için örtüşen sınav yüklerini hesaplayan optimizasyon motoru ve GitHub Pages karşılaştırma sitesi.
+Makaledeki **CP-SAT → Great Deluge** yöntemi ile matematiksel optimizasyon modellerini karşılaştırır. Arayüz Türkçe ve İngilizcedir.
 
 ## Çalıştırma
 
 ```powershell
 python -m pip install -r requirements.txt
-python main.py --input data/example_planned_schedule.csv --scenario all --minutes 60 --seeds 42,43,44 --seconds 10 --evaluations 3000 --output results/benchmark.json
+python main.py --input data/VerilerArasinav.xlsx --scenario paper --seconds 15 --evaluations 1000000 --seeds 42,43,44 --output results/real_benchmark.json
 python -m http.server 8765 --directory web
 ```
 
-`http://localhost:8765` adresini açın. **Sonuç yükle** ile `results/benchmark.json` seçin. Dosya tarayıcıda işlenir, bir sunucuya yüklenmez. Sayfa örnek olarak gerçek algoritma koşularından üretilmiş, açıkça **sentetik** etiketli bir veri kümesi gösterir.
+`http://localhost:8765` adresinde **Sonuç yükle** ile JSON raporu seçin. Dosya tarayıcıda işlenir. GitHub Pages hesaplama yapmaz; yerelde hesaplanan raporları gösterir.
 
-Eski Streamlit arayüzü kaldırıldı. GitHub Pages Python çalıştırmaz; deneyler yerel Python ortamında hesaplanır, JSON raporu statik sitede incelenir. Yükleme, senaryo/algoritma/tohum seçimi, karşılaştırma CSV'si ve seçilen çizelge indirmesi desteklenir.
+## Modeller
 
-## Sunucu senaryoları
+| Kimlik | Model | Çözücü | Amaç |
+|---|---|---|---|
+| cp_gd | Makaledeki iki aşamalı yöntem | CP-SAT + GD | İlk olurlu çizelgeden tepe yükünü azaltma |
+| mip | Karma tam sayılı programlama | CBC | Sürekli tepe değişkenini minimize etme |
+| ilp | Tam sayılı lineer programlama | CP-SAT | Tamsayılı tepe değişkenini minimize etme |
+| goal | Hedef programlama | CBC | Kanıtlanmış başlangıç alt hedefinden pozitif sapmayı minimize etme |
 
-| Senaryo | Maksimum eşzamanlı kullanıcı |
+Modeller kullanıcının `Gerçek Dünya Uygulamalarında Kullanılan Algoritmalar.xlsx` dosyasındaki matematiksel model ailelerinden seçilmiştir. Kurumlara özgü modellerin birebir yeniden üretimi değildir. Excel'deki DSS, GAMS, AMPL, CPLEX ve Gurobi ifadeleri ayrı algoritmalar olarak sayılmaz. Sütun üretimi, çok aşamalı kurum modelleri ve bulanık kritiklik modeli gerekli formülasyon/veri bulunmadığı için uygulanmış gibi gösterilmez. Excel satırları `docs/comparison_source.json` içinde kaynak bilgisi olarak korunur.
+
+Üç matematiksel model bu kapasite ve tepe yükü probleminde aynı optimumu hedefler. Hedef model tek hedeflidir; bulanık mantık iddiası yoktur. Modellerin ve çözücülerin süre sınırlı davranışı karşılaştırılır; sonuçlar bağımsız üç literatür algoritmasına karşı genel üstünlük kanıtı değildir. MIP ve hedef modelleri aynı CBC arka ucunu kullanır.
+
+## Ortak problem
+
+- Gözlenen tarih/başlangıçlar aday zaman pencereleridir.
+- Her sınav tek pencereye atanır; sınav katılımı bölünmez.
+- Tüm sınavların süresi `--minutes` ile belirlenir (varsayılan 60).
+- Yük `[başlangıç, bitiş)` aralıklarında hesaplanır. Farklı saatlerde başlayan ve gece yarısını aşan sınavlar dahil edilir.
+- Bütün modeller aynı kapasiteyi korur. Bireysel öğrenci kayıtları bulunmadığından öğrenci çakışması kısıtı yoktur.
+- Katılım sayısı tekil öğrenci sayısı değildir.
+
+Eşit katılımlı sınavlar, başka kısıt olmadığı için matematiksel modellerde tam sayılı adet değişkenleriyle gruplanır. Bu, büyük ikili atama matrisine eşdeğer bir azaltmadır; sonuç yeniden tek tek sınavlara açılır. Bölüm veya kişisel çakışma kısıtları eklenirse bu gruplama yeniden değerlendirilmelidir. Formülasyon: `docs/mathematical_comparison.md`.
+
+## Kapasiteler
+
+| Seçim | Maksimum eşzamanlı kullanıcı |
 |---|---:|
-| Senaryo 1 | 500 |
-| Senaryo 2 | 2.500 |
-| Senaryo 3 | 6.000 |
+| scenario_1 | 500 |
+| scenario_2 | 2.500 |
+| scenario_3 | 6.000 |
+| paper | 5.000 (makaledeki deney varsayımı) |
 
-`--scenario paper` makaledeki **5.000** kapasiteli deney varsayımını seçer. Bu, Senaryo 3'ün maksimumu değildir. CPU/RAM/ağ katsayıları ve ayrıntılı donanım tabloları kaldırıldı; tek kaynak kısıtı eşzamanlı sınav katılımıdır.
+`--scenario all` dört kapasiteyi çalıştırır. Varsayılan web raporu açıkça sentetik etiketlidir. `python generate_demo.py` bu raporu yeniden üretir.
 
-## Ortak problem ve algoritmalar
+## Sonuçların yorumu
 
-Her sınav, dosyada gözlenen aday başlangıçlardan tam olarak birine atanır; sınav ve katılımcı grubu bölünmez. Tüm sınavlar için `--minutes` ortak süre varsayımı kullanılır (varsayılan 60). Bitiş saati dosyadan alınmaz. Yükler `[başlangıç, bitiş)` aralıklarında hesaplanır; farklı başlangıç saatleri, gece yarısı ve eşzamanlı bitiş/başlangıç doğru ele alınır. Amaç, kapasiteyi koruyarak **en yüksek eşzamanlı katılımı azaltmaktır**.
+Karşılaştırma önce olurlu çözüm oranını, ardından tepe yükü ve süreyi değerlendirir. Olurlu ortalama, standart sapma, en iyi tepe, çalışma süresi, eşleşmiş koşularda kazanma/eşitlik/kaybetme ve kanıtlanmış alt sınıra göre açıklık gösterilir. Başarısız koşular sıfır tepe olarak çizilmez.
 
-- **CP-SAT → GD:** CP-SAT amaç fonksiyonu olmadan ilk olurlu çözümde durur. Great Deluge azalan kabul eşiğiyle taşıma/takas komşuluğunda tepe yükü iyileştirir, olurluluğu korur ve en iyi çözümü saklar. Büyük veri için bire bir ikili atama matrisine eşdeğer, ayrık başlangıç alanlı interval/cumulative modeli kullanılır.
-- **PSO:** ayrık zaman dilimlerine yuvarlanan hız/konum güncellemeleri, kişisel ve küresel en iyi, küçük mutasyon.
-- **GA:** turnuva seçimi, uniform çaprazlama, mutasyon ve elitist en kötü birey değişimi.
-- **TS:** taşıma komşuluğu, yedi iterasyonluk tabu süresi ve aspirasyon.
-- **AC:** feromon buharlaşması, en iyi çözüm pekiştirmesi ve artımlı yük sezgiselliği.
-- **HS:** harmony memory, bellekten seçim, pitch adjustment ve en kötü çözüm değişimi.
-- **Probleme özgü sezgisel:** büyük sınavları önce yerleştirme ve iyileştiren taşıma/takas araması.
-- **ANN:** sürekli Hopfield benzeri atama nöronları, karesel yük/kapasite enerjisi ve tekrarlayan güncellemeler. Eğitilmiş bir tahmin modeli değildir.
-- **SA:** azalan sıcaklık ve Metropolis kabulü.
+Açıklık = `(tepe − ortak kanıtlanmış alt sınır) / tepe`. Sıfır açıklık optimumu kanıtlar. Pozitif açıklık gerçek optimuma uzaklığın üst sınırıdır, kesin fark değildir. Ortak alt sınır yalnız aynı veri/süre/kapasite deneyindeki geçerli matematiksel sınırlardan elde edilir.
 
-Baseline yöntemler aynı problem için referans uygulamalardır; kullanıcının andığı araştırmacıların özgün uygulamalarının birebir replikasyonu değildir. PSO: inertia 0,7 ve cognitive/social 1,4; GA: turnuva 3, mutasyon max(1/n, 0,02); AC: buharlaşma 0,1, heuristic üssü 2; HS: memory 0,9, pitch 0,3; ANN: adım 0,2, overflow ağırlığı 10; SA: başlangıç sıcaklığı en büyük sınav katılımı. Bu parametreler `examlab/algorithms.py` içinde açıktır.
+Tüm modellerin zaman bütçesi model kurulumunu da içerir; solver sonlandırma/sonuç çıkarma masrafı sınırı bir miktar aşabilir. GD'nin ayrıca `--evaluations` üst sınırı vardır. Matematiksel çözücülerin iç düğüm aramaları aynı değerlendirme sayacıyla sınırlanmaz. CBC tekrarlarında rastgele tohum değişmez; süre dalgalanmaları olabilir. Küçük tekrar sayıları için istatistiksel anlamlılık iddiası kurulmaz. CBC yalnız son çözümü bildirir; yakınsama grafiğinde ara ilerleme uydurulmaz.
 
-Her yöntem aynı süre ve değerlendirme üst sınırını kullanır. CP-SAT iç arama sayıları bu sayaçla eşdeğer değildir; duvar saati ayrıca raporlanır. Model kurma veya tek bir pahalı adım süre sınırını aşabilir. Zaman sınırı baskınsa aynı tohum farklı makinelerde farklı sonuç verebilir. Başlangıç stratejileri algoritmanın parçasıdır; tümüne önerilen yöntemden iyi bir çizelge verilmez.
+Makale V3'te raporlanan 5.948 → 3.582 (%39,78) ayrı bir tek koşu sonucudur. Depodaki gerçek veri 2.219 sınav/144.467 katılım içerir; makaledeki filtrelenmiş 1.957 sınav/118.964 katılım ile aynı değildir. Yazılım çıktısı sunucu kesintisinin önlendiğini veya donanım azaltılabileceğini kanıtlamaz.
 
-Rapor ortalama/std. sapma/en iyi tepeyi **yalnız olurlu koşulardan**, başarı oranını ve süreyi **tüm koşulardan** hesaplar. Çözümsüzlük ile zaman aşımı ayrıdır. Tek koşuyu başarı oranı gibi sunmaz. Sıralama önce olurlu çözüm oranına, sonra ortalama tepeye göre yapılır. Makale yöntemi vurgulanır ama kazanan sonuçlar değiştirilmez.
+## Veri
 
-## Veri ve sınırlar
+CSV, XLSX veya JSON: `exam_id, student_count, date, start_time`. Türkçe kolon eşlemesi desteklenir. Her satır ayrı sınavdır. Hatalı kayıtlar reddedilir; `--drop-invalid` açık dışlamaya izin verir ve satır numaraları rapora yazılır. Çıktı kimlikleri anonimleştirilir.
 
-CSV, XLSX ve JSON desteklenir. Gerekli kolonlar: `exam_id, student_count, date, start_time`. `DERS_ID`, `OGR_SAY`, `TARIH`, `PLANLANAN_SAAT` gibi Türkçe kolonlar eşlenir. Tekrarlanan ders kodları birleştirilmez; her satır ayrı sınav olayıdır. Çıktı kimlikleri anonimleştirilir. Negatif/kesirli katılım ve hatalı tarih/saat varsayılan olarak reddedilir. `--drop-invalid` açıkça dışlamaya izin verir; dışlanan satır numaraları rapora yazılır. Otomatik ek tarih aralığı filtresi uygulanmaz.
-
-Bireysel öğrenci kayıtları olmadığı için öğrenci çakışması doğrulanmaz; bölüm etiketi öğrenci ortaklığı olarak kabul edilmez. Katılım toplamı tekil kişi değildir. Kapasite olurluluğu hizmet kesintisinin önlendiğini veya donanım azaltılabileceğini ispatlamaz. Bu sürümde aday tarihler arasında hareket serbesttir; bölüm/gün sabitlemesi veya farklı sınav süreleri ayrıca modellenmemiştir.
-
-V3 taslağı 1.957 sınav, 118.964 katılım ve 149 aday başlangıçla 5.948 → 3.582 (%39,78) tek koşu bildirir. Depodaki `VerilerArasinav.xlsx` 2.219 sınav, 144.467 katılım ve 187 aday başlangıç içerir; bu farklı veri, makalenin filtrelenmiş deneyi gibi sunulmaz. Taslaktaki Tablo 3'ün kaynak/katsayı satırları tutarsız olduğundan fiziksel kaynak modeli türetilmemiştir.
-
-## GitHub Pages yayını
-
-1. Değişiklikleri GitHub'daki `main` dalına gönderin.
-2. **Settings → Pages → Source → GitHub Actions** seçin.
-3. `Publish comparison site` iş akışı yalnız `web/` klasörünü yayımlar.
-
-[GitHub Pages özel iş akışları](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages). Ham kurumsal veriler ve yerel `results/` yayın paketine dahil değildir. Canlı yayına gönderme bu revizyon sırasında yapılmamıştır.
-
-## Doğrulama
+## Testler ve yayın
 
 ```powershell
 python -m unittest discover -s tests
 node --test tests/test_web.cjs
 ```
 
-Örnek sonuçları yeniden üretmek için `python generate_demo.py` kullanın. Bu işlem sentetik örnek CSV'yi ve `web/data/benchmark.json` raporunu yeniden oluşturur.
+GitHub'da **Settings → Pages → Source → GitHub Actions** seçildiğinde `.github/workflows/pages.yml` yalnız `web/` klasörünü yayımlar. Yerel `results/` ve ham kurumsal dosyalar yayın paketine alınmaz. Bu revizyon canlı yayına gönderilmemiştir.
 
-## Dosya yapısı
-
-- `examlab/`: veri okuma, zaman örtüşmesi, algoritmalar, benchmark raporu
-- `main.py`: tek komut satırı giriş noktası
-- `web/`: bağımlılıksız HTML/CSS/JS karşılaştırma sitesi
-- `tests/`: model, tarih ve rapor/grafik testleri
-- `data/`: sentetik örnek plan ve saklanan yerel gerçek veri
-- `results/`: yerel deney sonuçları (Git tarafından yok sayılır)
-
-## Kaynak
-
-Onur Mahmut Pişirir ve Recep Çolak, *Algorithmic Exam Timetabling to Prevent Server Crash in Cloud-Based Learning Management Systems*, V3 taslağı. CP-SAT → GD iki aşaması, 60 dakika varsayımı, kapasite senaryoları ve bildirilen %39,78 bulgusu bu kullanıcı belgesinden alınmıştır. Model uygulaması için [OR-Tools CP-SAT belgeleri](https://developers.google.com/optimization/cp/cp_solver) esas alınır. Belgede tamamlanmamış bölümler ve literatür anlatımı, yazılıma yönelik talimat olarak işlenmez.
-
-## Arayüz dilleri ve birleşik karşılaştırmalar
-
-Üst menüde Türkçe / English seçimi bulunur; seçim tarayıcıda saklanır. Dil değişince rapor, senaryo, algoritma ve tohum seçimi korunur. Başlıklar, grafikler, sonuç yorumları ve hata mesajları çevrilir.
-
-Süre–tepe yük dağılım grafiği, seçili tohumda tüm algoritmaların yakınsaması ve tüm senaryoları kapsayan sonuç matrisi eklendi. Makale yönteminin avantajları rapordaki başarı oranı, olurlu ortalama tepe ve süre değerlerinden hesaplanır. Daha iyi sonuç veren rakipler de gösterilir. Başarısız koşular sıfır yük olarak çizilmez. Örtüşme modeli bütün yöntemlerde ortak olduğu için yalnız makale yönteminin avantajı olarak sunulmaz.
+Uygulama referansları: [OR-Tools MIP](https://developers.google.com/optimization/mip/mip_example), [CP-SAT](https://developers.google.com/optimization/cp/cp_solver).

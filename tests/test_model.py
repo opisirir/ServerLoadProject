@@ -44,7 +44,7 @@ class ModelTests(unittest.TestCase):
         p = self.problem()
         for name in ALGORITHMS:
             with self.subTest(name=name):
-                r = solve(name, p, 250, seed=7, seconds=2, evaluations=50, population=5)
+                r = solve(name, p, 250, seed=7, seconds=2, evaluations=50)
                 self.assertIsNotNone(r["metrics"])
                 self.assertEqual(r["metrics"], p.metrics(np.array(r["assignment"]), 250))
                 self.assertLessEqual(r["evaluations"], 50)
@@ -55,12 +55,36 @@ class ModelTests(unittest.TestCase):
     def test_seeded_search_reproducible_with_nonbinding_time(self):
         p = self.problem()
         for name in ALGORITHMS:
-            a = solve(name, p, 300, seed=9, seconds=10, evaluations=30, population=5)
-            b = solve(name, p, 300, seed=9, seconds=10, evaluations=30, population=5)
+            a = solve(name, p, 300, seed=9, seconds=10, evaluations=30)
+            b = solve(name, p, 300, seed=9, seconds=10, evaluations=30)
             self.assertEqual(a["assignment"], b["assignment"], name)
 
     def test_scenario_maxima(self):
         self.assertEqual(list(SCENARIOS.values()), [500, 2500, 6000])
+
+    def test_mathematical_models_match_exhaustive_optimum(self):
+        from itertools import product
+        p = self.problem()
+        optimum = min(p.metrics(np.array(a), 300)["peak"] for a in product(range(3), repeat=3))
+        for name in ("mip", "ilp", "goal"):
+            r = solve(name, p, 300, seconds=3)
+            self.assertEqual(r["metrics"]["peak"], optimum, name)
+            self.assertEqual(r["lower_bound"], optimum, name)
+            self.assertTrue(r["optimal"], name)
+
+    def test_mathematical_models_reject_impossible_capacity(self):
+        for name in ("mip", "ilp", "goal"):
+            r = solve(name, self.problem(), 99, seconds=1)
+            self.assertIsNone(r["metrics"])
+            self.assertEqual(r["solver_status"], "INFEASIBLE_BY_LOWER_BOUND")
+
+    def test_equal_count_grouping_preserves_individual_exams(self):
+        p = Problem(["A", "B", "C", "D"], [50, 50, 50, 50],
+                    ["2026-01-01T09:00", "2026-01-01T10:00"], [0, 0, 0, 0])
+        for name in ("mip", "ilp", "goal"):
+            r = solve(name, p, 100, seconds=2)
+            self.assertEqual(len(r["assignment"]), 4)
+            self.assertEqual(r["metrics"]["loads"], [100, 100])
 
     def test_loader_keeps_repeated_courses_and_explicit_rejection(self):
         with tempfile.TemporaryDirectory() as folder:

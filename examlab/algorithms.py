@@ -2,8 +2,14 @@
 from time import perf_counter
 import numpy as np
 from ortools.sat.python import cp_model
+from .math_models import solve_mathematical
 
-ALGORITHMS = {"cp_gd": "CP-SAT → Great Deluge"}
+ALGORITHMS = {
+    "cp_gd": "CP-SAT → Great Deluge",
+    "mip": "Karma Tam Sayılı Programlama (CBC)",
+    "ilp": "Tam Sayılı Lineer Programlama (CP-SAT)",
+    "goal": "Hedef Programlama (CBC)",
+}
 
 
 class Budget:
@@ -64,19 +70,21 @@ def cp_first(p, capacity, seconds, seed):
     return a, solver.StatusName(status)
 
 
-def solve(name, p, capacity, seed=42, seconds=5, evaluations=2000, population=20):
-    if name not in ALGORITHMS or capacity <= 0 or seconds <= 0 or evaluations < 1 or population < 2:
+def solve(name, p, capacity, seed=42, seconds=5, evaluations=2000):
+    if name not in ALGORITHMS or capacity <= 0 or seconds <= 0 or evaluations < 1:
         raise ValueError("Invalid algorithm or search parameters.")
+    if name != "cp_gd":
+        return solve_mathematical(name, p, capacity, seed, seconds)
     rng = np.random.default_rng(seed)
     b = Budget(p, capacity, seconds, evaluations)
     n, m = len(p.ids), len(p.starts)
-    details = {}
+    details = {"lower_bound": p.lower_bound(), "optimal": False, "history_kind": "incumbents"}
     if name == "cp_gd":
         a, status = cp_first(p, capacity, seconds * .6, seed)
         details["cp_status"] = status
         if a is None:
             return {"algorithm": name, "seed": seed, "status": "no_solution", "cp_status": status,
-                    "runtime_seconds": perf_counter()-b.start, "evaluations": 0, "history": [], "metrics": None}
+                    "runtime_seconds": perf_counter()-b.start, "evaluations": 0, "history": [], "metrics": None, **details}
         score = b.evaluate(a)
         details["initial_peak"] = int(p.loads(a).max())
         details["cp_seconds"] = perf_counter() - b.start

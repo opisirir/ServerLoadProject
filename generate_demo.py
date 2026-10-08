@@ -23,7 +23,7 @@ def main():
             writer.writerow([f"EXAM_{i+1:04d}", f"Course_{i+1:04d}", int(rng.integers(20, 131)), f"Dept_{i%8+1:02d}", stamp.strftime("%Y-%m-%d"), stamp.strftime("%H:%M")])
     p, meta = load_problem(path)
     meta.update(synthetic=True, sha256=hashlib.sha256(path.read_bytes()).hexdigest())
-    report = run(p, meta, {**SCENARIOS, "paper": PAPER_CAPACITY}, [42, 43, 44], 3, 800)
+    report = run(p, meta, {**SCENARIOS, "paper": PAPER_CAPACITY}, [42, 43, 44], 2, 1000000)
     Path("web/data/benchmark.json").write_text(json.dumps(report, ensure_ascii=False, allow_nan=False), encoding="utf-8")
     Path("web/data/example_planned_schedule.csv").write_bytes(path.read_bytes())
 
