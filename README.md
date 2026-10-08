@@ -2,15 +2,29 @@
 
 Makaledeki **CP-SAT → Great Deluge** yöntemi ile matematiksel optimizasyon modellerini karşılaştırır. Arayüz Türkçe ve İngilizcedir.
 
-## Çalıştırma
+## Streamlit uygulaması
 
 ```powershell
 python -m pip install -r requirements.txt
-python main.py --input data/VerilerArasinav.xlsx --scenario paper --seconds 15 --evaluations 1000000 --seeds 42,43,44 --output results/real_benchmark.json
-python -m http.server 8765 --directory web
+python -m streamlit run streamlit_app.py
 ```
 
-`http://localhost:8765` adresinde **Sonuç yükle** ile JSON raporu seçin. Dosya tarayıcıda işlenir. GitHub Pages hesaplama yapmaz; yerelde hesaplanan raporları gösterir.
+Adres: `http://localhost:8501`. Türkçe/İngilizce arayüzde sentetik örneği görüntüleyin, JSON sonuç raporu yükleyin veya CSV/XLSX/JSON sınav verisinden yeni karşılaştırma çalıştırın. Varsayılan seçim Senaryo 3'tür. Her model aynı süre bütçesiyle sırayla çalışır; sonuçlar oturumda tutulur. Rapor, karşılaştırma ve çizelge indirilebilir.
+
+## GitHub üzerinden paylaşma
+
+- **Streamlit Community Cloud:** Depoyu GitHub'a yükleyin. [Community Cloud](https://share.streamlit.io/) üzerinde depoyu ve dalı seçin; giriş dosyası `streamlit_app.py`, Python sürümü 3.11 olsun. Bağımlılıklar `requirements.txt` üzerinden yüklenir. Paylaşım adresi `*.streamlit.app` olur.
+- **GitHub Pages:** `.github/workflows/pages.yml`, `web/` klasöründeki statik rapor görüntüleyiciyi yayımlar. GitHub → Settings → Pages → Source → GitHub Actions. Pages Python/Streamlit çalıştırmaz; yeni optimizasyon hesabı Streamlit uygulamasındadır.
+
+İki sürüm aynı JSON rapor biçimini kullanır. `web/`, GitHub Pages sürümüdür. Yüklemeler Streamlit sunucusunda işlenir; ham veri geçici dosyası işlem sonunda silinir. Yerel `results/` raporları yayınlanmaz. Kurumsal `data/VerilerArasinav.xlsx` halen Git tarafından izlenmektedir; herkese açık depo içeriğine dahil etmek istemiyorsanız paylaşım öncesinde izleme durumunu düzenleyin. Bu revizyon henüz GitHub'a gönderilmemiş veya canlı yayımlanmamıştır.
+
+Yerelde gerçek veri için:
+
+```powershell
+python main.py --input data/VerilerArasinav.xlsx --scenario paper --seconds 15 --evaluations 1000000 --seeds 42,43,44 --output results/real_benchmark.json
+```
+
+Streamlit'te **JSON raporu yükle** seçeneğiyle sonucu açın.
 
 ## Modeller
 

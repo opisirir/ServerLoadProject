@@ -1,7 +1,8 @@
-﻿.venv/
+.venv/
 .venv-1/
 __pycache__/
 *.py[cod]
 results/
 outputs*/
 .pytest_cache/
+.streamlit/secrets.toml
