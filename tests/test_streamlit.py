@@ -10,8 +10,8 @@ class StreamlitTests(unittest.TestCase):
         self.assertEqual(len(app.exception), 0)
         self.assertEqual(len(app.error), 0)
         self.assertEqual(len(app.metric), 4)
-        self.assertEqual(app.metric[2].value, '6,000')
-        self.assertEqual(len(app.tabs), 3)
+        self.assertEqual(app.metric[2].value, '5,000')
+        self.assertEqual(len(app.tabs), 2)
         self.assertEqual(len(app.dataframe[0].value), 4)
         app.sidebar.radio[0].set_value('English').run()
         self.assertEqual(len(app.exception), 0)
@@ -41,7 +41,7 @@ class StreamlitTests(unittest.TestCase):
         result = app.session_state['computed_report']
         self.assertEqual(result['dataset']['exams'], 2)
         self.assertEqual(len(result['experiments'][0]['runs']), 4)
-        self.assertEqual(result['experiments'][0]['capacity'], 6000)
+        self.assertEqual(result['experiments'][0]['capacity'], 5000)
 
     def test_real_report_session(self):
         import json

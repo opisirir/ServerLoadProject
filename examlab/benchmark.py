@@ -9,7 +9,7 @@ import ortools
 
 from .algorithms import ALGORITHMS, solve
 from .data import load_problem
-from .model import SCENARIOS, PAPER_CAPACITY
+from .model import SCENARIOS
 
 
 def run(p, metadata, scenarios, seeds, seconds, evaluations):
@@ -64,7 +64,7 @@ def main():
     parser = argparse.ArgumentParser(description="CP-SAT + Great Deluge versus mathematical optimization models")
     parser.add_argument("--input", "--planned_schedule", default="data/example_planned_schedule.csv")
     parser.add_argument("--output", default="results/benchmark.json")
-    parser.add_argument("--scenario", choices=[*SCENARIOS, "paper", "all"], default="all")
+    parser.add_argument("--scenario", choices=[*SCENARIOS, "paper", "all"], default="scenario_3")
     parser.add_argument("--minutes", type=int, default=60)
     parser.add_argument("--seeds", default="42,43,44")
     parser.add_argument("--seconds", type=float, default=5)
@@ -76,7 +76,8 @@ def main():
         parser.error("Seeds must be distinct integers from 0 to 2147483647.")
     p, metadata = load_problem(args.input, args.minutes, args.drop_invalid)
     metadata["sha256"] = hashlib.sha256(Path(args.input).read_bytes()).hexdigest()
-    scenarios = {**SCENARIOS, "paper": PAPER_CAPACITY} if args.scenario == "all" else {args.scenario: PAPER_CAPACITY if args.scenario == "paper" else SCENARIOS[args.scenario]}
+    scenario = "scenario_3" if args.scenario == "paper" else args.scenario
+    scenarios = SCENARIOS if scenario == "all" else {scenario: SCENARIOS[scenario]}
     report = run(p, metadata, scenarios, seeds, args.seconds, args.evaluations)
     path = Path(args.output); path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(report, ensure_ascii=False, indent=2, allow_nan=False), encoding="utf-8")

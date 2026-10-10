@@ -60,7 +60,7 @@ class ModelTests(unittest.TestCase):
             self.assertEqual(a["assignment"], b["assignment"], name)
 
     def test_scenario_maxima(self):
-        self.assertEqual(list(SCENARIOS.values()), [500, 2500, 6000])
+        self.assertEqual(list(SCENARIOS.values()), [500, 2500, 5000])
 
     def test_mathematical_models_match_exhaustive_optimum(self):
         from itertools import product

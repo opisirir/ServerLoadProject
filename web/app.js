@@ -1,4 +1,4 @@
-﻿'use strict';
+'use strict';
 const langAPI=typeof module!=='undefined'?require('./i18n.js'):I18N;
 const {UI,L}=langAPI;
 let language='tr';
@@ -89,8 +89,35 @@ function paperComparisonHTML(e){
  return '<tr><td>'+esc(SHORT[s.algorithm])+'</td><td>'+number(change,1)+(change==null?'':'%')+'</td><td>'+wins+' / '+ties+' / '+(paired.length-wins-ties)+'</td><td>'+number(paper.mean_runtime,3)+' / '+number(s.mean_runtime,3)+' s</td></tr>';}).join('');
  return '<table><thead><tr><th>'+L('Karşı model','Baseline')+'</th><th>'+L('Tepe avantajı (+ iyi)','Peak advantage (+ better)')+'</th><th>'+L('İyi / eşit / kötü*','Wins / ties / losses*')+'</th><th>'+L('Süre: makale / model','Runtime: paper / model')+'</th></tr></thead><tbody>'+rows+'</tbody></table><p class="subtle">'+L('*Aynı tohumdaki iki olurlu koşu. Tepe avantajı olurlu ortalamalardan hesaplanır.','*Pairs of feasible runs with the same seed. Peak advantage uses feasible-run means.')+'</p><p class="subtle">'+L('Ortak kanıtlanmış alt sınır: ','Shared certified lower bound: ')+number(e.certified_lower_bound)+'. '+L('Tablodaki açıklık: (tepe − alt sınır) / tepe; düşük daha iyi.','Table gap: (peak − lower bound) / peak; lower is better.')+'</p>';
 }
+const TABLE_LABELS = {"impact": ["Başlangıca göre iyileşme ve kapasite", "Improvement and capacity", {"model": ["Model", "Model"], "n": ["Olurlu koşu", "Feasible runs"], "peak": ["Ort. tepe", "Mean peak"], "reduction_pct": ["Tepe azalması (%)", "Peak reduction (%)"], "utilization_pct": ["Tepe / kapasite (%)", "Peak / capacity (%)"], "overload_minutes": ["Ort. aşım (dk)", "Mean overload (min)"], "excess_minutes": ["Ort. aşım (katılımcı-dk)", "Mean excess (participant-min)"], "variance": ["Ort. yük varyansı", "Mean load variance"]}], "stability": ["Tekrarlar arası tutarlılık", "Consistency across runs", {"model": ["Model", "Model"], "total": ["Toplam koşu", "Total runs"], "feasible": ["Olurlu koşu", "Feasible runs"], "min": ["En düşük tepe", "Minimum peak"], "median": ["Medyan tepe", "Median peak"], "max": ["En yüksek tepe", "Maximum peak"], "std": ["Örneklem std. sapma", "Sample std. deviation"], "runtime": ["Ort. süre (sn)", "Mean runtime (s)"]}], "quality": ["Alt sınır ve optimum kanıtı", "Lower bound and optimality evidence", {"model": ["Model", "Model"], "bound": ["Ortak alt sınır", "Shared lower bound"], "best": ["En iyi tepe", "Best peak"], "gap": ["En iyi açıklık (%)", "Best gap (%)"], "certified": ["Optimumu kanıtlanan koşu", "Certified optimal runs"], "total": ["Toplam koşu", "Total runs"]}]};
+
+function publicationTables(e){
+ const mean=a=>a.length?a.reduce((x,y)=>x+y,0)/a.length:null;
+ const b=e.reference, c=e.capacity;
+ const impact=[{model:'reference',n:1,peak:b.peak,reduction_pct:0,utilization_pct:100*b.peak/c,overload_minutes:b.minutes_above_capacity,excess_minutes:b.excess_participant_minutes,variance:b.load_variance}],stability=[],quality=[];
+ for(const s of e.summary){
+  const runs=e.runs.filter(r=>r.algorithm===s.algorithm), feasible=runs.filter(r=>r.metrics?.feasible), peaks=feasible.map(r=>r.metrics.peak).sort((a,b)=>a-b), avg=mean(peaks), metric=k=>mean(feasible.map(r=>r.metrics[k]));
+  impact.push({model:s.algorithm,n:feasible.length,peak:avg,reduction_pct:avg!==null&&b.peak?100*(b.peak-avg)/b.peak:null,utilization_pct:avg!==null?100*avg/c:null,overload_minutes:metric('minutes_above_capacity'),excess_minutes:metric('excess_participant_minutes'),variance:metric('load_variance')});
+  const n=peaks.length, best=n?peaks[0]:null;
+  stability.push({model:s.algorithm,total:runs.length,feasible:n,min:best,median:n?(peaks[Math.floor((n-1)/2)]+peaks[Math.floor(n/2)])/2:null,max:n?peaks[n-1]:null,std:n>1?Math.sqrt(peaks.reduce((a,v)=>a+(v-avg)**2,0)/(n-1)):null,runtime:mean(runs.map(r=>r.runtime_seconds))});
+  quality.push({model:s.algorithm,bound:e.certified_lower_bound,best,gap:best?100*(best-e.certified_lower_bound)/best:null,certified:peaks.filter(v=>v===e.certified_lower_bound).length,total:runs.length});
+ }
+ return {impact,stability,quality};
+}
+function publicationRows(e,key){
+ const labels=TABLE_LABELS[key][2], names={...SHORT,reference:L('Başlangıç çizelgesi','Reference schedule')};
+ return [Object.values(labels).map(v=>L(...v)),...publicationTables(e)[key].map(r=>Object.keys(labels).map(k=>k==='model'?names[r[k]]:r[k]))];
+}
+function publicationHTML(e){
+ return Object.entries(TABLE_LABELS).map(([key,[tr,en]])=>{const [headers,...rows]=publicationRows(e,key);return '<div class="panel"><h3>'+esc(L(tr,en))+'</h3><div class="table-scroll"><table><thead><tr>'+headers.map(h=>'<th>'+esc(h)+'</th>').join('')+'</tr></thead><tbody>'+rows.map(row=>'<tr>'+row.map((v,i)=>'<td>'+(i===0?esc(v):number(v,2))+'</td>').join('')+'</tr>').join('')+'</tbody></table></div><button class="text-button" data-publication="'+key+'">'+L('Tabloyu CSV indir','Download table CSV')+'</button></div>';}).join('');
+}
+
+function advantageHTML(report){
+ const rows=report.experiments.flatMap(e=>{const p=e.summary.find(s=>s.algorithm==='cp_gd');return e.summary.filter(s=>s.algorithm!=='cp_gd').map(s=>({scenario:scenarioName(e),model:SHORT[s.algorithm],value:p.mean_peak!=null&&s.mean_peak>0?100*(s.mean_peak-p.mean_peak)/s.mean_peak:null,success:`${number(p.success_rate)} / ${number(s.success_rate)}`}));});
+ return '<table><thead><tr><th>'+L('Senaryo','Scenario')+'</th><th>'+L('Karşı model','Baseline')+'</th><th>'+L('Önerilen yöntemin tepe avantajı (%)','Proposed method peak advantage (%)')+'</th><th>'+L('Başarı %: önerilen / karşı','Success %: proposed / baseline')+'</th></tr></thead><tbody>'+rows.map(r=>'<tr><td>'+esc(r.scenario)+'</td><td>'+esc(r.model)+'</td><td style="background:'+(r.value==null?'#f8fafc':r.value>0?'#ccfbf1':r.value<0?'#ffedd5':'#f8fafc')+';color:#111827;font-weight:bold">'+(r.value>0?'+':'')+number(r.value,2)+'</td><td>'+esc(r.success)+'</td></tr>').join('')+'</tbody></table>';
+}
 function languageChange(value){setLanguage(value);Object.assign(SHORT,UI[language].short);}
-if(typeof module!=='undefined')module.exports={validateReport,comparisonCSV,barSVG,lineSVG,esc,comparePaper,allConvergence,scatterSVG,matrixHTML,languageChange,paperComparisonHTML};
+if(typeof module!=='undefined')module.exports={advantageHTML,publicationTables,publicationRows,validateReport,comparisonCSV,barSVG,lineSVG,esc,comparePaper,allConvergence,scatterSVG,matrixHTML,languageChange,paperComparisonHTML};
 if(typeof document!=='undefined'){
  const $=id=>document.getElementById(id);let report;
  const selected=()=>report.experiments[Number($('scenario').value)];
@@ -141,6 +168,8 @@ if(typeof document!=='undefined'){
   const convergence=allConvergence(e,Number($('seed').value));
   $('convergence-chart').innerHTML=lineSVG(convergence,{title:L('Tüm algoritmaların yakınsaması','All-algorithm convergence'),width:700,height:350});
   $('all-legend').innerHTML=Object.keys(SHORT).map(id=>`<span><i style="background:${COLORS[id]}"></i>${esc(SHORT[id])}${convergence.find(s=>s.id===id)?.points.length?'':L(' (olurlu geçmiş yok)',' (no feasible history)')}</span>`).join('');
+  $('advantage-matrix').innerHTML=advantageHTML(report);
+  $('publication-tables').innerHTML=publicationHTML(e);
   $('scenario-matrix').innerHTML=matrixHTML(report);$('paper-comparison').innerHTML=paperComparisonHTML(e);evidence();
   const sorted=[...e.summary].sort((a,b)=>b.success_rate-a.success_rate||(a.mean_peak??Infinity)-(b.mean_peak??Infinity));
   text('ranking-note',L('Sıralama: başarı oranı ↓, ortalama tepe ↑','Order: success rate ↓, mean peak ↑'));
@@ -149,13 +178,14 @@ if(typeof document!=='undefined'){
   $('schedule-download').disabled=!r?.assignment;
  }
  function translate(value){languageChange(value);document.documentElement.lang=language;$('language').value=language;document.querySelectorAll('[data-tr][data-en]').forEach(el=>{el.textContent=el.dataset[language];});try{localStorage.setItem('exam-balance-language',language);}catch{}if(report){selects();render();}if(!$('error').hidden)text('error',L('Rapor yüklenemedi. Geçerli bir JSON raporu seçin.','Report could not be loaded. Select a valid JSON report.'));}
- function accept(data){const checked=validateReport(data);report=checked;selects();const preferred=report.experiments.findIndex(e=>e.scenario==='paper');if(preferred>=0)$('scenario').value=preferred;selects();render();$('dashboard').hidden=false;$('loading').hidden=true;$('error').hidden=true;$('export').disabled=false;}
+ function accept(data){const checked=validateReport(data);report=checked;selects();const preferred=report.experiments.findIndex(e=>e.scenario==='scenario_3');if(preferred>=0)$('scenario').value=preferred;selects();render();$('dashboard').hidden=false;$('loading').hidden=true;$('error').hidden=true;$('export').disabled=false;}
  function error(e){text('error',e.message);$('error').hidden=false;$('loading').hidden=true;}
  function download(content,name,type){const a=document.createElement('a'),url=URL.createObjectURL(new Blob(['\ufeff',content],{type}));a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
  $('language').addEventListener('change',()=>translate($('language').value));
  $('scenario').addEventListener('change',()=>{selects();render();});$('algorithm').addEventListener('change',()=>{setSeeds();render();});$('seed').addEventListener('change',render);
  $('report-file').addEventListener('change',async e=>{try{const f=e.target.files[0];if(!f)return;if(f.size>50*1024*1024)throw new Error(L('Rapor en fazla 50 MB olabilir.','Report size must not exceed 50 MB.'));accept(JSON.parse(await f.text()));}catch{error(new Error(L('Geçersiz rapor. benchmark.json seçin.','Invalid report. Select benchmark.json.')));}finally{e.target.value='';}});
  document.querySelector('label[for="report-file"]').addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();$('report-file').click();}});
+ $('publication-tables').addEventListener('click',event=>{const key=event.target.dataset.publication;if(!key)return;download(publicationRows(selected(),key).map(row=>row.map(csvCell).join(',')).join('\r\n'),`${selected().scenario}_${key}.csv`,'text/csv;charset=utf-8');});
  $('export').addEventListener('click',()=>download(comparisonCSV(selected()),'algorithm_comparison.csv','text/csv;charset=utf-8'));
  $('schedule-download').addEventListener('click',()=>{const r=run();if(!r?.assignment)return;const rows=[['exam_id','student_count','reference_start','optimized_start'],...report.exams.map((e,i)=>[e.exam_id,e.student_count,report.starts[e.reference_slot],report.starts[r.assignment[i]]])];download(rows.map(row=>row.map(csvCell).join(',')).join('\r\n'),`schedule_${r.algorithm}_${r.seed}.csv`,'text/csv;charset=utf-8');});
  let initial='tr';try{initial=localStorage.getItem('exam-balance-language')||'tr';}catch{}translate(initial);

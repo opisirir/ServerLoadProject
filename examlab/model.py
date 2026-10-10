@@ -1,8 +1,8 @@
 from dataclasses import dataclass
 import numpy as np
 
-SCENARIOS = {"scenario_1": 500, "scenario_2": 2500, "scenario_3": 6000}
-PAPER_CAPACITY = 5000
+SCENARIOS = {"scenario_1": 500, "scenario_2": 2500, "scenario_3": 5000}
+PAPER_CAPACITY = SCENARIOS["scenario_3"]
 
 
 @dataclass

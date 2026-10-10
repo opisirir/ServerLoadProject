@@ -1,4 +1,4 @@
-﻿# Exam Balance
+# Exam Balance
 
 Makaledeki **CP-SAT → Great Deluge** yöntemi ile matematiksel optimizasyon modellerini karşılaştırır. Arayüz Türkçe ve İngilizcedir.
 
@@ -21,7 +21,7 @@ Adres: `http://localhost:8501`. Türkçe/İngilizce arayüzde sentetik örneği 
 Yerelde gerçek veri için:
 
 ```powershell
-python main.py --input data/VerilerArasinav.xlsx --scenario paper --seconds 15 --evaluations 1000000 --seeds 42,43,44 --output results/real_benchmark.json
+python main.py --input data/VerilerArasinav.xlsx --scenario scenario_3 --seconds 15 --evaluations 1000000 --seeds 42,43,44 --output results/real_benchmark.json
 ```
 
 Streamlit'te **JSON raporu yükle** seçeneğiyle sonucu açın.
@@ -56,8 +56,8 @@ Eşit katılımlı sınavlar, başka kısıt olmadığı için matematiksel mode
 |---|---:|
 | scenario_1 | 500 |
 | scenario_2 | 2.500 |
-| scenario_3 | 6.000 |
-| paper | 5.000 (makaledeki deney varsayımı) |
+| scenario_3 | 5.000 |
+
 
 `--scenario all` dört kapasiteyi çalıştırır. Varsayılan web raporu açıkça sentetik etiketlidir. `python generate_demo.py` bu raporu yeniden üretir.
 
@@ -85,3 +85,5 @@ node --test tests/test_web.cjs
 GitHub'da **Settings → Pages → Source → GitHub Actions** seçildiğinde `.github/workflows/pages.yml` yalnız `web/` klasörünü yayımlar. Yerel `results/` ve ham kurumsal dosyalar yayın paketine alınmaz. Bu revizyon canlı yayına gönderilmemiştir.
 
 Uygulama referansları: [OR-Tools MIP](https://developers.google.com/optimization/mip/mip_example), [CP-SAT](https://developers.google.com/optimization/cp/cp_solver).
+
+Varsayılan deney Senaryo 3 ile 5.000 eşzamanlı kullanıcı kapasitesinde çalışır. `paper` eski komutlar için Senaryo 3 takma adıdır; ayrı deney oluşturmaz. `--scenario all` üç farklı kapasiteyi birer kez çalıştırır.
