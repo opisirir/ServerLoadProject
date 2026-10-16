@@ -26,7 +26,7 @@ function validateReport(r){
  return r;
 }
 function csvCell(value){const s=String(value??'');return '"'+(/^[=+@-]/.test(s)?"'":'')+s.replace(/"/g,'""')+'"';}
-function comparisonCSV(e){return [['algorithm','feasible_runs','runs','success_rate_pct','mean_peak','std_peak','best_peak','mean_runtime_seconds','mean_gap_pct'],...e.summary.map(s=>[s.algorithm,s.feasible_runs,s.runs,s.success_rate,s.mean_peak,s.std_peak,s.best_peak,s.mean_runtime,s.mean_gap_pct])].map(row=>row.map(csvCell).join(',')).join('\r\n');}
+function comparisonCSV(e){return [['algorithm','feasible_runs','success_rate_pct','mean_peak','best_peak','mean_runtime_seconds','mean_gap_pct'],...e.summary.map(s=>[s.algorithm,s.feasible_runs,s.success_rate,s.mean_peak,s.best_peak,s.mean_runtime,s.mean_gap_pct])].map(row=>row.map(csvCell).join(',')).join('\r\n');}
 function barSVG(rows,field,title,unit,errors=false){
  const w=520,h=210,left=115,right=70,top=12,step=40,max=Math.max(1,...rows.map(r=>(r[field]??0)+(errors?(r.std_peak??0):0)))*1.12,scale=v=>v/max*(w-left-right);
  let content='';
@@ -47,7 +47,7 @@ function lineSVG(series,{title,capacity=null,time=false,width=1080,height=270}={
  series.forEach(s=>{if(!s.points.length)return;let path=`M${x(s.points[0][0])},${y(s.points[0][1])}`;for(const p of s.points.slice(1))path+=`H${x(p[0])}V${y(p[1])}`;content+=`<path d="${path}" fill="none" stroke="${s.color}" stroke-width="${s.id==='cp_gd'?3.5:1.8}"/><circle cx="${x(s.points[0][0])}" cy="${y(s.points[0][1])}" r="2.5" fill="${s.color}"/>`;});
  return `<svg viewBox="0 0 ${width} ${height}" role="img" aria-label="${esc(title)}"><title>${esc(title)}</title>${content}</svg>`;
 }
-const COLORS={cp_gd:'#126b70',mip:'#d28a22',ilp:'#597bc3',goal:'#a6579c'};
+const COLORS={cp_gd:'#2563eb',mip:'#f97316',ilp:'#60a5fa',goal:'#a78bfa'};
 function scenarioName(e){return e.scenario==='paper'?L('Makale deneyi','Paper experiment')+' · '+number(e.capacity):L('Senaryo ','Scenario ')+(e.scenario.match(/\d+/)?.[0]??e.scenario)+' · '+number(e.capacity);}
 function comparePaper(e){
  const p=e.summary.find(s=>s.algorithm==='cp_gd');if(!p)return null;
@@ -89,7 +89,7 @@ function paperComparisonHTML(e){
  return '<tr><td>'+esc(SHORT[s.algorithm])+'</td><td>'+number(change,1)+(change==null?'':'%')+'</td><td>'+wins+' / '+ties+' / '+(paired.length-wins-ties)+'</td><td>'+number(paper.mean_runtime,3)+' / '+number(s.mean_runtime,3)+' s</td></tr>';}).join('');
  return '<table><thead><tr><th>'+L('Karşı model','Baseline')+'</th><th>'+L('Tepe avantajı (+ iyi)','Peak advantage (+ better)')+'</th><th>'+L('İyi / eşit / kötü*','Wins / ties / losses*')+'</th><th>'+L('Süre: makale / model','Runtime: paper / model')+'</th></tr></thead><tbody>'+rows+'</tbody></table><p class="subtle">'+L('*Aynı tohumdaki iki olurlu koşu. Tepe avantajı olurlu ortalamalardan hesaplanır.','*Pairs of feasible runs with the same seed. Peak advantage uses feasible-run means.')+'</p><p class="subtle">'+L('Ortak kanıtlanmış alt sınır: ','Shared certified lower bound: ')+number(e.certified_lower_bound)+'. '+L('Tablodaki açıklık: (tepe − alt sınır) / tepe; düşük daha iyi.','Table gap: (peak − lower bound) / peak; lower is better.')+'</p>';
 }
-const TABLE_LABELS = {"impact": ["Başlangıca göre iyileşme ve kapasite", "Improvement and capacity", {"model": ["Model", "Model"], "n": ["Olurlu koşu", "Feasible runs"], "peak": ["Ort. tepe", "Mean peak"], "reduction_pct": ["Tepe azalması (%)", "Peak reduction (%)"], "utilization_pct": ["Tepe / kapasite (%)", "Peak / capacity (%)"], "overload_minutes": ["Ort. aşım (dk)", "Mean overload (min)"], "excess_minutes": ["Ort. aşım (katılımcı-dk)", "Mean excess (participant-min)"], "variance": ["Ort. yük varyansı", "Mean load variance"]}], "stability": ["Tekrarlar arası tutarlılık", "Consistency across runs", {"model": ["Model", "Model"], "total": ["Toplam koşu", "Total runs"], "feasible": ["Olurlu koşu", "Feasible runs"], "min": ["En düşük tepe", "Minimum peak"], "median": ["Medyan tepe", "Median peak"], "max": ["En yüksek tepe", "Maximum peak"], "std": ["Örneklem std. sapma", "Sample std. deviation"], "runtime": ["Ort. süre (sn)", "Mean runtime (s)"]}], "quality": ["Alt sınır ve optimum kanıtı", "Lower bound and optimality evidence", {"model": ["Model", "Model"], "bound": ["Ortak alt sınır", "Shared lower bound"], "best": ["En iyi tepe", "Best peak"], "gap": ["En iyi açıklık (%)", "Best gap (%)"], "certified": ["Optimumu kanıtlanan koşu", "Certified optimal runs"], "total": ["Toplam koşu", "Total runs"]}]};
+const TABLE_LABELS = {"impact": ["Başlangıca göre iyileşme ve kapasite", "Improvement and capacity", {"model": ["Model", "Model"], "n": ["Olurlu koşu", "Feasible runs"], "peak": ["Ort. tepe", "Mean peak"], "reduction_pct": ["Tepe azalması (%)", "Peak reduction (%)"], "utilization_pct": ["Tepe / kapasite (%)", "Peak / capacity (%)"]}], "stability": ["Tekrarlar arası tutarlılık", "Consistency across runs", {"model": ["Model", "Model"], "feasible": ["Olurlu koşu", "Feasible runs"], "min": ["En düşük tepe", "Minimum peak"], "max": ["En yüksek tepe", "Maximum peak"], "runtime": ["Ort. süre (sn)", "Mean runtime (s)"]}], "quality": ["Alt sınır ve optimum kanıtı", "Lower bound and optimality evidence", {"model": ["Model", "Model"], "bound": ["Ortak alt sınır", "Shared lower bound"], "best": ["En iyi tepe", "Best peak"], "gap": ["En iyi açıklık (%)", "Best gap (%)"]}]};
 
 function publicationTables(e){
  const mean=a=>a.length?a.reduce((x,y)=>x+y,0)/a.length:null;
@@ -113,9 +113,12 @@ function publicationHTML(e){
 }
 
 function advantageHTML(report){
- const rows=report.experiments.flatMap(e=>{const p=e.summary.find(s=>s.algorithm==='cp_gd');return e.summary.filter(s=>s.algorithm!=='cp_gd').map(s=>({scenario:scenarioName(e),model:SHORT[s.algorithm],value:p.mean_peak!=null&&s.mean_peak>0?100*(s.mean_peak-p.mean_peak)/s.mean_peak:null,success:`${number(p.success_rate)} / ${number(s.success_rate)}`}));});
- return '<table><thead><tr><th>'+L('Senaryo','Scenario')+'</th><th>'+L('Karşı model','Baseline')+'</th><th>'+L('Önerilen yöntemin tepe avantajı (%)','Proposed method peak advantage (%)')+'</th><th>'+L('Başarı %: önerilen / karşı','Success %: proposed / baseline')+'</th></tr></thead><tbody>'+rows.map(r=>'<tr><td>'+esc(r.scenario)+'</td><td>'+esc(r.model)+'</td><td style="background:'+(r.value==null?'#f8fafc':r.value>0?'#ccfbf1':r.value<0?'#ffedd5':'#f8fafc')+';color:#111827;font-weight:bold">'+(r.value>0?'+':'')+number(r.value,2)+'</td><td>'+esc(r.success)+'</td></tr>').join('')+'</tbody></table>';
+ return report.experiments.map(e=>{const p=e.summary.find(s=>s.algorithm==='cp_gd');
+ const rows=e.summary.map(s=>{const delta=p.mean_peak!=null&&s.mean_peak>0?100*(s.mean_peak-p.mean_peak)/s.mean_peak:null;const label=s.algorithm==='cp_gd'?L('Makale yöntemi','Proposed method'):delta==null?'—':delta===0?L('Eşit','Equal'):number(Math.abs(delta),2)+'% '+(delta>0?L('daha düşük','lower'):L('daha yüksek','higher'));return '<tr><td>'+esc(SHORT[s.algorithm])+'</td><td>'+number(s.mean_peak,2)+'</td><td>'+esc(label)+'</td></tr>';}).join('');
+ return '<h4>'+esc(scenarioName(e))+'</h4>'+barSVG([...e.summary].sort((a,b)=>(a.mean_peak??Infinity)-(b.mean_peak??Infinity)),'mean_peak',L('Ortalama tepe yük · düşük daha iyi','Mean peak load · lower is better'),'')+'<table><thead><tr><th>Model</th><th>'+L('Ortalama tepe','Mean peak')+'</th><th>'+L('Makale yönteminin karşı modele göre tepe yükü','Proposed method peak relative to baseline')+'</th></tr></thead><tbody>'+rows+'</tbody></table>';
+ }).join('');
 }
+
 function languageChange(value){setLanguage(value);Object.assign(SHORT,UI[language].short);}
 if(typeof module!=='undefined')module.exports={advantageHTML,publicationTables,publicationRows,validateReport,comparisonCSV,barSVG,lineSVG,esc,comparePaper,allConvergence,scatterSVG,matrixHTML,languageChange,paperComparisonHTML};
 if(typeof document!=='undefined'){
@@ -151,7 +154,7 @@ if(typeof document!=='undefined'){
  function render(){
   const e=selected(),r=run(),m=r?.metrics,d=report.dataset;
   text('dataset-note',`${d.source_name} · ${number(d.exams)} ${L('sınav','exams')} · ${number(d.enrollments)} ${L('katılım','enrollments')} · ${d.slots} ${L('başlangıç','starts')} · ${d.duration_minutes} min`);
-  text('data-badge',d.synthetic?L('SENTETİK ÖRNEK','SYNTHETIC SAMPLE'):L('YÜKLENEN DENEY','LOADED EXPERIMENT'));
+  text('data-badge',L('DENEY SONUÇLARI','EXPERIMENT RESULTS'));
   text('before-peak',number(e.reference.peak));text('after-peak',number(m?.peak));
   const reduction=m&&e.reference.peak?100*(e.reference.peak-m.peak)/e.reference.peak:null;
   text('reduction',reduction==null?'—':`${number(Math.abs(reduction),1)}% ${reduction>=0?L('azalma','reduction'):L('artış','increase')}`);
@@ -173,9 +176,9 @@ if(typeof document!=='undefined'){
   $('scenario-matrix').innerHTML=matrixHTML(report);$('paper-comparison').innerHTML=paperComparisonHTML(e);evidence();
   const sorted=[...e.summary].sort((a,b)=>b.success_rate-a.success_rate||(a.mean_peak??Infinity)-(b.mean_peak??Infinity));
   text('ranking-note',L('Sıralama: başarı oranı ↓, ortalama tepe ↑','Order: success rate ↓, mean peak ↑'));
-  $('results-body').replaceChildren(...sorted.map(s=>{const tr=document.createElement('tr');if(s.algorithm==='cp_gd')tr.className='proposed';[UI[language].names[s.algorithm],`${s.feasible_runs} / ${s.runs}`,number(s.mean_peak,1),number(s.std_peak,1),number(s.best_peak),number(s.mean_runtime,3)+' s',number(s.mean_gap_pct,1)+'%'].forEach(v=>{const td=document.createElement('td');td.textContent=v;tr.append(td);});return tr;}));
+  $('results-body').replaceChildren(...sorted.map(s=>{const tr=document.createElement('tr');if(s.algorithm==='cp_gd')tr.className='proposed';[UI[language].names[s.algorithm],number(s.feasible_runs),number(s.mean_peak,1),number(s.best_peak),number(s.mean_runtime,3)+' s',number(s.mean_gap_pct,1)+'%'].forEach(v=>{const td=document.createElement('td');td.textContent=v;tr.append(td);});return tr;}));
   text('settings-note',`${L('Tohumlar','Seeds')}: ${report.settings.seeds.join(', ')} · ${report.settings.seconds_per_run} s · ${report.settings.gd_max_evaluations} ${L('GD değerlendirme sınırı','GD evaluation limit')} · OR-Tools ${report.settings.ortools}`);
-  $('schedule-download').disabled=!r?.assignment;
+  $('schedule-download').disabled=!r?.assignment; $('schedule-excel').disabled=!r?.assignment;
  }
  function translate(value){languageChange(value);document.documentElement.lang=language;$('language').value=language;document.querySelectorAll('[data-tr][data-en]').forEach(el=>{el.textContent=el.dataset[language];});try{localStorage.setItem('exam-balance-language',language);}catch{}if(report){selects();render();}if(!$('error').hidden)text('error',L('Rapor yüklenemedi. Geçerli bir JSON raporu seçin.','Report could not be loaded. Select a valid JSON report.'));}
  function accept(data){const checked=validateReport(data);report=checked;selects();const preferred=report.experiments.findIndex(e=>e.scenario==='scenario_3');if(preferred>=0)$('scenario').value=preferred;selects();render();$('dashboard').hidden=false;$('loading').hidden=true;$('error').hidden=true;$('export').disabled=false;}
@@ -187,6 +190,7 @@ if(typeof document!=='undefined'){
  document.querySelector('label[for="report-file"]').addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();$('report-file').click();}});
  $('publication-tables').addEventListener('click',event=>{const key=event.target.dataset.publication;if(!key)return;download(publicationRows(selected(),key).map(row=>row.map(csvCell).join(',')).join('\r\n'),`${selected().scenario}_${key}.csv`,'text/csv;charset=utf-8');});
  $('export').addEventListener('click',()=>download(comparisonCSV(selected()),'algorithm_comparison.csv','text/csv;charset=utf-8'));
+ $('schedule-excel').addEventListener('click',()=>{const r=run();if(!r?.assignment)return;const bytes=ExamFlowXlsx.schedule(report,selected(),r);const a=document.createElement('a'),url=URL.createObjectURL(new Blob([bytes],{type:'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'}));a.href=url;a.download=`ExamFlow_${r.algorithm}_${r.seed}.xlsx`;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);});
  $('schedule-download').addEventListener('click',()=>{const r=run();if(!r?.assignment)return;const rows=[['exam_id','student_count','reference_start','optimized_start'],...report.exams.map((e,i)=>[e.exam_id,e.student_count,report.starts[e.reference_slot],report.starts[r.assignment[i]]])];download(rows.map(row=>row.map(csvCell).join(',')).join('\r\n'),`schedule_${r.algorithm}_${r.seed}.csv`,'text/csv;charset=utf-8');});
  let initial='tr';try{initial=localStorage.getItem('exam-balance-language')||'tr';}catch{}translate(initial);
  fetch('data/benchmark.json').then(r=>{if(!r.ok)throw new Error();return r.json();}).then(accept).catch(()=>error(new Error(L('Örnek rapor yüklenemedi. JSON raporu seçebilirsiniz.','Sample report unavailable. You can load a JSON report.'))));

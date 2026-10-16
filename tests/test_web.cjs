@@ -29,7 +29,7 @@ test('combined convergence contains only selected mathematical methods',()=>{
  const series=app.allConvergence(report.experiments[0],42);assert.equal(series.length,4);assert.ok(series.find(s=>s.id==='cp_gd').points.length>0);assert.equal(app.allConvergence(report.experiments[0],999).flatMap(s=>s.points).length,0);
 });
 test('English includes gap and pairwise comparison explanations',()=>{
- app.languageChange('en');assert.match(app.matrixHTML(report),/Scenario 1/);assert.match(app.scatterSVG(report.experiments[0].summary),/Mean runtime/);assert.match(app.paperComparisonHTML(report.experiments[0]),/Shared certified lower bound/);assert.match(app.lineSVG([{points:[]}],{title:'empty'}),/No feasible/);assert.throws(()=>app.validateReport({}),/Invalid report/);app.languageChange('tr');
+ app.languageChange('en');assert.match(app.matrixHTML(report),/Scenario 3/);assert.match(app.scatterSVG(report.experiments[0].summary),/Mean runtime/);assert.match(app.paperComparisonHTML(report.experiments[0]),/Shared certified lower bound/);assert.match(app.lineSVG([{points:[]}],{title:'empty'}),/No feasible/);assert.throws(()=>app.validateReport({}),/Invalid report/);app.languageChange('tr');
 });
 
 test('scenario 3 uses 5000 without a duplicate paper experiment',()=>{
@@ -47,4 +47,12 @@ test('publication tables preserve failed runs and compute sample statistics',()=
  assert.equal(t.impact[1].reduction_pct,75);assert.equal(t.impact[2].overload_minutes,null);
  assert.equal(t.stability[0].median,50);assert.equal(t.stability[0].runtime,4);
  assert.equal(t.stability[0].std,Math.sqrt(200));assert.equal(t.quality[0].certified,1);
+});
+test('publication site exposes research data and Excel without method section',()=>{
+ const html=fs.readFileSync('web/index.html','utf8');
+ assert.match(html,/ExamFlow: A Capacity-Constrained Exam Timetabling System/);
+ assert.match(html,/Anonymized_Example_data.xlsx/);
+ assert.match(html,/id="schedule-excel"/);
+ assert.ok(!html.includes('id="method"'));
+ assert.ok(fs.existsSync('web/data/Anonymized_Example_data.xlsx'));
 });

@@ -1,89 +1,43 @@
-# Exam Balance
+# ExamFlow: A Capacity-Constrained Exam Timetabling System
 
-Makaledeki **CP-SAT → Great Deluge** yöntemi ile matematiksel optimizasyon modellerini karşılaştırır. Arayüz Türkçe ve İngilizcedir.
+Research companion for **Algorithmic Exam Timetabling to Prevent Server Crash in Cloud-Based Learning Management Systems**.
 
-## Streamlit uygulaması
+## Run
 
-```powershell
+Python 3.11 is recommended.
+
+```sh
 python -m pip install -r requirements.txt
 python -m streamlit run streamlit_app.py
 ```
 
-Adres: `http://localhost:8501`. Türkçe/İngilizce arayüzde sentetik örneği görüntüleyin, JSON sonuç raporu yükleyin veya CSV/XLSX/JSON sınav verisinden yeni karşılaştırma çalıştırın. Varsayılan seçim Senaryo 3'tür. Her model aynı süre bütçesiyle sırayla çalışır; sonuçlar oturumda tutulur. Rapor, karşılaştırma ve çizelge indirilebilir.
+Open http://localhost:8501. Download the example workbook, upload exam data, run a comparison, and download the selected optimized schedule as Excel. Each Excel export includes reference/optimized start times, end times, and experiment details.
 
-## GitHub üzerinden paylaşma
+## Example data and results
 
-- **Streamlit Community Cloud:** Depoyu GitHub'a yükleyin. [Community Cloud](https://share.streamlit.io/) üzerinde depoyu ve dalı seçin; giriş dosyası `streamlit_app.py`, Python sürümü 3.11 olsun. Bağımlılıklar `requirements.txt` üzerinden yüklenir. Paylaşım adresi `*.streamlit.app` olur.
-- **GitHub Pages:** `.github/workflows/pages.yml`, `web/` klasöründeki statik rapor görüntüleyiciyi yayımlar. GitHub → Settings → Pages → Source → GitHub Actions. Pages Python/Streamlit çalıştırmaz; yeni optimizasyon hesabı Streamlit uygulamasındadır.
+`web/data/Anonymized_Example_data.xlsx` is the user-supplied anonymized research dataset, distributed unchanged. It contains 2,219 records and 144,467 exam enrollments (not unique students). All supplied records are included; dates span March 28–June 12, 2023. The default report is a newly computed experiment on this file, not a claim to reproduce the exact values in the manuscript's earlier runs. A 10-day filtered analysis requires explicitly filtered input.
 
-İki sürüm aynı JSON rapor biçimini kullanır. `web/`, GitHub Pages sürümüdür. Yüklemeler Streamlit sunucusunda işlenir; ham veri geçici dosyası işlem sonunda silinir. Yerel `results/` raporları yayınlanmaz. Kurumsal `data/VerilerArasinav.xlsx` halen Git tarafından izlenmektedir; herkese açık depo içeriğine dahil etmek istemiyorsanız paylaşım öncesinde izleme durumunu düzenleyin. Bu revizyon henüz GitHub'a gönderilmemiş veya canlı yayımlanmamıştır.
-
-Yerelde gerçek veri için:
-
-```powershell
-python main.py --input data/VerilerArasinav.xlsx --scenario scenario_3 --seconds 15 --evaluations 1000000 --seeds 42,43,44 --output results/real_benchmark.json
+```sh
+python main.py --input web/data/Anonymized_Example_data.xlsx --scenario scenario_3 --seconds 15 --seeds 42,43,44 --output web/data/benchmark.json
 ```
 
-Streamlit'te **JSON raporu yükle** seçeneğiyle sonucu açın.
+Default capacity: 5,000; exam duration: 60 minutes. Exams remain whole. Individual student conflicts are not modeled. CBC goal programming is an equivalent objective reformulation in this implementation; its repeated runs are not independent randomized trials. See `docs/mathematical_comparison.md` for model details.
 
-## Modeller
+## Publication
 
-| Kimlik | Model | Çözücü | Amaç |
-|---|---|---|---|
-| cp_gd | Makaledeki iki aşamalı yöntem | CP-SAT + GD | İlk olurlu çizelgeden tepe yükünü azaltma |
-| mip | Karma tam sayılı programlama | CBC | Sürekli tepe değişkenini minimize etme |
-| ilp | Tam sayılı lineer programlama | CP-SAT | Tamsayılı tepe değişkenini minimize etme |
-| goal | Hedef programlama | CBC | Kanıtlanmış başlangıç alt hedefinden pozitif sapmayı minimize etme |
+- **GitHub Pages:** the existing workflow publishes only `web/`. This version displays results, accepts report uploads, and exports Excel in the browser; it cannot execute Python optimization.
+- **Streamlit:** deploy `streamlit_app.py` with Python 3.11 and `requirements.txt` to run new optimizations.
+- `python scripts/package_release.py` creates a clean publication ZIP with an explicit file allowlist. Private data, local outputs, virtual environments, and Git history are excluded.
 
-Modeller kullanıcının `Gerçek Dünya Uygulamalarında Kullanılan Algoritmalar.xlsx` dosyasındaki matematiksel model ailelerinden seçilmiştir. Kurumlara özgü modellerin birebir yeniden üretimi değildir. Excel'deki DSS, GAMS, AMPL, CPLEX ve Gurobi ifadeleri ayrı algoritmalar olarak sayılmaz. Sütun üretimi, çok aşamalı kurum modelleri ve bulanık kritiklik modeli gerekli formülasyon/veri bulunmadığı için uygulanmış gibi gösterilmez. Excel satırları `docs/comparison_source.json` içinde kaynak bilgisi olarak korunur.
+The current work prepares publication assets; deployment is a separate step. Previously committed private files may remain in Git history; the clean ZIP contains no history.
 
-Üç matematiksel model bu kapasite ve tepe yükü probleminde aynı optimumu hedefler. Hedef model tek hedeflidir; bulanık mantık iddiası yoktur. Modellerin ve çözücülerin süre sınırlı davranışı karşılaştırılır; sonuçlar bağımsız üç literatür algoritmasına karşı genel üstünlük kanıtı değildir. MIP ve hedef modelleri aynı CBC arka ucunu kullanır.
+## Research-use notice
 
-## Ortak problem
+This academic research prototype may not suit every examination timetable. Validate outputs against institutional requirements before use. No warranty of service continuity, crash prevention, or fitness for a particular purpose is provided. To the extent permitted by applicable law, developers and researchers disclaim liability for damages arising from use. Liability that cannot legally be excluded remains unaffected.
 
-- Gözlenen tarih/başlangıçlar aday zaman pencereleridir.
-- Her sınav tek pencereye atanır; sınav katılımı bölünmez.
-- Tüm sınavların süresi `--minutes` ile belirlenir (varsayılan 60).
-- Yük `[başlangıç, bitiş)` aralıklarında hesaplanır. Farklı saatlerde başlayan ve gece yarısını aşan sınavlar dahil edilir.
-- Bütün modeller aynı kapasiteyi korur. Bireysel öğrenci kayıtları bulunmadığından öğrenci çakışması kısıtı yoktur.
-- Katılım sayısı tekil öğrenci sayısı değildir.
+## Verification
 
-Eşit katılımlı sınavlar, başka kısıt olmadığı için matematiksel modellerde tam sayılı adet değişkenleriyle gruplanır. Bu, büyük ikili atama matrisine eşdeğer bir azaltmadır; sonuç yeniden tek tek sınavlara açılır. Bölüm veya kişisel çakışma kısıtları eklenirse bu gruplama yeniden değerlendirilmelidir. Formülasyon: `docs/mathematical_comparison.md`.
-
-## Kapasiteler
-
-| Seçim | Maksimum eşzamanlı kullanıcı |
-|---|---:|
-| scenario_1 | 500 |
-| scenario_2 | 2.500 |
-| scenario_3 | 5.000 |
-
-
-`--scenario all` dört kapasiteyi çalıştırır. Varsayılan web raporu açıkça sentetik etiketlidir. `python generate_demo.py` bu raporu yeniden üretir.
-
-## Sonuçların yorumu
-
-Karşılaştırma önce olurlu çözüm oranını, ardından tepe yükü ve süreyi değerlendirir. Olurlu ortalama, standart sapma, en iyi tepe, çalışma süresi, eşleşmiş koşularda kazanma/eşitlik/kaybetme ve kanıtlanmış alt sınıra göre açıklık gösterilir. Başarısız koşular sıfır tepe olarak çizilmez.
-
-Açıklık = `(tepe − ortak kanıtlanmış alt sınır) / tepe`. Sıfır açıklık optimumu kanıtlar. Pozitif açıklık gerçek optimuma uzaklığın üst sınırıdır, kesin fark değildir. Ortak alt sınır yalnız aynı veri/süre/kapasite deneyindeki geçerli matematiksel sınırlardan elde edilir.
-
-Tüm modellerin zaman bütçesi model kurulumunu da içerir; solver sonlandırma/sonuç çıkarma masrafı sınırı bir miktar aşabilir. GD'nin ayrıca `--evaluations` üst sınırı vardır. Matematiksel çözücülerin iç düğüm aramaları aynı değerlendirme sayacıyla sınırlanmaz. CBC tekrarlarında rastgele tohum değişmez; süre dalgalanmaları olabilir. Küçük tekrar sayıları için istatistiksel anlamlılık iddiası kurulmaz. CBC yalnız son çözümü bildirir; yakınsama grafiğinde ara ilerleme uydurulmaz.
-
-Makale V3'te raporlanan 5.948 → 3.582 (%39,78) ayrı bir tek koşu sonucudur. Depodaki gerçek veri 2.219 sınav/144.467 katılım içerir; makaledeki filtrelenmiş 1.957 sınav/118.964 katılım ile aynı değildir. Yazılım çıktısı sunucu kesintisinin önlendiğini veya donanım azaltılabileceğini kanıtlamaz.
-
-## Veri
-
-CSV, XLSX veya JSON: `exam_id, student_count, date, start_time`. Türkçe kolon eşlemesi desteklenir. Her satır ayrı sınavdır. Hatalı kayıtlar reddedilir; `--drop-invalid` açık dışlamaya izin verir ve satır numaraları rapora yazılır. Çıktı kimlikleri anonimleştirilir.
-
-## Testler ve yayın
-
-```powershell
+```sh
 python -m unittest discover -s tests
 node --test tests/test_web.cjs
 ```
-
-GitHub'da **Settings → Pages → Source → GitHub Actions** seçildiğinde `.github/workflows/pages.yml` yalnız `web/` klasörünü yayımlar. Yerel `results/` ve ham kurumsal dosyalar yayın paketine alınmaz. Bu revizyon canlı yayına gönderilmemiştir.
-
-Uygulama referansları: [OR-Tools MIP](https://developers.google.com/optimization/mip/mip_example), [CP-SAT](https://developers.google.com/optimization/cp/cp_solver).
-
-Varsayılan deney Senaryo 3 ile 5.000 eşzamanlı kullanıcı kapasitesinde çalışır. `paper` eski komutlar için Senaryo 3 takma adıdır; ayrı deney oluşturmaz. `--scenario all` üç farklı kapasiteyi birer kez çalıştırır.

@@ -55,14 +55,12 @@ def run(p, metadata, scenarios, seeds, seconds, evaluations):
                       for i, c, t in zip(p.ids, p.counts, p.reference)],
             "experiments": experiments,
             "paper": {"title": "Algorithmic Exam Timetabling to Prevent Server Crash in Cloud-Based Learning Management Systems",
-                      "version": "V3", "reported_before": 5948, "reported_after": 3582,
-                      "reported_reduction_pct": 39.78, "capacity": 5000,
-                      "note": "Manuscript single-run result; not reproduced by this demo."}}
+                      "note": "Research companion. Recomputed experiment results; not a reproduction of manuscript run values."}}
 
 
 def main():
     parser = argparse.ArgumentParser(description="CP-SAT + Great Deluge versus mathematical optimization models")
-    parser.add_argument("--input", "--planned_schedule", default="data/example_planned_schedule.csv")
+    parser.add_argument("--input", "--planned_schedule", default="web/data/Anonymized_Example_data.xlsx")
     parser.add_argument("--output", default="results/benchmark.json")
     parser.add_argument("--scenario", choices=[*SCENARIOS, "paper", "all"], default="scenario_3")
     parser.add_argument("--minutes", type=int, default=60)

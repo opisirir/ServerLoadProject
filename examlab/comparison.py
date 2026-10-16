@@ -36,19 +36,7 @@ def comparison_tables(experiment):
     return {'impact': impact, 'stability': stability, 'quality': quality}
 
 
-TABLE_LABELS = {
-    'impact': ('Başlangıca göre iyileşme ve kapasite', 'Improvement and capacity', {
-        'model': ('Model', 'Model'), 'n': ('Olurlu koşu', 'Feasible runs'), 'peak': ('Ort. tepe', 'Mean peak'),
-        'reduction_pct': ('Tepe azalması (%)', 'Peak reduction (%)'), 'utilization_pct': ('Tepe / kapasite (%)', 'Peak / capacity (%)'),
-        'overload_minutes': ('Ort. aşım (dk)', 'Mean overload (min)'), 'excess_minutes': ('Ort. aşım (katılımcı-dk)', 'Mean excess (participant-min)'),
-        'variance': ('Ort. yük varyansı', 'Mean load variance')}),
-    'stability': ('Tekrarlar arası tutarlılık', 'Consistency across runs', {
-        'model': ('Model', 'Model'), 'total': ('Toplam koşu', 'Total runs'), 'feasible': ('Olurlu koşu', 'Feasible runs'),
-        'min': ('En düşük tepe', 'Minimum peak'), 'median': ('Medyan tepe', 'Median peak'), 'max': ('En yüksek tepe', 'Maximum peak'),
-        'std': ('Örneklem std. sapma', 'Sample std. deviation'), 'runtime': ('Ort. süre (sn)', 'Mean runtime (s)')}),
-    'quality': ('Alt sınır ve optimum kanıtı', 'Lower bound and optimality evidence', {
-        'model': ('Model', 'Model'), 'bound': ('Ortak alt sınır', 'Shared lower bound'), 'best': ('En iyi tepe', 'Best peak'),
-        'gap': ('En iyi açıklık (%)', 'Best gap (%)'), 'certified': ('Optimumu kanıtlanan koşu', 'Certified optimal runs'), 'total': ('Toplam koşu', 'Total runs')})}
+TABLE_LABELS = {'impact': ('Başlangıca göre iyileşme ve kapasite', 'Improvement and capacity', {'model': ('Model', 'Model'), 'n': ('Olurlu koşu', 'Feasible runs'), 'peak': ('Ort. tepe', 'Mean peak'), 'reduction_pct': ('Tepe azalması (%)', 'Peak reduction (%)'), 'utilization_pct': ('Tepe / kapasite (%)', 'Peak / capacity (%)')}), 'stability': ('Tekrarlar arası tutarlılık', 'Consistency across runs', {'model': ('Model', 'Model'), 'feasible': ('Olurlu koşu', 'Feasible runs'), 'min': ('En düşük tepe', 'Minimum peak'), 'max': ('En yüksek tepe', 'Maximum peak'), 'runtime': ('Ort. süre (sn)', 'Mean runtime (s)')}), 'quality': ('Alt sınır ve optimum kanıtı', 'Lower bound and optimality evidence', {'model': ('Model', 'Model'), 'bound': ('Ortak alt sınır', 'Shared lower bound'), 'best': ('En iyi tepe', 'Best peak'), 'gap': ('En iyi açıklık (%)', 'Best gap (%)')})}
 
 
 def advantage_rows(report):
@@ -56,8 +44,6 @@ def advantage_rows(report):
     for e in report['experiments']:
         proposed = next(s for s in e['summary'] if s['algorithm'] == 'cp_gd')
         for peer in e['summary']:
-            if peer['algorithm'] == 'cp_gd':
-                continue
             delta = None
             if proposed['mean_peak'] is not None and peer['mean_peak']:
                 delta = 100 * (peer['mean_peak'] - proposed['mean_peak']) / peer['mean_peak']

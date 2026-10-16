@@ -17,7 +17,7 @@ class StreamlitTests(unittest.TestCase):
         self.assertEqual(len(app.exception), 0)
         self.assertEqual(app.tabs[0].label, 'Comparison')
         app.sidebar.selectbox[1].set_value(0).run()
-        self.assertEqual(app.metric[2].value, '500')
+        self.assertEqual(app.metric[2].value, '5,000')
         app.sidebar.selectbox[0].set_value('compute').run()
         self.assertEqual(len(app.exception), 0)
         self.assertEqual(len(app.get('form')), 1)

@@ -10,17 +10,24 @@ import streamlit as st
 from examlab.benchmark import run
 from examlab.comparison import comparison_tables, TABLE_LABELS, advantage_rows
 from examlab.data import load_problem
+from examlab.export import schedule_xlsx
 from examlab.model import SCENARIOS
 
 ROOT = Path(__file__).parent
 MODELS = ['cp_gd', 'mip', 'ilp', 'goal']
 NAMES = {'cp_gd': 'CP-SAT → Great Deluge', 'mip': 'MIP · CBC', 'ilp': 'ILP · CP-SAT', 'goal': 'Goal · CBC'}
-COLORS = ['#0d9488', '#6366f1', '#f59e0b', '#e879a5']
+COLORS = ['#2563eb', '#f97316', '#60a5fa', '#a78bfa']
 
-st.set_page_config(page_title='Exam Balance', page_icon='📊', layout='wide')
+st.set_page_config(page_title='ExamFlow: A Capacity-Constrained Exam Timetabling System', page_icon='📊', layout='wide')
 st.markdown('''<style>
 .block-container {max-width:1320px;padding-top:2rem;}
 [data-testid="stMetric"] {background:#f1f5f9;border:1px solid #e2e8f0;border-radius:12px;padding:16px;}
+[data-testid="stSidebar"] {background:#eff6ff;}
+[data-testid="stDownloadButton"] button, [data-testid="stButton"] button {border:1px solid #93c5fd;background:#eff6ff;color:#1e40af;border-radius:10px;font-weight:600;}
+[data-testid="stDownloadButton"] button:hover, [data-testid="stButton"] button:hover {background:#dbeafe;border-color:#2563eb;color:#1e3a8a;}
+button[kind="primary"], [data-testid="stFormSubmitButton"] button {background:#2563eb;color:white;border:1px solid #2563eb;border-radius:10px;}
+button[kind="primary"]:hover {background:#c2410c;border-color:#c2410c;}
+h1,h2,h3 {color:#172554;}
 h1 {letter-spacing:-.04em;} h3 {font-size:1.15rem;}
 </style>''', unsafe_allow_html=True)
 lang = st.sidebar.radio('Dil / Language', ['Türkçe', 'English'])
@@ -56,13 +63,17 @@ def chart(data, x, y, kind='bar'):
     return base.encode(x=x, y=y, color=model_color(), tooltip=list(data.columns)).properties(height=300)
 
 
-st.title('Exam Balance')
+st.title('ExamFlow: A Capacity-Constrained Exam Timetabling System')
+st.caption('Research companion · Algorithmic Exam Timetabling to Prevent Server Crash in Cloud-Based Learning Management Systems')
 st.caption(t('Sınav çizelgeleme · Matematiksel model karşılaştırması', 'Exam timetabling · Mathematical model comparison'))
-source = st.sidebar.selectbox(t('Veri kaynağı', 'Data source'), ['demo', 'report', 'compute'], format_func=lambda v: {'demo': t('Örnek rapor · Sentetik', 'Sample report · Synthetic'), 'report': t('JSON raporu yükle', 'Upload JSON report'), 'compute': t('Yeni karşılaştırma', 'New comparison')}[v])
+source = st.sidebar.selectbox(t('Veri kaynağı', 'Data source'), ['demo', 'report', 'compute'], format_func=lambda v: {'demo': t('Örnek veri sonuçları', 'Example dataset results'), 'report': t('JSON raporu yükle', 'Upload JSON report'), 'compute': t('Yeni karşılaştırma', 'New comparison')}[v])
+st.sidebar.download_button(t('Örnek veriyi indir (Excel)', 'Download example data (Excel)'), (ROOT / 'web/data/Anonymized_Example_data.xlsx').read_bytes(), 'Anonymized_Example_data.xlsx', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
+with st.expander(t('Araştırma kullanımı ve sorumluluk bildirimi', 'Research use and disclaimer')):
+    st.write(t('Bu uygulama bir akademik araştırma prototipidir ve her sınav programına uygun olmayabilir. Öğrenci çakışmaları ve kuruma özgü tüm kısıtlar modellenmez. Sonuçlar uygulamaya alınmadan önce kullanıcı tarafından doğrulanmalıdır. Hizmet sürekliliği, sunucu çökmesinin önlenmesi veya belirli bir sonuca ilişkin garanti verilmez. Yürürlükteki hukukun izin verdiği ölçüde, geliştiriciler ve araştırmacılar kullanım kaynaklı zararlardan sorumluluk kabul etmez. Bu bildirim kanunen dışlanamayan sorumlulukları sınırlamaz.', 'This application is an academic research prototype and may not suit every examination timetable. Student conflicts and all institution-specific constraints are not modeled. Users must validate results before operational use. No warranty is provided for service continuity, prevention of server crashes, or any particular outcome. To the extent permitted by applicable law, developers and researchers disclaim liability for damages arising from use. This notice does not exclude liability that cannot legally be excluded.'))
 report = None
 if source == 'demo':
     report = json.loads((ROOT / 'web/data/benchmark.json').read_text(encoding='utf-8'))
-    st.info(t('Sentetik örnek veri. Gerçek deney için rapor yükleyin veya karşılaştırma çalıştırın.', 'Synthetic sample data. Upload a report or run a comparison for actual experiments.'))
+    st.info(t('Anonymized_Example_data: makale çalışmasına ait anonimleştirilmiş örnek veri. Gösterilen sonuçlar bu dosyayla yeniden hesaplanmıştır; makalede raporlanan koşulardan farklı olabilir.', 'Anonymized_Example_data: anonymized example data associated with the paper. Displayed results were recomputed from this file and may differ from the runs reported in the manuscript.'))
 elif source == 'report':
     upload = st.sidebar.file_uploader(t('Sonuç raporu', 'Result report'), type=['json'])
     if upload:
@@ -117,7 +128,7 @@ try:
     df['model'] = df['algorithm'].map(NAMES)
     dataset = report['dataset']
     columns = st.columns(4)
-    for col, label, value in zip(columns, [t('Sınav', 'Exams'), t('Katılım', 'Enrollments'), t('Maks. eşzamanlı kullanıcı', 'Max. concurrent users'), t('Süre / koşu', 'Time / run')], [dataset['exams'], dataset['enrollments'], e['capacity'], str(report['settings']['seconds_per_run']) + ' s']):
+    for col, label, value in zip(columns, [t('Sınav', 'Exams'), t('Katılım', 'Enrollments'), t('Maks. eşzamanlı kullanıcı', 'Max. concurrent users'), t('Süre', 'Time')], [dataset['exams'], dataset['enrollments'], e['capacity'], str(report['settings']['seconds_per_run']) + ' s']):
         col.metric(label, f'{value:,}' if isinstance(value, int) else value)
     st.caption(f"{dataset.get('source_name', '')} · {dataset['duration_minutes']} min · {len(report['settings']['seeds'])} " + t('tekrar', 'repeats'))
     comparison, load_tab = st.tabs([t('Karşılaştırma', 'Comparison'), t('Yük ve çizelge', 'Load and schedule')])
@@ -129,21 +140,30 @@ try:
         worse = complete and all(paper['mean_peak'] > s['mean_peak'] for s in peers)
         tied = complete and all(paper['mean_peak'] == s['mean_peak'] for s in peers)
         verdict = t('Makale yöntemi bu deneyde daha düşük ortalama tepe yük buldu.', 'The paper method found a lower mean peak in this experiment.') if better else t('Makale yöntemi bu deneyde daha yüksek ortalama tepe yük buldu.', 'The paper method found a higher mean peak in this experiment.') if worse else t('Ortalama tepe yükleri eşit.', 'Mean peaks are equal.') if tied else t('Sonuç karma veya olurlu koşular eksik; genel üstünlük gösterilmedi.', 'Results are mixed or feasible runs are missing; overall superiority is not established.')
-        st.success(verdict) if better else st.info(verdict)
+        if better:
+            st.success(verdict)
+        else:
+            st.info(verdict)
         st.subheader(t('Önerilen yöntemin karşı modellere göre tepe yük avantajı', 'Proposed method: peak-load advantage over baselines'))
         advantage = pd.DataFrame(advantage_rows(report))
         advantage['baseline'] = advantage['baseline'].map(NAMES)
         advantage['scenario'] = advantage.apply(lambda r: f"{r['scenario'].split('_')[-1]} · {r['capacity']:,}", axis=1)
-        valid = advantage.dropna(subset=['advantage_pct'])
-        limit_adv = max(1.0, valid['advantage_pct'].abs().max()) if len(valid) else 1.0
-        heat = alt.Chart(valid).mark_rect().encode(
-            x=alt.X('baseline:N', title=t('Karşı model', 'Baseline')),
-            y=alt.Y('scenario:N', title=t('Senaryo · kapasite', 'Scenario · capacity')),
-            color=alt.Color('advantage_pct:Q', title=t('Avantaj (%)', 'Advantage (%)'), scale=alt.Scale(domain=[-limit_adv, 0, limit_adv], range=['#b45309', '#f8fafc', '#0d9488'])),
-            tooltip=list(advantage.columns))
-        values = heat.mark_text(color='#111827').encode(text=alt.Text('advantage_pct:Q', format='.2f'))
-        st.altair_chart((heat + values).properties(height=160), use_container_width=True)
-        st.caption(t('Pozitif / yeşil: önerilen yöntem daha düşük tepe üretir. Negatif / turuncu: karşı model daha iyidir. Değer = 100 × (karşı model − önerilen yöntem) / karşı model. Ortalamalar olurlu koşulara aittir; başarı oranları araç ipucunda gösterilir. Tüm senaryolar ve karşı modeller dahildir.', 'Positive / green: the proposed method has a lower peak. Negative / orange: the baseline is better. Value = 100 × (baseline − proposed) / baseline. Means cover feasible runs; tooltips show success rates. All scenarios and baselines are included.'))
+        comparison_load = df.dropna(subset=['mean_peak']).copy()
+        comparison_load['display'] = comparison_load.apply(lambda r: r['model'] + (t(' · Makale yöntemi', ' · Proposed method') if r['algorithm'] == 'cp_gd' else ''), axis=1)
+        max_peak = max(1, comparison_load['mean_peak'].max()) if len(comparison_load) else 1
+        bars = alt.Chart(comparison_load).mark_bar(cornerRadius=5, size=30).encode(
+            y=alt.Y('display:N', title=None, sort=alt.SortField(field='mean_peak', order='ascending'), axis=alt.Axis(labelLimit=340)),
+            x=alt.X('mean_peak:Q', title=t('Ortalama tepe yük · Daha düşük daha iyi', 'Mean peak load · Lower is better'), scale=alt.Scale(domain=[0, max_peak * 1.18])),
+            color=alt.condition(alt.datum.algorithm == 'cp_gd', alt.value('#2563eb'), alt.value('#f97316')),
+            tooltip=[alt.Tooltip('model:N', title='Model'), alt.Tooltip('mean_peak:Q', format='.2f'), alt.Tooltip('success_rate:Q')])
+        labels_adv = bars.mark_text(align='left', dx=7, fontSize=14, fontWeight='bold').encode(text=alt.Text('mean_peak:Q', format=',.2f'), color=alt.value('#172554'))
+        st.altair_chart((bars + labels_adv).properties(height=240), use_container_width=True)
+        st.caption(t('Daha kısa çubuk, daha düşük sunucu tepe yükü demektir. Mavi: makale yöntemi; turuncu: karşı modeller. Tüm çubuklar sıfırdan başlar ve aynı ölçektedir. Ortalamalar olurlu sonuçlara aittir.', 'A shorter bar means a lower server peak load. Blue: proposed method; orange: baselines. All bars start at zero and share the same scale. Means cover feasible results.'))
+        for peer in peers:
+            if paper['mean_peak'] is not None and peer['mean_peak']:
+                reduction = 100 * (peer['mean_peak'] - paper['mean_peak']) / peer['mean_peak']
+                direction = t('daha düşük', 'lower') if reduction > 0 else t('daha yüksek', 'higher') if reduction < 0 else t('eşit', 'equal')
+                st.markdown(f"**{NAMES[peer['algorithm']]}:** " + t('Makale yönteminin ortalama tepe yükü ', 'The proposed method’s mean peak load is ') + (f"**%{abs(reduction):.2f} {direction}**" if reduction else f"**{direction}**"))
         st.download_button(t('Avantaj tablosunu indir', 'Download advantage table'), advantage.to_csv(index=False).encode('utf-8-sig'), 'peak_advantages.csv', 'text/csv')
         stages = [{'seed': str(r['seed']), 'stage': label, 'peak': peak} for r in e['runs'] if r['algorithm'] == 'cp_gd' and r.get('initial_peak') is not None and r.get('metrics') and r['metrics']['feasible'] for label, peak in [(t('CP-SAT başlangıç', 'CP-SAT initial'), r['initial_peak']), (t('GD sonrası', 'After GD'), r['metrics']['peak'])]]
         if stages:
@@ -156,7 +176,7 @@ try:
         c1.altair_chart(chart(df.dropna(subset=['mean_peak'])[['model', 'mean_peak', 'std_peak']], alt.X('model:N', title=None, sort=list(NAMES.values()), axis=alt.Axis(labelAngle=0)), alt.Y('mean_peak:Q', title=t('Eşzamanlı katılım', 'Concurrent enrollments'))), use_container_width=True)
         c2.subheader(t('Süre ve çözüm kalitesi', 'Runtime and solution quality'))
         c2.altair_chart(chart(df.dropna(subset=['mean_peak'])[['model', 'mean_runtime', 'mean_peak']], alt.X('mean_runtime:Q', title=t('Ortalama süre (sn) ↓', 'Mean runtime (s) ↓'), scale=alt.Scale(zero=True)), alt.Y('mean_peak:Q', title=t('Ortalama tepe ↓', 'Mean peak ↓')), 'point'), use_container_width=True)
-        labels = {'model': t('Model', 'Model'), 'mean_peak': t('Ort. tepe', 'Mean peak'), 'std_peak': t('Std. sapma', 'Std. deviation'), 'mean_runtime': t('Süre (sn)', 'Runtime (s)'), 'success_rate': t('Olurlu koşu (%)', 'Feasible runs (%)'), 'mean_gap_pct': t('Açıklık (%)', 'Gap (%)')}
+        labels = {'model': t('Model', 'Model'), 'mean_peak': t('Ort. tepe', 'Mean peak'), 'mean_runtime': t('Süre (sn)', 'Runtime (s)'), 'success_rate': t('Olurlu koşu (%)', 'Feasible runs (%)'), 'mean_gap_pct': t('Açıklık (%)', 'Gap (%)')}
         table = df[list(labels)].rename(columns=labels)
         st.dataframe(table, hide_index=True, width='stretch')
         rows = []
@@ -186,12 +206,12 @@ try:
         for key, rows in comparison_tables(e).items():
             title_tr, title_en, labels = TABLE_LABELS[key]
             with st.expander(t(title_tr, title_en), expanded=True):
-                frame = pd.DataFrame(rows)
+                frame = pd.DataFrame(rows)[list(labels)]
                 frame['model'] = frame['model'].map({**NAMES, 'reference': t('Başlangıç çizelgesi', 'Reference schedule')})
                 frame = frame.rename(columns={k: t(*v) for k, v in labels.items()})
                 st.dataframe(frame, hide_index=True, width='stretch')
                 st.download_button(t('Tabloyu CSV indir', 'Download table CSV'), frame.to_csv(index=False).encode('utf-8-sig'), f'{e["scenario"]}_{key}.csv', 'text/csv', key=f'table_{key}')
-        st.caption(t('Tutarlılık tablosundaki sapma örneklem sapmasıdır (n−1); tek koşuda hesaplanmaz. Süre tüm koşuları kapsar. Yük varyansı aday başlangıçların kapsadığı aralıklarda süreyle ağırlıklandırılmadan hesaplanır. Açıklık = (en iyi tepe − ortak alt sınır) / en iyi tepe. Sıfır açıklık optimum kanıtıdır; pozitif açıklık gerçek optimum farkı değildir. CBC tekrarları bağımsız rastgele örnekler değildir; tablolar istatistiksel anlamlılık iddiası taşımaz.', 'Consistency uses sample standard deviation (n−1), unavailable for a single run. Runtime covers all runs. Load variance is unweighted across intervals covered by candidate starts. Gap = (best peak − shared lower bound) / best peak. Zero gap certifies optimality; positive gap is not the exact distance to optimum. CBC repeats are not independent random samples; these tables do not claim statistical significance.'))
+        st.caption(t('Açıklık = (en iyi tepe − ortak alt sınır) / en iyi tepe. Pozitif açıklık gerçek optimum farkı değildir.', 'Gap = (best peak − shared lower bound) / best peak. A positive gap is not the exact distance to optimum.'))
     with load_tab:
         seed_load = st.selectbox(t('Yük grafiği tohumu', 'Load chart seed'), report['settings']['seeds'])
         load_rows = []
@@ -208,6 +228,7 @@ try:
             result = next(r for r in selected if r['algorithm'] == chosen)
             schedule = pd.DataFrame([{'exam_id': exam['exam_id'], 'student_count': exam['student_count'], 'start': report['starts'][slot]} for exam, slot in zip(report['exams'], result['assignment'])])
             st.dataframe(schedule, hide_index=True, width='stretch')
+            st.download_button(t('Optimize edilmiş çizelgeyi indir (Excel)', 'Download optimized schedule (Excel)'), schedule_xlsx(report, e, result), f'ExamFlow_{chosen}_{seed_load}.xlsx', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
             st.download_button(t('Çizelge CSV', 'Schedule CSV'), schedule.to_csv(index=False).encode('utf-8-sig'), 'schedule.csv', 'text/csv')
     st.sidebar.download_button(t('JSON raporu indir', 'Download JSON report'), json.dumps(report, ensure_ascii=False, allow_nan=False), 'benchmark.json', 'application/json')
 except (KeyError, TypeError, ValueError, IndexError) as exc:

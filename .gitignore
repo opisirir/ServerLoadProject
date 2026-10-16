@@ -8,3 +8,6 @@ outputs*/
 .streamlit/secrets.toml
 .DS_Store
 dist/serverload-paper-demo.zip
+
+dist/
+data/
